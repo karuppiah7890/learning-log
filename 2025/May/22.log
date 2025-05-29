@@ -1,0 +1,1704 @@
+Last login: Thu May 22 13:40:34 on console
+ ~  $ brew install encoredev/tap/encore
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 8 taps (heroku/brew, goreleaser/tap, dart-lang/dart, windmilleng/tap, lihaoyun6/tap, sass/sass, homebrew/core and homebrew/cask).
+==> New Formulae
+bento                                    lima-additional-guestagents
+bower-mail                               mender-cli
+chart-releaser                           nelm
+codex                                    nerdlog
+cookcli                                  pieces-cli
+cpdf                                     pixd
+dart-lang/dart/dart@3.8.0                smenu
+e2b                                      timoni
+guichan                                  tmuxai
+hellwal                                  xml2rfc
+jjui
+==> New Casks
+5ire                                     nao
+azookey                                  nextcloud-talk
+billy-frontier                           opensuperwhisper
+bison-wallet                             status
+blankie                                  teleport@16
+burp-suite-professional@early-adopter    timescribe
+burp-suite@early-adopter                 void
+feather                                  voiden
+font-leland                              wrkspace
+font-savate                              zen-privacy
+jetdrive-toolbox
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+You have 248 outdated formulae and 3 outdated casks installed.
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+==> Tapping encoredev/tap
+Cloning into '/usr/local/Homebrew/Library/Taps/encoredev/homebrew-tap'...
+remote: Enumerating objects: 2438, done.
+remote: Counting objects: 100% (139/139), done.
+remote: Compressing objects: 100% (83/83), done.
+remote: Total 2438 (delta 90), reused 50 (delta 50), pack-reused 2299 (from 4)
+Receiving objects: 100% (2438/2438), 340.53 KiB | 2.04 MiB/s, done.
+Resolving deltas: 100% (1152/1152), done.
+Tapped 3 formulae (14 files, 420.9KB).
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+
+==> Fetching encoredev/tap/encore
+==> Downloading https://d2f391esomvqpi.cloudfront.net/encore-1.47.1-darwin_amd64
+######################################################################### 100.0%
+==> Installing encore from encoredev/tap
+
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+==> Summary
+🍺  /usr/local/Cellar/encore/1.47.1: 11,195 files, 398.8MB, built in 21 seconds
+==> Running `brew cleanup encore`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Autoremoving 48 unneeded formulae:
+adns
+aspell
+cabal-install
+ctags
+dav1d
+flac
+frei0r
+ghc
+ilmbase
+jansson
+lame
+libassuan
+libbluray
+libiconv
+libogg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libvidstab
+libvorbis
+libvpx
+lua@5.1
+lxc
+lz4
+make
+npth
+opencore-amr
+opus
+pinentry
+rav1e
+rtmpdump
+rubberband
+sdl2
+snap
+speex
+squashfs
+srt
+swig
+the_silver_searcher
+theora
+wxwidgets
+x264
+xdelta
+xvid
+zeromq
+zimg
+zstd
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/Cask/quickrecorder--1.6.5.dmg... (4.4MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/Cask/font-hack-nerd-font--3.3.0.zip... (16.5MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/bootsnap/a4b1741e95dc30e265f80c555f7fc0efcfa081aae6524a9513a325b310cbbfd4... (568 files, 4.7MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/bootsnap/81feb4463046d7e3003aacb963cdf053eb0efa04c422452278129b748ae33e4a... (568 files, 4.6MB)
+ ✘  ~  $ 
+ ✘  ~  $ 
+ ✘  ~  $ encore app create --example=hello-world
+
+Note: This CLI tool collects usage data to help us improve Encore.
+      You can disable this by running 'encore telemetry disable'.
+
+Log in / Sign up for a free Encore Cloud account to enable automated cloud deployments? (Y/n): y
+Successfully logged in!
+  ✔ Template: hello-world  
+  ✔ App Name: store-stuff  
+                           
+
+Downloaded template hello-world.
+
+Successfully created app store-stuff!
+
+App ID:   store-stuff-5gbi
+Web URL:  https://app.encore.cloud/store-stuff-5gbi
+App Root: /Users/karuppiahn/store-stuff
+
+Run your app with: cd store-stuff && encore run
+
+Run your app now? (Y/n): y
+
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Starting Encore application... Done!
+
+  Encore development server running!
+
+  Your API is running at:     http://127.0.0.1:4000
+  Development Dashboard URL:  http://127.0.0.1:9400/store-stuff-5gbi
+  MCP SSE URL:                http://127.0.0.1:9900/sse?appID=store-stuff-5gbi
+
+  New Encore release available: v1.47.2 (you have v1.47.1)
+  Update with: encore version update
+
+10:36PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:36PM INF listening for incoming HTTP requests
+
+Hint: make an API call by running: curl http://127.0.0.1:4000/hello/foo
+10:37PM INF starting request endpoint=World service=hello trace_id=4qpbpsfqm153qpsfcdvu45cmq0 x_correlation_id=dash-call-1
+10:37PM INF request completed code=ok duration=0.115468 endpoint=World service=hello trace_id=4qpbpsfqm153qpsfcdvu45cmq0 x_correlation_id=dash-call-1
+
+10:39PM INF starting request endpoint=World service=hello trace_id=395ls3f0k5n7ch2pa91ol4tfs0
+10:39PM INF request completed code=ok duration=0.071296 endpoint=World service=hello trace_id=395ls3f0k5n7ch2pa91ol4tfs0
+10:39PM INF starting request endpoint=World service=hello trace_id=r11g1fviaqgglhohf6ditf7hlo
+10:39PM INF request completed code=ok duration=0.031845 endpoint=World service=hello trace_id=r11g1fviaqgglhohf6ditf7hlo
+10:39PM INF starting request endpoint=World service=hello trace_id=pibo2qppavdqinqqt40hp5d3r0
+10:39PM INF request completed code=ok duration=0.153483 endpoint=World service=hello trace_id=pibo2qppavdqinqqt40hp5d3r0
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected 'package', found 'EOF'
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:1:1 ]
+   │
+───╯
+
+Changes detected, recompiling...
+10:41PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:41PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1374]──
+
+API functions must have at least 1 parameter, found 0 parameters.
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:4:11 ]
+   │
+ 2 │ 
+ 3 │ //encore:api public path=/store
+ 4 │ func Store()
+   ⋮           ──
+───╯
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: context
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:4:16 ]
+   │
+ 2 │ 
+ 3 │ //encore:api public path=/store
+ 4 │ func Store(ctx context)
+   ⋮                ───────
+───╯
+
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected 'IDENT', found ')'
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:24 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.)
+   ⋮                        ▲
+───╯
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+missing parameter type
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:38 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.Context, data )
+   ⋮                                      ▲
+───╯
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: Data
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:38 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.Context, data Data)
+   ⋮                                      ────
+───╯
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: Data
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:8:38 ]
+    │
+  6 │ 
+  7 │ //encore:api public path=/store
+  8 │ func Store(ctx context.Context, data Data)
+    ⋮                                      ────
+────╯
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: # encore.app/store
+store/store.go:12:1: missing return
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+Changes detected, recompiling...
+10:49PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:49PM INF registered API endpoint endpoint=Store path=/store service=store
+10:49PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:49PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:49PM INF registered API endpoint endpoint=Store path=/store service=store
+10:49PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:50PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:50PM INF registered API endpoint endpoint=Store path=/store service=store
+10:50PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: go: updates to go.mod needed; to update it:
+	go mod tidy
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "datadb" variable
+ 10 │ var datadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testdatadb" variable
+ 10 │ var testdatadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDatadb" variable
+ 10 │ var testDatadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("testdata", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the test_data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the test_data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+
+Last login: Thu May 22 13:40:34 on console
+ ~  $ brew install encoredev/tap/encore
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 8 taps (heroku/brew, goreleaser/tap, dart-lang/dart, windmilleng/tap, lihaoyun6/tap, sass/sass, homebrew/core and homebrew/cask).
+==> New Formulae
+bento                                    lima-additional-guestagents
+bower-mail                               mender-cli
+chart-releaser                           nelm
+codex                                    nerdlog
+cookcli                                  pieces-cli
+cpdf                                     pixd
+dart-lang/dart/dart@3.8.0                smenu
+e2b                                      timoni
+guichan                                  tmuxai
+hellwal                                  xml2rfc
+jjui
+==> New Casks
+5ire                                     nao
+azookey                                  nextcloud-talk
+billy-frontier                           opensuperwhisper
+bison-wallet                             status
+blankie                                  teleport@16
+burp-suite-professional@early-adopter    timescribe
+burp-suite@early-adopter                 void
+feather                                  voiden
+font-leland                              wrkspace
+font-savate                              zen-privacy
+jetdrive-toolbox
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+You have 248 outdated formulae and 3 outdated casks installed.
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+==> Tapping encoredev/tap
+Cloning into '/usr/local/Homebrew/Library/Taps/encoredev/homebrew-tap'...
+remote: Enumerating objects: 2438, done.
+remote: Counting objects: 100% (139/139), done.
+remote: Compressing objects: 100% (83/83), done.
+remote: Total 2438 (delta 90), reused 50 (delta 50), pack-reused 2299 (from 4)
+Receiving objects: 100% (2438/2438), 340.53 KiB | 2.04 MiB/s, done.
+Resolving deltas: 100% (1152/1152), done.
+Tapped 3 formulae (14 files, 420.9KB).
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+
+==> Fetching encoredev/tap/encore
+==> Downloading https://d2f391esomvqpi.cloudfront.net/encore-1.47.1-darwin_amd64
+######################################################################### 100.0%
+==> Installing encore from encoredev/tap
+
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+==> Summary
+🍺  /usr/local/Cellar/encore/1.47.1: 11,195 files, 398.8MB, built in 21 seconds
+==> Running `brew cleanup encore`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Autoremoving 48 unneeded formulae:
+adns
+aspell
+cabal-install
+ctags
+dav1d
+flac
+frei0r
+ghc
+ilmbase
+jansson
+lame
+libassuan
+libbluray
+libiconv
+libogg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libvidstab
+libvorbis
+libvpx
+lua@5.1
+lxc
+lz4
+make
+npth
+opencore-amr
+opus
+pinentry
+rav1e
+rtmpdump
+rubberband
+sdl2
+snap
+speex
+squashfs
+srt
+swig
+the_silver_searcher
+theora
+wxwidgets
+x264
+xdelta
+xvid
+zeromq
+zimg
+zstd
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/Cask/quickrecorder--1.6.5.dmg... (4.4MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/Cask/font-hack-nerd-font--3.3.0.zip... (16.5MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/bootsnap/a4b1741e95dc30e265f80c555f7fc0efcfa081aae6524a9513a325b310cbbfd4... (568 files, 4.7MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/bootsnap/81feb4463046d7e3003aacb963cdf053eb0efa04c422452278129b748ae33e4a... (568 files, 4.6MB)
+ ✘  ~  $ 
+ ✘  ~  $ 
+ ✘  ~  $ encore app create --example=hello-world
+
+Note: This CLI tool collects usage data to help us improve Encore.
+      You can disable this by running 'encore telemetry disable'.
+
+Log in / Sign up for a free Encore Cloud account to enable automated cloud deployments? (Y/n): y
+Successfully logged in!
+  ✔ Template: hello-world  
+  ✔ App Name: store-stuff  
+                           
+
+Downloaded template hello-world.
+
+Successfully created app store-stuff!
+
+App ID:   store-stuff-5gbi
+Web URL:  https://app.encore.cloud/store-stuff-5gbi
+App Root: /Users/karuppiahn/store-stuff
+
+Run your app with: cd store-stuff && encore run
+
+Run your app now? (Y/n): y
+
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Starting Encore application... Done!
+
+  Encore development server running!
+
+  Your API is running at:     http://127.0.0.1:4000
+  Development Dashboard URL:  http://127.0.0.1:9400/store-stuff-5gbi
+  MCP SSE URL:                http://127.0.0.1:9900/sse?appID=store-stuff-5gbi
+
+  New Encore release available: v1.47.2 (you have v1.47.1)
+  Update with: encore version update
+
+10:36PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:36PM INF listening for incoming HTTP requests
+
+Hint: make an API call by running: curl http://127.0.0.1:4000/hello/foo
+10:37PM INF starting request endpoint=World service=hello trace_id=4qpbpsfqm153qpsfcdvu45cmq0 x_correlation_id=dash-call-1
+10:37PM INF request completed code=ok duration=0.115468 endpoint=World service=hello trace_id=4qpbpsfqm153qpsfcdvu45cmq0 x_correlation_id=dash-call-1
+
+10:39PM INF starting request endpoint=World service=hello trace_id=395ls3f0k5n7ch2pa91ol4tfs0
+10:39PM INF request completed code=ok duration=0.071296 endpoint=World service=hello trace_id=395ls3f0k5n7ch2pa91ol4tfs0
+10:39PM INF starting request endpoint=World service=hello trace_id=r11g1fviaqgglhohf6ditf7hlo
+10:39PM INF request completed code=ok duration=0.031845 endpoint=World service=hello trace_id=r11g1fviaqgglhohf6ditf7hlo
+10:39PM INF starting request endpoint=World service=hello trace_id=pibo2qppavdqinqqt40hp5d3r0
+10:39PM INF request completed code=ok duration=0.153483 endpoint=World service=hello trace_id=pibo2qppavdqinqqt40hp5d3r0
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected 'package', found 'EOF'
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:1:1 ]
+   │
+───╯
+
+Changes detected, recompiling...
+10:41PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:41PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:47PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:47PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1374]──
+
+API functions must have at least 1 parameter, found 0 parameters.
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:4:11 ]
+   │
+ 2 │ 
+ 3 │ //encore:api public path=/store
+ 4 │ func Store()
+   ⋮           ──
+───╯
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: context
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:4:16 ]
+   │
+ 2 │ 
+ 3 │ //encore:api public path=/store
+ 4 │ func Store(ctx context)
+   ⋮                ───────
+───╯
+
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected 'IDENT', found ')'
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:24 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.)
+   ⋮                        ▲
+───╯
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+missing parameter type
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:38 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.Context, data )
+   ⋮                                      ▲
+───╯
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: Data
+
+   ╭─[ /Users/karuppiahn/store-stuff/store/store.go:6:38 ]
+   │
+ 4 │ 
+ 5 │ //encore:api public path=/store
+ 6 │ func Store(ctx context.Context, data Data)
+   ⋮                                      ────
+───╯
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+undefined type: Data
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:8:38 ]
+    │
+  6 │ 
+  7 │ //encore:api public path=/store
+  8 │ func Store(ctx context.Context, data Data)
+    ⋮                                      ────
+────╯
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Invalid API Function ──────────────────────────────────────────────────────────────[E1375]──
+
+API functions must have at most 1 or 2 results, found 0 results.
+
+hint: valid signatures are:
+	- func(context.Context) error
+	- func(context.Context) (*ResponseData, error)
+	- func(context.Context, *RequestData) error
+	- func(context.Context, *RequestType) (*ResponseData, error)
+
+For more information on how to use APIs, see https://encore.dev/docs/primitives/apis
+
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: # encore.app/store
+store/store.go:12:1: missing return
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+Changes detected, recompiling...
+10:49PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:49PM INF registered API endpoint endpoint=Store path=/store service=store
+10:49PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:49PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:49PM INF registered API endpoint endpoint=Store path=/store service=store
+10:49PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+10:50PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+10:50PM INF registered API endpoint endpoint=Store path=/store service=store
+10:50PM INF listening for incoming HTTP requests
+Reloaded successfully.
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: go: updates to go.mod needed; to update it:
+	go mod tidy
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the todo database and assign it to the "tododb" variable
+ 10 │ var tododb = sqldb.NewDatabase("todo", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "datadb" variable
+ 10 │ var datadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testdatadb" variable
+ 10 │ var testdatadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDatadb" variable
+ 10 │ var testDatadb = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("testdata", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the test_data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+Changes detected, recompiling...
+
+── Invalid sqldb.NewDatabase call ────────────────────────────────────────────────────[E1797]──
+
+The migration directory does not exist.
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:11:14 ]
+    │
+  9 │ // Create the test_data database and assign it to the "testDataDB" variable
+ 10 │ var testDataDB = sqldb.NewDatabase("test_data", sqldb.DatabaseConfig{
+ 11 │     Migrations: "./migrations",
+    ⋮                 ──────────────
+ 12 │ })
+ 13 │ 
+────╯
+
+For more information about how to use databases in Encore, see
+https://encore.dev/docs/primitives/databases
+
+^C
+ ✘  ~  $ 
+
+ store-stuff  main ✘  $ ls
+README.md	encore.app	go.mod		go.sum		hello
+ store-stuff  main ✘  $ cat go.
+go.mod  go.sum  
+ store-stuff  main ✘  $ cat go.mod 
+module encore.app
+
+go 1.18
+
+require encore.dev v1.46.1 // indirect
+ store-stuff  main ✘  $ ls encore.app 
+encore.app
+ store-stuff  main ✘  $ file encore.app 
+encore.app: JSON data
+ store-stuff  main ✘  $ less encore.app 
+ store-stuff  main ✘  $ ls hello/
+encore.gen.go	hello.go	hello_test.go
+ store-stuff  main ✘  $ code .
+[0522/223812.375993:ERROR:codesign_util.cc(109)] SecCodeCheckValidity: Error Domain=NSOSStatusErrorDomain Code=-67062 "(null)" (-67062)
+ store-stuff  main ✘  $ curl http://localhost:4000/hello/World
+{
+  "Message": "Hello, World!"
+}
+ store-stuff  main ✘  $ curl http://localhost:4000/hello/Blah
+{
+  "Message": "Hello, Blah!"
+}
+ store-stuff  main ✘  $ curl http://localhost:4000/hello/blah
+{
+  "Message": "Hello, blah!"
+}
+ store-stuff  main ✘  $ go mod tidy -v
+go: downloading github.com/jackc/pgx/v5 v5.2.0
+go: downloading github.com/jackc/puddle/v2 v2.1.2
+go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+go: downloading golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90
+go: downloading golang.org/x/text v0.3.8
+go: downloading golang.org/x/sync v0.0.0-20220923202941-7f9b1623fab7
+go: downloading go.uber.org/atomic v1.10.0
+go: downloading github.com/stretchr/testify v1.8.0
+ store-stuff  main ✘  $ 
+
+
+ store-stuff  main ✘  $ encore run
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Creating PostgreSQL database cluster... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Pulling PostgreSQL docker image... Done!
+  ❌ Running database migrations... Failed: migrate db test_data: could not migrate database test_data: failed to migrate database: migration failed in line 0: CREATE TABLE test_data (
+  id BIGSERIAL PRIMARY KEY,
+  data TEXT NOT NULL,
+);
+;
+insert into schema_migrations (version, dirty) values (1, false) ON CONFLICT (version) DO UPDATE SET dirty = false; (details: ERROR: syntax error at or near ")" (SQLSTATE 42601))
+migrate db test_data: could not migrate database test_data: failed to migrate database: migration failed in line 0: CREATE TABLE test_data (
+  id BIGSERIAL PRIMARY KEY,
+  data TEXT NOT NULL,
+);
+;
+insert into schema_migrations (version, dirty) values (1, false) ON CONFLICT (version) DO UPDATE SET dirty = false; (details: ERROR: syntax error at or near ")" (SQLSTATE 42601))
+ ✘  store-stuff  main ✘  $ encore run
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Creating PostgreSQL database cluster... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Running database migrations... Done!
+  ✔ Starting Encore application... Done!
+
+  Encore development server running!
+
+  Your API is running at:     http://127.0.0.1:4000
+  Development Dashboard URL:  http://127.0.0.1:9400/store-stuff-5gbi
+  MCP SSE URL:                http://127.0.0.1:9900/sse?appID=store-stuff-5gbi
+
+  New Encore release available: v1.47.2 (you have v1.47.1)
+  Update with: encore version update
+
+11:00PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+11:00PM INF registered API endpoint endpoint=Store path=/store service=store
+11:00PM INF listening for incoming HTTP requests
+ store-stuff  main ✘  $ encore run
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Creating PostgreSQL database cluster... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Running database migrations... Done!
+  ✔ Starting Encore application... Done!
+
+  Encore development server running!
+
+  Your API is running at:     http://127.0.0.1:4000
+  Development Dashboard URL:  http://127.0.0.1:9400/store-stuff-5gbi
+  MCP SSE URL:                http://127.0.0.1:9900/sse?appID=store-stuff-5gbi
+
+  New Encore release available: v1.47.2 (you have v1.47.1)
+  Update with: encore version update
+
+11:00PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+11:00PM INF registered API endpoint endpoint=Store path=/store service=store
+11:00PM INF listening for incoming HTTP requests
+Changes detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: # encore.app/store
+store/store.go:22:2: undefined: test
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+Changes detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected selector or type assertion, found 'return'
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:23:2 ]
+    │
+ 21 │ func Store(ctx context.Context, data Data) error {
+ 22 │     testDataDB.
+ 23 │     return nil
+    ⋮     ───────
+ 24 │ }
+────╯
+
+And 1 more errorsChanges detected, recompiling...
+
+── Parse Error in Go Source ──────────────────────────────────────────────────────────[E0002]──
+
+expected selector or type assertion, found 'return'
+
+    ╭─[ /Users/karuppiahn/store-stuff/store/store.go:23:2 ]
+    │
+ 21 │ func Store(ctx context.Context, data Data) error {
+ 22 │     testDataDB.Stdlib().
+ 23 │     return nil
+    ⋮     ───────
+ 24 │ }
+────╯
+
+And 1 more errorsChanges detected, recompiling...
+
+── Error ─────────────────────────────────────────────────────────────────────────────[E0003]──
+
+compilation failure: # encore.app/store
+store/store.go:22:2: testDataDB (variable of type *sqldb.Database) is not used
+
+╭─[Stack Trace]
+├─▶ build.(*builder).buildMain-fm.(*builder).buildMain.func1 encr.dev/v2/compiler/build/build.go:316
+├─▶ etrace.Sync0                                             encr.dev/internal/etrace/etrace.go:10
+├─▶ build.(*builder).buildMain                               encr.dev/v2/compiler/build/build.go:251
+├─▶ build.(*builder).Build                                   encr.dev/v2/compiler/build/build.go:128
+├─▶ build.Build                                              encr.dev/v2/compiler/build/build.go:73
+├─▶ v2builder.BuilderImpl.Compile.func1                      encr.dev/v2/v2builder/v2builder.go:149
+╰─[... remaining frames omitted ...]
+
+^C store-stuff  main ✘  $ encore run
+  ✔ Building Encore application graph... Done!
+  ✔ Analyzing service topology... Done!
+  ✔ Creating PostgreSQL database cluster... Done!
+  ✔ Generating boilerplate code... Done!
+  ✔ Compiling application source code... Done!
+  ✔ Running database migrations... Done!
+  ✔ Starting Encore application... Done!
+
+  Encore development server running!
+
+  Your API is running at:     http://127.0.0.1:4000
+  Development Dashboard URL:  http://127.0.0.1:9400/store-stuff-5gbi
+  MCP SSE URL:                http://127.0.0.1:9900/sse?appID=store-stuff-5gbi
+
+  New Encore release available: v1.47.2 (you have v1.47.1)
+  Update with: encore version update
+
+11:09PM INF registered API endpoint endpoint=World path=/hello/:name service=hello
+11:09PM INF registered API endpoint endpoint=Store path=/store service=store
+11:09PM INF listening for incoming HTTP requests
+11:10PM INF starting request endpoint=Store service=store trace_id=2vsd2sfo1q5rjf846okqjp076s
+11:10PM INF request completed code=ok duration=19.290502 endpoint=Store service=store trace_id=2vsd2sfo1q5rjf846okqjp076s
+11:26PM TRC endpoint not found gateway=true hosting=["hello","store"] path=/store
+11:27PM INF starting request endpoint=Store service=store trace_id=m2q2n8nktk309hqt51h3befcd0
+11:27PM ERR request failed error="decode request: request_body: missing request body: missing request body" code=invalid_argument endpoint=Store service=store trace_id=m2q2n8nktk309hqt51h3befcd0
+11:27PM INF request completed code=invalid_argument duration=0.134409 endpoint=Store service=store trace_id=m2q2n8nktk309hqt51h3befcd0
+
+
+11:27PM INF starting request endpoint=Store service=store trace_id=f12bp93gqq20te8vgvrhapqpj8
+11:27PM ERR request failed error="decode request: request_body: missing request body: missing request body" code=invalid_argument endpoint=Store service=store trace_id=f12bp93gqq20te8vgvrhapqpj8
+11:27PM INF request completed code=invalid_argument duration=0.050742 endpoint=Store service=store trace_id=f12bp93gqq20te8vgvrhapqpj8
+
+ store-stuff  main ✘  $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+ store-stuff  main ✘  $ docker images
+REPOSITORY                  TAG            IMAGE ID       CREATED       SIZE
+redis                       latest         b8477f2e393b   3 years ago   113MB
+ubuntu                      latest         9873176a8ff5   3 years ago   72.7MB
+redisuniversity/ru101-lab   latest         f434000071d9   4 years ago   556MB
+kindest/haproxy             2.1.1-alpine   7ebf6e0784e9   5 years ago   22.5MB
+ store-stuff  main ✘  $ docker images
+REPOSITORY                  TAG            IMAGE ID       CREATED       SIZE
+redis                       latest         b8477f2e393b   3 years ago   113MB
+ubuntu                      latest         9873176a8ff5   3 years ago   72.7MB
+redisuniversity/ru101-lab   latest         f434000071d9   4 years ago   556MB
+kindest/haproxy             2.1.1-alpine   7ebf6e0784e9   5 years ago   22.5MB
+ store-stuff  main ✘  $ watch docker images
+ store-stuff  main ✘  $ docker ps
+CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS                     NAMES
+67fc800b25c5   encoredotdev/postgres:15   "docker-entrypoint.s…"   7 seconds ago   Up 4 seconds   0.0.0.0:54289->5432/tcp   sqldb-store-stuff-5gbi-default-d0nlik1tr70i2kmkb5h0
+ store-stuff  main ✘  $ curl -X POST http://localhost:4000/store -d '{"data": "[[0,1]]"}'
+ store-stuff  main ✘  $ enco
+encode_keychange  encore            
+ store-stuff  main ✘  $ enco
+encode_keychange  encore            
+ store-stuff  main ✘  $ encore shell
+unknown command "shell" for "encore"
+ ✘  store-stuff  main ✘  $ encore 
+encore is the fastest way of developing backend applications
+
+Usage:
+  encore [command]
+
+Available Commands:
+  app                             Commands to create and link Encore apps
+  auth                            Commands to authenticate with Encore
+  build                           build provides ways to build your application for deployment
+  check                           Checks your application for compile-time errors using Encore's compiler.
+  config                          Get or set a configuration value
+  daemon                          Starts the encore daemon
+  db                              Database management commands
+  exec                            Runs executable scripts against the local Encore app
+  gen                             Code generation commands
+  help                            Help about any command
+  kubernetes                      Kubernetes management commands
+  logs                            Streams logs from your application
+  mcp                             MCP (Message Context Provider) commands
+  namespace                       Manage infrastructure namespaces
+  rand                            Utilities for generating cryptographically secure random data
+  run                             Runs your application
+  secret                          Secret management commands
+  telemetry                       Reports the current telemetry status
+  test                            Tests your application
+  version                         Reports the current version of the encore application
+
+Flags:
+  -h, --help            help for encore
+      --trace string    file to write execution trace data to
+  -v, --verbose count   verbose output
+
+Use "encore [command] --help" for more information about a command.
+ store-stuff  main ✘  $ encore db
+Database management commands
+
+Usage:
+  encore db [command]
+
+Available Commands:
+  conn-uri    Outputs the database connection string
+  proxy       Sets up a proxy tunnel to the database
+  reset       Resets the databases with the given names. Use --all to reset all databases.
+  shell       Connects to the database via psql shell
+
+Flags:
+  -h, --help   help for db
+
+Global Flags:
+      --trace string    file to write execution trace data to
+  -v, --verbose count   verbose output
+
+Use "encore db [command] --help" for more information about a command.
+ store-stuff  main ✘  $ encore db shell
+error: could not find an Encore service with a database in this directory (or any of the parent directories).
+
+Note: You can specify a service name to connect to it directly using the command 'encore db shell <database-name>'.
+ ✘  store-stuff  main ✘  $ encore db shell store
+error: could not connect to the database for service store: database not found
+ ✘  store-stuff  main ✘  $ encore db shell test_data
+psql (13.1, server 15.7 (Debian 15.7-1.pgdg110+1))
+WARNING: psql major version 13, server major version 15.
+         Some psql features might not work.
+Type "help" for help.
+
+test_data=> \d
+                  List of relations
+ Schema |       Name        |   Type   |    Owner     
+--------+-------------------+----------+--------------
+ public | schema_migrations | table    | encore-admin
+ public | test_data         | table    | encore-admin
+ public | test_data_id_seq  | sequence | encore-admin
+(3 rows)
+
+test_data=> select * from test_data;
+ id |  data   
+----+---------
+  1 | [[0,1]]
+(1 row)
+
+test_data=> ^D\q
+ store-stuff  main ✘  $ curl http://localhost:4000/store 
+{
+  "code": "not_found",
+  "message": "endpoint not found",
+  "details": null
+} store-stuff  main ✘  $ curl -X POST http://localhost:4000/store 
+curl: (2) no URL specified
+curl: try 'curl --help' or 'curl --manual' for more information
+ ✘  store-stuff  main ✘  $ curl -X POST http://localhost:4000/store 
+{
+  "code": "invalid_argument",
+  "message": "decode request: request_body: missing request body: missing request body",
+  "details": null
+} store-stuff  main ✘  $ curl -X POST http://localhost:4000/store 
+ ✘  store-stuff  main ✘  $ curl -i -X POST http://localhost:4000/store 
+HTTP/1.1 400 Bad Request
+Content-Length: 140
+Content-Type: application/json
+Date: Thu, 22 May 2025 17:57:17 GMT
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Encore-Trace-Id: f12bp93gqq20te8vgvrhapqpj8
+X-Request-Id: f12bp93gqq20te8vgvrhapqpj8
+
+{
+  "code": "invalid_argument",
+  "message": "decode request: request_body: missing request body: missing request body",
+  "details": null
+} store-stuff  main ✘  $ 
+ store-stuff  main ✘  $ 
+ store-stuff  main ✘  $ 
+ store-stuff  main ✘  $ 
+ store-stuff  main ✔  $ g remote -v
+encore	encore://store-stuff-5gbi (fetch)
+encore	encore://store-stuff-5gbi (push)
+origin	git@github.com:karuppiah7890/store-stuff.git (fetch)
+origin	git@github.com:karuppiah7890/store-stuff.git (push)
+ store-stuff  main ✔  $ gp encore
+Pushing to encore://store-stuff-5gbi
+The authenticity of host 'git.encore.dev (34.85.245.63)' can't be established.
+ED25519 key fingerprint is SHA256:GM2FBpB2/5LlKsoXAO3DRrSGdM5DoiDMcmWORiuSJo4.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'git.encore.dev' (ED25519) to the list of known hosts.
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (19/19), 8.36 KiB | 4.18 MiB/s, done.
+Total 19 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: main: triggered deploy https://app.encore.cloud/store-stuff-5gbi/deploys/staging/1niuv4eagipb4qa5tet0
+To encore://store-stuff-5gbi
+ * [new branch]      main -> main
+updating local tracking ref 'refs/remotes/encore/main'
+ store-stuff  main ✔  $ 
+

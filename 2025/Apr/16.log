@@ -1,0 +1,2515 @@
+ ~  $ brew install lihaoyun6/tap/quickrecorder
+Running `brew update --auto-update`...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ef0bc1da0f381f61f3e1fbc1abaf7616f66d1e2fff5eff3682645f966077392d
+######################################################################### 100.0%
+==> Pouring portable-ruby-3.3.8.el_capitan.bottle.tar.gz
+==> homebrew/core is old and unneeded, untapping to save space...
+Untapping homebrew/core...
+Untapped 3 commands and 7542 formulae (7,462 files, 944.1MB).
+==> homebrew/cask is old and unneeded, untapping to save space...
+Untapping homebrew/cask...
+Untapped 7447 casks (4,614 files, 425.0MB).
+==> Auto-updated Homebrew!
+Updated 11 taps (homebrew/cask-fonts, homebrew/services, mongodb/brew, buildpacks/tap, goreleaser/tap, windmilleng/tap, tinygo-org/tools, ory/kratos, sass/sass, homebrew/core and homebrew/cask).
+==> New Formulae
+ab-av1                                   libsvgtiny
+acme.sh                                  libtatsu
+acronym                                  libtickit
+action-docs                              libultrahdr
+actions-batch                            libunicode
+ad                                       libvirt-python
+adapterremoval                           libwapcaplet
+adaptivecpp                              libxpresent
+afl++                                    libxsd-frontend
+age-plugin-se                            limbo
+aicommit                                 limesuite
+aider                                    litmusctl
+algolia                                  lla
+aliae                                    llama.cpp
+alive2                                   lld
+alloy                                    lld@19
+ampl-asl                                 llgo
+ansible-builder                          llvm@17
+ansible-creator                          llvm@18
+ansible@10                               llvm@19
+ansible@8                                localai
+ansible@9                                logdy
+anubis                                   lol-html
+anyquery                                 lsusb-laniksj
+apache-flink-cdc                         ltex-ls-plus
+apache-flink@1                           ludusavi
+appwrite                                 lume
+aqtinstall                               m68k-elf-binutils
+aqua                                     m68k-elf-gcc
+arelo                                    mac
+argc                                     macmon
+argtable3                                mactop
+asak                                     maeparser
+asm6809                                  magic-wormhole.rs
+asmfmt                                   mago
+astroterm                                mako
+async_simple                             malcontent
+atac                                     mani
+autobrr                                  manim
+autotrace                                mantra
+aws-c-auth                               mariadb@11.1
+aws-c-cal                                mariadb@11.2
+aws-c-common                             mariadb@11.4
+aws-c-compression                        marisa
+aws-c-event-stream                       markdown-oxide
+aws-c-http                               marmite
+aws-c-io                                 martin
+aws-c-mqtt                               mbpoll
+aws-c-s3                                 mcpm
+aws-c-sdkutils                           md2pdf
+aws-checksums                            mdformat
+aws-crt-cpp                              mdq
+awsdac                                   mdsh
+azqr                                     mdz
+azure-core-cpp                           meli
+azure-storage-blobs-cpp                  memray
+azure-storage-common-cpp                 mergiraf
+azurehound                               mihomo
+babelfish                                minijinja-cli
+bacon-ls                                 minio-warp
+bagels                                   mkdocs-material
+basedpyright                             mlx
+basti                                    mmdbctl
+batt                                     mmdbinspect
+bazel@7                                  mob
+bc-gh                                    mongodb/brew/mongodb-community@7.0
+beakerlib                                mongodb/brew/mongodb-enterprise@7.0
+beancount-language-server                mongodb/brew/mongodb-mongocryptd@7.0
+beanquery                                monocle
+beautysh                                 moon
+bed                                      morpheus
+behaviortree.cpp                         mox
+bender                                   msieve
+bibtex-tidy                              mtm
+bigquery-emulator                        mubeng
+binocle                                  mummer
+binsider                                 mysql-client@8.4
+blisp                                    mysql@8.4
+block-goose-cli                          nak
+bluez                                    nanobind
+bold                                     navidrome
+bombardier                               ncmdump
+boost@1.85                               neocmakelsp
+bootterm                                 neosync
+boring                                   nerdfetch
+bpftop                                   netaddr
+bpmnlint                                 netatalk
+bruno-cli                                netfetch
+bump-my-version                          netsurf-buildsystem
+c-blosc2                                 neverest
+c2patool                                 nextdns
+c3c                                      nmail
+c4core                                   nmstatectl
+cahute                                   node-red
+carapace                                 node@22
+cargo-cache                              nom
+cargo-chef                               noseyparker
+cargo-cyclonedx                          nowplaying-cli
+cargo-dist                               nping
+cargo-expand                             npm-check-updates
+cargo-flamegraph                         nrm
+cargo-fuzz                               nsync
+cargo-hack                               nuitka
+cargo-llvm-cov                           nuspell
+cargo-msrv                               nvtop
+cargo-public-api                         oasdiff
+cargo-run-bin                            ocaml@4
+cargo-shuttle                            ocicl
+cargo-sort                               odbc2parquet
+cargo-spellcheck                         oils-for-unix
+cargo-sweep                              oj
+cargo-update                             onion-location
+catgirl                                  onnx
+cbfmt                                    open-simh
+cdncheck                                 openapi-diff
+cekit                                    openapi-tui
+cf-terraforming                          openbao
+cfnctl                                   openfa
+chainhook                                openjdk@21
+chaos-client                             openjph
+chdig                                    opensca-cli
+cherrybomb                               oranda
+chiko                                    org-formation
+chisel-tunnel                            otel-cli
+chkbit                                   otree
+chsrc                                    otterdog
+cidr                                     ov
+clang-uml                                overarch
+clangql                                  overtls
+clickhouse-sql-parser                    oxker
+cljfmt                                   oxlint
+cloud-provider-kind                      packcc
+cloudflare-cli4                          packetry
+cloudfoundry-cli                         paperjam
+cloudquery                               parallel-disk-usage
+cmake-language-server                    parca
+cmake-lint                               parlay
+cmrc                                     parsedmarc
+cobo-cli                                 pass-import
+cobra-cli                                passt
+code2prompt                              pawk
+codeberg-cli                             pcaudiolib
+codecov-cli                              pdfly
+codesnap                                 pdfrip
+codevis                                  pedump
+comrak                                   percona-server@8.0
+comtrya                                  percona-xtrabackup@8.0
+coordgen                                 periphery
+cortexso                                 perl-dbd-mysql
+cot                                      pgbackrest
+cotila                                   pgcopydb
+cotp                                     pgrx
+cpp-lazy                                 phodav
+cpp-peglib                               php@8.2
+crates-tui                               php@8.3
+crossplane                               physunits
+crow                                     pie
+cspell                                   pinact
+csvlens                                  pipelight
+cyctl                                    pipet
+cyme                                     pistache
+cyphernetes                              pivit
+dalfox                                   pivy
+darklua                                  pixi-pack
+dbg-macro                                pkgx
+dblab                                    pkl
+deadfinder                               pkl-lsp
+decasify                                 planus
+decompose                                pnpm@8
+dep-tree                                 pnpm@9
+dependabot                               podlet
+descope                                  podman-tui
+dhall-toml                               policy_sentry
+diary                                    polkit
+dillo                                    porter
+dipc                                     poselib
+directx-headers                          postgresql-hll
+direwolf                                 postgresql@17
+dish                                     posting
+displayplacer                            poutine
+dissent                                  precious
+distill-cli                              prism-cli
+djlint                                   prjtrellis
+dnsgen                                   probe-rs-tools
+dockcheck                                progressline
+dockerfilegraph                          projectable
+dockerfmt                                promptfoo
+doltgres                                 proto
+doppler                                  protobuf@29
+dotnet@8                                 protoc-gen-grpc-java
+dotslash                                 protoc-gen-js
+dotter                                   proxyfor
+dpcmd                                    pscale
+dpic                                     pug
+dra                                      pulsarctl
+draft                                    punktf
+dragonbox                                purr
+drogon                                   pyp
+dry                                      pytest
+dtsroll                                  python-freethreading
+ducker                                   python-gdbm@3.13
+dud                                      python-tk@3.13
+dug                                      python@3.13
+dum                                      pyupgrade
+dvr-scan                                 qbec
+dwarfs                                   qbittorrent-cli
+dyff                                     qrtool
+easyeda2kicad                            qshell
+ecs-deploy                               ra-multiplex
+edbrowse                                 rage
+edgevpn                                  rainfrog
+egctl                                    ramalama
+energy                                   rapidfuzz-cpp
+ente-cli                                 rapidyaml
+envelope                                 rasterio
+envio                                    ratarmount
+epoll-shim                               ratchet
+erlang@26                                rathole
+erlang_ls                                ratify
+eslint_d                                 rattler-build
+espeak-ng                                rattler-index
+evans                                    rawdog
+eventpp                                  rdap
+evil-helix                               recc
+excalidraw-converter                     redict
+exomizer                                 redka
+fabric-ai                                redocly-cli
+facad                                    redress
+fairy-stockfish                          regal
+falcosecurity-libs                       render
+fancy-cat                                replxx
+fast_float                               repren
+fastapi                                  restish
+fastbuild                                retire
+fastly                                   retry
+fatal                                    reuse
+fcft                                     reveal-md
+fedify                                   rhai
+feluda                                   rink
+fern-api                                 rip2
+ffmpeg@6                                 river
+fierce                                   rmtrash
+fileql                                   robin-map
+fiona                                    rogcat
+firefly                                  ronn-ng
+fish-lsp                                 roxctl
+flang                                    rpcsvc-proto
+flawz                                    rpds-py
+flexiblas                                rsgain
+flow-control                             rshijack
+flowpipe                                 rsyncy
+fltk@1.3                                 rtabmap
+foot                                     ruby-lsp
+forbidden                                ruby@3.2
+fortitude                                ruby@3.3
+fortran-stdlib                           runitor
+foundry                                  rust-parallel
+fpm                                      rust-script
+fricas                                   rustcat
+frizbee                                  rustic
+ftnchek                                  rustls-ffi
+ftxui                                    rustywind
+funzzy                                   ryelang
+fzf-make                                 s5cmd
+g-ls                                     safety
+gabo                                     sby
+gama                                     scala@3.3
+gamdl                                    scnlib
+garnet                                   scooter
+gauth                                    screenpipe
+gcc@13                                   scryer-prolog
+gci                                      sdl3
+gcr                                      sdl3_image
+gdown                                    sdl3_ttf
+gdrive@2                                 seam
+gdtoolkit                                semver
+geesefs                                  sendme
+geni                                     senpai
+gensio                                   sentry-cli
+gersemi                                  sentry-native
+gfxutil                                  sequin
+ggh                                      sequoia-sq
+gh-ost                                   sequoia-sqv
+ghc@9.10                                 serie
+ghc@9.8                                  serpl
+gimmecert                                sesh
+git-grab                                 setconf
+git-graph                                sf
+git-ignore                               sfml@2
+git-mob                                  sfsexp
+git-spice                                shepherd
+git-split-diffs                          sherlock
+git-who                                  showcert
+github-mcp-server                        shuttle
+gitu                                     sidekick
+glasskube                                sigi
+glaze                                    sigsum-go
+glbinding@2                              sitefetch
+glibc@2.17                               sixtunnel
+globstar                                 slackdump
+gnmic                                    sleek
+gnome-builder                            slepc
+gnome-online-accounts                    slepc-complex
+go-blueprint                             slumber
+go-parquet-tools                         snakeviz
+go-size-analyzer                         snowflake-cli
+go@1.21                                  soapyhackrf
+go@1.22                                  soapyremote
+go@1.23                                  soft-serve
+godap                                    solo2-cli
+goimports                                span-lite
+goku                                     spicetify-cli
+golangci-lint-langserver                 spidermonkey@115
+gollama                                  spidermonkey@91
+gomi                                     spoofdpi
+gopeed                                   spytrap-adb
+goreleaser/tap/goreleaser-pro@2          sq
+goresym                                  sql-formatter
+gorilla-cli                              sqlboiler
+gotz                                     sqlitecpp
+gowall                                   squealer
+goyacc                                   srgn
+gplugin                                  ssh3
+gptme                                    sshpass
+gptscript                                sshx
+gql                                      starlark-rust
+grafana-alloy                            statesmith
+graphql-inspector                        static-web-server
+graphviz2drawio                          steamguard-cli
+greenmask                                stellar-cli
+grizzly                                  streamrip
+gsan                                     stripe-cli
+gtree                                    stripe-mock
+guile-fibers                             sttr
+gurk                                     sugarjar
+gut                                      sui
+h26forge                                 superfile
+halp                                     superhtml
+haproxy@2.8                              surfer
+harlequin                                sv2v
+harper                                   swc
+harsh                                    swctl
+havener                                  symfony-cli
+havn                                     synchrony
+hawkeye                                  sysaidmin
+hcledit                                  sysprof
+helm-docs                                tabiew
+helm-ls                                  tabulate
+heroku                                   tach
+hevi                                     talosctl
+hgrep                                    tartufo
+hishtory                                 task@2
+hjson                                    taskflow
+hk                                       taskopen
+hl                                       tcl-tk@8
+hopscotch-map                            tdb
+html2markdown                            telegram-downloader
+http-server-rs                           television
+hub-tool                                 templ
+humanlog                                 tenere
+hypopg                                   tenv
+i686-elf-grub                            termbg
+iamb                                     termscp
+icann-rdap                               terraform-cleaner
+icloudpd                                 terraform-iam-policy-validator
+icu4c@74                                 terrahash
+icu4c@75                                 terramaid
+icu4c@76                                 terrapin-scanner
+icu4c@77                                 testscript
+identme                                  tevent
+idsgrep                                  tex-fmt
+ignite                                   texi2mdoc
+iguana                                   text-embeddings-inference
+imgp                                     texttest
+immich-cli                               tf-summarize
+immich-go                                tfautomv
+inchi                                    tfcmt
+infisical                                tfocus
+ingress2gateway                          tfprovidercheck
+inlyne                                   tgpt
+instaloader                              the-way
+iowow                                    threatcl
+ipatool                                  tiny
+ipsw                                     tinymist
+is-fast                                  tinysparql
+jaguar                                   tllist
+jenkins-cli                              tml
+jikken                                   tmpmail
+jira-cli                                 tmt
+jnv                                      tmux-sessionizer
+jot                                      todoist
+js-beautify                              tofuenv
+jsbeautifier                             toipe
+json2hcl                                 tomcat@10
+jsontoolkit                              toml2json
+jsrepo                                   tomlplusplus
+jtbl                                     topfew
+jupytext                                 topiary
+jwt-cli                                  traefik@2
+jxl-oxide                                trdsql
+k8sgpt                                   tsui
+kafkactl                                 tuisky
+kamal-proxy                              twitch-cli
+kanata                                   typeshare
+kapp                                     typioca
+kaskade                                  typos-lsp
+kbld                                     typstfmt
+kconf                                    typstyle
+kea                                      tzdb
+keep-sorted                              ubi
+keeper-commander                         ufbt
+keyutils                                 umka-lang
+kfr                                      umockdev
+kin                                      unciv
+kiota                                    uni-algo
+kirimase                                 urlscan
+koji                                     usage
+kool                                     uutils-diffutils
+kraftkit                                 uv
+krep                                     uvw
+ktexttemplate                            valkey
+ktfmt                                    vals
+ktor                                     veccore
+kty                                      vedic
+kube-bench                               veilid
+kubecolor                                versitygw
+kubectl-cnpg                             veryfasttree
+kubectl-rook-ceph                        vexctl
+kubehound                                vfkit
+kubelogin                                vfox
+kubeone                                  vgt
+kubernetes-cli@1.29                      victorialogs
+kubernetes-cli@1.30                      vimtutor-sequel
+kubernetes-cli@1.31                      vipsdisp
+kubeshark                                virtctl
+kubetail                                 visidata
+kubetrim                                 vo-amrwbenc
+kubetui                                  vrc-get
+kubevpn                                  vscli
+kuto                                     vue-language-server
+kuzco                                    vulkan-profiles
+kuzu                                     vulkan-volk
+lando-cli                                wails
+langgraph-cli                            wasi-libc
+languagetool-rust                        wasi-runtimes
+largetifftools                           wasm-component-ld
+lavat                                    wasmedge
+lazyjj                                   watcher
+lazyjournal                              wcstools
+lazysql                                  wcurl
+lbfgspp                                  weaviate
+leetcode-cli                             weaviate-cli
+leetgo                                   wfa2-lib
+legba                                    wgo
+lexido                                   whisperkit-cli
+libassuan@2                              wstunnel
+libblastrampoline                        wthrr
+libcdio-paranoia                         wush
+libconfini                               x-cmd
+libcotp                                  x86_64-elf-grub
+libcss                                   xan
+libcutl                                  xc
+libcyaml                                 xcode-build-server
+libdex                                   xcresultparser
+libdom                                   xeyes
+libdpp                                   xk6
+libesedb                                 xlsclients
+libformfactor                            xmq
+libgedit-gfls                            xprop
+libgit2@1.7                              xroar
+libgit2@1.8                              xtermcontrol
+libgoa                                   xwininfo
+libgudev                                 yalantinglibs
+libheinz                                 yamlfix
+libhubbub                                yara-x
+libkeyfinder                             yatas
+liblc3                                   yices2
+libmps                                   yo
+libmsquic                                yoke
+libnice-gstreamer                        yor
+libnsbmp                                 yozefu
+libnsgif                                 ytt
+liborigin                                yutu
+libparserutils                           zfind
+libpeas@1                                zigmod
+libpg_query                              zigup
+libpostal                                zimfw
+libpostal-rest                           zipkin
+librime                                  zizmor
+libscfg                                  zlib-ng-compat
+libsidplayfp                             zlib-rs
+libspelling                              zns
+libspelling@0.2                          zsh-f-sy-h
+libsql                                   zsh-system-clipboard
+==> New Casks
+1password-cli@1                          font-nanum-pen-script
+1password-cli@beta                       font-nanum-square
+1password@7                              font-nanum-square-neo
+1password@beta                           font-nanum-square-round
+1password@nightly                        font-narnoor
+ableset                                  font-national-park
+ableton-live-intro@11                    font-nats
+ableton-live-lite@11                     font-neonderthaw
+ableton-live-standard@11                 font-nerko-one
+ableton-live-suite@10                    font-neucha
+ableton-live-suite@11                    font-neuton
+ace-studio                               font-new-amsterdam
+acreom                                   font-new-computer-modern
+acronis-true-image-cleanup-tool          font-new-rocker
+adguard-vpn@nightly                      font-new-tegomin
+adguard@nightly                          font-new-york
+adlock                                   font-news-cycle
+advanced-renamer                         font-newsreader
+aerial@beta                              font-nico-moji
+affinity-designer@1                      font-niconne
+affinity-photo@1                         font-nikukyu
+affinity-publisher@1                     font-nimbus-sans-l
+agent-tars                               font-niramit
+aide-app                                 font-nixie-one
+airdash                                  font-nobile
+alcom                                    font-nokora
+alcove                                   font-norican
+alfred@4                                 font-nosifer
+amiberry                                 font-nosifer-caps
+amie                                     font-notable
+amneziavpn                               font-nothing-you-could-do
+anchor-wallet                            font-noticia-text
+android-studio-preview@beta              font-noto-color-emoji
+android-studio-preview@canary            font-noto-color-emoji-compat-test
+anka-build-cloud-controller              font-noto-emoji
+anka-build-cloud-registry                font-noto-kufi-arabic
+antinote                                 font-noto-mono
+anythingllm                              font-noto-mono-for-powerline
+anytype@alpha                            font-noto-music
+anytype@beta                             font-noto-naskh-arabic
+apidog-europe                            font-noto-naskh-arabic-ui
+approf                                   font-noto-nastaliq-urdu
+aqua                                     font-noto-nerd-font
+archivewebpage                           font-noto-rashi-hebrew
+arctic                                   font-noto-sans
+arduino-ide@nightly                      font-noto-sans-adlam
+arm-performance-libraries                font-noto-sans-adlam-unjoined
+arturia-software-center                  font-noto-sans-anatolian-hieroglyphs
+atv-remote                               font-noto-sans-arabic
+autogram                                 font-noto-sans-arabic-ui
+automattic-texts                         font-noto-sans-armenian
+automounterhelper                        font-noto-sans-avestan
+avbeam                                   font-noto-sans-balinese
+aw-edid-editor                           font-noto-sans-bamum
+ayugram                                  font-noto-sans-bassa-vah
+azure-data-studio@insiders               font-noto-sans-batak
+ba-connected                             font-noto-sans-bengali
+backyard-ai                              font-noto-sans-bengali-ui
+badgeify                                 font-noto-sans-bhaiksuki
+ball                                     font-noto-sans-brahmi
+bambu-connect                            font-noto-sans-buginese
+bananas                                  font-noto-sans-buhid
+batfi                                    font-noto-sans-canadian-aboriginal
+bbackupp                                 font-noto-sans-carian
+bbedit@14                                font-noto-sans-caucasian-albanian
+beaver-notes                             font-noto-sans-chakma
+bentobox                                 font-noto-sans-cham
+beutl                                    font-noto-sans-cherokee
+beyond-compare@4                         font-noto-sans-chorasmian
+beyond-compare@beta                      font-noto-sans-cjk
+bezel                                    font-noto-sans-cjk-hk
+bias-fx                                  font-noto-sans-cjk-jp
+bindiff                                  font-noto-sans-cjk-kr
+bitbox                                   font-noto-sans-cjk-sc
+blender@lts                              font-noto-sans-cjk-tc
+blip                                     font-noto-sans-coptic
+blitz-gg                                 font-noto-sans-cuneiform
+block-goose                              font-noto-sans-cypriot
+blockstream-green                        font-noto-sans-cypro-minoan
+blood-on-the-clocktower-online           font-noto-sans-deseret
+bobhelper                                font-noto-sans-devanagari
+boltai                                   font-noto-sans-devanagari-ui
+bookmacster@beta                         font-noto-sans-display
+boosteroid                               font-noto-sans-duployan
+brave-browser@beta                       font-noto-sans-egyptian-hieroglyphs
+brave-browser@dev                        font-noto-sans-elbasan
+brave-browser@nightly                    font-noto-sans-elymaic
+brightintosh                             font-noto-sans-ethiopic
+brightvpn                                font-noto-sans-georgian
+browser-actions                          font-noto-sans-glagolitic
+buckets@beta                             font-noto-sans-gothic
+bugdom2                                  font-noto-sans-grantha
+cables                                   font-noto-sans-gujarati
+cahier                                   font-noto-sans-gujarati-ui
+caido                                    font-noto-sans-gunjala-gondi
+calibrite-profiler                       font-noto-sans-gurmukhi
+candy-crisis                             font-noto-sans-gurmukhi-ui
+canon-ufrii-driver                       font-noto-sans-hanifi-rohingya
+cap                                      font-noto-sans-hanunoo
+capcut                                   font-noto-sans-hatran
+captainplugins                           font-noto-sans-hebrew
+carbon-copy-cloner@5                     font-noto-sans-hk
+carbon-copy-cloner@6                     font-noto-sans-imperial-aramaic
+cardo-update                             font-noto-sans-indic-siyaq-numbers
+ccstudio                                 font-noto-sans-inscriptional-pahlavi
+charles@4                                font-noto-sans-inscriptional-parthian
+charmstone                               font-noto-sans-javanese
+chatgpt                                  font-noto-sans-jp
+chatwise                                 font-noto-sans-kaithi
+cherry-studio                            font-noto-sans-kannada
+chime                                    font-noto-sans-kannada-ui
+chime@alpha                              font-noto-sans-kawi
+choice-financial-terminal                font-noto-sans-kayah-li
+chordpotion                              font-noto-sans-kharoshthi
+chromedriver@beta                        font-noto-sans-khmer
+clash-verge-rev                          font-noto-sans-khmer-ui
+claude                                   font-noto-sans-khojki
+cleanclip                                font-noto-sans-khudawadi
+cleanupbuddy                             font-noto-sans-kr
+clearvpn                                 font-noto-sans-lao
+clion@eap                                font-noto-sans-lao-looped
+clipbook                                 font-noto-sans-lao-ui
+cloudflare-warp@beta                     font-noto-sans-lepcha
+cocoapacketanalyzer                      font-noto-sans-limbu
+colemak-dh                               font-noto-sans-linear-a
+colemak-dhk                              font-noto-sans-linear-b
+comfyui                                  font-noto-sans-lisu
+companion                                font-noto-sans-lycian
+companion-satellite                      font-noto-sans-lydian
+companion@beta                           font-noto-sans-mahajani
+consul                                   font-noto-sans-malayalam
+core-tunnel                              font-noto-sans-malayalam-ui
+cork                                     font-noto-sans-mandaic
+corretto@11                              font-noto-sans-manichaean
+corretto@17                              font-noto-sans-marchen
+corretto@21                              font-noto-sans-masaram-gondi
+corretto@8                               font-noto-sans-math
+coterm                                   font-noto-sans-mayan-numerals
+cpu-info                                 font-noto-sans-medefaidrin
+crashplan                                font-noto-sans-meetei-mayek
+creality-print                           font-noto-sans-mende-kikakui
+crosspaste                               font-noto-sans-meroitic
+crystaldiffract                          font-noto-sans-miao
+crystalviewer                            font-noto-sans-modi
+dana-dex                                 font-noto-sans-mongolian
+dante-controller                         font-noto-sans-mono
+dante-via                                font-noto-sans-mono-cjk-hk
+darkmodebuddy                            font-noto-sans-mono-cjk-jp
+dash@6                                   font-noto-sans-mono-cjk-kr
+dataflare                                font-noto-sans-mono-cjk-sc
+db-browser-for-sqlcipher@nightly         font-noto-sans-mono-cjk-tc
+db-browser-for-sqlite@nightly            font-noto-sans-mro
+deadbeef@nightly                         font-noto-sans-multani
+deelay                                   font-noto-sans-myanmar
+default-handler                          font-noto-sans-myanmar-ui
+defold@alpha                             font-noto-sans-n-ko
+defold@beta                              font-noto-sans-nabataean
+dehesselle-meld                          font-noto-sans-nag-mundari
+desktime                                 font-noto-sans-nandinagari
+dfcf                                     font-noto-sans-new-tai-lue
+discord@canary                           font-noto-sans-newa
+discord@development                      font-noto-sans-nko
+discord@ptb                              font-noto-sans-nko-unjoined
+display-pilot                            font-noto-sans-nushu
+displaybuddy                             font-noto-sans-ogham
+djstudio                                 font-noto-sans-ol-chiki
+djuced                                   font-noto-sans-old-hungarian
+dnsmonitor                               font-noto-sans-old-italic
+dockdoor                                 font-noto-sans-old-north-arabian
+dockfix                                  font-noto-sans-old-permic
+dockside                                 font-noto-sans-old-persian
+dolphin@beta                             font-noto-sans-old-sogdian
+dolphin@dev                              font-noto-sans-old-south-arabian
+domzilla-caffeine                        font-noto-sans-old-turkic
+dorico                                   font-noto-sans-oriya
+dosbox-staging                           font-noto-sans-oriya-ui
+dotnet-sdk@preview                       font-noto-sans-osage
+dotnet@preview                           font-noto-sans-osmanya
+dropbox@beta                             font-noto-sans-pahawh-hmong
+duplicateaudiofinder                     font-noto-sans-palmyrene
+ea                                       font-noto-sans-pau-cin-hau
+earnapp                                  font-noto-sans-phags-pa
+easydevo                                 font-noto-sans-phagspa
+effect-house                             font-noto-sans-phoenician
+egovframedev                             font-noto-sans-psalter-pahlavi
+elecom-mouse-util                        font-noto-sans-rejang
+element@nightly                          font-noto-sans-runic
+elephas@beta                             font-noto-sans-samaritan
+elgato-capture-device-utility            font-noto-sans-saurashtra
+emacs@nightly                            font-noto-sans-sc
+emacs@pretest                            font-noto-sans-sharada
+emby                                     font-noto-sans-shavian
+emclient@beta                            font-noto-sans-siddham
+endless-sky-high-dpi                     font-noto-sans-signwriting
+ente-auth                                font-noto-sans-sinhala
+excalidrawz                              font-noto-sans-sinhala-ui
+excire-foto                              font-noto-sans-sogdian
+fastdmg                                  font-noto-sans-sora-sompeng
+fathom                                   font-noto-sans-soyombo
+feedflow                                 font-noto-sans-sundanese
+figma@beta                               font-noto-sans-syloti-nagri
+find-my-ports                            font-noto-sans-symbols
+firefox@beta                             font-noto-sans-symbols-2
+firefox@cn                               font-noto-sans-syriac
+firefox@developer-edition                font-noto-sans-syriac-eastern
+firefox@esr                              font-noto-sans-syriac-estrangela
+firefox@nightly                          font-noto-sans-syriac-western
+fixkey                                   font-noto-sans-tagalog
+flashspace                               font-noto-sans-tagbanwa
+flowvision                               font-noto-sans-tai-le
+flox                                     font-noto-sans-tai-tham
+flutterflow                              font-noto-sans-tai-viet
+focu                                     font-noto-sans-takri
+focusrite-control-2                      font-noto-sans-tamil
+folding-at-home@beta                     font-noto-sans-tamil-supplement
+follow@alpha                             font-noto-sans-tamil-ui
+font-0xproto                             font-noto-sans-tangsa
+font-0xproto-nerd-font                   font-noto-sans-tc
+font-3270                                font-noto-sans-telugu
+font-3270-nerd-font                      font-noto-sans-telugu-ui
+font-42dot-sans                          font-noto-sans-thaana
+font-437-plus                            font-noto-sans-thai
+font-abeezee                             font-noto-sans-thai-looped
+font-abel                                font-noto-sans-thai-ui
+font-abhaya-libre                        font-noto-sans-tibetan
+font-aboreto                             font-noto-sans-tifinagh
+font-aboriginal-sans                     font-noto-sans-tirhuta
+font-aboriginal-serif                    font-noto-sans-ugaritic
+font-abril-fatface                       font-noto-sans-vai
+font-abyssinica-sil                      font-noto-sans-vithkuqi
+font-academicons                         font-noto-sans-wancho
+font-aclonica                            font-noto-sans-warang-citi
+font-acme                                font-noto-sans-yi
+font-actor                               font-noto-sans-zanabazar-square
+font-adamina                             font-noto-serif
+font-adinatha-tamil-brahmi               font-noto-serif-ahom
+font-adlam-display                       font-noto-serif-armenian
+font-adobe-blank                         font-noto-serif-balinese
+font-advent-pro                          font-noto-serif-bengali
+font-adwaita                             font-noto-serif-cjk
+font-afacad                              font-noto-serif-cjk-hk
+font-afacad-flux                         font-noto-serif-cjk-jp
+font-african-sans                        font-noto-serif-cjk-kr
+font-african-serif                       font-noto-serif-cjk-sc
+font-agave                               font-noto-serif-cjk-tc
+font-agave-nerd-font                     font-noto-serif-devanagari
+font-agbalumo                            font-noto-serif-display
+font-agdasima                            font-noto-serif-dogra
+font-agu-display                         font-noto-serif-ethiopic
+font-aguafina-script                     font-noto-serif-georgian
+font-ahuramzda                           font-noto-serif-grantha
+font-aileron                             font-noto-serif-gujarati
+font-akatab                              font-noto-serif-gurmukhi
+font-akaya-kanadaka                      font-noto-serif-hebrew
+font-akaya-telivigala                    font-noto-serif-hentaigana
+font-akronim                             font-noto-serif-hk
+font-aksara-bali-galang                  font-noto-serif-jp
+font-akshar                              font-noto-serif-kannada
+font-aladin                              font-noto-serif-khitan-small-script
+font-alata                               font-noto-serif-khmer
+font-alatsi                              font-noto-serif-khojki
+font-albert-sans                         font-noto-serif-kr
+font-albertella                          font-noto-serif-lao
+font-aldrich                             font-noto-serif-makasar
+font-alef                                font-noto-serif-malayalam
+font-alegreya                            font-noto-serif-myanmar
+font-alegreya-sans                       font-noto-serif-np-hmong
+font-alegreya-sans-sc                    font-noto-serif-nyiakeng-puachue-hmong
+font-alegreya-sc                         font-noto-serif-old-uyghur
+font-aleo                                font-noto-serif-oriya
+font-alex-brush                          font-noto-serif-ottoman-siyaq
+font-alexandria                          font-noto-serif-sc
+font-alfa-slab-one                       font-noto-serif-sinhala
+font-alice                               font-noto-serif-tamil
+font-alike                               font-noto-serif-tangut
+font-alike-angular                       font-noto-serif-tc
+font-alkalami                            font-noto-serif-telugu
+font-alkatra                             font-noto-serif-thai
+font-allan                               font-noto-serif-tibetan
+font-allerta                             font-noto-serif-todhri
+font-allerta-stencil                     font-noto-serif-toto
+font-allison                             font-noto-serif-vithkuqi
+font-allura                              font-noto-serif-yezidi
+font-almarai                             font-noto-traditional-nushu
+font-almendra                            font-noto-znamenny-musical-notation
+font-almendra-display                    font-nova-cut
+font-almendra-sc                         font-nova-flat
+font-alumni-sans                         font-nova-mono
+font-alumni-sans-collegiate-one          font-nova-oval
+font-alumni-sans-collegiate-one-sc       font-nova-round
+font-alumni-sans-inline-one              font-nova-script
+font-alumni-sans-pinstripe               font-nova-slim
+font-alumni-sans-sc                      font-nova-square
+font-amarante                            font-ntr
+font-amaranth                            font-numans
+font-amatic-sc                           font-nunito
+font-amethysta                           font-nunito-sans
+font-amiko                               font-nuosu-sil
+font-amiri                               font-ocr
+font-amiri-quran                         font-odibee-sans
+font-amita                               font-odor-mean-chey
+font-amstelvar-alpha                     font-office-code-pro
+font-anaheim                             font-offside
+font-andada-pro                          font-ofl-sorts-mill-goudy-tt
+font-andagii                             font-oi
+font-andale-mono                         font-ojuju
+font-andika                              font-old-standard-tt
+font-andron-scriptor-web                 font-oldenburg
+font-anek-bangla                         font-ole
+font-anek-devanagari                     font-oleo-script
+font-anek-gujarati                       font-oleo-script-swash-caps
+font-anek-gurmukhi                       font-onest
+font-anek-kannada                        font-oooh-baby
+font-anek-latin                          font-open-dyslexic
+font-anek-malayalam                      font-open-dyslexic-nerd-font
+font-anek-odia                           font-open-iconic
+font-anek-tamil                          font-open-sans
+font-anek-telugu                         font-open-sans-hebrew
+font-angkor                              font-open-sans-hebrew-condensed
+font-anka-coder                          font-oppo-sans
+font-annapurna-sil                       font-optician-sans
+font-annie-use-your-telescope            font-oranienbaum
+font-anonymice-nerd-font                 font-orbit
+font-anonymice-powerline                 font-orbitron
+font-anonymous-pro                       font-oregano
+font-anta                                font-orelega-one
+font-antic                               font-orienta
+font-antic-didone                        font-original-surfer
+font-antic-slab                          font-ostrich-sans
+font-antinoou                            font-oswald
+font-anton                               font-otomanopee-one
+font-anton-sc                            font-outfit
+font-antonio                             font-over-the-rainbow
+font-anuphan                             font-overlock
+font-anybody                             font-overlock-sc
+font-aoboshi-one                         font-overpass
+font-aporetic                            font-overpass-mono
+font-ar-one-sans                         font-overpass-nerd-font
+font-arapey                              font-overused-grotesk
+font-arbutus                             font-ovo
+font-arbutus-slab                        font-oxanium
+font-architects-daughter                 font-oxygen
+font-architype-renner                    font-oxygen-mono
+font-archivo                             font-pacifico
+font-archivo-black                       font-padauk
+font-archivo-narrow                      font-padyakke-expanded-one
+font-are-you-serious                     font-palanquin
+font-aref-ruqaa                          font-palanquin-dark
+font-aref-ruqaa-ink                      font-palemonasmufi-bold
+font-arial                               font-palemonasmufi-bolditalic
+font-arial-black                         font-palemonasmufi-italic
+font-arima                               font-palemonasmufi-regular
+font-arimo                               font-palette-mosaic
+font-arimo-nerd-font                     font-pangolin
+font-arizonia                            font-paprika
+font-ark-pixel-10px-monospaced           font-parisienne
+font-ark-pixel-10px-proportional         font-parkinsans
+font-ark-pixel-12px-monospaced           font-passero-one
+font-ark-pixel-12px-proportional         font-passion-one
+font-ark-pixel-16px-monospaced           font-passions-conflict
+font-ark-pixel-16px-proportional         font-pathway-extreme
+font-armata                              font-pathway-gothic-one
+font-arsenal                             font-patrick-hand
+font-arsenal-sc                          font-patrick-hand-sc
+font-artifika                            font-pattaya
+font-arvo                                font-patua-one
+font-arya                                font-pavanam
+font-asap                                font-paytone-one
+font-asap-condensed                      font-peddana
+font-asar                                font-peralta
+font-asset                               font-permanent-marker
+font-assistant                           font-petemoss
+font-astloch                             font-petit-formal-script
+font-asul                                font-petrona
+font-athiti                              font-phetsarath
+font-atkinson-hyperlegible               font-philosopher
+font-atkinson-hyperlegible-mono          font-photonico-code
+font-atkinson-hyperlegible-next          font-phudu
+font-atma                                font-piazzolla
+font-atomic-age                          font-piedra
+font-aubrey                              font-pigmo00
+font-audiowide                           font-pigmo01
+font-aurulent-sans-mono-nerd-font        font-pinyon-script
+font-autour-one                          font-pirata-one
+font-average                             font-pixel-code
+font-average-mono                        font-pixelify-sans
+font-average-sans                        font-plangothic
+font-averia-gruesa-libre                 font-plaster
+font-averia-libre                        font-platypi
+font-averia-sans-libre                   font-play
+font-averia-serif-libre                  font-playball
+font-awesome-terminal-fonts              font-playfair
+font-azeret-mono                         font-playfair-display
+font-azonix                              font-playfair-display-sc
+font-b612                                font-playpen-sans
+font-b612-mono                           font-playpen-sans-arabic
+font-babylonica                          font-playpen-sans-deva
+font-bacasime-antique                    font-playpen-sans-hebrew
+font-bad-script                          font-playpen-sans-thai
+font-badeen-display                      font-playwrite-ar
+font-bagel-fat-one                       font-playwrite-ar-guides
+font-bahiana                             font-playwrite-at
+font-bahianita                           font-playwrite-at-guides
+font-bai-jamjuree                        font-playwrite-au-nsw
+font-bakbak-one                          font-playwrite-au-nsw-guides
+font-ballet                              font-playwrite-au-qld
+font-baloo                               font-playwrite-au-qld-guides
+font-baloo-2                             font-playwrite-au-sa
+font-baloo-bhai-2                        font-playwrite-au-sa-guides
+font-baloo-bhaijaan-2                    font-playwrite-au-tas
+font-baloo-bhaina-2                      font-playwrite-au-tas-guides
+font-baloo-chettan-2                     font-playwrite-au-vic
+font-baloo-da-2                          font-playwrite-au-vic-guides
+font-baloo-paaji-2                       font-playwrite-be-vlg
+font-baloo-tamma-2                       font-playwrite-be-vlg-guides
+font-baloo-tammudu-2                     font-playwrite-be-wal
+font-baloo-thambi-2                      font-playwrite-be-wal-guides
+font-balsamiq-sans                       font-playwrite-br
+font-balthazar                           font-playwrite-br-guides
+font-bangers                             font-playwrite-ca
+font-barlow                              font-playwrite-ca-guides
+font-barlow-condensed                    font-playwrite-cl
+font-barlow-semi-condensed               font-playwrite-cl-guides
+font-barriecito                          font-playwrite-co
+font-barrio                              font-playwrite-co-guides
+font-basic                               font-playwrite-cu
+font-baskervville                        font-playwrite-cu-guides
+font-baskervville-sc                     font-playwrite-cz
+font-batang                              font-playwrite-cz-guides
+font-batangche                           font-playwrite-de-grund
+font-battambang                          font-playwrite-de-grund-guides
+font-baumans                             font-playwrite-de-la
+font-bayon                               font-playwrite-de-la-guides
+font-be-vietnam-pro                      font-playwrite-de-sas
+font-beau-rivage                         font-playwrite-de-sas-guides
+font-bebas-neue                          font-playwrite-de-va
+font-beiruti                             font-playwrite-de-va-guides
+font-belanosima                          font-playwrite-dk-loopet
+font-belgrano                            font-playwrite-dk-loopet-guides
+font-bellefair                           font-playwrite-dk-uloopet
+font-belleza                             font-playwrite-dk-uloopet-guides
+font-bellota                             font-playwrite-es
+font-bellota-text                        font-playwrite-es-deco
+font-benchnine                           font-playwrite-es-deco-guides
+font-benne                               font-playwrite-es-guides
+font-bentham                             font-playwrite-fr-moderne
+font-berkshire-swash                     font-playwrite-fr-moderne-guides
+font-besley                              font-playwrite-fr-trad
+font-beth-ellen                          font-playwrite-fr-trad-guides
+font-bevan                               font-playwrite-gb-j
+font-bhavuka                             font-playwrite-gb-j-guides
+font-bhutuka-expanded-one                font-playwrite-gb-s
+font-big-shoulders                       font-playwrite-gb-s-guides
+font-big-shoulders-display               font-playwrite-hr
+font-big-shoulders-display-sc            font-playwrite-hr-guides
+font-big-shoulders-inline                font-playwrite-hr-lijeva
+font-big-shoulders-inline-display        font-playwrite-hr-lijeva-guides
+font-big-shoulders-inline-display-sc     font-playwrite-hu
+font-big-shoulders-inline-text           font-playwrite-hu-guides
+font-big-shoulders-inline-text-sc        font-playwrite-id
+font-big-shoulders-stencil               font-playwrite-id-guides
+font-big-shoulders-stencil-display       font-playwrite-ie
+font-big-shoulders-stencil-display-sc    font-playwrite-ie-guides
+font-big-shoulders-stencil-text          font-playwrite-in
+font-big-shoulders-stencil-text-sc       font-playwrite-in-guides
+font-big-shoulders-text                  font-playwrite-is
+font-big-shoulders-text-sc               font-playwrite-is-guides
+font-bigblue-terminal-nerd-font          font-playwrite-it-moderna
+font-bigelow-rules                       font-playwrite-it-moderna-guides
+font-bigshot-one                         font-playwrite-it-trad
+font-bilbo                               font-playwrite-it-trad-guides
+font-bilbo-swash-caps                    font-playwrite-mx
+font-biorhyme                            font-playwrite-mx-guides
+font-biorhyme-expanded                   font-playwrite-ng-modern
+font-birthstone                          font-playwrite-ng-modern-guides
+font-birthstone-bounce                   font-playwrite-nl
+font-biryani                             font-playwrite-nl-guides
+font-bitcount                            font-playwrite-no
+font-bitcount-prop-single-ink            font-playwrite-no-guides
+font-bitcount-single-ink                 font-playwrite-nz
+font-bitstream-vera                      font-playwrite-nz-guides
+font-bitstream-vera-sans-mono-nerd-font  font-playwrite-pe
+font-bitter                              font-playwrite-pe-guides
+font-bitter-ht                           font-playwrite-pl
+font-biz-udgothic                        font-playwrite-pl-guides
+font-biz-udmincho                        font-playwrite-pt
+font-biz-udpgothic                       font-playwrite-pt-guides
+font-biz-udpmincho                       font-playwrite-ro
+font-black-and-white-picture             font-playwrite-ro-guides
+font-black-han-sans                      font-playwrite-sk
+font-black-ops-one                       font-playwrite-sk-guides
+font-blackout                            font-playwrite-tz
+font-blaka                               font-playwrite-tz-guides
+font-blaka-hollow                        font-playwrite-us-modern
+font-blaka-ink                           font-playwrite-us-modern-guides
+font-blex-mono-nerd-font                 font-playwrite-us-trad
+font-blinker                             font-playwrite-us-trad-guides
+font-blokk-neue                          font-playwrite-vn
+font-bm                                  font-playwrite-vn-guides
+font-bodoni-moda                         font-playwrite-za
+font-bodoni-moda-sc                      font-playwrite-za-guides
+font-bokor                               font-plemol-jp
+font-boldonse                            font-plemol-jp-hs
+font-bona-nova                           font-plemol-jp-nf
+font-bona-nova-sc                        font-plus-jakarta-sans
+font-bonbon                              font-pochaevsk
+font-bonheur-royale                      font-podkova
+font-boogaloo                            font-podkova-vf-beta
+font-borel                               font-poetsen-one
+font-bowlby-one                          font-poiret-one
+font-bowlby-one-sc                       font-poller-one
+font-braah-one                           font-poltawski-nowy
+font-brass-mono                          font-poly
+font-bravura                             font-pompiere
+font-brawler                             font-ponnala
+font-bree-serif                          font-ponomar
+font-bricolage-grotesque                 font-pontano-sans
+font-briem-hand                          font-poor-story
+font-brill                               font-poppins
+font-bruno-ace                           font-poppins-latin
+font-bruno-ace-sc                        font-poprumcute
+font-brygada-1918                        font-port-lligat-sans
+font-bubblegum-sans                      font-port-lligat-slab
+font-bubbler-one                         font-porter-sans-block
+font-buda                                font-potta-one
+font-buenard                             font-powerline-symbols
+font-bukyvede-bold                       font-pragati-narrow
+font-bukyvede-italic                     font-praise
+font-bukyvede-regular                    font-prata
+font-bungee                              font-preahvihear
+font-bungee-color                        font-press-start-2p
+font-bungee-hairline                     font-pretendard
+font-bungee-inline                       font-pretendard-gov
+font-bungee-outline                      font-pretendard-jp
+font-bungee-shade                        font-pretendard-std
+font-bungee-spice                        font-pridi
+font-bungee-tint                         font-princess-sofia
+font-butcherman                          font-prociono
+font-butterfly-kids                      font-profont-nerd-font
+font-bytesized                           font-profontx
+font-cabin                               font-proggy-clean-tt-nerd-font
+font-cabin-condensed                     font-prompt
+font-cabin-sketch                        font-prosto-one
+font-cactus-classical-serif              font-protest-guerrilla
+font-caesar-dressing                     font-protest-revolution
+font-cagliostro                          font-protest-riot
+font-cairo                               font-protest-strike
+font-cairo-play                          font-proza-libre
+font-cal-sans                            font-pt-mono
+font-caladea                             font-pt-sans
+font-calistoga                           font-pt-sans-caption
+font-calligraffitti                      font-pt-sans-narrow
+font-cambay                              font-pt-serif
+font-cambo                               font-pt-serif-caption
+font-camingocode                         font-public-sans
+font-candal                              font-puppies-play
+font-cantarell                           font-puritan
+font-cantata-one                         font-purple-purse
+font-cantora-one                         font-pushster
+font-caprasimo                           font-qahiri
+font-capriola                            font-quando
+font-caramel                             font-quantico
+font-carattere                           font-quattrocento
+font-cardo                               font-quattrocento-sans
+font-carlito                             font-questrial
+font-carme                               font-quicksand
+font-carrois-gothic                      font-quintessential
+font-carrois-gothic-sc                   font-qwigley
+font-carter-one                          font-qwitcher-grypen
+font-cascadia-code                       font-racing-sans-one
+font-cascadia-code-nf                    font-radio-canada
+font-cascadia-code-pl                    font-radio-canada-big
+font-cascadia-mono                       font-radley
+font-cascadia-mono-nf                    font-rajdhani
+font-cascadia-mono-pl                    font-rakkas
+font-caskaydia-cove-nerd-font            font-raleway
+font-caskaydia-mono-nerd-font            font-raleway-dots
+font-castoro                             font-ramabhadra
+font-castoro-titling                     font-ramaraja
+font-catamaran                           font-rambla
+font-caudex                              font-rammetto-one
+font-caveat                              font-rampart-one
+font-caveat-brush                        font-ranchers
+font-cedarville-cursive                  font-rancho
+font-ceviche-one                         font-ranga
+font-chakra-petch                        font-rasa
+font-changa                              font-rationale
+font-changa-one                          font-ravi-prakash
+font-chango                              font-readex-pro
+font-chapbook                            font-recursive
+font-charis-sil                          font-recursive-code
+font-charm                               font-recursive-desktop
+font-charmonman                          font-recursive-mono-nerd-font
+font-charter                             font-red-hat-display
+font-chathura                            font-red-hat-mono
+font-chau-philomene-one                  font-red-hat-text
+font-chela-one                           font-red-rose
+font-chelsea-market                      font-redacted
+font-chenla                              font-redacted-script
+font-chenyuluoyan                        font-reddit-mono
+font-cherish                             font-reddit-sans
+font-cherry-bomb-one                     font-reddit-sans-condensed
+font-cherry-cream-soda                   font-redhat
+font-cherry-swash                        font-redressed
+font-chewy                               font-reem-kufi
+font-chiayi-city                         font-reem-kufi-fun
+font-chicle                              font-reem-kufi-ink
+font-chilanka                            font-reenie-beanie
+font-chiron-hei-hk                       font-reggae-one
+font-chiron-sung-hk                      font-rem
+font-chivo                               font-rethink-sans
+font-chivo-mono                          font-revalia
+font-chocolate-classical-sans            font-rhodium-libre
+font-chokokutai                          font-ribeye
+font-chomsky                             font-ribeye-marrow
+font-chonburi                            font-ricty-diminished
+font-church-slavonic                     font-righteous
+font-cica                                font-risque
+font-cica-without-emoji                  font-road-rage
+font-cinzel                              font-roboto
+font-cinzel-decorative                   font-roboto-condensed
+font-clear-sans                          font-roboto-flex
+font-clicker-script                      font-roboto-mono
+font-climate-crisis                      font-roboto-mono-for-powerline
+font-cochineal                           font-roboto-mono-nerd-font
+font-coda                                font-roboto-serif
+font-code-new-roman-nerd-font            font-roboto-slab
+font-code2002                            font-rochester
+font-codicon                             font-rock-3d
+font-codystar                            font-rock-salt
+font-coelacanth                          font-rocknroll-one
+font-coiny                               font-rokkitt
+font-combo                               font-rokkitt-vf-beta
+font-comfortaa                           font-romanesco
+font-comforter                           font-ronde
+font-comforter-brush                     font-ropa-sans
+font-comic-mono                          font-rosario
+font-comic-neue                          font-rosarivo
+font-comic-relief                        font-rouge-script
+font-comic-sans-ms                       font-routed-gothic
+font-comic-shanns-mono-nerd-font         font-rowdies
+font-coming-soon                         font-rozha-one
+font-comme                               font-rubik
+font-commissioner                        font-rubik-80s-fade
+font-commit-mono                         font-rubik-beastly
+font-commit-mono-nerd-font               font-rubik-broken-fax
+font-computer-modern                     font-rubik-bubbles
+font-conakry                             font-rubik-burned
+font-concert-one                         font-rubik-dirt
+font-condiment                           font-rubik-distressed
+font-consolas-for-powerline              font-rubik-doodle-shadow
+font-constructium                        font-rubik-doodle-triangles
+font-content                             font-rubik-gemstones
+font-contrail-one                        font-rubik-glitch
+font-convergence                         font-rubik-glitch-pop
+font-cookie                              font-rubik-iso
+font-cooper-hewitt                       font-rubik-lines
+font-copse                               font-rubik-maps
+font-coral-pixels                        font-rubik-marker-hatch
+font-corben                              font-rubik-maze
+font-corinthia                           font-rubik-microbe
+font-cormorant                           font-rubik-mono-one
+font-cormorant-garamond                  font-rubik-moonrocks
+font-cormorant-infant                    font-rubik-one
+font-cormorant-sc                        font-rubik-pixels
+font-cormorant-unicase                   font-rubik-puddles
+font-cormorant-upright                   font-rubik-scribble
+font-courgette                           font-rubik-spray-paint
+font-courier-new                         font-rubik-storm
+font-courier-prime                       font-rubik-vinyl
+font-courier-prime-code                  font-rubik-wet-paint
+font-courier-prime-medium-and-semi-bold  font-ruda
+font-courier-prime-sans                  font-rufina
+font-cousine                             font-ruge-boogie
+font-cousine-nerd-font                   font-ruluko
+font-coustard                            font-rum-raisin
+font-covered-by-your-grace               font-ruslan-display
+font-cozette                             font-russo-one
+font-crafty-girls                        font-ruthie
+font-creepster                           font-ruwudu
+font-creepster-caps                      font-rye
+font-crete-round                         font-sacramento
+font-crimson-pro                         font-sahitya
+font-crimson-text                        font-sail
+font-croissant-one                       font-saira
+font-crushed                             font-saira-condensed
+font-cubic-11                            font-saira-extra-condensed
+font-cuprum                              font-saira-semi-condensed
+font-cute-font                           font-saira-stencil-one
+font-cutive                              font-salsa
+font-cutive-mono                         font-sanchez
+font-d2coding                            font-sancreek
+font-d2coding-nerd-font                  font-sankofa-display
+font-daddy-time-mono-nerd-font           font-sans-forgetica
+font-dai-banna-sil                       font-sansation
+font-damion                              font-sansita
+font-dancing-script                      font-sansita-one
+font-danfo                               font-sansita-swashed
+font-dangrek                             font-sarabun
+font-darker-grotesque                    font-sarala
+font-darumadrop-one                      font-sarasa-gothic
+font-darwin                              font-sarina
+font-dashicons                           font-sarpanch
+font-david-clm                           font-sassy-frass
+font-david-libre                         font-satisfy
+font-dawning-of-a-new-day                font-satoshi
+font-days-one                            font-sauce-code-pro-nerd-font
+font-decovar-alpha                       font-sawarabi-gothic
+font-dejavu                              font-sawarabi-mincho
+font-dejavu-sans-mono-for-powerline      font-scada
+font-dejavu-sans-mono-nerd-font          font-scheherazade
+font-dekko                               font-scheherazade-new
+font-dela-gothic-one                     font-schibsted-grotesk
+font-delicious-handrawn                  font-schoolbell
+font-delius                              font-scientifica
+font-delius-swash-caps                   font-scope-one
+font-delius-unicase                      font-seaweed-script
+font-della-respira                       font-secular-one
+font-delugia-book                        font-sedan
+font-delugia-complete                    font-sedan-sc
+font-delugia-mono-complete               font-sedgwick-ave
+font-delugia-mono-powerline              font-sedgwick-ave-display
+font-delugia-powerline                   font-sen
+font-denk-one                            font-send-flowers
+font-departure-mono                      font-server-mono
+font-departure-mono-nerd-font            font-sevillana
+font-devicons                            font-seymour-one
+font-devonshire                          font-sf-arabic
+font-dhurjati                            font-sf-armenian
+font-dhyana                              font-sf-compact
+font-didact-gothic                       font-sf-georgian
+font-digital-numbers                     font-sf-hebrew
+font-digohweli-old-do                    font-sf-mono
+font-diphylleia                          font-sf-mono-for-powerline
+font-diplomata                           font-sf-mono-nerd-font-ligaturized
+font-diplomata-sc                        font-sf-pro
+font-dm-mono                             font-shadows-into-light
+font-dm-sans                             font-shadows-into-light-two
+font-dm-serif-display                    font-shafarik
+font-dm-serif-text                       font-shalimar
+font-do-hyeon                            font-shantell-sans
+font-dokdo                               font-shanti
+font-domine                              font-share
+font-donegal-one                         font-share-tech
+font-dongle                              font-share-tech-mono
+font-doppio-one                          font-shippori-antique
+font-dorsa                               font-shippori-antique-b1
+font-dosis                               font-shippori-mincho
+font-dotgothic16                         font-shippori-mincho-b1
+font-doto                                font-shizuru
+font-dotum                               font-shojumaru
+font-dotumche                            font-short-stack
+font-doulos-sil                          font-shrikhand
+font-dr-sugiyama                         font-shure-tech-mono-nerd-font
+font-dream-han-sans                      font-siemreap
+font-droid-sans-mono-for-powerline       font-sigmar
+font-droid-sans-mono-nerd-font           font-sigmar-one
+font-duru-sans                           font-signika
+font-dynalight                           font-signika-negative
+font-dynapuff                            font-signika-negative-sc
+font-eagle-lake                          font-signika-sc
+font-east-sea-dokdo                      font-silkscreen
+font-eater                               font-simonetta
+font-eb-garamond                         font-simple-line-icons
+font-ebh                                 font-single-day
+font-economica                           font-sintony
+font-eczar                               font-sirin-stencil
+font-edlo                                font-sitara
+font-edu-au-vic-wa-nt-arrows             font-six-caps
+font-edu-au-vic-wa-nt-dots               font-sixtyfour
+font-edu-au-vic-wa-nt-guides             font-sixtyfour-convergence
+font-edu-au-vic-wa-nt-hand               font-sketchybar-app-font
+font-edu-au-vic-wa-nt-pre                font-skranji
+font-edu-nsw-act-foundation              font-slabo-13px
+font-edu-qld-beginner                    font-slabo-27px
+font-edu-sa-beginner                     font-slackey
+font-edu-tas-beginner                    font-slackside-one
+font-edu-vic-wa-nt-beginner              font-smiley-sans
+font-edwin                               font-smokum
+font-el-messiri                          font-smooch
+font-eldur                               font-smooch-sans
+font-electrolize                         font-smythe
+font-elice-digital-baeum                 font-sn-pro
+font-elsie                               font-sniglet
+font-elsie-swash-caps                    font-snippet
+font-elstobd                             font-snowburst-one
+font-emblema-one                         font-sofadi-one
+font-emilys-candy                        font-sofia
+font-encode-sans                         font-sofia-sans
+font-encode-sans-condensed               font-sofia-sans-condensed
+font-encode-sans-expanded                font-sofia-sans-extra-condensed
+font-encode-sans-sc                      font-sofia-sans-semi-condensed
+font-encode-sans-semi-condensed          font-solitreo
+font-encode-sans-semi-expanded           font-solway
+font-engagement                          font-sometype-mono
+font-englebert                           font-song-myung
+font-enriqueta                           font-sono
+font-envy-code-r                         font-sonsie-one
+font-envy-code-r-nerd-font               font-sora
+font-ephesis                             font-sorts-mill-goudy
+font-epilogue                            font-souliyo
+font-epunda-sans                         font-sour-gummy
+font-epunda-slab                         font-source-code-pro
+font-erica-one                           font-source-code-pro-for-powerline
+font-escumasia                           font-source-han-code-jp
+font-esteban                             font-source-sans-3
+font-estonia                             font-source-serif-4
+font-et-book                             font-space-grotesk
+font-euphoria-script                     font-space-mono
+font-everson-mono                        font-space-mono-nerd-font
+font-ewert                               font-special-elite
+font-exile                               font-special-gothic
+font-exo                                 font-special-gothic-condensed-one
+font-exo-2                               font-special-gothic-expanded-one
+font-expletus-sans                       font-spectral
+font-explora                             font-spectral-sc
+font-ezra-sil                            font-spicy-rice
+font-faculty-glyphic                     font-spinnaker
+font-fahkwang                            font-spirax
+font-fairfax                             font-splash
+font-fairfax-hd                          font-spleen
+font-familjen-grotesk                    font-spline-sans
+font-fandol                              font-spline-sans-mono
+font-fantasque-sans-mono                 font-squada-one
+font-fantasque-sans-mono-nerd-font       font-square-peg
+font-fantasque-sans-mono-noloopk         font-sree-krushnadevaraya
+font-fanwood-text                        font-sriracha
+font-farro                               font-srisakdi
+font-farsan                              font-staatliches
+font-fascinate                           font-stalemate
+font-fascinate-inline                    font-stalinist-one
+font-faster-one                          font-stardos-stencil
+font-fasthand                            font-stick
+font-fauna-one                           font-stick-no-bills
+font-faune                               font-stint-ultra-condensed
+font-faustina                            font-stint-ultra-expanded
+font-federant                            font-stix
+font-federo                              font-stix-two-math
+font-felipa                              font-stix-two-text
+font-fenix                               font-stoke
+font-festive                             font-strait
+font-figtree                             font-strong
+font-finger-paint                        font-style-script
+font-finlandica                          font-stylish
+font-fira-code                           font-sudo
+font-fira-code-nerd-font                 font-sue-ellen-francisco
+font-fira-mono                           font-suez-one
+font-fira-mono-for-powerline             font-sulphur-point
+font-fira-mono-nerd-font                 font-sumana
+font-fira-sans                           font-sunflower
+font-fira-sans-condensed                 font-sunshiney
+font-fira-sans-extra-condensed           font-supermercado-one
+font-firago                              font-sura
+font-firge                               font-suranna
+font-firgenerd                           font-suravaram
+font-fjalla-one                          font-suse
+font-fjord-one                           font-suwannaphum
+font-flamenco                            font-swanky-and-moo-moo
+font-flavors                             font-symbols-only-nerd-font
+font-fleur-de-leah                       font-syncopate
+font-flow-block                          font-syne
+font-flow-circular                       font-syne-mono
+font-flow-rounded                        font-syne-tactile
+font-foldit                              font-tac-one
+font-fondamento                          font-tagesschrift
+font-fontawesome                         font-tai-heritage-pro
+font-fontdiner-swanky                    font-tajawal
+font-forum                               font-takaoex
+font-foundation-icons                    font-tamzen
+font-foundry-sterling                    font-tangerine
+font-fragment-mono                       font-tapestry
+font-fragment-mono-sc                    font-taprom
+font-francois-one                        font-tauri
+font-frank-ruhl-libre                    font-taviraj
+font-fraunces                            font-teachers
+font-freckle-face                        font-teko
+font-fredericka-the-great                font-tektur
+font-fredoka                             font-telex
+font-free-mono-tengwar                   font-tenali-ramakrishna
+font-freefont                            font-tengwar-formal-csur
+font-freehand                            font-tengwar-telcontar
+font-freeman                             font-tenor-sans
+font-fresca                              font-terminess-ttf-nerd-font
+font-frijole                             font-terminus
+font-fruktur                             font-tex-gyre-adventor
+font-fugaz-one                           font-tex-gyre-bonum
+font-fuggles                             font-tex-gyre-bonum-math
+font-funnel-display                      font-tex-gyre-chorus
+font-funnel-sans                         font-tex-gyre-cursor
+font-fustat                              font-tex-gyre-heros
+font-fuzzy-bubbles                       font-tex-gyre-pagella
+font-fzfangsong-z02                      font-tex-gyre-pagella-math
+font-fzkai-z03                           font-tex-gyre-schola
+font-fzshusong-z01                       font-tex-gyre-schola-math
+font-fzxiaobiaosong-b05                  font-tex-gyre-termes
+font-ga-maamli                           font-tex-gyre-termes-math
+font-gabarito                            font-text-me-one
+font-gabriela                            font-texturina
+font-gaegu                               font-thabit
+font-gafata                              font-tharlon
+font-gajraj-one                          font-thasadith
+font-galada                              font-the-girl-next-door
+font-galdeano                            font-the-nautigal
+font-galindo                             font-tiejili-sc
+font-gamja-flower                        font-tienne
+font-gandhi-sans                         font-tillana
+font-gantari                             font-tilt-neon
+font-gasoek-one                          font-tilt-prism
+font-gayathri                            font-tilt-warp
+font-gd-highwaygothicja                  font-times-new-roman
+font-geist                               font-times-newer-roman
+font-geist-mono                          font-timmana
+font-geist-mono-nerd-font                font-tinos
+font-gelasio                             font-tinos-nerd-font
+font-gemunu-libre                        font-tiny5
+font-genjyuugothic                       font-tiro-bangla
+font-genjyuugothic-l                     font-tiro-devanagari-hindi
+font-genjyuugothic-x                     font-tiro-devanagari-marathi
+font-genkigothic                         font-tiro-devanagari-sanskrit
+font-genos                               font-tiro-gurmukhi
+font-genryumin                           font-tiro-kannada
+font-gensekigothic                       font-tiro-tamil
+font-gensenrounded                       font-tiro-telugu
+font-genshingothic                       font-titan-one
+font-gentium-basic                       font-titillium
+font-gentium-book-basic                  font-titillium-web
+font-gentium-book-plus                   font-togalite
+font-gentium-plus                        font-tomorrow
+font-genwanmin                           font-tourney
+font-genyogothic                         font-trade-winds
+font-genyomin                            font-train-one
+font-geo                                 font-trebuchet-ms
+font-geologica                           font-triodion
+font-georama                             font-trirong
+font-georgia                             font-trispace
+font-geostar                             font-trocchi
+font-geostar-fill                        font-trochut
+font-germania-one                        font-truculenta
+font-gfs-didot                           font-trykker
+font-gfs-neohellenic                     font-tsukimi-rounded
+font-gideon-roman                        font-tt2020
+font-gidole                              font-tuffy
+font-gidugu                              font-tulpen-one
+font-gilbert                             font-turret-road
+font-gilda-display                       font-twilio-sans-mono
+font-girassol                            font-twinkle-star
+font-give-you-glory                      font-twitter-color-emoji
+font-glass-antiqua                       font-typographer-woodcut-initials-one
+font-glegoo                              font-ubuntu
+font-gloock                              font-ubuntu-condensed
+font-gloria-hallelujah                   font-ubuntu-mono
+font-glory                               font-ubuntu-mono-derivative-powerline
+font-glow-sans-j-compressed              font-ubuntu-mono-nerd-font
+font-glow-sans-j-condensed               font-ubuntu-nerd-font
+font-glow-sans-j-extended                font-ubuntu-sans
+font-glow-sans-j-normal                  font-ubuntu-sans-mono
+font-glow-sans-j-wide                    font-ubuntu-sans-nerd-font
+font-glow-sans-sc-compressed             font-uchen
+font-glow-sans-sc-condensed              font-udev-gothic
+font-glow-sans-sc-extended               font-udev-gothic-hs
+font-glow-sans-sc-normal                 font-udev-gothic-nf
+font-glow-sans-sc-wide                   font-ultra
+font-glow-sans-tc-compressed             font-unbounded
+font-glow-sans-tc-condensed              font-uncial-antiqua
+font-glow-sans-tc-extended               font-undefined-medium
+font-glow-sans-tc-normal                 font-underdog
+font-glow-sans-tc-wide                   font-unica-one
+font-gluten                              font-unifrakturcook
+font-gnu-unifont                         font-unifrakturmaguntia
+font-go                                  font-unkempt
+font-go-mono-nerd-font                   font-unlock
+font-goblin-one                          font-unna
+font-gochi-hand                          font-updock
+font-gohufont-nerd-font                  font-urbanist
+font-goldman                             font-urw-base35
+font-golos-text                          font-vampiro-one
+font-goorm-sans                          font-varela
+font-goorm-sans-code                     font-varela-round
+font-gorditas                            font-varta
+font-gothic-a1                           font-vast-shadow
+font-gotu                                font-vazirmatn
+font-goudy-bookletter-1911               font-verdana
+font-gowun-batang                        font-vesper-libre
+font-gowun-dodum                         font-viaoda-libre
+font-graduate                            font-vibes
+font-grand-hotel                         font-vibur
+font-grandiflora-one                     font-victor-mono
+font-grandstander                        font-victor-mono-nerd-font
+font-grape-nuts                          font-vidaloka
+font-gravitas-one                        font-viga
+font-great-vibes                         font-vina-sans
+font-grechen-fuemen                      font-voces
+font-grenze                              font-volkhov
+font-grenze-gotisch                      font-vollkorn
+font-grey-qo                             font-vollkorn-sc
+font-greybeard                           font-voltaire
+font-griffy                              font-vt323
+font-gruppo                              font-vujahday-script
+font-gudea                               font-waiting-for-the-sunrise
+font-gugi                                font-wallpoet
+font-gulim                               font-walter-turncoat
+font-gulimche                            font-waptia
+font-gulzar                              font-warnes
+font-gungsuh                             font-water-brush
+font-gungsuhche                          font-waterfall
+font-gupter                              font-wavefont
+font-gurajada                            font-webdings
+font-gwendolyn                           font-wellfleet
+font-habibi                              font-wendy-one
+font-hachi-maru-pop                      font-whisper
+font-hack                                font-windsong
+font-hackgen                             font-winky-rough
+font-hackgen-nerd                        font-winky-sans
+font-hahmlet                             font-wire-one
+font-halant                              font-wittgenstein
+font-hammersmith-one                     font-wix-madefor-display
+font-han-nom-a                           font-wix-madefor-text
+font-hanalei                             font-work-sans
+font-hanalei-fill                        font-workbench
+font-handjet                             font-xanh-mono
+font-handlee                             font-xits
+font-hanken-grotesk                      font-xkcd
+font-hannari                             font-xkcd-script
+font-hanuman                             font-yaldevi
+font-happy-monkey                        font-yaldevi-colombo
+font-harano-aji                          font-yanone-kaffeesatz
+font-harmattan                           font-yantramanav
+font-hasklig                             font-yarndings-12
+font-hasklug-nerd-font                   font-yarndings-12-charted
+font-headland-one                        font-yarndings-20
+font-heavy-data-nerd-font                font-yarndings-20-charted
+font-hedvig-letters-sans                 font-yatra-one
+font-hedvig-letters-serif                font-yellowtail
+font-heebo                               font-yeon-sung
+font-henny-penny                         font-yeseva-one
+font-hepta-slab                          font-yesteryear
+font-hermeneus-one                       font-yinmar
+font-hermit                              font-yomogi
+font-herr-von-muellerhoff                font-young-serif
+font-hi-melody                           font-yrsa
+font-hina-mincho                         font-ysabeau
+font-hind                                font-ysabeau-infant
+font-hind-colombo                        font-ysabeau-office
+font-hind-guntur                         font-ysabeau-sc
+font-hind-jalandhar                      font-yuji-boku
+font-hind-kochi                          font-yuji-hentaigana-akari
+font-hind-madurai                        font-yuji-hentaigana-akebono
+font-hind-mysuru                         font-yuji-mai
+font-hind-siliguri                       font-yuji-syuku
+font-hind-vadodara                       font-yusei-magic
+font-holtwood-one-sc                     font-zain
+font-homemade-apple                      font-zcool-kuaile
+font-homenaje                            font-zcool-qingke-huangyou
+font-honk                                font-zcool-xiaowei
+font-host-grotesk                        font-zed-mono
+font-hubballi                            font-zed-mono-nerd-font
+font-hubot-sans                          font-zed-sans
+font-humor-sans                          font-zen-antique
+font-hurmit-nerd-font                    font-zen-antique-soft
+font-hurricane                           font-zen-dots
+font-hyppolit                            font-zen-kaku-gothic-antique
+font-ia-writer-duo                       font-zen-kaku-gothic-new
+font-ia-writer-mono                      font-zen-kurenaido
+font-ia-writer-quattro                   font-zen-loop
+font-iansui                              font-zen-maru-gothic
+font-ibarra-real-nova                    font-zen-old-mincho
+font-ibm-plex                            font-zen-tokyo-zoo
+font-ibm-plex-math                       font-zeyada
+font-ibm-plex-mono                       font-zhi-mang-xing
+font-ibm-plex-sans                       font-zhudou-sans
+font-ibm-plex-sans-arabic                font-zhuque-fangsong
+font-ibm-plex-sans-condensed             font-zilla-slab
+font-ibm-plex-sans-devanagari            font-zilla-slab-highlight
+font-ibm-plex-sans-hebrew                font-zpix
+font-ibm-plex-sans-jp                    fontcreator
+font-ibm-plex-sans-kr                    freelens
+font-ibm-plex-sans-sc                    freeshow
+font-ibm-plex-sans-tc                    fujifilm-tether-app
+font-ibm-plex-sans-thai                  fujifilm-x-raw-studio
+font-ibm-plex-sans-thai-looped           furtherance
+font-ibm-plex-serif                      fuse-t
+font-iceberg                             galaxybudsclient
+font-iceland                             garmin-basecamp
+font-icomoon                             gauntlet
+font-im-fell-double-pica                 geoda
+font-im-fell-double-pica-sc              geogebra@5
+font-im-fell-dw-pica                     get-api
+font-im-fell-dw-pica-sc                  getoutline
+font-im-fell-english                     ghostty
+font-im-fell-english-sc                  ghostty@tip
+font-im-fell-french-canon                gimp@dev
+font-im-fell-french-canon-sc             gitbutler
+font-im-fell-great-primer                github-copilot-for-xcode
+font-im-fell-great-primer-sc             github@beta
+font-im-writing-nerd-font                gitkraken-on-premise-serverless
+font-imbue                               gitlight
+font-iming                               godot@3
+font-impact                              godspeed
+font-imperial-script                     gologin
+font-imprima                             google-chrome@beta
+font-inclusive-sans                      google-chrome@canary
+font-inconsolata                         google-chrome@dev
+font-inconsolata-dz-for-powerline        google-japanese-ime@dev
+font-inconsolata-for-powerline           gpg-suite@nightly
+font-inconsolata-for-powerline-bold      gpt4all
+font-inconsolata-g                       graalvm-jdk@17
+font-inconsolata-g-for-powerline         graalvm-jdk@21
+font-inconsolata-go-nerd-font            granola
+font-inconsolata-lgc                     grayjay
+font-inconsolata-lgc-nerd-font           green-go-control
+font-inconsolata-nerd-font               greenery
+font-inder                               halion-sonic
+font-indie-flower                        halloy
+font-infini                              hamrs-pro
+font-ingrid-darling                      hancom-docs
+font-inika                               hapigo
+font-inknut-antiqua                      helio
+font-input                               helpwire-operator
+font-inria                               heynote
+font-inria-sans                          hhkb-studio
+font-inria-serif                         hides
+font-inspiration                         homerow
+font-instrument-sans                     hopper-disassembler
+font-instrument-serif                    huggingchat
+font-intel-one-mono                      huly
+font-inter                               hy-rpe2
+font-inter-tight                         hyper@canary
+font-intone-mono-nerd-font               hyperconnect
+font-iosevka                             ia-markdown-dictionary
+font-iosevka-aile                        ia-presenter
+font-iosevka-comfy                       ibkr
+font-iosevka-curly                       ijhttp
+font-iosevka-curly-slab                  ik-product-manager
+font-iosevka-etoile                      imaging-edge
+font-iosevka-nerd-font                   imaging-edge-webcam
+font-iosevka-slab                        imazing-profile-editor
+font-iosevka-ss01                        impel
+font-iosevka-ss02                        inkdown
+font-iosevka-ss03                        inmusic-software-center
+font-iosevka-ss04                        inso@beta
+font-iosevka-ss05                        insomnia@alpha
+font-iosevka-ss06                        insomnium
+font-iosevka-ss07                        instantview
+font-iosevka-ss08                        intellij-idea@eap
+font-iosevka-ss09                        ireal-pro
+font-iosevka-ss10                        irpf2024
+font-iosevka-ss11                        irpf2025
+font-iosevka-ss12                        ishare
+font-iosevka-ss13                        istat-menus@5
+font-iosevka-ss14                        istat-menus@6
+font-iosevka-ss15                        istatistica-core
+font-iosevka-ss16                        istherenet
+font-iosevka-ss17                        iterm2@beta
+font-iosevka-ss18                        iterm2@nightly
+font-iosevka-term-nerd-font              itermai
+font-iosevka-term-slab-nerd-font         ivacy
+font-ipaexfont                           jagex
+font-ipafont                             jamie
+font-ipamjmincho                         jan
+font-iranian-sans                        java@beta
+font-iranian-serif                       jet-pilot
+font-irish-grover                        jordanbaird-ice
+font-island-moments                      jottacloud
+font-istok-web                           jslegendre-themeengine
+font-italiana                            julia@lts
+font-italianno                           julia@nightly
+font-itim                                jumpcloud-password-manager
+font-jaapokki                            juxtacode
+font-jacquard-12                         jyutping
+font-jacquard-12-charted                 k6-studio
+font-jacquard-24                         k8studio
+font-jacquard-24-charted                 kaleidoscope@2
+font-jacquarda-bastarda-9                kaleidoscope@3
+font-jacquarda-bastarda-9-charted        kando
+font-jacques-francois                    kate
+font-jacques-francois-shadow             keepassxc@beta
+font-jaini                               keepassxc@snapshot
+font-jaini-purva                         keka@beta
+font-jaldi                               keyboard-cowboy
+font-jaro                                keyguard
+font-jeju-gothic                         kilohearts-installer
+font-jeju-hallasan                       kimis
+font-jeju-myeongjo                       kindle-create
+font-jersey-10                           kit
+font-jersey-10-charted                   kitty@nightly
+font-jersey-15                           kunkun
+font-jersey-15-charted                   label-live
+font-jersey-20                           labplot
+font-jersey-20-charted                   lando@edge
+font-jersey-25                           langgraph-studio
+font-jersey-25-charted                   last-window-quits
+font-jetbrains-mono                      lazycat
+font-jetbrains-mono-nerd-font            leader-key
+font-jf-open-huninn                      legcord
+font-jim-nightshade                      lets
+font-joan                                libreoffice-still
+font-jockey-one                          libreoffice-still-language-pack
+font-jolly-lodger                        lightburn
+font-jomhuria                            limitless
+font-jomolhari                           linearmouse@beta
+font-joscelyn                            little-snitch@4
+font-josefin-sans                        little-snitch@5
+font-josefin-slab                        local@beta
+font-jost                                localcan
+font-joti-one                            localsend
+font-jsmath-cmbx10                       longplay
+font-jsmath-cmex10                       lookaway
+font-jsmath-cmmi10                       loop
+font-jsmath-cmr10                        losslessswitcher
+font-jsmath-cmsy10                       loungy
+font-jsmath-cmti10                       luanti
+font-jua                                 lunarbar
+font-judson                              lunatask
+font-julee                               lw-scanner
+font-juliamono                           lyric-fever
+font-julius-sans-one                     lyricsfinder
+font-junction                            mac-mouse-fix@2
+font-junge                               macai
+font-junicode                            macfuse@dev
+font-jura                                macloggerdx@beta
+font-just-another-hand                   macskk
+font-just-me-again-down-here             macsymbolicator
+font-k2d                                 magicquit
+font-kablammo                            mailbird
+font-kadwa                               mailmate@beta
+font-kaisei-decol                        mailsteward
+font-kaisei-harunoumi                    markedit
+font-kaisei-opti                         material-maker
+font-kaisei-tokumin                      mdb-accdb-viewer
+font-kaiso                               mediamate
+font-kalam                               meridiem
+font-kalnia                              meta-quest-developer-hub
+font-kalnia-glaze                        metarename
+font-kameron                             metavideo
+font-kanchenjunga                        mi@beta
+font-kanit                               microsoft-edge@beta
+font-kanjistrokeorders                   microsoft-edge@canary
+font-kantumruy-pro                       microsoft-edge@dev
+font-kapakana                            microsoft-openjdk@11
+font-karantina                           microsoft-openjdk@17
+font-karla                               microsoft-openjdk@21
+font-karla-tamil-inclined                microsoft-teams@classic
+font-karla-tamil-upright                 mihomo-party
+font-karma                               mindmac
+font-katibeh                             mindmaster-cn
+font-kaushan-script                      minstaller
+font-kavivanar                           mitti
+font-kavoon                              mixing-station
+font-kawkab-mono                         mixxx@snapshot
+font-kay-pho-du                          moment
+font-kdam-thmor-pro                      monal@beta
+font-keania-one                          monarch
+font-kelly-slab                          mongodb-compass@beta
+font-kenia                               mono-mdk-for-visual-studio
+font-khand                               monokle
+font-khmer                               morisawa-desktop-manager
+font-khula                               motion
+font-khyay                               mouseless
+font-kimberella                          mouseless@preview
+font-kings                               msty
+font-kirang-haerang                      mullvadvpn@beta
+font-kite-one                            mumble@snapshot
+font-kiwi-maru                           mumuplayer
+font-klee-one                            muteme
+font-knewave                             mythic
+font-ko-pub-batang                       naps2
+font-kodchasan                           navicat-premium-lite
+font-kode-mono                           navicat-premium@15
+font-koh-santepheap                      navigraph-charts
+font-koho                                navigraph-simlink
+font-kokoro                              ndi-tools
+font-kolker-brush                        neo-network-utility
+font-konkhmer-sleokchher                 neohtop
+font-kosugi                              nessus
+font-kosugi-maru                         nethlink
+font-kotta-one                           netnewswire@beta
+font-koulen                              nexonplug
+font-kranky                              nextcloud-vfs
+font-kreative-square                     nightshade
+font-kreon                               notchnook
+font-kristi                              notes-better
+font-krona-one                           notesollama
+font-krub                                notion-mail
+font-kufam                               nperf
+font-kulim-park                          nrf-connect
+font-kumar-one                           nrfutil
+font-kumar-one-outline                   nvidia-nsight-compute
+font-kumbh-sans                          nvidia-nsight-systems
+font-kurale                              nx-studio
+font-la-belle-aurore                     obs-backgroundremoval
+font-labrada                             obs@beta
+font-lacquer                             obscura-vpn
+font-laila                               octarine
+font-lakki-reddy                         october
+font-lalezar                             ollama
+font-lancelot                            ollamac
+font-langar                              olympus
+font-langdon                             omegat@latest
+font-last-resort                         ontime
+font-last-resort-high-efficiency         open-eid
+font-lateef                              opencat
+font-latin-modern                        openchrom
+font-latin-modern-math                   opencloud
+font-lato                                openemu@experimental
+font-lavishly-yours                      openhv
+font-league-gothic                       openra-playtest
+font-league-mono                         openscad@snapshot
+font-league-script                       openshot-video-editor@daily
+font-league-spartan                      openthesaurus-deutsch
+font-leckerli-one                        opera-air
+font-ledger                              opera-crypto@developer
+font-lekton                              opera@beta
+font-lekton-nerd-font                    oracle-jdk-javadoc@21
+font-lemon                               oracle-jdk@17
+font-lemonada                            oracle-jdk@21
+font-lemonada-vf-beta                    orka-desktop
+font-lexend                              outfox
+font-lexend-deca                         overlayed
+font-lexend-exa                          ovice
+font-lexend-giga                         oxygen-xml-developer
+font-lexend-mega                         pairpods
+font-lexend-peta                         paragon-extfs@11
+font-lexend-tera                         parallels@12
+font-lexend-zetta                        parallels@13
+font-liberation                          parallels@14
+font-liberation-mono-for-powerline       parallels@15
+font-liberation-nerd-font                parallels@16
+font-libertinus                          parallels@17
+font-libertinus-math                     parallels@18
+font-libertinus-mono                     parallels@19
+font-libre-barcode-128                   pareto-security
+font-libre-barcode-128-text              pastenow
+font-libre-barcode-39                    pdf-expert@beta
+font-libre-barcode-39-extended           pdl
+font-libre-barcode-39-extended-text      pearcleaner
+font-libre-barcode-39-text               pecunia
+font-libre-barcode-ean13-text            pgadmin3
+font-libre-baskerville                   phocus
+font-libre-bodoni                        phoenix-code
+font-libre-caslon-display                photostickies
+font-libre-caslon-text                   pia
+font-libre-franklin                      picoscope@beta
+font-licorice                            pile
+font-life-savers                         pinwheel
+font-liga-comic-mono                     pixel-shift-combiner
+font-ligature-symbols                    pixpin
+font-lilex                               playcover-community@beta
+font-lilex-nerd-font                     plugdata@nightly
+font-lilita-one                          positron
+font-lily-script-one                     postico@1
+font-limelight                           postman@canary
+font-linden-hill                         posture-pal
+font-linefont                            powershell@preview
+font-linux-biolinum                      precize
+font-linux-libertine                     presonus-universal-control
+font-lisu-bosa                           prettyclean
+font-liter                               processing@3
+font-literata                            processspy
+font-liu-jian-mao-cao                    productive
+font-livvic                              pronotes
+font-lobster                             propresenter@beta
+font-lobster-two                         proton-drive
+font-lohit                               proton-mail
+font-lohit-bengali                       proton-pass
+font-lohit-tamil                         qbittorrent@lt20
+font-londrina-outline                    qdirstat
+font-londrina-shadow                     qgis@ltr
+font-londrina-sketch                     qlzipinfo
+font-londrina-solid                      qobuz-downloader
+font-long-cang                           qt-creator@dev
+font-lora                                qt-design-studio
+font-love-light                          quba
+font-love-ya-like-a-sister               quick-app-ide
+font-loved-by-the-king                   quicktune
+font-lovers-quarrel                      quickwhisper
+font-luckiest-guy                        quiet
+font-luculent                            radiola
+font-lugrasimo                           rave
+font-lumanosimo                          reader
+font-lunasima                            readest
+font-lusitana                            reflector@2
+font-lustria                             replaywebpage
+font-luxurious-roman                     replit
+font-luxurious-script                    repo-prompt
+font-lxgw-bright                         requestly
+font-lxgw-bright-gb                      restapia
+font-lxgw-bright-tc                      restic-browser
+font-lxgw-fasmartgothic                  retcon
+font-lxgw-heartserif                     retroarch-metal@nightly
+font-lxgw-neoxihei                       rivet
+font-lxgw-neozhisong                     rize
+font-lxgw-simxihei                       roam
+font-lxgw-simzhisong                     roblox
+font-lxgw-wenkai                         robloxstudio
+font-lxgw-wenkai-gb                      rode-unify
+font-lxgw-wenkai-gb-lite                 rode-virtual-channels
+font-lxgw-wenkai-lite                    rouvy
+font-lxgw-wenkai-mono-tc                 royal-tsx@beta
+font-lxgw-wenkai-tc                      rstudio@daily
+font-lxgw-zhenkai                        safari-technology-preview
+font-m-plus-1                            sakura
+font-m-plus-1-code                       salt
+font-m-plus-1p                           sanctum
+font-m-plus-2                            satdump
+font-m-plus-code-latin                   satyrn
+font-m-plus-rounded-1c                   screaming-frog-log-file-analyser
+font-ma-shan-zheng                       screenmemory
+font-macondo                             screens-assist
+font-macondo-swash-caps                  segger-ozone
+font-mada                                semeru-jdk-open@11
+font-madimi-one                          semeru-jdk-open@17
+font-magra                               semeru-jdk-open@21
+font-maiden-orange                       semeru-jdk-open@8
+font-maitree                             serial-studio
+font-major-mono-display                  shadow-bot
+font-makinas4                            shadow@beta
+font-mako                                shortwave
+font-mali                                signal@beta
+font-mallanna                            silhouette-studio
+font-mamelon                             simpletex
+font-maname                              singlebox
+font-mandali                             singlecrystal
+font-manjari                             sketch@beta
+font-manrope                             sketchup
+font-mansalva                            skype@preview
+font-manuale                             slack@beta
+font-maple-mono-cn                       slicer@preview
+font-maple-mono-nf                       slidepad
+font-maple-mono-nf-cn                    smcfancontrol@beta
+font-maple-mono-normal                   sokim
+font-maple-mono-normal-cn                sonarr@beta
+font-maple-mono-normal-nf                sonos-s1-controller
+font-maple-mono-normal-nf-cn             soundanchor
+font-marcellus                           soundsource@test
+font-marcellus-sc                        sourcetree@beta
+font-marck-script                        spectrolite
+font-margarine                           sq-mixpad
+font-marhey                              stability-matrix
+font-markazi-text                        starnet2
+font-marko-one                           startupfolder
+font-marmelad                            stashpad
+font-martel                              steinberg-activation-manager
+font-martel-sans                         steinberg-download-assistant
+font-martian-mono                        steinberg-library-manager
+font-martian-mono-nerd-font              steinberg-mediabay
+font-marvel                              stratoshark
+font-masinahikan                         stratoshark@dev
+font-masinahikan-dene                    streammusic
+font-mate                                structuredlogviewer
+font-mate-sc                             sublime-merge@dev
+font-matemasie                           sublime-text@dev
+font-material-design-icons-webfont       superwhisper
+font-material-icons                      supremo
+font-material-symbols                    surge@4
+font-maven-pro                           svp
+font-maven-pro-vf-beta                   swift-shift
+font-mclaren                             synology-image-assistant
+font-mea-culpa                           sys-pc-tool
+font-meddon                              tabtab
+font-medievalsharp                       taccy
+font-medula-one                          tal-drum
+font-meera-inimai                        taskbar
+font-megrim                              tdr-molotok
+font-meie-script                         tdr-prism
+font-meltho                              teamspeak-client@beta
+font-mengshen-regular                    telegram-desktop@beta
+font-menlo-for-powerline                 teleport
+font-meow-script                         tella
+font-merge-one                           temurin@11
+font-merienda                            temurin@17
+font-merriweather                        temurin@19
+font-merriweather-sans                   temurin@20
+font-mervale-script                      temurin@21
+font-meslo-for-powerlevel10k             temurin@8
+font-meslo-for-powerline                 termius@beta
+font-meslo-lg                            termora
+font-meslo-lg-dz                         testfully
+font-meslo-lg-nerd-font                  theiaide
+font-metal                               thelowtechguys-cling
+font-metal-mania                         threema@beta
+font-metamorphous                        thumbhost3mf
+font-metrophobic                         thunderbird@beta
+font-metropolis                          thunderbird@daily
+font-miama                               thunderbird@esr
+font-miao-unicode                        timelapze
+font-michroma                            timemachinestatus
+font-micro-5                             tm-error-logger
+font-micro-5-charted                     toneprint
+font-migmix-1m                           topaz-photo-ai
+font-migmix-1p                           tor-browser@alpha
+font-migmix-2m                           tpvirtual
+font-migmix-2p                           trae
+font-migu-1c                             trae-cn
+font-migu-1m                             transmission@nightly
+font-migu-1p                             treeviewer
+font-migu-2m                             triliumnext-notes
+font-milonga                             truetree
+font-miltonian                           truhu
+font-miltonian-tattoo                    tsh@13
+font-mina                                tunetag
+font-mingzat                             tunnelblick@beta
+font-miniver                             turbotax-2024
+font-miracode                            twingate
+font-miriam-libre                        typefully
+font-miriam-mono-clm                     typora@dev
+font-mirza                               ua-midi-control
+font-miss-fajardose                      ugg
+font-mitr                                ui-tars
+font-mochiy-pop-one                      unraid-usb-creator-next
+font-mochiy-pop-p-one                    upscayl
+font-modak                               utm@beta
+font-modern-antiqua                      valhalla-freq-echo
+font-moderustic                          valhalla-space-modulator
+font-mogra                               valhalla-supermassive
+font-mohave                              vcam
+font-moirai-one                          veracrypt-fuse-t
+font-molengo                             vernier-spectral-analysis
+font-molle                               vesktop
+font-mona-sans                           vezer
+font-monaspace                           viable
+font-monaspace-nerd-font                 vienna-assistant
+font-monda                               vimcal
+font-monocraft                           virtualbox@6
+font-monocraft-nerd-font                 virtualbox@beta
+font-monofett                            virtualbuddy@beta
+font-monofur-for-powerline               virtualdj
+font-monofur-nerd-font                   visual-studio-code@insiders
+font-monoid                              vivaldi@snapshot
+font-monoid-nerd-font                    viz
+font-monoisome                           vlc@nightly
+font-monomakh                            voiceink
+font-monomaniac-one                      vscodium@insiders
+font-mononoki                            wakatime
+font-mononoki-nerd-font                  warcraft-logs-uploader
+font-monoton                             wave
+font-monsieur-la-doulaise                wd-security
+font-montaga                             wealthfolio
+font-montagu-slab                        weasis
+font-montecarlo                          webkinz
+font-montez                              website-audit
+font-montserrat                          wezterm@nightly
+font-montserrat-alternates               whatsapp@beta
+font-montserrat-subrayada                whatsapp@legacy
+font-montserrat-underline                whimsical
+font-moo-lah-lah                         whoozle-android-file-transfer@nightly
+font-mooli                               widgettoggler
+font-moon-dance                          wifiman
+font-moralerspace                        winbox
+font-moralerspace-hw                     windowkeys
+font-moralerspace-hw-jpdoc               windows-app
+font-moralerspace-hw-nf                  windsurf
+font-moralerspace-jpdoc                  windsurf@next
+font-moralerspace-nf                     wine@devel
+font-moul                                wine@staging
+font-moulpali                            wins
+font-mountains-of-christmas              wiso-steuer-2024
+font-mouse-memoirs                       wiso-steuer-2025
+font-mr-bedfort                          wizcli
+font-mr-dafoe                            wljs-notebook
+font-mr-de-haviland                      wordpresscom-studio
+font-mrs-saint-delafield                 x32-edit
+font-mrs-sheppards                       xact
+font-ms-madi                             xampp@7
+font-mukta                               xcodepilot
+font-mukta-mahee                         xliff-editor
+font-mukta-malar                         xmenu
+font-mukta-vaani                         xmind@beta
+font-mukti-narrow                        xnapper
+font-mulish                              yaak
+font-murecho                             yaak@beta
+font-museo                               yandex-music
+font-museomoderno                        yellowdot
+font-my-soul                             yes24-ebook
+font-myanmar-sans-pro                    youlean-loudness-meter
+font-mynaui-icons                        zed@preview
+font-mynerve                             zen-browser
+font-myrica                              zen-browser@twilight
+font-myricam                             zipic
+font-mystery-quest                       znote
+font-n-gage                              zoom-m3-edit-and-play
+font-nabla                               zotero@beta
+font-namdhinggo                          zulu@11
+font-nanum-brush-script                  zulu@17
+font-nanum-gothic                        zulu@21
+font-nanum-gothic-coding                 zulu@8
+font-nanum-myeongjo
+==> Deleted Installed Formulae
+glide ✘         icu4c ✘         ilmbase ✘       lua@5.1 ✘       pkg-config ✘
+==> Deleted Installed Casks
+font-hack-nerd-font ✘
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+You have 248 outdated formulae and 3 outdated casks installed.
+==> font-hack-nerd-font has been moved to Homebrew.
+To uninstall the cask, run:
+  brew uninstall --cask --force font-hack-nerd-font
+==> Installing font-hack-nerd-font...
+==> Upgrading 1 outdated package:
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+font-hack-nerd-font 2.0.0 -> 3.3.0
+==> Upgrading font-hack-nerd-font
+==> Downloading https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0
+==> Downloading from https://objects.githubusercontent.com/github-production-rel
+######################################################################### 100.0%
+==> Backing Font 'Hack Bold Nerd Font Complete.ttf' up to '/usr/local/Caskroom/f
+==> Removing Font '/Users/karuppiahn/Library/Fonts/Hack Bold Nerd Font Complete.
+==> Backing Font 'Hack Bold Italic Nerd Font Complete.ttf' up to '/usr/local/Cas
+==> Removing Font '/Users/karuppiahn/Library/Fonts/Hack Bold Italic Nerd Font Co
+==> Backing Font 'Hack Regular Nerd Font Complete.ttf' up to '/usr/local/Caskroo
+==> Removing Font '/Users/karuppiahn/Library/Fonts/Hack Regular Nerd Font Comple
+==> Backing Font 'Hack Italic Nerd Font Complete.ttf' up to '/usr/local/Caskroom
+==> Removing Font '/Users/karuppiahn/Library/Fonts/Hack Italic Nerd Font Complet
+==> Moving Font 'HackNerdFont-Bold.ttf' to '/Users/karuppiahn/Library/Fonts/Hack
+==> Moving Font 'HackNerdFont-BoldItalic.ttf' to '/Users/karuppiahn/Library/Font
+==> Moving Font 'HackNerdFont-Italic.ttf' to '/Users/karuppiahn/Library/Fonts/Ha
+==> Moving Font 'HackNerdFont-Regular.ttf' to '/Users/karuppiahn/Library/Fonts/H
+==> Moving Font 'HackNerdFontMono-Bold.ttf' to '/Users/karuppiahn/Library/Fonts/
+==> Moving Font 'HackNerdFontMono-BoldItalic.ttf' to '/Users/karuppiahn/Library/
+==> Moving Font 'HackNerdFontMono-Italic.ttf' to '/Users/karuppiahn/Library/Font
+==> Moving Font 'HackNerdFontMono-Regular.ttf' to '/Users/karuppiahn/Library/Fon
+==> Moving Font 'HackNerdFontPropo-Bold.ttf' to '/Users/karuppiahn/Library/Fonts
+==> Moving Font 'HackNerdFontPropo-BoldItalic.ttf' to '/Users/karuppiahn/Library
+==> Moving Font 'HackNerdFontPropo-Italic.ttf' to '/Users/karuppiahn/Library/Fon
+==> Moving Font 'HackNerdFontPropo-Regular.ttf' to '/Users/karuppiahn/Library/Fo
+==> Purging files for version 2.0.0 of Cask font-hack-nerd-font
+🍺  font-hack-nerd-font was successfully upgraded!
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/go--1.21.4.tar.gz... (25.7MB)
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Autoremoving 48 unneeded formulae:
+adns
+aspell
+cabal-install
+ctags
+dav1d
+flac
+frei0r
+ghc
+ilmbase
+jansson
+lame
+libassuan
+libbluray
+libiconv
+libogg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libvidstab
+libvorbis
+libvpx
+lua@5.1
+lxc
+lz4
+make
+npth
+opencore-amr
+opus
+pinentry
+rav1e
+rtmpdump
+rubberband
+sdl2
+snap
+speex
+squashfs
+srt
+swig
+the_silver_searcher
+theora
+wxwidgets
+x264
+xdelta
+xvid
+zeromq
+zimg
+zstd
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/linkage.json... (685.2KB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/portable-ruby-2.6.10_1.el_capitan.bottle.tar.gz... (8.7MB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/api-source/Homebrew/homebrew-core/8d5a92873c80d99ac64fc06b2d139a35771dd24a/Formula/gettext.rb... (2.3KB)
+Removing: /Users/karuppiahn/Library/Caches/Homebrew/api-source/Homebrew/homebrew-core/e99983bbf02dafdaeff1589fa6e2a91d6833c18a/Formula/go.rb... (4.4KB)
+Removing: /Users/karuppiahn/Library/Logs/Homebrew/go... (5 files, 594.9KB)
+Pruned 2 symbolic links from /usr/local
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+
+==> Tapping lihaoyun6/tap
+Cloning into '/usr/local/Homebrew/Library/Taps/lihaoyun6/homebrew-tap'...
+remote: Enumerating objects: 633, done.
+remote: Counting objects: 100% (99/99), done.
+remote: Compressing objects: 100% (85/85), done.
+remote: Total 633 (delta 73), reused 17 (delta 14), pack-reused 534 (from 1)
+Receiving objects: 100% (633/633), 4.68 MiB | 5.35 MiB/s, done.
+Resolving deltas: 100% (404/404), done.
+Tapped 10 casks and 7 formulae (28 files, 4.7MB).
+==> Downloading https://github.com/lihaoyun6/QuickRecorder/releases/download/1.6
+==> Downloading from https://objects.githubusercontent.com/github-production-rel
+######################################################################### 100.0%
+==> Installing Cask quickrecorder
+==> Moving App 'QuickRecorder.app' to '/Applications/QuickRecorder.app'
+🍺  quickrecorder was successfully installed!
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+
+ ~  $ brew install hotchemi/tap/scre
+==> Tapping hotchemi/tap
+Cloning into '/usr/local/Homebrew/Library/Taps/hotchemi/homebrew-tap'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 16 (delta 3), reused 4 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (16/16), done.
+Resolving deltas: 100% (3/3), done.
+Tapped 1 cask (14 files, 9.5KB).
+==> Downloading https://github.com/hotchemi/Scre/releases/download/0.2/Scre.zip
+==> Downloading from https://objects.githubusercontent.com/github-production-rel
+######################################################################### 100.0%
+==> Installing Cask scre
+==> Moving App 'Scre.app' to '/Applications/Scre.app'
+🍺  scre was successfully installed!
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+
+ ~  $ ls -al /Applications/QuickRecorder.app
+total 0
+drwxr-xr-x@  3 karuppiahn  staff    96 Feb  4 21:45 .
+drwxrwxr-x  45 root        admin  1440 Apr 16 15:06 ..
+drwxr-xr-x@  8 karuppiahn  staff   256 Feb  4 21:45 Contents
+ ~  $ sudo xattr -r -d com.apple.quarantine /Applications/QuickRecorder.app
+Password:
+ ~  $ sudo xattr -r -d com.apple.quarantine /Applications/
+.DS_Store                          OBS.app/
+.localized                         Pages.app/
+Adobe Creative Cloud/              Pester.app/
+Alacritty.app/                     Postgres.app/
+Alfred 4.app/                      QuickRecorder.app/
+Amazon Kindle.app/                 Safari.app/
+AppCleaner.app/                    Scratch 3.app/
+Clipy.app/                         Scre.app/
+Discord.app/                       Slack.app/
+Docker.app/                        Spectacle.app/
+Fanny.app/                         Sublime Text.app/
+Firefox Developer Edition.app/     SyphonInject.app/
+GPG Keychain.app/                  Tor Browser.app/
+Google Chrome.app/                 Utilities/
+Hex Fiend.app/                     VLC.app/
+IntelliJ IDEA CE.app/              Visual Studio Code - Insiders.app/
+Kap.app/                           Visual Studio Code.app/
+KeeWeb.app/                        WebTorrent.app/
+Keynote.app/                       XChat Azure.app/
+Microsoft To Do.app/               iTerm.app/
+Multipass.app/                     zoom.us.app/
+Numbers.app/                       
+ ~  $ sudo xattr -r -d com.apple.quarantine /Applications/Scr
+Scratch 3.app/ Scre.app/      
+ ~  $ sudo xattr -r -d com.apple.quarantine /Applications/Scre.app/
+ ~  $ sudo xattr -r -d com.apple.quarantine /Applications/Scre.app
+ ~  $ 
+ ~  $ brew remove quickrecorder
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Uninstalling Cask quickrecorder
+==> Backing App 'QuickRecorder.app' up to '/usr/local/Caskroom/quickrecorder/1.6
+==> Removing App '/Applications/QuickRecorder.app'
+==> Purging files for version 1.6.5 of Cask quickrecorder
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Autoremoving 48 unneeded formulae:
+adns
+aspell
+cabal-install
+ctags
+dav1d
+flac
+frei0r
+ghc
+ilmbase
+jansson
+lame
+libassuan
+libbluray
+libiconv
+libogg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libvidstab
+libvorbis
+libvpx
+lua@5.1
+lxc
+lz4
+make
+npth
+opencore-amr
+opus
+pinentry
+rav1e
+rtmpdump
+rubberband
+sdl2
+snap
+speex
+squashfs
+srt
+swig
+the_silver_searcher
+theora
+wxwidgets
+x264
+xdelta
+xvid
+zeromq
+zimg
+zstd
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+ ✘  ~  $ brew remove scre
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Uninstalling Cask scre
+==> Backing App 'Scre.app' up to '/usr/local/Caskroom/scre/0.2/Scre.app'
+==> Removing App '/Applications/Scre.app'
+==> Purging files for version 0.2 of Cask scre
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+==> Autoremoving 48 unneeded formulae:
+adns
+aspell
+cabal-install
+ctags
+dav1d
+flac
+frei0r
+ghc
+ilmbase
+jansson
+lame
+libassuan
+libbluray
+libiconv
+libogg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libvidstab
+libvorbis
+libvpx
+lua@5.1
+lxc
+lz4
+make
+npth
+opencore-amr
+opus
+pinentry
+rav1e
+rtmpdump
+rubberband
+sdl2
+snap
+speex
+squashfs
+srt
+swig
+the_silver_searcher
+theora
+wxwidgets
+x264
+xdelta
+xvid
+zeromq
+zimg
+zstd
+Error: Unexpected method 'appcast' called on Cask ferdi.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+Error: Unexpected method 'appcast' called on Cask font-hack-nerd-font-mono.
+Follow the instructions here:
+  https://github.com/Homebrew/homebrew-cask#reporting-bugs
+ ✘  ~  $ 

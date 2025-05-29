@@ -1,0 +1,322 @@
+ rustlings  karuppiah-solutions-2025-april ✔  $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+info: downloading installer
+warn: It looks like you have an existing rustup settings file at:
+warn: /Users/karuppiahn/.rustup/settings.toml
+warn: Rustup will install the default toolchain as specified in the settings file,
+warn: instead of the one inferred from the default host triple.
+
+Welcome to Rust!
+
+This will download and install the official compiler for the Rust
+programming language, and its package manager, Cargo.
+
+Rustup metadata and toolchains will be installed into the Rustup
+home directory, located at:
+
+  /Users/karuppiahn/.rustup
+
+This can be modified with the RUSTUP_HOME environment variable.
+
+The Cargo home directory is located at:
+
+  /Users/karuppiahn/.cargo
+
+This can be modified with the CARGO_HOME environment variable.
+
+The cargo, rustc, rustup and other commands will be added to
+Cargo's bin directory, located at:
+
+  /Users/karuppiahn/.cargo/bin
+
+This path will then be added to your PATH environment variable by
+modifying the profile files located at:
+
+  /Users/karuppiahn/.profile
+  /Users/karuppiahn/.bash_profile
+  /Users/karuppiahn/.bashrc
+  /Users/karuppiahn/.zshenv
+  /Users/karuppiahn/.xdg-config/fish/conf.d/rustup.fish
+
+You can uninstall at any time with rustup self uninstall and
+these changes will be reverted.
+
+Current installation options:
+
+
+   default host triple: x86_64-apple-darwin
+     default toolchain: stable (default)
+               profile: default
+  modify PATH variable: yes
+
+1) Proceed with standard installation (default - just press enter)
+2) Customize installation
+3) Cancel installation
+>
+
+info: profile set to 'default'
+info: default host triple is x86_64-apple-darwin
+warn: Updating existing toolchain, profile choice will be ignored
+info: syncing channel updates for 'stable-x86_64-apple-darwin'
+info: latest update on 2025-04-03, rust version 1.86.0 (05f9846f8 2025-03-31)
+info: downloading component 'rustc'
+ 65.1 MiB /  65.1 MiB (100 %)  12.5 MiB/s in  5s         
+info: downloading component 'rust-std'
+ 25.9 MiB /  25.9 MiB (100 %)  12.6 MiB/s in  2s         
+info: downloading component 'cargo'
+info: downloading component 'rust-docs'
+ 21.3 MiB /  21.3 MiB (100 %)  13.0 MiB/s in  1s         
+info: downloading component 'rust-std' for 'wasm32-unknown-emscripten'
+ 20.8 MiB /  20.8 MiB (100 %)   4.1 MiB/s in  7s         
+info: downloading component 'rls'
+info: downloading component 'rust-src'
+info: downloading component 'rust-analysis'
+info: removing previous version of component 'rustc'
+info: removing previous version of component 'rust-std'
+info: removing previous version of component 'cargo'
+info: removing previous version of component 'rust-docs'
+info: removing previous version of component 'rust-std' for 'wasm32-unknown-emscripten'
+info: removing previous version of component 'rls'
+info: removing previous version of component 'rust-src'
+info: removing previous version of component 'rust-analysis'
+info: installing component 'rustc'
+ 65.1 MiB /  65.1 MiB (100 %)  13.9 MiB/s in  5s         
+info: installing component 'rust-std'
+ 25.9 MiB /  25.9 MiB (100 %)  11.7 MiB/s in  2s         
+info: installing component 'cargo'
+info: installing component 'rust-docs'
+ 21.3 MiB /  21.3 MiB (100 %)   4.2 MiB/s in  5s         
+info: installing component 'rust-std' for 'wasm32-unknown-emscripten'
+ 20.8 MiB /  20.8 MiB (100 %)  13.6 MiB/s in  1s         
+info: installing component 'rls'
+info: installing component 'rust-src'
+info: installing component 'rust-analysis'
+info: default toolchain set to 'stable-x86_64-apple-darwin'
+
+  stable-x86_64-apple-darwin updated - rustc 1.86.0 (05f9846f8 2025-03-31) (from rustc 1.42.0 (b8cedc004 2020-03-09))
+
+
+Rust is installed now. Great!
+
+To get started you may need to restart your current shell.
+This would reload your PATH environment variable to include
+Cargo's bin directory ($HOME/.cargo/bin).
+
+To configure your current shell, you need to source
+the corresponding env file under $HOME/.cargo.
+
+This is usually done by running one of the following (note the leading DOT):
+. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
+source "$HOME/.cargo/env.fish"  # For fish
+source "$HOME/.cargo/env.nu"    # For nushell
+ rustlings  karuppiah-solutions-2025-april ✔  $ rustc --version
+rustc 1.86.0 (05f9846f8 2025-03-31)
+ rustlings  karuppiah-solutions-2025-april ✔  $ rust
+rust-analyzer  rust-gdbgui    rustc          rustfmt        
+rust-gdb       rust-lldb      rustdoc        rustup         
+ rustlings  karuppiah-solutions-2025-april ✔  $ rustup --version
+rustup 1.28.1 (f9edccde0 2025-03-05)
+info: This is the version for the rustup toolchain manager, not the rustc compiler.
+info: The currently active `rustc` version is `rustc 1.86.0 (05f9846f8 2025-03-31)`
+ rustlings  karuppiah-solutions-2025-april ✔  $ 
+ rustlings  karuppiah-solutions-2025-april ✔  $ cargo install rustlings
+    Updating crates.io index
+  Downloaded rustlings v6.4.0
+  Downloaded 1 crate (102.1 KB) in 0.55s
+  Installing rustlings v6.4.0
+    Updating crates.io index
+     Locking 84 packages to latest compatible versions
+      Adding crossterm v0.28.1 (available: v0.29.0)
+      Adding notify v7.0.0 (available: v8.0.0)
+      Adding rustix v0.38.44 (available: v1.0.5)
+  Downloaded anstream v0.6.18
+  Downloaded anstyle-query v1.1.2
+  Downloaded smallvec v1.15.0
+  Downloaded rustlings-macros v6.4.0
+  Downloaded toml_datetime v0.6.8
+  Downloaded utf8parse v0.2.2
+  Downloaded signal-hook-registry v1.4.2
+  Downloaded walkdir v2.5.0
+  Downloaded unicode-ident v1.0.18
+  Downloaded serde_derive v1.0.219
+  Downloaded parking_lot v0.12.3
+  Downloaded mio v1.0.3
+  Downloaded toml_edit v0.22.24
+  Downloaded serde v1.0.219
+  Downloaded crossterm v0.28.1
+  Downloaded serde_json v1.0.140
+  Downloaded winnow v0.7.6
+  Downloaded clap_builder v4.5.37
+  Downloaded hashbrown v0.15.2
+  Downloaded indexmap v2.9.0
+  Downloaded memchr v2.7.4
+  Downloaded ryu v1.0.20
+  Downloaded syn v2.0.100
+  Downloaded proc-macro2 v1.0.95
+  Downloaded log v0.4.27
+  Downloaded clap_derive v4.5.32
+  Downloaded rustix v0.38.44
+  Downloaded bitflags v2.9.0
+  Downloaded anyhow v1.0.98
+  Downloaded signal-hook v0.3.17
+  Downloaded parking_lot_core v0.9.10
+  Downloaded notify v7.0.0
+  Downloaded filetime v0.2.25
+  Downloaded strsim v0.11.1
+  Downloaded scopeguard v1.2.0
+  Downloaded lock_api v0.4.12
+  Downloaded heck v0.5.0
+  Downloaded errno v0.3.11
+  Downloaded autocfg v1.4.0
+  Downloaded signal-hook-mio v0.2.4
+  Downloaded serde_spanned v0.6.8
+  Downloaded same-file v1.0.6
+  Downloaded notify-types v1.0.1
+  Downloaded itoa v1.0.15
+  Downloaded colorchoice v1.0.3
+  Downloaded clap_lex v0.7.4
+  Downloaded clap v4.5.37
+  Downloaded quote v1.0.40
+  Downloaded os_pipe v1.2.1
+  Downloaded libc v0.2.172
+  Downloaded equivalent v1.0.2
+  Downloaded instant v0.1.13
+  Downloaded cfg-if v1.0.0
+  Downloaded is_terminal_polyfill v1.70.1
+  Downloaded fsevent-sys v4.1.0
+  Downloaded anstyle v1.0.10
+  Downloaded anstyle-parse v0.2.6
+  Downloaded 57 crates (3.8 MB) in 0.98s
+   Compiling proc-macro2 v1.0.95
+   Compiling unicode-ident v1.0.18
+   Compiling libc v0.2.172
+   Compiling serde v1.0.219
+   Compiling cfg-if v1.0.0
+   Compiling autocfg v1.4.0
+   Compiling parking_lot_core v0.9.10
+   Compiling utf8parse v0.2.2
+   Compiling signal-hook v0.3.17
+   Compiling log v0.4.27
+   Compiling anstyle-parse v0.2.6
+   Compiling anstyle-query v1.1.2
+   Compiling colorchoice v1.0.3
+   Compiling rustix v0.38.44
+   Compiling equivalent v1.0.2
+   Compiling scopeguard v1.2.0
+   Compiling lock_api v0.4.12
+   Compiling anstyle v1.0.10
+   Compiling is_terminal_polyfill v1.70.1
+   Compiling bitflags v2.9.0
+   Compiling hashbrown v0.15.2
+   Compiling smallvec v1.15.0
+   Compiling indexmap v2.9.0
+   Compiling anstream v0.6.18
+   Compiling instant v0.1.13
+   Compiling same-file v1.0.6
+   Compiling anyhow v1.0.98
+   Compiling clap_lex v0.7.4
+   Compiling winnow v0.7.6
+   Compiling serde_json v1.0.140
+   Compiling heck v0.5.0
+   Compiling strsim v0.11.1
+   Compiling quote v1.0.40
+   Compiling syn v2.0.100
+   Compiling clap_builder v4.5.37
+   Compiling signal-hook-registry v1.4.2
+   Compiling mio v1.0.3
+   Compiling errno v0.3.11
+   Compiling filetime v0.2.25
+   Compiling parking_lot v0.12.3
+   Compiling signal-hook-mio v0.2.4
+   Compiling fsevent-sys v4.1.0
+   Compiling walkdir v2.5.0
+   Compiling notify-types v1.0.1
+   Compiling itoa v1.0.15
+   Compiling memchr v2.7.4
+   Compiling ryu v1.0.20
+   Compiling notify v7.0.0
+   Compiling crossterm v0.28.1
+   Compiling os_pipe v1.2.1
+   Compiling serde_derive v1.0.219
+   Compiling clap_derive v4.5.32
+   Compiling clap v4.5.37
+   Compiling serde_spanned v0.6.8
+   Compiling toml_datetime v0.6.8
+   Compiling toml_edit v0.22.24
+   Compiling rustlings-macros v6.4.0
+   Compiling rustlings v6.4.0
+    Finished `release` profile [optimized] target(s) in 41.67s
+  Installing /Users/karuppiahn/.cargo/bin/rustlings
+   Installed package `rustlings v6.4.0` (executable `rustlings`)
+ rustlings  karuppiah-solutions-2025-april ✔  $ 
+ rustlings  karuppiah-solutions-2025-april ✔  $ rustlings 
+Error: You are trying to run Rustlings using the old method before version 6.
+The new method doesn't include cloning the Rustlings' repository.
+Please follow the instructions in `README.md`:
+https://github.com/rust-lang/rustlings#getting-started
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+ ✘  rustlings  karuppiah-solutions-2025-april ✔  $ 
+
+ ~  $ rustlings -h
+Rustlings is a collection of small exercises to get you used to writing and reading Rust code
+
+Usage: rustlings [OPTIONS] [COMMAND]
+
+Commands:
+  init       Initialize the official Rustlings exercises
+  run        Run a single exercise. Runs the next pending exercise if the exercise name is not specified
+  check-all  Check all the exercises, marking them as done or pending accordingly
+  reset      Reset a single exercise
+  hint       Show a hint. Shows the hint of the next pending exercise if the exercise name is not specified
+  dev        Commands for developing (third-party) Rustlings exercises
+  help       Print this message or the help of the given subcommand(s)
+
+Options:
+      --manual-run  Manually run the current exercise using `r` in the watch mode. Only use this if Rustlings fails to detect exercise file changes
+  -h, --help        Print help
+  -V, --version     Print version
+ ~  $ rustlings init
+This command will create the directory `rustlings/` which will contain the exercises.
+Press ENTER to continue 
+
+Initialization done ✓
+
+Run `cd rustlings` to go into the generated directory.
+Then run `rustlings` to get started.
+ ~  $ cd rustlings/
+ rustlings  master ✘  $ ls
+Cargo.toml		rust-analyzer.toml
+exercises		solutions
+ rustlings  master ✘  $ ls exercises/
+00_intro		09_strings		18_iterators
+01_variables		10_modules		19_smart_pointers
+02_functions		11_hashmaps		20_threads
+03_if			12_options		21_macros
+04_primitive_types	13_error_handling	22_clippy
+05_vecs			14_generics		23_conversions
+06_move_semantics	15_traits		README.md
+07_structs		16_lifetimes		quizzes
+08_enums		17_tests
+ rustlings  master ✘  $ ls exercises/00_intro/
+README.md	intro1.rs	intro2.rs
+ rustlings  master ✘  $ ls exercises/01_variables/
+README.md	variables2.rs	variables4.rs	variables6.rs
+variables1.rs	variables3.rs	variables5.rs
+ rustlings  master ✘  $ gst
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	Cargo.toml
+	exercises/
+	rust-analyzer.toml
+	solutions/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ rustlings  master ✘  $ 
+
