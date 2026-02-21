@@ -1,0 +1,409 @@
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  6.5  0.3  21612 12808 ?        Ss   10:16   0:03 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    10:16   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   10:16   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   10:16   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   10:16   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   10:16   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/0:0-cgroup_release]
+root           8  0.0  0.0      0     0 ?        I<   10:16   0:00 [kworker/0:0H-events_highpri]
+root           9  0.2  0.0      0     0 ?        I    10:16   0:00 [kworker/u4:0-events_unbound]
+root          10  0.0  0.0      0     0 ?        I<   10:16   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    10:16   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    10:16   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    10:16   0:00 [rcu_tasks_trace_kthread]
+root          14  0.1  0.0      0     0 ?        S    10:16   0:00 [ksoftirqd/0]
+root          15  0.1  0.0      0     0 ?        I    10:16   0:00 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    10:16   0:00 [migration/0]
+root          17  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/0:1-rcu_gp]
+root          18  0.0  0.0      0     0 ?        S    10:16   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    10:16   0:00 [cpuhp/1]
+root          20  0.2  0.0      0     0 ?        S    10:16   0:00 [migration/1]
+root          21  0.1  0.0      0     0 ?        S    10:16   0:00 [ksoftirqd/1]
+root          22  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/1:0-virtio_vsock]
+root          23  0.0  0.0      0     0 ?        I<   10:16   0:00 [kworker/1:0H-kblockd]
+root          25  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/u4:1-flush-253:0]
+root          26  0.0  0.0      0     0 ?        S    10:16   0:00 [kdevtmpfs]
+root          27  0.0  0.0      0     0 ?        I<   10:16   0:00 [inet_frag_wq]
+root          28  0.0  0.0      0     0 ?        S    10:16   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    10:16   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    10:16   0:00 [oom_reaper]
+root          31  0.1  0.0      0     0 ?        I    10:16   0:00 [kworker/u4:2-events_unbound]
+root          32  0.0  0.0      0     0 ?        I<   10:16   0:00 [writeback]
+root          33  0.0  0.0      0     0 ?        S    10:16   0:00 [kcompactd0]
+root          34  0.0  0.0      0     0 ?        SN   10:16   0:00 [ksmd]
+root          35  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/1:1-events]
+root          36  0.0  0.0      0     0 ?        SN   10:16   0:00 [khugepaged]
+root          37  0.0  0.0      0     0 ?        I<   10:16   0:00 [kintegrityd]
+root          38  0.0  0.0      0     0 ?        I<   10:16   0:00 [kblockd]
+root          39  0.0  0.0      0     0 ?        I<   10:16   0:00 [blkcg_punt_bio]
+root          40  0.0  0.0      0     0 ?        I<   10:16   0:00 [md]
+root          41  0.0  0.0      0     0 ?        S    10:16   0:00 [watchdogd]
+root          42  0.0  0.0      0     0 ?        I<   10:16   0:00 [rpciod]
+root          43  0.0  0.0      0     0 ?        I<   10:16   0:00 [xprtiod]
+root          44  0.6  0.0      0     0 ?        I<   10:16   0:00 [kworker/0:1H-kblockd]
+root          73  0.0  0.0      0     0 ?        S    10:16   0:00 [kswapd0]
+root          75  0.0  0.0      0     0 ?        I<   10:16   0:00 [nfsiod]
+root          77  0.0  0.0      0     0 ?        I<   10:16   0:00 [xfsalloc]
+root          78  0.0  0.0      0     0 ?        I<   10:16   0:00 [xfs_mru_cache]
+root          80  0.0  0.0      0     0 ?        I<   10:16   0:00 [kthrotld]
+root          83  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/1:2-cgroup_free]
+root          85  0.0  0.0      0     0 ?        S    10:16   0:00 [irq/24-ACPI:Ged]
+root          92  0.0  0.0      0     0 ?        I<   10:16   0:00 [acpi_thermal_pm]
+root         118  0.0  0.0      0     0 ?        S    10:16   0:00 [hwrng]
+root         149  0.0  0.0      0     0 ?        I<   10:16   0:00 [kworker/1:1H-kblockd]
+root         153  0.0  0.0      0     0 ?        I<   10:16   0:00 [iscsi_conn_clea]
+root         162  0.0  0.0      0     0 ?        I<   10:16   0:00 [bond0]
+root         198  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/u4:3-flush-253:0]
+root         219  0.0  0.0      0     0 ?        I<   10:16   0:00 [raid5wq]
+root         226  0.0  0.0      0     0 ?        I<   10:16   0:00 [mld]
+root         227  0.0  0.0      0     0 ?        I<   10:16   0:00 [ipv6_addrconf]
+root         238  0.0  0.0    996     4 ?        S    10:16   0:00 bpfilter_umh
+root         239  0.0  0.0      0     0 ?        I<   10:16   0:00 [kstrp]
+root         251  0.0  0.0      0     0 ?        I<   10:16   0:00 [zswap-shrink]
+root         252  0.0  0.0      0     0 ?        I<   10:16   0:00 [kworker/u5:0]
+root         333  0.2  0.0      0     0 ?        S    10:16   0:00 [jbd2/vda-8]
+root         334  0.0  0.0      0     0 ?        I<   10:16   0:00 [ext4-rsv-conver]
+root         338  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/0:2-virtio_vsock]
+root         357  0.3  0.3  42248 16332 ?        S<s  10:16   0:00 /usr/lib/systemd/systemd-journald
+root         397  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/1:3-events]
+root         598  0.1  0.0      0     0 ?        I    10:16   0:00 [kworker/u4:4-events_unbound]
+root         781  0.1  0.1  24096  6044 ?        Ss   10:16   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     788  0.1  0.2  21464 11916 ?        Ss   10:16   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     789  0.0  0.1  91028  6432 ?        Ssl  10:16   0:00 /usr/lib/systemd/systemd-timesyncd
+root         810  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/0:3-cgroup_bpf_destroy]
+root         816  0.0  0.0      0     0 ?        I<   10:16   0:00 [cryptd]
+root         849  0.0  0.0      0     0 ?        I    10:16   0:00 [kworker/0:4-events]
+message+     854  0.6  0.1   9556  5196 ?        Ss   10:16   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activat
+root         856  0.1  0.3 1239628 12408 ?       Ssl  10:16   0:00 /usr/local/bin/examiner
+root         857  0.4  0.2  18048  8208 ?        Ss   10:16   0:00 /usr/lib/systemd/systemd-logind
+root         862  0.0  0.0   3116  1076 tty1     Ss+  10:16   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         866  0.0  0.0   3160  1080 ttyS0    Ss+  10:16   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root         874  0.0  0.1  12024  7788 ?        Ss   10:16   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+laborant     902  0.2  0.2  20072 11120 ?        Ss   10:16   0:00 /usr/lib/systemd/systemd --user
+laborant     903  0.0  0.0  21156  1728 ?        S    10:16   0:00 (sd-pam)
+root         918  0.0  0.2  14784 10092 ?        Ss   10:16   0:00 sshd: laborant [priv]
+root         923  0.1  0.2  19880 10940 ?        Ss   10:16   0:00 /usr/lib/systemd/systemd --user
+root         924  0.0  0.0  21160  1712 ?        S    10:16   0:00 (sd-pam)
+laborant     932  0.0  0.1  14944  6184 ?        S    10:16   0:00 sshd: laborant@pts/0
+laborant     934  0.2  0.2   9028  8300 pts/0    Ss   10:16   0:00 -bash
+postgres    4145  0.4  0.8 228628 34364 ?        Ss   10:17   0:00 /usr/lib/postgresql/18/bin/postgres -D /var/lib/postgresql/18/main -c config_fi
+postgres    4146  0.0  0.1 228628  8040 ?        Ss   10:17   0:00 postgres: 18/main: io worker 0
+postgres    4147  0.0  0.1 228628  5844 ?        Ss   10:17   0:00 postgres: 18/main: io worker 1
+postgres    4148  0.0  0.1 228628  5844 ?        Ss   10:17   0:00 postgres: 18/main: io worker 2
+postgres    4149  0.0  0.1 228764  5888 ?        Ss   10:17   0:00 postgres: 18/main: checkpointer 
+postgres    4150  0.0  0.1 228628  5884 ?        Ss   10:17   0:00 postgres: 18/main: background writer 
+postgres    4152  0.0  0.1 228628  5936 ?        Ss   10:17   0:00 postgres: 18/main: walwriter 
+postgres    4153  0.0  0.2 230204  8864 ?        Ss   10:17   0:00 postgres: 18/main: autovacuum launcher 
+postgres    4154  0.0  0.1 230204  6852 ?        Ss   10:17   0:00 postgres: 18/main: logical replication launcher 
+laborant    4174  6.2  1.6 1122768 67480 ?       Ssl  10:17   0:00 /usr/lib/code-server/lib/node /usr/lib/code-server --bind-addr=127.0.0.1:50062 
+root        4175  0.7  0.1 164736  6456 ?        Ssl  10:17   0:00 /lib/systemd/systemd-socket-proxyd 127.0.0.1:50062
+laborant    4194 40.9  4.8 11875288 200324 ?     Sl   10:17   0:02 /usr/lib/code-server/lib/node /usr/lib/code-server/out/node/entry
+laborant    4235  7.2  1.5 1266704 63916 ?       Sl   10:17   0:00 /usr/lib/code-server/lib/node /usr/lib/code-server/lib/vscode/out/bootstrap-for
+laborant    4241 76.0  3.3 33445656 137804 ?     Sl   10:17   0:01 /usr/lib/code-server/lib/node --dns-result-order=ipv4first /usr/lib/code-server
+laborant    4295  0.0  0.1   8332  4300 pts/0    R+   10:17   0:00 ps aux
+laborant    4296  0.0  0.1   8540  4420 ?        R    10:17   0:00 git status -z -uall
+laborant@ubuntu-01:~$ ps aux | rg postgres
+postgres    4145  0.3  0.8 228628 34364 ?        Ss   10:17   0:00 /usr/lib/postgresql/18/bin/postgres -D /var/lib/postgresql/18/main -c config_file=/etc/postgresql/18/main/postgresql.conf
+postgres    4146  0.0  0.1 228628  8040 ?        Ss   10:17   0:00 postgres: 18/main: io worker 0
+postgres    4147  0.0  0.1 228628  5844 ?        Ss   10:17   0:00 postgres: 18/main: io worker 1
+postgres    4148  0.0  0.1 228628  5844 ?        Ss   10:17   0:00 postgres: 18/main: io worker 2
+postgres    4149  0.0  0.1 228764  5888 ?        Ss   10:17   0:00 postgres: 18/main: checkpointer 
+postgres    4150  0.0  0.1 228628  5884 ?        Ss   10:17   0:00 postgres: 18/main: background writer 
+postgres    4152  0.0  0.1 228628  5936 ?        Ss   10:17   0:00 postgres: 18/main: walwriter 
+postgres    4153  0.0  0.2 230204  8864 ?        Ss   10:17   0:00 postgres: 18/main: autovacuum launcher 
+postgres    4154  0.0  0.1 230204  6852 ?        Ss   10:17   0:00 postgres: 18/main: logical replication launcher 
+laborant    4325  0.0  0.1   8896  4920 pts/0    D+   10:17   0:00 rg postgres
+laborant@ubuntu-01:~$ sudo -u postgres
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+laborant@ubuntu-01:~$ sudo -u postgres psql
+psql (18.2 (Ubuntu 18.2-1.pgdg24.04+1))
+Type "help" for help.
+
+postgres=# select 1;
+ ?column? 
+----------
+        1
+(1 row)
+
+postgres=# CREATE DATABASE lab;
+\c lab
+CREATE DATABASE
+You are now connected to database "lab" as user "postgres".
+lab=# show dat
+data_checksums       data_directory       data_directory_mode  data_sync_retry      datestyle            
+lab=# show databases;
+ERROR:  unrecognized configuration parameter "databases"
+lab=# \l
+                                                 List of databases
+   Name    |  Owner   | Encoding | Locale Provider | Collate |  Ctype  | Locale | ICU Rules |   Access privileges   
+-----------+----------+----------+-----------------+---------+---------+--------+-----------+-----------------------
+ lab       | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ postgres  | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ template0 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+           |          |          |                 |         |         |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+           |          |          |                 |         |         |        |           | postgres=CTc/postgres
+(4 rows)
+
+lab=# CREATE TABLE users (
+    id BIGSERIAL PRIMARY KEY,
+    email TEXT,
+    country TEXT,
+    created_at TIMESTAMP,
+    is_active BOOLEAN
+);
+CREATE TABLE
+lab=# \dt
+          List of tables
+ Schema | Name  | Type  |  Owner   
+--------+-------+-------+----------
+ public | users | table | postgres
+(1 row)
+
+lab=# \dt+
+                                       List of tables
+ Schema | Name  | Type  |  Owner   | Persistence | Access method |    Size    | Description 
+--------+-------+-------+----------+-------------+---------------+------------+-------------
+ public | users | table | postgres | permanent   | heap          | 8192 bytes | 
+(1 row)
+
+lab=# INSERT INTO users (email, country, created_at, is_active)
+SELECT
+    'user' || gs || '@example.com',
+    (ARRAY['IN','US','UK','DE','FR'])[floor(random()*5)+1],
+    NOW() - (random() * INTERVAL '365 days'),
+    random() > 0.5
+FROM generate_series(1, 5000000) gs;
+^C
+lab=# 
+\q
+laborant@ubuntu-01:~$ tmux
+-bash: tmux: command not found
+laborant@ubuntu-01:~$ apt update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease                                  
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease           
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+7 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt install tmux
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libevent-core-2.1-7t64 libutempter0
+The following NEW packages will be installed:
+  libevent-core-2.1-7t64 libutempter0 tmux
+0 upgraded, 3 newly installed, 0 to remove and 7 not upgraded.
+Need to get 581 kB of archives.
+After this operation, 1504 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libevent-core-2.1-7t64 amd64 2.1.12-stable-9ubuntu2 [91.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libutempter0 amd64 1.2.1-3build1 [9606 B]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tmux amd64 3.4-1ubuntu0.1 [480 kB]
+Fetched 581 kB in 3s (190 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libevent-core-2.1-7t64:amd64.
+(Reading database ... 48524 files and directories currently installed.)
+Preparing to unpack .../libevent-core-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb ...
+Unpacking libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Selecting previously unselected package libutempter0:amd64.
+Preparing to unpack .../libutempter0_1.2.1-3build1_amd64.deb ...
+Unpacking libutempter0:amd64 (1.2.1-3build1) ...
+Selecting previously unselected package tmux.
+Preparing to unpack .../tmux_3.4-1ubuntu0.1_amd64.deb ...
+Unpacking tmux (3.4-1ubuntu0.1) ...
+Setting up libutempter0:amd64 (1.2.1-3build1) ...
+Setting up libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Setting up tmux (3.4-1ubuntu0.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for debianutils (5.17build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+laborant@ubuntu-01:~$ tmux
+[exited]
+laborant@ubuntu-01:~$ tmux
+[detached (from session 0)]
+laborant@ubuntu-01:~$ tmux ls
+0: 1 windows (created Wed Feb 18 10:22:10 2026)
+laborant@ubuntu-01:~$ tmux a
+[exited]
+laborant@ubuntu-01:~$ tmux ls
+no server running on /tmp/tmux-1001/default
+laborant@ubuntu-01:~$ sudo -u postgres psql
+psql (18.2 (Ubuntu 18.2-1.pgdg24.04+1))
+Type "help" for help.
+
+postgres=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN';
+ERROR:  relation "users" does not exist
+LINE 2: SELECT * FROM users
+                      ^
+postgres=# \c lab 
+You are now connected to database "lab" as user "postgres".
+lab=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN';
+                                                          QUERY PLAN                                                          
+------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on users  (cost=0.00..114036.93 rows=1011832 width=43) (actual time=6.969..422.420 rows=1000429.00 loops=1)
+   Filter: (country = 'IN'::text)
+   Rows Removed by Filter: 3999571
+   Buffers: shared hit=16015 read=35522
+ Planning:
+   Buffers: shared hit=69 read=3
+ Planning Time: 1.167 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.351 ms (Deform 0.127 ms), Inlining 0.000 ms, Optimization 0.658 ms, Emission 6.129 ms, Total 7.138 ms
+ Execution Time: 540.386 ms
+(12 rows)
+
+lab=# select count(*) from users where country = 'IN';
+  count  
+---------
+ 1000429
+(1 row)
+
+lab=# CREATE INDEX idx_users_country ON users(country);
+CREATE INDEX
+lab=# EXPLAIN ANALYZE                                 
+SELECT * FROM users
+WHERE country = 'IN';
+                                                                  QUERY PLAN                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on users  (cost=11270.14..75455.05 rows=1011833 width=43) (actual time=77.723..535.867 rows=1000429.00 loops=1)
+   Recheck Cond: (country = 'IN'::text)
+   Heap Blocks: exact=51537
+   Buffers: shared read=52382 written=8240
+   ->  Bitmap Index Scan on idx_users_country  (cost=0.00..11017.18 rows=1011833 width=0) (actual time=58.065..58.066 rows=1000429.00 loops=1)
+         Index Cond: (country = 'IN'::text)
+         Index Searches: 1
+         Buffers: shared read=845
+ Planning:
+   Buffers: shared hit=19 read=1
+ Planning Time: 1.535 ms
+ Execution Time: 567.281 ms
+(12 rows)
+
+lab=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;
+                                                                  QUERY PLAN                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on users  (cost=11144.37..75329.28 rows=508750 width=43) (actual time=75.803..275.211 rows=499605.00 loops=1)
+   Recheck Cond: (country = 'IN'::text)
+   Filter: is_active
+   Rows Removed by Filter: 500824
+   Heap Blocks: exact=51537
+   Buffers: shared read=52382
+   ->  Bitmap Index Scan on idx_users_country  (cost=0.00..11017.18 rows=1011833 width=0) (actual time=63.898..63.898 rows=1000429.00 loops=1)
+         Index Cond: (country = 'IN'::text)
+         Index Searches: 1
+         Buffers: shared read=845
+ Planning Time: 0.131 ms
+ Execution Time: 293.003 ms
+(12 rows)
+
+lab=# CREATE INDEX idx_users_country_active ON users(country, is_active);
+CREATE INDEX
+lab=# EXPLAIN ANALYZE                                                    
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;
+lab=# 
+lab=# 
+lab=# 
+lab=# 
+lab=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;
+lab=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true \G
+invalid command \G
+Try \? for help.
+lab-# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;
+ERROR:  syntax error at or near "EXPLAIN"
+LINE 5: EXPLAIN ANALYZE
+        ^
+lab=# 
+lab=# 
+lab=# EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;
+lab=# 
+\q
+laborant@ubuntu-01:~$ sudo -u postgres psql -c "EXPLAIN ANALYZE
+SELECT * FROM users
+WHERE country = 'IN'
+AND is_active = true;"
+ERROR:  relation "users" does not exist
+LINE 2: SELECT * FROM users
+                      ^
+laborant@ubuntu-01:~$ sudo -u postgres psql -d lab  -c "EXPLAIN ANALYZE SELECT * FROM users WHERE country = 'IN' AND is_active = true;"
+laborant@ubuntu-01:~$ sudo -u postgres psql -d lab  -c "EXPLAIN ANALYZE SELECT * FROM users WHERE country = 'IN' AND is_active = true;" | cat
+                                                                    QUERY PLAN                                                                     
+---------------------------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on users  (cost=6939.12..64835.50 rows=508750 width=43) (actual time=41.293..148.916 rows=499605.00 loops=1)
+   Recheck Cond: ((country = 'IN'::text) AND is_active)
+   Heap Blocks: exact=51537
+   Buffers: shared read=51961
+   ->  Bitmap Index Scan on idx_users_country_active  (cost=0.00..6811.93 rows=508750 width=0) (actual time=34.098..34.098 rows=499605.00 loops=1)
+         Index Cond: ((country = 'IN'::text) AND (is_active = true))
+         Index Searches: 1
+         Buffers: shared read=424
+ Planning:
+   Buffers: shared hit=93 read=25
+ Planning Time: 0.826 ms
+ Execution Time: 165.627 ms
+(12 rows)
+
+laborant@ubuntu-01:~$ 

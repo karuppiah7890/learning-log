@@ -89,6 +89,10 @@ resource "aws_security_group_rule" "web" {
 
 ```
 
+More Details:
+
+About Configuration and Secrets
+
 ---
 
 2nd Round
