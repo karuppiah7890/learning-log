@@ -1,0 +1,636 @@
+ stack1  main ✘ ⬆  $ brew info gdb
+==> gdb ✘: stable 17.1, HEAD
+GNU debugger
+https://www.gnu.org/software/gdb/
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/g/gdb.rb
+License: GPL-3.0-or-later
+==> Dependencies
+Build: pkgconf ✔
+Required: gmp ✔, mpfr ✔, ncurses ✔, python@3.14 ✔, readline ✔, xz ✔, zstd ✔, expat ✔
+==> Options
+--HEAD
+	Install HEAD version
+==> Caveats
+gdb requires special privileges to access Mach ports.
+You will need to codesign the binary. For instructions, see:
+
+  https://sourceware.org/gdb/wiki/PermissionsDarwin
+==> Analytics
+install: 2,094 (30 days), 8,251 (90 days), 40,687 (365 days)
+install-on-request: 2,071 (30 days), 8,177 (90 days), 40,465 (365 days)
+build-error: 66 (30 days)
+ stack1  main ✘ ⬆  $ brew install gdb
+✔︎ JSON API cask.jws.json                                            Downloaded   15.3MB/ 15.3MB
+✔︎ JSON API formula.jws.json                                         Downloaded   31.9MB/ 31.9MB
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report Tier 3 unrelated issues to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+Warning: Calling `depends_on macos: :sierra` is deprecated! There is no replacement.
+Please report this issue to the ubuntu/homebrew-microk8s tap (not Homebrew/* repositories):
+  /usr/local/Homebrew/Library/Taps/ubuntu/homebrew-microk8s/Formula/microk8s.rb:9
+
+==> Fetching downloads for: gdb
+✔︎ API Source gdb.rb                                                 Verified      3.0KB/  3.0KB
+✔︎ Formula gdb (17.1)                                                Verified     24.7MB/ 24.7MB
+==> ../configure --enable-targets=all --disable-binutils --disable-nls --enable-tui --with-curs
+==> make
+Last 15 lines from /Users/karuppiahn/Library/Logs/Homebrew/gdb/02.make.log:
+../../gdb/arch/amd64-linux-tdesc.c:52:19: error: use of undeclared identifier 'tdesc_cache'
+  const auto it = tdesc_cache.find (xstate_bv);
+                  ^
+../../gdb/arch/amd64-linux-tdesc.c:53:13: error: use of undeclared identifier 'tdesc_cache'
+  if (it != tdesc_cache.end ())
+            ^
+../../gdb/arch/amd64-linux-tdesc.c:65:3: error: use of undeclared identifier 'tdesc_cache'
+  tdesc_cache.emplace (xstate_bv, std::move (tdesc));
+  ^
+  CXX    arch/arm.o
+8 errors generated.
+make[2]: *** [arch/amd64-linux-tdesc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [all-gdb] Error 2
+make: *** [all] Error 2
+
+
+
+Error: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report Tier 3 unrelated issues to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+This build failure was expected, as this is not a Tier 1 configuration:
+  https://docs.brew.sh/Support-Tiers
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+ ✘  stack1  main ✘ ⬆  $ 
+
+ stack1  main ✘ ⬆  $ rust
+rust-analyzer  rust-gdbgui    rustc          rustfmt        rustup         
+rust-gdb       rust-lldb      rustdoc        rustlings      
+ stack1  main ✘ ⬆  $ rustup 
+rustup 1.28.1 (f9edccde0 2025-03-05)
+
+The Rust toolchain installer
+
+Usage: rustup[EXE] [OPTIONS] [+toolchain] [COMMAND]
+
+Commands:
+  show         Show the active and installed toolchains or profiles
+  update       Update Rust toolchains and rustup
+  check        Check for updates to Rust toolchains and rustup
+  default      Set the default toolchain
+  toolchain    Modify or query the installed toolchains
+  target       Modify a toolchain's supported targets
+  component    Modify a toolchain's installed components
+  override     Modify toolchain overrides for directories
+  run          Run a command with an environment configured for a given toolchain
+  which        Display which binary will be run for a given command
+  doc          Open the documentation for the current toolchain
+  man          View the man page for a given command
+  self         Modify the rustup installation
+  set          Alter rustup settings
+  completions  Generate tab-completion scripts for your shell
+  help         Print this message or the help of the given subcommand(s)
+
+Arguments:
+  [+toolchain]
+          Release channel (e.g. +stable) or custom toolchain to set override
+
+Options:
+  -v, --verbose
+          Set log level to 'DEBUG' if 'RUSTUP_LOG' is unset
+
+  -q, --quiet
+          Disable progress output, set log level to 'WARN' if 'RUSTUP_LOG' is unset
+
+  -h, --help
+          Print help
+
+  -V, --version
+          Print version
+
+Discussion:
+    Rustup installs The Rust Programming Language from the official
+    release channels, enabling you to easily switch between stable,
+    beta, and nightly compilers and keep them updated. It makes
+    cross-compiling simpler with binary builds of the standard library
+    for common platforms.
+
+    If you are new to Rust consider running `rustup doc --book` to
+    learn Rust.
+
+ ✘  stack1  main ✘ ⬆  $ rustup show
+Default host: x86_64-apple-darwin
+rustup home:  /Users/karuppiahn/.rustup
+
+installed toolchains
+--------------------
+stable-x86_64-apple-darwin (active, default)
+nightly-x86_64-apple-darwin
+
+active toolchain
+----------------
+name: stable-x86_64-apple-darwin
+active because: it's the default toolchain
+installed targets:
+  wasm32-unknown-emscripten
+  x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup check
+stable-x86_64-apple-darwin - Update available : 1.86.0 (05f9846f8 2025-03-31) -> 1.93.1 (01f6ddf75 2026-02-11)
+nightly-x86_64-apple-darwin - Update available : 1.44.0-nightly (f509b26a7 2020-03-18) -> 1.96.0-nightly (80381278a 2026-03-01)
+rustup - Update available : 1.28.1 -> 1.28.2
+ stack1  main ✘ ⬆  $ rustup update
+info: syncing channel updates for 'stable-x86_64-apple-darwin'
+info: latest update on 2026-02-12, rust version 1.93.1 (01f6ddf75 2026-02-11)
+error: component 'rls-preview' for target 'x86_64-apple-darwin' is unavailable for download for channel 'stable'
+error: One or many components listed above might have been permanently removed from newer versions
+error: of the official Rust distribution due to deprecation.
+error: 
+error: You can find the list of removed components at
+error: <https://rust-lang.github.io/rustup/devel/concepts/components.html#previous-components>.
+error: 
+error: If you are updating an existing toolchain, after determining the deprecated component(s)
+error: in question, please remove them with a command such as:
+error: 
+error:     rustup component remove --toolchain stable <COMPONENT>...
+error: 
+error: After that, you should be able to continue with the update as usual.
+info: syncing channel updates for 'nightly-x86_64-apple-darwin'
+info: latest update on 2026-03-02, rust version 1.96.0-nightly (80381278a 2026-03-01)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-03-01-x86_64-apple-darwin'
+info: latest update on 2026-03-01, rust version 1.96.0-nightly (38c0de8dc 2026-02-28)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-28-x86_64-apple-darwin'
+info: latest update on 2026-02-28, rust version 1.95.0-nightly (3a70d0349 2026-02-27)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-27-x86_64-apple-darwin'
+info: latest update on 2026-02-27, rust version 1.95.0-nightly (6a979b3e3 2026-02-26)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-26-x86_64-apple-darwin'
+info: latest update on 2026-02-26, rust version 1.95.0-nightly (1ed488274 2026-02-25)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-25-x86_64-apple-darwin'
+info: latest update on 2026-02-25, rust version 1.95.0-nightly (859951e3c 2026-02-24)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-24-x86_64-apple-darwin'
+info: latest update on 2026-02-24, rust version 1.95.0-nightly (b3869b94c 2026-02-23)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-23-x86_64-apple-darwin'
+info: latest update on 2026-02-23, rust version 1.95.0-nightly (c78a29473 2026-02-22)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-22-x86_64-apple-darwin'
+info: latest update on 2026-02-22, rust version 1.95.0-nightly (5fb2ff861 2026-02-21)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-21-x86_64-apple-darwin'
+info: latest update on 2026-02-21, rust version 1.95.0-nightly (0376d43d4 2026-02-20)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-20-x86_64-apple-darwin'
+info: latest update on 2026-02-20, rust version 1.95.0-nightly (7f99507f5 2026-02-19)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-19-x86_64-apple-darwin'
+info: latest update on 2026-02-19, rust version 1.95.0-nightly (c04308580 2026-02-18)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-18-x86_64-apple-darwin'
+info: latest update on 2026-02-18, rust version 1.95.0-nightly (838709580 2026-02-17)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-17-x86_64-apple-darwin'
+info: latest update on 2026-02-17, rust version 1.95.0-nightly (3c9faa0d0 2026-02-16)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-16-x86_64-apple-darwin'
+info: latest update on 2026-02-16, rust version 1.95.0-nightly (873b4beb0 2026-02-15)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-15-x86_64-apple-darwin'
+info: latest update on 2026-02-15, rust version 1.95.0-nightly (a33907a7a 2026-02-14)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-14-x86_64-apple-darwin'
+info: latest update on 2026-02-14, rust version 1.95.0-nightly (a423f68a0 2026-02-13)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-13-x86_64-apple-darwin'
+info: latest update on 2026-02-13, rust version 1.95.0-nightly (47611e160 2026-02-12)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-12-x86_64-apple-darwin'
+info: latest update on 2026-02-12, rust version 1.95.0-nightly (7057231bd 2026-02-11)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-11-x86_64-apple-darwin'
+info: latest update on 2026-02-11, rust version 1.95.0-nightly (9e79395f9 2026-02-10)
+info: skipping nightly which is missing installed component 'rls'
+info: syncing channel updates for 'nightly-2026-02-10-x86_64-apple-darwin'
+info: latest update on 2026-02-10, rust version 1.95.0-nightly (18d13b533 2026-02-09)
+info: skipping nightly which is missing installed component 'rls'
+error: component 'rls-preview' for target 'x86_64-apple-darwin' is unavailable for download for channel 'nightly'
+error: Sometimes not all components are available in any given nightly.
+error: If you don't need these components, you could try a minimal installation with:
+error: 
+error:     rustup toolchain add nightly --profile minimal
+error: 
+error: If you require these components, please install and use the latest successfully built version,
+error: which you can find at <https://rust-lang.github.io/rustup-components-history>.
+error: 
+error: After determining the correct date, install it with a command such as:
+error: 
+error:     rustup toolchain install nightly-2018-12-27
+error: 
+error: Then you can use the toolchain with commands such as:
+error: 
+error:     cargo +nightly-2018-12-27 build
+info: checking for self-update
+info: downloading self-update
+
+   stable-x86_64-apple-darwin update failed - rustc 1.86.0 (05f9846f8 2025-03-31)
+  nightly-x86_64-apple-darwin update failed - rustc 1.44.0-nightly (f509b26a7 2020-03-18)
+
+info: cleaning up downloads & tmp directories
+ ✘  stack1  main ✘ ⬆  $ rustup check
+stable-x86_64-apple-darwin - Update available : 1.86.0 (05f9846f8 2025-03-31) -> 1.93.1 (01f6ddf75 2026-02-11)
+nightly-x86_64-apple-darwin - Update available : 1.44.0-nightly (f509b26a7 2020-03-18) -> 1.96.0-nightly (80381278a 2026-03-01)
+rustup - Up to date : 1.28.2
+ stack1  main ✘ ⬆  $ rustup toolchain
+Install, uninstall, or list toolchains
+
+Usage: rustup[EXE] toolchain <COMMAND>
+
+Commands:
+  list       List installed toolchains
+  install    Install or update the given toolchains, or by default the active toolchain
+  uninstall  Uninstall the given toolchains
+  link       Create a custom toolchain by symlinking to a directory
+  help       Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+
+Discussion:
+    Many `rustup` commands deal with *toolchains*, a single
+    installation of the Rust compiler. `rustup` supports multiple
+    types of toolchains. The most basic track the official release
+    channels: 'stable', 'beta' and 'nightly'; but `rustup` can also
+    install specific toolchains from the official archives, toolchains for
+    alternate host platforms, and from local builds ('custom toolchains').
+
+    Standard release channel toolchain names have the following form:
+
+        <channel>[-<date>][-<host>]
+
+        <channel>       = stable|beta|nightly|<versioned>[-<prerelease>]
+        <versioned>     = <major.minor>|<major.minor.patch>
+        <prerelease>    = beta[.<number>]
+        <date>          = YYYY-MM-DD
+        <host>          = <target-triple>
+
+    'channel' is a named release channel, a major and minor version
+    number such as `1.42`, or a fully specified version number, such
+    as `1.42.0`. Channel names can be optionally appended with an
+    archive date, as in `nightly-2014-12-18`, in which case the
+    toolchain is downloaded from the archive for that date.
+
+    The host may be specified as a target triple. This is most useful
+    for installing a 32-bit compiler on a 64-bit platform, or for
+    installing the [MSVC-based toolchain] on Windows. For example:
+
+        $ rustup toolchain install stable-x86_64-pc-windows-msvc
+
+    For convenience, omitted elements of the target triple will be
+    inferred, so the above could be written:
+
+        $ rustup toolchain install stable-msvc
+
+    The `rustup default` command may be used to both install and set
+    the desired toolchain as default in a single command:
+
+        $ rustup default stable-msvc
+
+    rustup can also manage symlinked local toolchain builds, which are
+    often used for developing Rust itself. For more information see
+    `rustup toolchain help link`.
+ ✘  stack1  main ✘ ⬆  $ rustup toolchain list
+stable-x86_64-apple-darwin (active, default)
+nightly-x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup 
+rustup 1.28.2 (e4f3ad6f8 2025-04-28)
+
+The Rust toolchain installer
+
+Usage: rustup[EXE] [OPTIONS] [+toolchain] [COMMAND]
+
+Commands:
+  toolchain    Install, uninstall, or list toolchains
+  default      Set the default toolchain
+  show         Show the active and installed toolchains or profiles
+  update       Update Rust toolchains and rustup
+  check        Check for updates to Rust toolchains and rustup
+  target       Modify a toolchain's supported targets
+  component    Modify a toolchain's installed components
+  override     Modify toolchain overrides for directories
+  run          Run a command with an environment configured for a given toolchain
+  which        Display which binary will be run for a given command
+  doc          Open the documentation for the current toolchain
+  man          View the man page for a given command
+  self         Modify the rustup installation
+  set          Alter rustup settings
+  completions  Generate tab-completion scripts for your shell
+  help         Print this message or the help of the given subcommand(s)
+
+Arguments:
+  [+toolchain]
+          Release channel (e.g. +stable) or custom toolchain to set override
+
+Options:
+  -v, --verbose
+          Set log level to 'DEBUG' if 'RUSTUP_LOG' is unset
+
+  -q, --quiet
+          Disable progress output, set log level to 'WARN' if 'RUSTUP_LOG' is unset
+
+  -h, --help
+          Print help
+
+  -V, --version
+          Print version
+
+Discussion:
+    Rustup installs The Rust Programming Language from the official
+    release channels, enabling you to easily switch between stable,
+    beta, and nightly compilers and keep them updated. It makes
+    cross-compiling simpler with binary builds of the standard library
+    for common platforms.
+
+    If you are new to Rust consider running `rustup doc --book` to
+    learn Rust.
+
+ ✘  stack1  main ✘ ⬆  $ rustup component
+Modify a toolchain's installed components
+
+Usage: rustup[EXE] component <COMMAND>
+
+Commands:
+  list    List installed and available components
+  add     Add a component to a Rust toolchain
+  remove  Remove a component from a Rust toolchain
+  help    Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+ ✘  stack1  main ✘ ⬆  $ rustup component list
+cargo-x86_64-apple-darwin (installed)
+clippy-x86_64-apple-darwin
+llvm-bitcode-linker-x86_64-apple-darwin
+llvm-tools-x86_64-apple-darwin
+rls-x86_64-apple-darwin (installed)
+rust-analysis-x86_64-apple-darwin (installed)
+rust-analyzer-x86_64-apple-darwin
+rust-docs-x86_64-apple-darwin (installed)
+rust-src (installed)
+rust-std-aarch64-apple-darwin
+rust-std-aarch64-apple-ios
+rust-std-aarch64-apple-ios-macabi
+rust-std-aarch64-apple-ios-sim
+rust-std-aarch64-linux-android
+rust-std-aarch64-pc-windows-gnullvm
+rust-std-aarch64-pc-windows-msvc
+rust-std-aarch64-unknown-fuchsia
+rust-std-aarch64-unknown-linux-gnu
+rust-std-aarch64-unknown-linux-musl
+rust-std-aarch64-unknown-linux-ohos
+rust-std-aarch64-unknown-none
+rust-std-aarch64-unknown-none-softfloat
+rust-std-aarch64-unknown-uefi
+rust-std-arm-linux-androideabi
+rust-std-arm-unknown-linux-gnueabi
+rust-std-arm-unknown-linux-gnueabihf
+rust-std-arm-unknown-linux-musleabi
+rust-std-arm-unknown-linux-musleabihf
+rust-std-arm64ec-pc-windows-msvc
+rust-std-armebv7r-none-eabi
+rust-std-armebv7r-none-eabihf
+rust-std-armv5te-unknown-linux-gnueabi
+rust-std-armv5te-unknown-linux-musleabi
+rust-std-armv7-linux-androideabi
+rust-std-armv7-unknown-linux-gnueabi
+rust-std-armv7-unknown-linux-gnueabihf
+rust-std-armv7-unknown-linux-musleabi
+rust-std-armv7-unknown-linux-musleabihf
+rust-std-armv7-unknown-linux-ohos
+rust-std-armv7a-none-eabi
+rust-std-armv7r-none-eabi
+rust-std-armv7r-none-eabihf
+rust-std-i586-pc-windows-msvc
+rust-std-i586-unknown-linux-gnu
+rust-std-i586-unknown-linux-musl
+rust-std-i686-linux-android
+rust-std-i686-pc-windows-gnu
+rust-std-i686-pc-windows-gnullvm
+rust-std-i686-pc-windows-msvc
+rust-std-i686-unknown-freebsd
+rust-std-i686-unknown-linux-gnu
+rust-std-i686-unknown-linux-musl
+rust-std-i686-unknown-uefi
+rust-std-loongarch64-unknown-linux-gnu
+rust-std-loongarch64-unknown-linux-musl
+rust-std-loongarch64-unknown-none
+rust-std-loongarch64-unknown-none-softfloat
+rust-std-nvptx64-nvidia-cuda
+rust-std-powerpc-unknown-linux-gnu
+rust-std-powerpc64-unknown-linux-gnu
+rust-std-powerpc64le-unknown-linux-gnu
+rust-std-powerpc64le-unknown-linux-musl
+rust-std-riscv32i-unknown-none-elf
+rust-std-riscv32im-unknown-none-elf
+rust-std-riscv32imac-unknown-none-elf
+rust-std-riscv32imafc-unknown-none-elf
+rust-std-riscv32imc-unknown-none-elf
+rust-std-riscv64gc-unknown-linux-gnu
+rust-std-riscv64gc-unknown-linux-musl
+rust-std-riscv64gc-unknown-none-elf
+rust-std-riscv64imac-unknown-none-elf
+rust-std-s390x-unknown-linux-gnu
+rust-std-sparc64-unknown-linux-gnu
+rust-std-sparcv9-sun-solaris
+rust-std-thumbv6m-none-eabi
+rust-std-thumbv7em-none-eabi
+rust-std-thumbv7em-none-eabihf
+rust-std-thumbv7m-none-eabi
+rust-std-thumbv7neon-linux-androideabi
+rust-std-thumbv7neon-unknown-linux-gnueabihf
+rust-std-thumbv8m.base-none-eabi
+rust-std-thumbv8m.main-none-eabi
+rust-std-thumbv8m.main-none-eabihf
+rust-std-wasm32-unknown-emscripten (installed)
+rust-std-wasm32-unknown-unknown
+rust-std-wasm32-wasip1
+rust-std-wasm32-wasip1-threads
+rust-std-wasm32-wasip2
+rust-std-wasm32v1-none
+rust-std-x86_64-apple-darwin (installed)
+rust-std-x86_64-apple-ios
+rust-std-x86_64-apple-ios-macabi
+rust-std-x86_64-fortanix-unknown-sgx
+rust-std-x86_64-linux-android
+rust-std-x86_64-pc-solaris
+rust-std-x86_64-pc-windows-gnu
+rust-std-x86_64-pc-windows-gnullvm
+rust-std-x86_64-pc-windows-msvc
+rust-std-x86_64-unknown-freebsd
+rust-std-x86_64-unknown-fuchsia
+rust-std-x86_64-unknown-illumos
+rust-std-x86_64-unknown-linux-gnu
+rust-std-x86_64-unknown-linux-gnux32
+rust-std-x86_64-unknown-linux-musl
+rust-std-x86_64-unknown-linux-ohos
+rust-std-x86_64-unknown-netbsd
+rust-std-x86_64-unknown-none
+rust-std-x86_64-unknown-redox
+rust-std-x86_64-unknown-uefi
+rustc-x86_64-apple-darwin (installed)
+rustc-dev-aarch64-apple-darwin
+rustc-dev-aarch64-pc-windows-msvc
+rustc-dev-aarch64-unknown-linux-gnu
+rustc-dev-aarch64-unknown-linux-musl
+rustc-dev-arm-unknown-linux-gnueabi
+rustc-dev-arm-unknown-linux-gnueabihf
+rustc-dev-armv7-unknown-linux-gnueabihf
+rustc-dev-i686-pc-windows-gnu
+rustc-dev-i686-pc-windows-msvc
+rustc-dev-i686-unknown-linux-gnu
+rustc-dev-loongarch64-unknown-linux-gnu
+rustc-dev-loongarch64-unknown-linux-musl
+rustc-dev-powerpc-unknown-linux-gnu
+rustc-dev-powerpc64-unknown-linux-gnu
+rustc-dev-powerpc64le-unknown-linux-gnu
+rustc-dev-powerpc64le-unknown-linux-musl
+rustc-dev-riscv64gc-unknown-linux-gnu
+rustc-dev-s390x-unknown-linux-gnu
+rustc-dev-x86_64-apple-darwin
+rustc-dev-x86_64-pc-windows-gnu
+rustc-dev-x86_64-pc-windows-msvc
+rustc-dev-x86_64-unknown-freebsd
+rustc-dev-x86_64-unknown-illumos
+rustc-dev-x86_64-unknown-linux-gnu
+rustc-dev-x86_64-unknown-linux-musl
+rustc-dev-x86_64-unknown-netbsd
+rustc-docs-aarch64-unknown-linux-gnu
+rustc-docs-x86_64-unknown-linux-gnu
+rustfmt-x86_64-apple-darwin (installed)
+ stack1  main ✘ ⬆  $ rustup toolchain list
+stable-x86_64-apple-darwin (active, default)
+nightly-x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup toolchain 
+Install, uninstall, or list toolchains
+
+Usage: rustup[EXE] toolchain <COMMAND>
+
+Commands:
+  list       List installed toolchains
+  install    Install or update the given toolchains, or by default the active toolchain
+  uninstall  Uninstall the given toolchains
+  link       Create a custom toolchain by symlinking to a directory
+  help       Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+
+Discussion:
+    Many `rustup` commands deal with *toolchains*, a single
+    installation of the Rust compiler. `rustup` supports multiple
+    types of toolchains. The most basic track the official release
+    channels: 'stable', 'beta' and 'nightly'; but `rustup` can also
+    install specific toolchains from the official archives, toolchains for
+    alternate host platforms, and from local builds ('custom toolchains').
+
+    Standard release channel toolchain names have the following form:
+
+        <channel>[-<date>][-<host>]
+
+        <channel>       = stable|beta|nightly|<versioned>[-<prerelease>]
+        <versioned>     = <major.minor>|<major.minor.patch>
+        <prerelease>    = beta[.<number>]
+        <date>          = YYYY-MM-DD
+        <host>          = <target-triple>
+
+    'channel' is a named release channel, a major and minor version
+    number such as `1.42`, or a fully specified version number, such
+    as `1.42.0`. Channel names can be optionally appended with an
+    archive date, as in `nightly-2014-12-18`, in which case the
+    toolchain is downloaded from the archive for that date.
+
+    The host may be specified as a target triple. This is most useful
+    for installing a 32-bit compiler on a 64-bit platform, or for
+    installing the [MSVC-based toolchain] on Windows. For example:
+
+        $ rustup toolchain install stable-x86_64-pc-windows-msvc
+
+    For convenience, omitted elements of the target triple will be
+    inferred, so the above could be written:
+
+        $ rustup toolchain install stable-msvc
+
+    The `rustup default` command may be used to both install and set
+    the desired toolchain as default in a single command:
+
+        $ rustup default stable-msvc
+
+    rustup can also manage symlinked local toolchain builds, which are
+    often used for developing Rust itself. For more information see
+    `rustup toolchain help link`.
+ ✘  stack1  main ✘ ⬆  $ rustup toolchain uninstall
+error: the following required arguments were not provided:
+  <TOOLCHAIN>...
+
+Usage: rustup[EXE] toolchain uninstall <TOOLCHAIN>...
+
+For more information, try '--help'.
+ ✘  stack1  main ✘ ⬆  $ rustup toolchain list
+stable-x86_64-apple-darwin (active, default)
+nightly-x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup toolchain uninstall stable-x86_64-apple-darwin
+warn: removing the active toolchain; a toolchain override will be required for running Rust tools
+warn: removing the default toolchain; proc-macros and build scripts might no longer build
+info: uninstalling toolchain 'stable-x86_64-apple-darwin'
+info: toolchain 'stable-x86_64-apple-darwin' uninstalled
+ stack1  main ✘ ⬆  $ rustup toolchain list
+info: syncing channel updates for 'stable-x86_64-apple-darwin'
+info: latest update on 2026-02-12, rust version 1.93.1 (01f6ddf75 2026-02-11)
+info: downloading component 'cargo'
+info: downloading component 'clippy'
+info: downloading component 'rust-docs'
+ 20.7 MiB /  20.7 MiB (100 %)   9.7 MiB/s in  2s         
+info: downloading component 'rust-std'
+ 27.2 MiB /  27.2 MiB (100 %)  10.2 MiB/s in  2s         
+info: downloading component 'rustc'
+ 73.8 MiB /  73.8 MiB (100 %)  11.0 MiB/s in  6s         
+info: downloading component 'rustfmt'
+info: installing component 'cargo'
+info: installing component 'clippy'
+info: installing component 'rust-docs'
+ 20.7 MiB /  20.7 MiB (100 %)   3.6 MiB/s in  4s         
+info: installing component 'rust-std'
+ 27.2 MiB /  27.2 MiB (100 %)  13.2 MiB/s in  2s         
+info: installing component 'rustc'
+ 73.8 MiB /  73.8 MiB (100 %)  13.7 MiB/s in  5s         
+info: installing component 'rustfmt'
+nightly-x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup toolchain list
+stable-x86_64-apple-darwin (active, default)
+nightly-x86_64-apple-darwin
+ stack1  main ✘ ⬆  $ rustup toolchain uninstall nightly-x86_64-apple-darwin
+info: uninstalling toolchain 'nightly-x86_64-apple-darwin'
+info: toolchain 'nightly-x86_64-apple-darwin' uninstalled
+ stack1  main ✘ ⬆  $ rustup toolchain list
+stable-x86_64-apple-darwin (active, default)
+ stack1  main ✘ ⬆  $ rustup check
+stable-x86_64-apple-darwin - Up to date : 1.93.1 (01f6ddf75 2026-02-11)
+rustup - Up to date : 1.28.2
+ stack1  main ✘ ⬆  $ 

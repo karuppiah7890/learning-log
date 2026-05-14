@@ -1,0 +1,388 @@
+laborant@docker-01:~$ docker run --rm -it postgres:18.3-trixie@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a
+Unable to find image 'postgres:18.3-trixie@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a' locally
+docker.io/library/postgres@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a: Pulling from library/postgres
+f3bba6db66bc: Pull complete 
+d4ced18622af: Pull complete 
+07cec992154a: Pull complete 
+bda354b903ce: Pull complete 
+895ed9837058: Pull complete 
+fd0dcffac314: Pull complete 
+365add159c69: Pull complete 
+fcd98f4944fb: Pull complete 
+917d5439b698: Pull complete 
+daebffc75218: Pull complete 
+af73ff344a10: Pull complete 
+ec781dee3f47: Pull complete 
+ce2467f2f21d: Pull complete 
+af9063ecbdef: Download complete 
+b26b36c837dc: Download complete 
+Digest: sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a
+Status: Downloaded newer image for postgres@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+laborant@docker-01:~$ docker run --rm -it -e POSTGRES_HOST_AUTH_METHOD=trust postgres:18.3-trixie@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac134
+1bba01c1ffdfce9ff9fc34a
+********************************************************************************
+WARNING: POSTGRES_HOST_AUTH_METHOD has been set to "trust". This will allow
+         anyone with access to the Postgres port to access your database without
+         a password, even if POSTGRES_PASSWORD is set. See PostgreSQL
+         documentation about "trust":
+         https://www.postgresql.org/docs/current/auth-trust.html
+         In Docker's default configuration, this is effectively any other
+         container on the same system.
+
+         It is not recommended to use POSTGRES_HOST_AUTH_METHOD=trust. Replace
+         it with "-e POSTGRES_PASSWORD=password" instead to set a password in
+         "docker run".
+********************************************************************************
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-03-20 07:55:17.817 UTC [52] LOG:  starting PostgreSQL 18.3 (Debian 18.3-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-03-20 07:55:17.819 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-03-20 07:55:17.821 UTC [58] LOG:  database system was shut down at 2026-03-20 07:55:17 UTC
+2026-03-20 07:55:17.823 UTC [52] LOG:  database system is ready to accept connections
+ done
+server started
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2026-03-20 07:55:17.927 UTC [52] LOG:  received fast shutdown request
+.2026-03-20 07:55:17.927 UTC [52] LOG:  aborting any active transactions
+2026-03-20 07:55:17.929 UTC [52] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+2026-03-20 07:55:17.930 UTC [56] LOG:  shutting down
+2026-03-20 07:55:17.930 UTC [56] LOG:  checkpoint starting: shutdown immediate
+2026-03-20 07:55:17.931 UTC [56] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/175F850, redo lsn=0/175F850
+2026-03-20 07:55:17.936 UTC [52] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-03-20 07:55:18.043 UTC [1] LOG:  starting PostgreSQL 18.3 (Debian 18.3-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-03-20 07:55:18.044 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-03-20 07:55:18.044 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-03-20 07:55:18.044 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-03-20 07:55:18.047 UTC [72] LOG:  database system was shut down at 2026-03-20 07:55:17 UTC
+2026-03-20 07:55:18.048 UTC [1] LOG:  database system is ready to accept connections
+^C2026-03-20 07:55:22.482 UTC [1] LOG:  received fast shutdown request
+2026-03-20 07:55:22.482 UTC [1] LOG:  aborting any active transactions
+2026-03-20 07:55:22.484 UTC [1] LOG:  background worker "logical replication launcher" (PID 75) exited with exit code 1
+2026-03-20 07:55:22.484 UTC [70] LOG:  shutting down
+2026-03-20 07:55:22.484 UTC [70] LOG:  checkpoint starting: shutdown immediate
+2026-03-20 07:55:22.486 UTC [70] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/175F8C8, redo lsn=0/175F8C8
+2026-03-20 07:55:22.491 UTC [1] LOG:  database system is shut down
+laborant@docker-01:~$ docker run --rm -it -e POSTGRES_HOST_AUTH_METHOD=trust postgres:18.3-trixie@sha256:a9abf4275f9e99bff8e6aed712b3b7dfec9cac1341bba01c1ffdfce9ff9fc34a
+********************************************************************************
+WARNING: POSTGRES_HOST_AUTH_METHOD has been set to "trust". This will allow
+         anyone with access to the Postgres port to access your database without
+         a password, even if POSTGRES_PASSWORD is set. See PostgreSQL
+         documentation about "trust":
+         https://www.postgresql.org/docs/current/auth-trust.html
+         In Docker's default configuration, this is effectively any other
+         container on the same system.
+
+         It is not recommended to use POSTGRES_HOST_AUTH_METHOD=trust. Replace
+         it with "-e POSTGRES_PASSWORD=password" instead to set a password in
+         "docker run".
+********************************************************************************
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-03-20 07:56:20.767 UTC [52] LOG:  starting PostgreSQL 18.3 (Debian 18.3-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-03-20 07:56:20.768 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-03-20 07:56:20.770 UTC [58] LOG:  database system was shut down at 2026-03-20 07:56:20 UTC
+2026-03-20 07:56:20.772 UTC [52] LOG:  database system is ready to accept connections
+ done
+server started
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2026-03-20 07:56:20.875 UTC [52] LOG:  received fast shutdown request
+.2026-03-20 07:56:20.876 UTC [52] LOG:  aborting any active transactions
+2026-03-20 07:56:20.877 UTC [52] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+2026-03-20 07:56:20.877 UTC [56] LOG:  shutting down
+2026-03-20 07:56:20.877 UTC [56] LOG:  checkpoint starting: shutdown immediate
+2026-03-20 07:56:20.879 UTC [56] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/175F850, redo lsn=0/175F850
+2026-03-20 07:56:20.885 UTC [52] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-03-20 07:56:20.992 UTC [1] LOG:  starting PostgreSQL 18.3 (Debian 18.3-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-03-20 07:56:20.992 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-03-20 07:56:20.992 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-03-20 07:56:20.992 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-03-20 07:56:20.994 UTC [72] LOG:  database system was shut down at 2026-03-20 07:56:20 UTC
+2026-03-20 07:56:20.996 UTC [1] LOG:  database system is ready to accept connections
+
+^C2026-03-20 07:56:22.915 UTC [1] LOG:  received fast shutdown request
+2026-03-20 07:56:22.916 UTC [1] LOG:  aborting any active transactions
+2026-03-20 07:56:22.917 UTC [1] LOG:  background worker "logical replication launcher" (PID 75) exited with exit code 1
+2026-03-20 07:56:22.917 UTC [70] LOG:  shutting down
+2026-03-20 07:56:22.918 UTC [70] LOG:  checkpoint starting: shutdown immediate
+2026-03-20 07:56:22.919 UTC [70] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/175F8C8, redo lsn=0/175F8C8
+2026-03-20 07:56:22.925 UTC [1] LOG:  database system is shut down
+laborant@docker-01:~$ docker run --rm -it ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse:live@sha256:62b1b7fbea25dc9451d552d4684ad21e95
+a67a51cb8b9804501e47c8a6503346
+Unable to find image 'ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse:live@sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346' locally
+ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse@sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346: Pulling from sagikazarmark/iximiuz-labs/playgrounds/clickhouse
+96dbe8c7b323: Pull complete 
+6bff7398408a: Pull complete 
+4451103110f0: Pull complete 
+841ca9dfbe5c: Pull complete 
+a9fbcc237e7f: Pull complete 
+340909f81a50: Pull complete 
+9e5dcd247017: Pull complete 
+282e3eb04ad2: Pull complete 
+615b5b364e3e: Pull complete 
+e8b3e0db92a7: Pull complete 
+b1d32b09c99e: Pull complete 
+c53fd97ba75e: Pull complete 
+788751923e61: Pull complete 
+5b5194510822: Pull complete 
+ae0985d9ff00: Pull complete 
+e69ce99f1910: Pull complete 
+cacf180d43ad: Pull complete 
+40aacb65a13f: Pull complete 
+9dac8ae2644f: Pull complete 
+f174d76af50f: Pull complete 
+baa9e71a063a: Pull complete 
+df54379eb168: Pull complete 
+034e644aff87: Pull complete 
+1539d6f5a4a0: Pull complete 
+25e4376eced5: Pull complete 
+8acca958bec7: Pull complete 
+98605213ebf9: Pull complete 
+39258c5debaa: Pull complete 
+25326e27139d: Download complete 
+Digest: sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346
+Status: Downloaded newer image for ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse@sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346
+Welcome to ClickHouse! 🎉
+
+A fast, open-source, column-oriented, analytical database.
+
+🏷️ Version:             25.7.4.11
+🌐 HTTP endpoint:       http://localhost:8123
+⚙️ Config dir:          /etc/clickhouse-server
+👤 Username:            admin
+🔒 Password:            iximiuz
+
+More about ClickHouse: https://clickhouse.com
+
+Happy learning! 🚀
+
+laborant@eae110471d08:/$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+laborant       1  0.4  0.1   8952  8216 pts/0    Ss   07:57   0:00 /bin/bash
+laborant      28  0.0  0.0   8280  4280 pts/0    R+   07:57   0:00 ps aux
+laborant@eae110471d08:/$ clickhouse
+clickhouse                      clickhouse-compressor           clickhouse-git-import           clickhouse-local
+clickhouse-benchmark            clickhouse-disks                clickhouse-keeper               clickhouse-obfuscator
+clickhouse-chdig                clickhouse-extract-from-config  clickhouse-keeper-client        clickhouse-server
+clickhouse-client               clickhouse-format               clickhouse-keeper-converter     
+laborant@eae110471d08:/$ clickhouse-client 
+ClickHouse client version 25.7.4.11 (official build).
+Connecting to localhost:9000 as user default.
+Code: 210. DB::NetException: Connection refused (localhost:9000). (NETWORK_ERROR)
+
+laborant@eae110471d08:/$ 
+exit
+laborant@docker-01:~$ dive ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse:live@sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346
+Image Source: docker://ghcr.io/sagikazarmark/iximiuz-labs/playgrounds/clickhouse:live@sha256:62b1b7fbea25dc9451d552d4684ad21e95a67a51cb8b9804501e47c8a6503346
+Extracting image from docker-engine... (this can take a while for large images)
+Analyzing image...
+Building cache...
+laborant@docker-01:~$ 
+Welcome to ClickHouse! 🎉
+
+A fast, open-source, column-oriented, analytical database.
+
+🏷️ Version:             25.7.4.11
+🌐 HTTP endpoint:       http://localhost:8123
+⚙️ Config dir:          /etc/clickhouse-server
+👤 Username:            admin
+🔒 Password:            iximiuz
+
+More about ClickHouse: https://clickhouse.com
+
+Happy learning! 🚀
+
+laborant@clickhouse:~$ clickhouse
+clickhouse                      clickhouse-compressor           clickhouse-git-import           clickhouse-local
+clickhouse-benchmark            clickhouse-disks                clickhouse-keeper               clickhouse-obfuscator
+clickhouse-chdig                clickhouse-extract-from-config  clickhouse-keeper-client        clickhouse-server
+clickhouse-client               clickhouse-format               clickhouse-keeper-converter     
+laborant@clickhouse:~$ clickhouse-c
+clickhouse-chdig       clickhouse-client      clickhouse-compressor  
+laborant@clickhouse:~$ clickhouse-client 
+ClickHouse client version 25.7.4.11 (official build).
+Connecting to localhost:9000 as user default.
+Connected to ClickHouse server version 25.7.4.
+
+Warnings:
+ * Delay accounting is not enabled, OSIOWaitMicroseconds will not be gathered. You can enable it using `sudo sh -c 'echo 1 > /proc/sys/kernel/task_delayacct'` or by using sysctl.
+
+clickhouse :) Bye.
+laborant@clickhouse:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  3.7  0.1  20976 12416 ?        Ss   07:58   0:00 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    07:58   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   07:58   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   07:58   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   07:58   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   07:58   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/0:0-events]
+root           8  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/0:0H-events_highpri]
+root           9  0.1  0.0      0     0 ?        I    07:58   0:00 [kworker/u8:0-flush-253:0]
+root          10  0.0  0.0      0     0 ?        I<   07:58   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    07:58   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    07:58   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    07:58   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    07:58   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    07:58   0:00 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    07:58   0:00 [migration/0]
+root          17  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/0:1-cgroup_release]
+root          18  0.0  0.0      0     0 ?        S    07:58   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    07:58   0:00 [cpuhp/1]
+root          20  0.3  0.0      0     0 ?        S    07:58   0:00 [migration/1]
+root          21  0.0  0.0      0     0 ?        S    07:58   0:00 [ksoftirqd/1]
+root          22  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/1:0-events]
+root          23  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/1:0H-events_highpri]
+root          24  0.0  0.0      0     0 ?        S    07:58   0:00 [cpuhp/2]
+root          25  0.3  0.0      0     0 ?        S    07:58   0:00 [migration/2]
+root          26  0.0  0.0      0     0 ?        S    07:58   0:00 [ksoftirqd/2]
+root          27  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/2:0-events_power_efficient]
+root          28  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/2:0H-kblockd]
+root          29  0.0  0.0      0     0 ?        S    07:58   0:00 [cpuhp/3]
+root          30  0.3  0.0      0     0 ?        S    07:58   0:00 [migration/3]
+root          31  0.0  0.0      0     0 ?        S    07:58   0:00 [ksoftirqd/3]
+root          32  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/3:0-events]
+root          33  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/3:0H-kblockd]
+root          35  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/u8:1-events_unbound]
+root          36  0.2  0.0      0     0 ?        I    07:58   0:00 [kworker/u8:2-events_unbound]
+root          37  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/u8:3-flush-253:0]
+root          38  0.0  0.0      0     0 ?        S    07:58   0:00 [kdevtmpfs]
+root          39  0.0  0.0      0     0 ?        I<   07:58   0:00 [inet_frag_wq]
+root          40  0.0  0.0      0     0 ?        S    07:58   0:00 [kauditd]
+root          41  0.0  0.0      0     0 ?        S    07:58   0:00 [khungtaskd]
+root          42  0.0  0.0      0     0 ?        S    07:58   0:00 [oom_reaper]
+root          43  0.0  0.0      0     0 ?        I<   07:58   0:00 [writeback]
+root          44  0.0  0.0      0     0 ?        S    07:58   0:00 [kcompactd0]
+root          45  0.0  0.0      0     0 ?        SN   07:58   0:00 [ksmd]
+root          46  0.0  0.0      0     0 ?        SN   07:58   0:00 [khugepaged]
+root          47  0.0  0.0      0     0 ?        I<   07:58   0:00 [kintegrityd]
+root          48  0.0  0.0      0     0 ?        I<   07:58   0:00 [kblockd]
+root          49  0.0  0.0      0     0 ?        I<   07:58   0:00 [blkcg_punt_bio]
+root          50  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/1:1-mm_percpu_wq]
+root          51  0.0  0.0      0     0 ?        I<   07:58   0:00 [md]
+root          52  0.0  0.0      0     0 ?        S    07:58   0:00 [watchdogd]
+root          53  0.0  0.0      0     0 ?        I<   07:58   0:00 [rpciod]
+root          54  0.0  0.0      0     0 ?        I<   07:58   0:00 [xprtiod]
+root          55  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/2:1-events]
+root          56  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/0:1H-kblockd]
+root          91  0.0  0.0      0     0 ?        S    07:58   0:00 [kswapd0]
+root          94  0.0  0.0      0     0 ?        I<   07:58   0:00 [nfsiod]
+root          95  0.0  0.0      0     0 ?        I<   07:58   0:00 [xfsalloc]
+root          96  0.0  0.0      0     0 ?        I<   07:58   0:00 [xfs_mru_cache]
+root          98  0.0  0.0      0     0 ?        I<   07:58   0:00 [kthrotld]
+root         101  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/3:1-rcu_gp]
+root         102  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/3:2-mm_percpu_wq]
+root         104  0.0  0.0      0     0 ?        S    07:58   0:00 [irq/24-ACPI:Ged]
+root         111  0.0  0.0      0     0 ?        I<   07:58   0:00 [acpi_thermal_pm]
+root         147  0.0  0.0      0     0 ?        S    07:58   0:00 [hwrng]
+root         167  0.2  0.0      0     0 ?        I<   07:58   0:00 [kworker/2:1H-kblockd]
+root         176  0.0  0.0      0     0 ?        I<   07:58   0:00 [iscsi_conn_clea]
+root         182  0.0  0.0      0     0 ?        I<   07:58   0:00 [bond0]
+root         183  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/1:1H-kblockd]
+root         233  0.0  0.0      0     0 ?        I<   07:58   0:00 [raid5wq]
+root         245  0.0  0.0      0     0 ?        I<   07:58   0:00 [mld]
+root         246  0.0  0.0      0     0 ?        I<   07:58   0:00 [ipv6_addrconf]
+root         257  0.0  0.0    996     4 ?        S    07:58   0:00 bpfilter_umh
+root         258  0.0  0.0      0     0 ?        I<   07:58   0:00 [kstrp]
+root         270  0.0  0.0      0     0 ?        I<   07:58   0:00 [zswap-shrink]
+root         271  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/u9:0]
+root         330  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/2:2]
+root         353  0.0  0.0      0     0 ?        S    07:58   0:00 [jbd2/vda-8]
+root         354  0.0  0.0      0     0 ?        I<   07:58   0:00 [ext4-rsv-conver]
+root         355  0.5  0.0      0     0 ?        S    07:58   0:00 [ext4lazyinit]
+root         359  0.0  0.0      0     0 ?        I<   07:58   0:00 [kworker/3:1H-kblockd]
+root         377  0.1  0.1  42096 16164 ?        S<s  07:58   0:00 /usr/lib/systemd/systemd-journald
+root         422  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/1:2-cgroup_free]
+root         737  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/u8:4-flush-253:0]
+root         842  0.0  0.0  24096  6156 ?        Ss   07:58   0:00 /usr/lib/systemd/systemd-udevd
+root         845  0.0  0.0      0     0 ?        I    07:58   0:00 [kworker/0:2-events_power_efficient]
+systemd+     850  0.1  0.1  21460 11884 ?        Ss   07:58   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     851  0.0  0.0  91024  6416 ?        Ssl  07:58   0:00 /usr/lib/systemd/systemd-timesyncd
+root         884  0.0  0.0      0     0 ?        I<   07:58   0:00 [cryptd]
+clickho+     916  0.3  1.3 608996 107012 ?       Ssl  07:58   0:00 clickhouse-watchdog        --config=/etc/clickhouse-server/config.xml --pid-fil
+message+     917  0.0  0.0   9428  5144 ?        Ss   07:58   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activat
+root         919  1.8  1.8 1379196 150020 ?      Ssl  07:58   0:00 /usr/local/bin/examiner
+root         923  0.0  0.1  18028  8284 ?        Ss   07:58   0:00 /usr/lib/systemd/systemd-logind
+root         926  0.0  0.0   3116  1060 tty1     Ss+  07:58   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         927  0.0  0.0   3160  1052 ttyS0    Ss+  07:58   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root         928  0.0  0.0  12020  7800 ?        Ss   07:58   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+clickho+     965  5.8  6.6 7096060 545088 ?      SLl  07:58   0:01 /usr/bin/clickhouse-server --config=/etc/clickhouse-server/config.xml --pid-fil
+laborant    1653  0.1  0.1  20068 11196 ?        Ss   07:59   0:00 /usr/lib/systemd/systemd --user
+laborant    1654  0.0  0.0  21152  1728 ?        S    07:59   0:00 (sd-pam)
+root        1671  0.0  0.1  14776 10196 ?        Ss   07:59   0:00 sshd: laborant [priv]
+laborant    1675  0.0  0.0  14936  6384 ?        S    07:59   0:00 sshd: laborant@pts/0
+laborant    1676  0.2  0.1   9164  8456 pts/0    Ss   07:59   0:00 -bash
+laborant    1711  0.0  0.0   8280  4148 pts/0    R+   07:59   0:00 ps aux
+laborant@clickhouse:~$ 

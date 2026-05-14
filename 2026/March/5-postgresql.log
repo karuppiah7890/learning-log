@@ -1,0 +1,193 @@
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ sudo -u postgres
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+laborant@ubuntu-01:~$ sudo -u postgres ls
+ls: cannot open directory '.': Permission denied
+laborant@ubuntu-01:~$ sudo -u postgres psql
+psql (18.3 (Ubuntu 18.3-1.pgdg24.04+1))
+Type "help" for help.
+
+postgres=# 
+\q
+laborant@ubuntu-01:~$ sudo -u postgres ls /
+bin                boot  etc   lib                lib64       media  opt   root  sbin                srv  tmp  var
+bin.usr-is-merged  dev   home  lib.usr-is-merged  lost+found  mnt    proc  run   sbin.usr-is-merged  sys  usr
+laborant@ubuntu-01:~$ sudo -u postgres psql
+psql (18.3 (Ubuntu 18.3-1.pgdg24.04+1))
+Type "help" for help.
+
+postgres=# 
+\q
+laborant@ubuntu-01:~$ sudo -u postgres psql -c "select 1"
+ ?column? 
+----------
+        1
+(1 row)
+
+laborant@ubuntu-01:~$ sudo -u postgres psql 
+psql (18.3 (Ubuntu 18.3-1.pgdg24.04+1))
+Type "help" for help.
+
+postgres=# CREATE TABLE bloat_test (
+    id serial PRIMARY KEY,
+    data text
+);
+CREATE TABLE
+postgres=# pg_total_relation_size('bloat_test')
+postgres-# ;
+ERROR:  syntax error at or near "pg_total_relation_size"
+LINE 1: pg_total_relation_size('bloat_test')
+        ^
+postgres=# SELECT pg_total_relation_size('bloat_test');
+ pg_total_relation_size 
+------------------------
+                  16384
+(1 row)
+
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 16 kB
+(1 row)
+
+postgres=# INSERT INTO bloat_test(data)
+SELECT repeat('hello world ', 20)
+FROM generate_series(1, 500000);
+INSERT 0 500000
+postgres=# SELECT pg_total_relation_size('bloat_test');
+ pg_total_relation_size 
+------------------------
+              152567808
+(1 row)
+
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 146 MB
+(1 row)
+
+postgres=# ALTER TABLE bloat_test SET (autovacuum_enabled = false);
+ALTER TABLE
+postgres=# UPDATE bloat_test
+SET data = repeat('updated text ', 20);
+UPDATE 500000
+postgres=# UPDATE bloat_test
+SET data = md5(random()::text);
+UPDATE 500000
+postgres=# UPDATE bloat_test
+SET data = md5(random()::text);
+UPDATE 500000
+postgres=# UPDATE bloat_test
+SET data = md5(random()::text);
+UPDATE 500000
+postgres=# UPDATE bloat_test
+SET data = md5(random()::text);
+UPDATE 500000
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 437 MB
+(1 row)
+
+postgres=# UPDATE bloat_test                                           
+SET data = md5(random()::text);
+UPDATE 500000
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 468 MB
+(1 row)
+
+postgres=# SELECT
+    relname,
+    n_live_tup,
+    n_dead_tup
+FROM pg_stat_user_tables
+WHERE relname = 'bloat_test';
+  relname   | n_live_tup | n_dead_tup 
+------------+------------+------------
+ bloat_test |     500000 |    2984623
+(1 row)
+
+postgres=# VACUUM bloat_test;
+VACUUM
+postgres=# SELECT
+    relname,
+    n_live_tup,
+    n_dead_tup
+FROM pg_stat_user_tables
+WHERE relname = 'bloat_test';
+  relname   | n_live_tup | n_dead_tup 
+------------+------------+------------
+ bloat_test |     500000 |          0
+(1 row)
+
+postgres=# SELECT pg_total_relation_size('bloat_test');
+ pg_total_relation_size 
+------------------------
+              491077632
+(1 row)
+
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 468 MB
+(1 row)
+
+postgres=# CLUSTER bloat_test USING bloat_test_pkey;
+CLUSTER
+postgres=# SELECT pg_size_pretty(pg_total_relation_size('bloat_test'));
+ pg_size_pretty 
+----------------
+ 43 MB
+(1 row)
+
+postgres=# VACUUM FULL bloat_test;
+VACUUM
+postgres=# SELECT n_tup_hot_upd
+FROM pg_stat_user_tables
+WHERE relname='hot_test';
+ n_tup_hot_upd 
+---------------
+(0 rows)
+
+postgres=# SELECT n_tup_hot_upd
+FROM pg_stat_user_tables
+WHERE relname='bloat_test';
+ n_tup_hot_upd 
+---------------
+         89619
+(1 row)
+
+postgres=# 
+\q
+laborant@ubuntu-01:~$ 

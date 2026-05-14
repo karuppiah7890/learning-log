@@ -1,0 +1,208 @@
+ usage-tracker  main ✘  $ brew info duckdb
+✔︎ JSON API formula_tap_migrations.jws.json           Downloaded    2.0KB/  2.0KB
+✔︎ JSON API cask_tap_migrations.jws.json              Downloaded    2.4KB/  2.4KB
+✔︎ JSON API formula.jws.json                          Downloaded   32.0MB/ 32.0MB
+✔︎ JSON API cask.jws.json                             Downloaded   15.4MB/ 15.4MB
+==> duckdb ✘: stable 1.5.2
+Embeddable SQL OLAP Database Management System
+https://www.duckdb.org
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/d/duckdb.rb
+License: MIT
+==> Dependencies
+Build: cmake ✘
+==> Downloading https://formulae.brew.sh/api/formula/duckdb.json
+==> Analytics
+install: 6,178 (30 days), 15,077 (90 days), 50,246 (365 days)
+install-on-request: 6,177 (30 days), 15,075 (90 days), 50,243 (365 days)
+build-error: 52 (30 days)
+ usage-tracker  main ✘  $ brew install duckdb
+==> Auto-updating Homebrew...
+Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
+`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:7c7830166a509857669c544dcba7a0d08ca656a3da073c68826ca0a5b1b56b12
+######################################################################### 100.0%
+==> Pouring portable-ruby-4.0.2_1.catalina.bottle.tar.gz
+==> Auto-updated Homebrew!
+Updated 9 taps (heroku/brew, mongodb/brew, goreleaser/tap, dart-lang/dart, windmilleng/tap, sass/sass, encoredev/tap, homebrew/core and homebrew/cask).
+==> New Formulae
+apache-arrow-adbc: Cross-language, Arrow-native database access
+apache-arrow-adbc-glib: GLib bindings for Apache Arrow ADBC
+apfel: Apple Intelligence from the command-line, with OpenAi-compatible API server
+cline: AI-powered coding agent for complex work
+crip: Tool to extract server certificates
+ctx7: Manage AI coding skills and documentation context
+cyan: iOS app injector and modifier
+dart-lang/dart/dart@3.11.3
+dart-lang/dart/dart@3.11.4
+dart-sass: Reference implementation of Sass, written in Dart
+dartaotruntime: Command-line tool for running AOT-compiled snapshots of Dart code
+dispenso: High-performance C++ library for parallel programming
+dtop: Terminal dashboard for Docker monitoring across multiple hosts
+et: Remote terminal with IP roaming
+expert: Official Elixir Language Server Protocol implementation
+fvm: Manage Flutter SDK versions per project
+ggml: Tensor library for machine learning
+git-format-staged: Git command to transform staged files using a formatting command
+graalvm: JDK distribution with Graal compiler and Native Image
+icestorm: Tools for analyzing and creating Lattice iCE40 FPGA bitstream files
+jsongrep: Query tool for JSON, YAML, TOML, and other structured formats
+lazycut: Terminal-based video trimming TUI
+libheif-plugins: ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+libkiwix: Common code base for all Kiwix ports
+libpathrs: C-friendly API to make path resolution safer on Linux
+lief: Library to Instrument Executable Formats
+merve: C++ lexer for extracting named exports from CommonJS modules
+miniaudio: Audio playback and capture library
+nbytes: Library of byte handling functions extracted from Node.js core
+nextpnr-ice40: Portable FPGA place and route tool for Lattice iCE40
+oh-my-agent: Portable multi-agent harness for .agents-based skills and workflows
+opentimestamps-client: Create and verify OpenTimestamps proofs
+overturemaps: Python tools for interacting with Overture Maps data
+pay: HTTP client that automatically handles 402 Payment Required
+pipewire-gstreamer: GStreamer Plugin for PipeWire
+portless: Replace port numbers with stable, named local URLs for humans and agents
+proxelar: Man-in-the-Middle proxy for HTTP/HTTPS traffic
+qtcanvaspainter: Accelerated 2D painting solution for Qt Quick and QRhi-based render targets
+qttasktree: General purpose library for asynchronous task execution
+resticprofile: Configuration profiles manager and scheduler for restic backup
+rpiboot: Raspberry Pi USB boot tool for Compute Modules
+rustpython: Python Interpreter written in Rust
+rvvm: RISC-V Virtual Machine
+sarif-fmt: Pretty print SARIF files to easy human readable output
+sheets: Terminal based spreadsheet tool
+skip: Tool for building Swift apps for Android
+summarize: Multi-modal AI tool to extract and summarize content
+t2sz: Compress a file into a seekable zstd with per-file seeking for tar archives
+tini: Tiny but valid init for containers
+wireplumber: Session / policy manager implementation for PipeWire
+wmbusmeters: Read wired or wireless mbus protocol to acquire utility meter readings
+xcursorgen: Create an X cursor file from a collection of PNG images
+yelp-xsl: Document transformations from Yelp
+zycore-c: Zyan Core Library for C
+==> New Casks
+altar-ai: AI-powered meeting assistant
+appgridmac: AI-assisted Launchpad replacement
+backblaze-restore: Computer backup restore client
+baoliandeng: VPN proxy powered by Mihomo (Clash Meta)
+cadran: Desktop clock rendered behind your icons
+cc-switch: Configuration manager for AI coding agents
+claude-code@latest: Terminal-based AI coding assistant
+clearance: Markdown viewer and editor
+copilot-language-server: Language Server Protocol server for GitHub Copilot
+craft-agents: AI assistant for connecting and working across data sources
+dbeaverteam: Universal database tool and SQL client
+dbvr: Lightweight CLI tool for running database operations
+equibop: Custom Discord App
+fidelity-trader+: Trading platform
+fluidvoice: Offline voice-to-text dictation app with AI enhancement
+font-bj-cree
+font-ioskeley-mono
+font-saira-stencil
+font-selawik
+font-strichpunkt-sans
+font-suez-one
+font-sulphur-point
+font-sumana
+font-sura
+font-suranna
+font-suravaram
+font-syne-mono
+font-syne-tactile
+sponsors
+gram: Code editor focused on stability, without AI, subscriptions, or telemetry
+happ: Platform for building proxies to bypass network restrictions
+hive-app: AI agent orchestrator for parallel coding across projects
+idevice-pair: Generate pair records for iOS devices
+incident-io: Incident management platform
+intiface-central: Frontend application for the Buttplug sex toy control library
+jiba: Apple Music metadata localisation tool
+nimbalyst: Visual workspace for building with Codex and Claude Code
+notchi: Notch companion for Claude Code
+nvidia-sync: Utility for launching applications and containers on remote Linux systems
+ob-xf: Virtual analog synthesizer
+orchard: Native GUI for Apple Containers
+paper-design: Design tool for creating interfaces and prototypes
+plamo-translate: Translator focused on Japanese
+pluralplay-flclashx: Cross-platform proxy client based on ClashMeta
+proton-meet: Desktop client for Proton Meet
+radial: Gesture-based launcher for apps, text snippets, and scripts
+rayon: AI-powered drawing for interior designers and architects
+remanager: Desktop app for managing mods on reMarkable tablets
+rockxy-community: HTTP proxy
+rowboat: Open-source AI coworker, with memory
+scribus@devel: Free and open-source page layout program
+spectra-app: OpenSpec document management desktop app
+supasidebar: Arc-like sidebar to save links, files and folders from any browser
+super: Analytics database that fuses structured and semi-structured data
+tablen: Native SQL client
+tencent-ugit: Tencent Git GUI Client
+ulaa: Privacy-centric browser with advanced tracking protection
+vibe-island: Dynamic island AI agent utility
+vibeproxy: Menu bar app for using AI subscriptions with coding tools
+voicemod: Real-time voice changer and soundboard
+voiden@beta: API development tool
+wallspace: Live wallpaper app
+worksheet-crafter: Worksheet and lesson material creator
+
+You have 244 outdated formulae and 3 outdated casks installed.
+
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report issues with Tier 3 configurations to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+==> Fetching downloads for: duckdb
+✔︎ API Source duckdb.rb                               Verified      3.0KB/  3.0KB
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/c6feba5
+Already downloaded: /Users/karuppiahn/Library/Caches/Homebrew/downloads/67a8d33d249289a61d73bbea79275fd26c6a947af2d80ec72200dcdde1f7efc0--cmake.rb
+✔︎ API Source cmake.rb                                Verified      3.2KB/  3.2KB
+✔︎ Formula cmake (4.3.1)                              Verified     13.0MB/ 13.0MB
+✔︎ Formula duckdb (1.5.2)
+==> Installing duckdb dependency: cmake
+q==> ./bootstrap --prefix=/usr/local/Cellar/cmake/4.3.1 --no-system-libs --parall
+
+^C^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+^C
+One sec, cleaning up...
+
+
+
+^C
+ ✘  usage-tracker  main ✘  $ 

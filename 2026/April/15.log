@@ -1,0 +1,832 @@
+ ✘  usage-tracker  main ✘  $ brew install duckdb --ignore-dependencies
+Warning: `--ignore-dependencies` is an unsupported Homebrew developer option!
+Adjust your PATH to put any preferred versions of applications earlier in the
+PATH rather than using this unsupported option!
+
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report issues with Tier 3 configurations to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+==> Fetching downloads for: duckdb
+✔︎ API Source duckdb.rb                               Verified      3.0KB/  3.0KB
+✔︎ Formula duckdb (1.5.2)
+==> cmake -S . -B build -DBUILD_EXTENSIONS='autocomplete;icu;parquet;json' -DENA
+Last 15 lines from /Users/karuppiahn/Library/Logs/Homebrew/duckdb/01.cmake.log:
+-B
+build
+-DBUILD_EXTENSIONS='autocomplete;icu;parquet;json'
+-DENABLE_EXTENSION_AUTOLOADING=1
+-DENABLE_EXTENSION_AUTOINSTALL=1
+-DCMAKE_INSTALL_PREFIX=/usr/local/Cellar/duckdb/1.5.2
+-DCMAKE_INSTALL_LIBDIR=lib
+-DCMAKE_BUILD_TYPE=Release
+-DCMAKE_FIND_FRAMEWORK=LAST
+-DCMAKE_VERBOSE_MAKEFILE=ON
+-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=/usr/local/Homebrew/Library/Homebrew/cmake/trap_fetchcontent_provider.cmake
+-Wno-dev
+-DBUILD_TESTING=OFF
+-DCMAKE_OSX_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk
+
+
+
+
+Error: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report issues with Tier 3 configurations to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+This build failure was expected, as this is not a Tier 1 configuration:
+  https://docs.brew.sh/Support-Tiers
+Do not report any issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+ ✘  usage-tracker  main ✘  $ 
+ usage-tracker  main ✘  $ curl https://install.duckdb.org | sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  4163  100  4163    0     0  10211      0 --:--:-- --:--:-- --:--:-- 10228
+
+*** DuckDB Linux/MacOS installation script, version 1.5.2 ***
+
+
+         .;odxdl,            
+       .xXXXXXXXXKc          
+       0XXXXXXXXXXXd  cooo:  
+      ,XXXXXXXXXXXXK  OXXXXd 
+       0XXXXXXXXXXXo  cooo:  
+       .xXXXXXXXXKc          
+         .;odxdl,  
+
+
+######################################################################## 100.0%
+
+Successfully installed DuckDB 1.5.2 to /Users/karuppiahn/.duckdb/cli/1.5.2/duckdb
+Updated symlink from /Users/karuppiahn/.duckdb/cli/latest/duckdb to
+                     /Users/karuppiahn/.duckdb/cli/1.5.2/duckdb
+
+Hint: Append the following line to your shell profile:
+export PATH="/Users/karuppiahn/.duckdb/cli/latest":$PATH
+Also created a symlink from /Users/karuppiahn/.local/bin/duckdb 
+                         to /Users/karuppiahn/.duckdb/cli/latest/duckdb
+
+To launch DuckDB 1.5.2 now, type
+/Users/karuppiahn/.duckdb/cli/latest/duckdb
+ usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+
+ usage-tracker  main ✘  $ which duckdb
+/Users/karuppiahn/.local/bin/duckdb
+ usage-tracker  main ✘  $ ls -al /Users/karuppiahn/.local/bin/duckdb
+lrwxr-xr-x  1 karuppiahn  staff  43 Apr 15 12:41 /Users/karuppiahn/.local/bin/duckdb -> /Users/karuppiahn/.duckdb/cli/latest/duckdb
+ usage-tracker  main ✘  $ ls -al /Users/karuppiahn/.duckdb/cli/latest/duckdb
+-rwxr-xr-x  1 karuppiahn  staff  58844512 Apr 15 12:41 /Users/karuppiahn/.duckdb/cli/latest/duckdb
+ usage-tracker  main ✘  $ ls ~/.duckdb
+cli
+ usage-tracker  main ✘  $ ls ~/.duckdb/cli/
+1.5.2	latest
+ usage-tracker  main ✘  $ ls ~/.duckdb/cli/1.5.2/
+duckdb		duckdb.gz
+ usage-tracker  main ✘  $ ls -al ~/.duckdb/cli/1.5.2/
+total 151888
+drwxr-xr-x  4 karuppiahn  staff       128 Apr 15 12:41 .
+drwxr-xr-x  4 karuppiahn  staff       128 Apr 15 12:41 ..
+-rwxr-xr-x  1 karuppiahn  staff  58844512 Apr 15 12:41 duckdb
+-rw-r--r--  1 karuppiahn  staff  18396137 Apr 15 12:41 duckdb.gz
+ usage-tracker  main ✘  $ ls -al ~/.duckdb/cli/latest
+lrwxr-xr-x  1 karuppiahn  staff  35 Apr 15 12:41 /Users/karuppiahn/.duckdb/cli/latest -> /Users/karuppiahn/.duckdb/cli/1.5.2
+ usage-tracker  main ✘  $ ls -al ~/.duckdb/cli/latest/duckdb
+-rwxr-xr-x  1 karuppiahn  staff  58844512 Apr 15 12:41 /Users/karuppiahn/.duckdb/cli/latest/duckdb
+ usage-tracker  main ✘  $ ls -al ~/.duckdb/cli/latest
+lrwxr-xr-x  1 karuppiahn  staff  35 Apr 15 12:41 /Users/karuppiahn/.duckdb/cli/latest -> /Users/karuppiahn/.duckdb/cli/1.5.2
+ usage-tracker  main ✘  $ ls -al ~/.duckdb/cli/
+total 0
+drwxr-xr-x  4 karuppiahn  staff  128 Apr 15 12:41 .
+drwxr-xr-x  3 karuppiahn  staff   96 Apr 15 12:41 ..
+drwxr-xr-x  4 karuppiahn  staff  128 Apr 15 12:41 1.5.2
+lrwxr-xr-x  1 karuppiahn  staff   35 Apr 15 12:41 latest -> /Users/karuppiahn/.duckdb/cli/1.5.2
+ usage-tracker  main ✘  $ 
+ usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+memory D analyse
+         ;
+memory D analyze;
+memory D CALL duckdb_functions();
+┌───────────────┬──────────────┬─────────────┬───┬───────────┬────────────┬────────────┐
+│ database_name │ database_oid │ schema_name │ … │ examples  │ stability  │ categories │
+│    varchar    │   varchar    │   varchar   │ … │ varchar[] │  varchar   │ varchar[]  │
+├───────────────┼──────────────┼─────────────┼───┼───────────┼────────────┼────────────┤
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│   ·           │ ·            │  ·          │ … │ ·         │  ·         │ ·          │
+│   ·           │ ·            │  ·          │ … │ ·         │  ·         │ ·          │
+│   ·           │ ·            │  ·          │ … │ ·         │  ·         │ ·          │
+│ system        │ 0            │ pg_catalog  │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ NULL       │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+│ system        │ 0            │ main        │ … │ []        │ CONSISTENT │ []         │
+└───────────────┴──────────────┴─────────────┴───┴───────────┴────────────┴────────────┘
+  2949 rows (40 shown)      use .last to show entire result       20 columns (6 shown)
+memory D 
+
+memory D .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+memory D .last
+┌───────────────┬──────────────┬─────────────┬──────────────────────────────────────────┬─────>
+│ database_name │ database_oid │ schema_name │              function_name               │     >
+│    varchar    │   varchar    │   varchar   │                 varchar                  │     >
+├───────────────┼──────────────┼─────────────┼──────────────────────────────────────────┼─────>
+│ system        │ 0            │ main        │ pragma_table_info                        │ NULL>
+│ system        │ 0            │ main        │ pragma_storage_info                      │ NULL>
+│ system        │ 0            │ main        │ pragma_show                              │ NULL>
+│ system        │ 0            │ main        │ pragma_platform                          │ NULL>
+│ system        │ 0            │ main        │ pragma_metadata_info                     │ NULL>
+│ system        │ 0            │ main        │ pragma_metadata_info                     │ NULL>
+│ system        │ 0            │ main        │ pragma_database_size                     │ NULL>
+│ system        │ 0            │ main        │ pragma_collations                        │ NULL>
+│ system        │ 0            │ main        │ pg_timezone_names                        │ NULL>
+│ system        │ 0            │ main        │ parquet_schema                           │ NULL>
+│ system        │ 0            │ main        │ parquet_schema                           │ NULL>
+│ system        │ 0            │ main        │ parquet_scan                             │ NULL>
+│ system        │ 0            │ main        │ parquet_scan                             │ NULL>
+│ system        │ 0            │ main        │ parquet_metadata                         │ NULL>
+│ system        │ 0            │ main        │ parquet_metadata                         │ NULL>
+│ system        │ 0            │ main        │ parquet_kv_metadata                      │ NULL>
+│ system        │ 0            │ main        │ parquet_kv_metadata                      │ NULL>
+│ system        │ 0            │ main        │ parquet_full_metadata                    │ NULL>
+│ system        │ 0            │ main        │ parquet_full_metadata                    │ NULL>
+│ system        │ 0            │ main        │ parquet_file_metadata                    │ NULL>
+│ system        │ 0            │ main        │ parquet_file_metadata                    │ NULL>
+│ system        │ 0            │ main        │ parquet_bloom_probe                      │ NULL>
+│ system        │ 0            │ main        │ parquet_bloom_probe                      │ NULL>
+memory D 
+
+memory D SELECT now;
+Binder Error:
+Referenced column "now" was not found because the FROM clause is missing
+
+LINE 1: SELECT now;
+               ^
+memory D SELECT now();
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:54:32.814829+05:30 │
+└──────────────────────────────────┘
+memory D 
+memory D .last
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:54:32.814829+05:30 │
+└──────────────────────────────────┘
+memory D .last
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:54:32.814829+05:30 │
+└──────────────────────────────────┘
+memory D SELECT now();
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:55:59.442068+05:30 │
+└──────────────────────────────────┘
+memory D SELECT now();
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:56:01.889955+05:30 │
+└──────────────────────────────────┘
+memory D .last
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:56:01.889955+05:30 │
+└──────────────────────────────────┘
+memory D .last
+┌──────────────────────────────────┐
+│              now()               │
+│     timestamp with time zone     │
+├──────────────────────────────────┤
+│ 2026-04-15 12:56:01.889955+05:30 │
+└──────────────────────────────────┘
+memory D 
+
+memory D .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+memory D .prompt 
+memory D .prompt >
+>.prompt > 
+>.prompt '> '
+> .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+> 
+
+ ✘  usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+
+ usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+memory D 
+
+ usage-tracker  main ✘  $ 
+memory D .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+memory D .prompt 
+memory D .prompt >
+>.prompt > 
+>.prompt '> '
+> .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+> 
+
+ ✘  usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+
+ usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+memory D 
+
+ usage-tracker  main ✘  $ 
+memory D .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+memory D .prompt 
+memory D .prompt >
+>.prompt > 
+>.prompt '> '
+> .help
+.bail on|off                             Stop after hitting an error.  Default OFF
+.binary on|off                           Turn binary output on or off.  Default OFF
+.cd DIRECTORY                            Change the working directory to DIRECTORY
+.changes on|off                          Show number of rows changed by SQL
+.columns                                 Column-wise rendering of query results
+.decimal_sep SEP                         Sets the decimal separator used when rendering numbers. Only for duckbox mode.
+.databases                               List names and files of attached databases
+.dump ?TABLE?                            Render database content as SQL
+.display_colors [bold|underline]         Display all terminal colors and their names
+.echo on|off                             Turn command echo on or off
+.edit                                    Opens an external text editor to edit a query.
+.excel                                   Display the output of next command in spreadsheet
+.exit ?CODE?                             Exit this program with return-code CODE
+.headers on|off                          Turn display of headers on or off
+.help ?-all? ?PATTERN?                   Show help text for PATTERN
+.highlight on|off                        Toggle syntax highlighting in the shell on/off
+.highlight_colors OPTIONS                Configure highlighting colors
+.highlight_errors on|off                 Turn highlighting of errors on or off
+.highlight_mode mixed|dark|light         Toggle the highlight mode to dark or light mode
+.highlight_results on|off                Turn highlighting of results on or off
+.import FILE TABLE                       Import data from FILE into TABLE
+.indexes ?TABLE?                         Show names of indexes
+.last                                    Render the last result without truncating
+.large_number_rendering MODE             Toggle readable rendering of large numbers (duckbox only)
+.log FILE|off                            Turn logging on or off.  FILE can be stderr/stdout
+.maxrows COUNT                           Sets the maximum number of rows for display (default: 40). Only for duckbox mode.
+.maxwidth COUNT                          Sets the maximum width in characters. 0 defaults to terminal width. Only for duckbox mode.
+.mode MODE ?TABLE?                       Set output mode
+.multiline                               Sets the render mode to multi-line
+.nullvalue STRING                        Use STRING in place of NULL values
+.open ?OPTIONS? ?FILE?                   Close existing database and reopen FILE
+.once ?FILE?                             Output for the next SQL command only to FILE
+.output ?FILE?                           Send output to FILE or stdout if FILE is omitted
+.pager OPTIONS                           Control pager usage for output
+.print STRING...                         Print literal STRING
+.progress_bar OPTIONS                    Configure the progress bar display
+.prompt MAIN CONTINUE                    Replace the standard prompts
+.quit                                    Exit this program
+.read FILE                               Read input from FILE
+.read_line_version linenoise|fallback    Sets the library used for processing interactive input
+.render_completion on|off                Toggle displaying of completion prompts in the shell on/off
+.render_errors on|off                    Toggle rendering of errors in the shell on/off
+.rows                                    Row-wise rendering of query results (default)
+.safe_mode                               Enable safe-mode
+.separator COL ?ROW?                     Change the column and row separators
+.schema ?PATTERN?                        Show the CREATE statements matching PATTERN
+.shell CMD ARGS...                       Run CMD ARGS... in a system shell
+.show                                    Show the current values for various settings
+.singleline                              Sets the render mode to single-line
+.startup_text none|version|all           Start-up text to display. Set this as the first line in .duckdbrc
+.system CMD ARGS...                      Run CMD ARGS... in a system shell
+.tables ?TABLE?                          List names of tables matching LIKE pattern TABLE
+.thousand_sep SEP                        Sets the thousand separator used when rendering numbers. Only for duckbox mode.
+.timer on|off                            Turn SQL timer on or off
+.ui_command [command]                    Set the UI command
+.version                                 Show the version
+.width NUM1 NUM2 ...                     Set minimum column widths for columnar output
+
+Run .help --all for extended information
+Run .help shortcuts for keyboard shortcuts
+> 
+
+ ✘  usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+
+ usage-tracker  main ✘  $ duckdb
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D 
+memory D 
+
+ usage-tracker  main ✘  $ 
+ usage-tracker  main ✔  $ duckdb 
+DuckDB v1.5.2 (Variegata)
+Enter ".help" for usage hints.
+memory D SELECT '2022-10-08 13:13:34-07';
+┌──────────────────────────┐
+│ '2022-10-08 13:13:34-07' │
+│         varchar          │
+├──────────────────────────┤
+│ 2022-10-08 13:13:34-07   │
+└──────────────────────────┘
+memory D SELECT '2022-10-08 13:13:34-07'::TIMESTAMPTZ;
+┌──────────────────────────────────────────────────────────────┐
+│ CAST('2022-10-08 13:13:34-07' AS "TIMESTAMP WITH TIME ZONE") │
+│                   timestamp with time zone                   │
+├──────────────────────────────────────────────────────────────┤
+│ 2022-10-09 01:43:34+05:30                                    │
+└──────────────────────────────────────────────────────────────┘
+memory D SELECT '2022-10-08 13:13:34-07';
+┌──────────────────────────┐
+│ '2022-10-08 13:13:34-07' │
+│         varchar          │
+├──────────────────────────┤
+│ 2022-10-08 13:13:34-07   │
+└──────────────────────────┘
+memory D 

@@ -1,0 +1,53 @@
+ ~  $ curl -sf https://labs.iximiuz.com/cli/install.sh | sh
+ ✘  ~  $ labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+ ~  $ labctl version
+0.1.58 (built: 2026-01-16T10:20:52Z commit: 8ae52702372481c44e0c1ad7bdce90afc387fb0b)
+ ~  $ curl -sf https://labs.iximiuz.com/cli/install.sh | sh
+Downloading package https://github.com/iximiuz/labctl/releases/download/v0.1.61/labctl_darwin_amd64.tar.gz as /Users/karuppiahn/labctl_darwin_amd64.tar.gz
+Download complete.
+Unpacking labctl to /Users/karuppiahn/.iximiuz/labctl/bin
+Installation of labctl is complete.
+
+Add the following lines to your ~/.bashrc file:
+
+   export PATH=$PATH:/Users/karuppiahn/.iximiuz/labctl/bin
+   source <(labctl completion bash)
+
+Then open a new terminal or run the following command:
+
+   labctl --version
+   labctl auth login
+
+For more information, please visit https://github.com/iximiuz/labctl
+Happy hacking!
+ ~  $ labctl version
+0.1.61 (built: 2026-02-21T14:51:17Z commit: b21b2d46a0ccd4c160f5e0167af2945270902944)
+ ~  $ 

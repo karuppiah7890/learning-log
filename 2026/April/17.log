@@ -1,0 +1,220 @@
+ prometheus  $ brew update
+==> Updating Homebrew...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+Error: homebrew/homebrew-cask-fonts does not exist! Run `brew untap homebrew/homebrew-cask-fonts` to remove it.
+ ✘  prometheus  $ brew tap
+buildpacks/tap
+dart-lang/dart
+encoredev/tap
+goreleaser/tap
+heroku/brew
+homebrew/cask-fonts
+homebrew/services
+hotchemi/tap
+jkawamoto/fgo
+joshuaclayton/formulae
+jtyr/repo
+kong/kong
+lihaoyun6/tap
+mongodb/brew
+nanovms/qemu
+ory/kratos
+pivotal/tap
+sass/sass
+thecasualcoder/stable
+tinygo-org/tools
+ubuntu/microk8s
+windmilleng/tap
+yogeshsr/tap
+ prometheus  $ brew untap homebrew/cask-fonts
+Untapping homebrew/cask-fonts...
+Untapped (1,267 files, 22.3MB).
+ prometheus  $ 
+
+ prometheus  $ brew info git
+==> git ✔: stable 2.53.0, HEAD
+Distributed revision control system
+https://git-scm.com
+Installed (on request)
+/usr/local/Cellar/git/2.38.0 (1,592 files, 50.0MB) *
+  Poured from bottle on 2022-10-18 at 18:11:56
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/g/git.rb
+License: GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT
+==> Dependencies
+Required (2): pcre2 ✘, gettext ✘
+Recursive Runtime (2): 2 ✔, 0 ✘
+==> Options
+--HEAD
+	Install HEAD version
+==> Caveats
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
+==> Downloading https://formulae.brew.sh/api/formula/git.json
+==> Analytics
+install: 138,940 (30 days), 368,333 (90 days), 1,587,933 (365 days)
+install-on-request: 136,845 (30 days), 362,367 (90 days), 1,534,176 (365 days)
+build-error: 644 (30 days)
+ prometheus  $ 
+
+ prometheus  $ brew info git
+==> git ✔: stable 2.53.0, HEAD
+Distributed revision control system
+https://git-scm.com
+Installed (on request)
+/usr/local/Cellar/git/2.38.0 (1,592 files, 50.0MB) *
+  Poured from bottle on 2022-10-18 at 18:11:56
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/g/git.rb
+License: GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT
+==> Dependencies
+Required (2): pcre2 ✘, gettext ✘
+Recursive Runtime (2): 2 ✔, 0 ✘
+==> Options
+--HEAD
+	Install HEAD version
+==> Caveats
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
+==> Analytics
+install: 138,940 (30 days), 368,333 (90 days), 1,587,933 (365 days)
+install-on-request: 136,845 (30 days), 362,367 (90 days), 1,534,176 (365 days)
+build-error: 644 (30 days)
+ prometheus  $ brew install git
+git 2.38.0 is already installed but outdated (so it will be upgraded).
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+You may have better luck with MacPorts which supports older versions of macOS:
+  https://www.macports.org
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report issues with Tier 3 configurations to Homebrew/* repositories!
+Read the above document before opening any issues or PRs.
+
+==> Fetching downloads for: git
+✔︎ API Source git.rb                                  Verified      9.0KB/  9.0KB
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/5e04c93
+Already downloaded: /Users/karuppiahn/Library/Caches/Homebrew/downloads/6d1f7788b2267533335f7b23b12e7b98d02c6252b539ce929c63ce9c1179493d--pcre2.rb
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/5e04c93
+Already downloaded: /Users/karuppiahn/Library/Caches/Homebrew/downloads/6ebdb1eab9719fe4d8b8845eb92cacb937d2aa6320a6ca3c33116a146fdda615--libunistring.rb
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/5e04c93
+Already downloaded: /Users/karuppiahn/Library/Caches/Homebrew/downloads/10753ec8854e829552ed538321701f2bf4b879dd5f5314427450d6d9b7a644e3--gettext.rb
+✔︎ API Source pcre2.rb                                Verified      2.2KB/  2.2KB
+✔︎ Formula pcre2 (10.47)                              Verified      2.1MB/  2.1MB
+✔︎ API Source libunistring.rb                         Verified      2.5KB/  2.5KB
+✔︎ Formula libunistring (1.4.2)                       Verified      5.0MB/  5.0MB
+✔︎ API Source gettext.rb                              Verified      2.8KB/  2.8KB
+✔︎ Formula gettext (1.0)                              Verified     32.7MB/ 32.7MB
+✔︎ Resource git--Authen::SASL                         Verified     41.5KB/ 41.5KB
+✔︎ Resource git--html                                 Verified      1.7MB/  1.7MB
+✔︎ Resource git--man                                  Verified    614.1KB/614.1KB
+✔︎ Resource git--Net::SMTP::SSL                       Verified      2.5KB/  2.5KB
+✔︎ Patch 2.53.0-osxkeychain-top-level-makefile.patch  Verified      5.1KB/  5.1KB
+✔︎ Formula git (2.53.0)                               Verified      8.0MB/  8.0MB
+==> Upgrading git
+  2.38.0 -> 2.53.0_1 
+==> Installing dependencies for git: libunistring, gettext and pcre2
+==> Installing git dependency: libunistring
+==> ./configure --disable-silent-rules
+
+==> make
+==> make check
+
+ Downloads  $ cd prometheus-3.11.2.darwin-amd64/
+ prometheus-3.11.2.darwin-amd64  $ ls
+LICENSE		NOTICE		prometheus	prometheus.yml	promtool
+ prometheus-3.11.2.darwin-amd64  $ ./prometheus 
+time=2026-04-17T16:07:50.494+05:30 level=INFO source=main.go:1678 msg="updated GOGC" old=100 new=75
+time=2026-04-17T16:07:50.495+05:30 level=INFO source=main.go:744 msg="Leaving GOMAXPROCS=8: CPU quota undefined" component=automaxprocs
+time=2026-04-17T16:07:50.495+05:30 level=INFO source=memlimit.go:198 msg="GOMEMLIMIT is updated" component=automemlimit package=github.com/KimMachineGun/automemlimit/memlimit GOMEMLIMIT=15461882265 previous=9223372036854775807
+time=2026-04-17T16:07:50.495+05:30 level=INFO source=main.go:851 msg="Starting Prometheus Server" mode=server version="(version=3.11.2, branch=HEAD, revision=f0f0fdd679dcd6df320b0558b20919f7cd44c407)"
+time=2026-04-17T16:07:50.495+05:30 level=INFO source=main.go:856 msg="operational information" build_context="(go=go1.26.2, platform=darwin/amd64, user=root@80b0efef0c55, date=20260413-11:54:49, tags=netgo,builtinassets)" host_details=(darwin) fd_limits="(soft=61440, hard=unlimited)" vm_limits="(soft=unlimited, hard=unlimited)"
+time=2026-04-17T16:07:50.630+05:30 level=INFO source=web.go:710 msg="Start listening for connections" component=web address=0.0.0.0:9090
+time=2026-04-17T16:07:50.630+05:30 level=INFO source=main.go:1410 msg="Starting TSDB ..."
+time=2026-04-17T16:07:50.631+05:30 level=INFO source=tls_config.go:354 msg="Listening on" component=web address=[::]:9090
+time=2026-04-17T16:07:50.631+05:30 level=INFO source=tls_config.go:357 msg="TLS is disabled." component=web http2=false address=[::]:9090
+time=2026-04-17T16:07:50.634+05:30 level=INFO source=head.go:698 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+time=2026-04-17T16:07:50.634+05:30 level=INFO source=head.go:784 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=16.874µs
+time=2026-04-17T16:07:50.634+05:30 level=INFO source=head.go:792 msg="Replaying WAL, this may take a while" component=tsdb
+time=2026-04-17T16:07:50.634+05:30 level=INFO source=head.go:865 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0 duration=268.882µs
+time=2026-04-17T16:07:50.634+05:30 level=INFO source=head.go:902 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=98.041µs wal_replay_duration=290.56µs wbl_replay_duration=191ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=16.874µs total_replay_duration=428.038µs
+time=2026-04-17T16:07:50.636+05:30 level=INFO source=main.go:1431 msg="filesystem information" fs_type=1a
+time=2026-04-17T16:07:50.636+05:30 level=INFO source=main.go:1434 msg="TSDB started"
+time=2026-04-17T16:07:50.636+05:30 level=INFO source=main.go:1632 msg="Loading configuration file" filename=prometheus.yml
+time=2026-04-17T16:07:50.636+05:30 level=INFO source=main.go:1048 msg="TSDB retention updated" duration=15d size=0B percentage=0
+time=2026-04-17T16:07:50.660+05:30 level=INFO source=main.go:1671 msg="Completed loading of configuration file" db_storage=36.961µs remote_storage=5.157µs web_handler=353ns query_engine=658ns scrape=23.109708ms scrape_sd=76.254µs notify=221.719µs notify_sd=25.19µs rules=8.181µs tracing=21.504µs filename=prometheus.yml totalDuration=23.811577ms
+time=2026-04-17T16:07:50.660+05:30 level=INFO source=main.go:1395 msg="Server is ready to receive web requests."
+time=2026-04-17T16:07:50.660+05:30 level=INFO source=manager.go:209 msg="Starting rule manager..." component="rule manager"
+ 
+time=2026-04-17T19:33:27.780+05:30 level=INFO source=compact.go:590 msg="write block started" component=tsdb mint=1776422278678 maxt=1776427200000 ulid=01KPDW1XN4HCKD7MBSW00AGZ8A
+time=2026-04-17T19:33:29.930+05:30 level=INFO source=compact.go:627 msg="write block completed" component=tsdb mint=1776422278678 maxt=1776427200000 ulid=01KPDW1XN4HCKD7MBSW00AGZ8A duration=2.150702316s ooo=false
+time=2026-04-17T19:33:29.934+05:30 level=INFO source=head.go:1478 msg="Head GC started" component=tsdb caller=truncateMemory
+time=2026-04-17T19:33:29.946+05:30 level=INFO source=head.go:1482 msg="Head GC completed" component=tsdb caller=truncateMemory duration=12.513981ms
+time=2026-04-17T20:38:18.036+05:30 level=INFO source=compact.go:590 msg="write block started" component=tsdb mint=1776427204567 maxt=1776434400000 ulid=01KPDZRMQJVD7QBSPR4X8YK0P0
+time=2026-04-17T20:38:20.999+05:30 level=INFO source=compact.go:627 msg="write block completed" component=tsdb mint=1776427204567 maxt=1776434400000 ulid=01KPDZRMQJVD7QBSPR4X8YK0P0 duration=2.965721844s ooo=false
+time=2026-04-17T20:38:21.008+05:30 level=INFO source=head.go:1478 msg="Head GC started" component=tsdb caller=truncateMemory
+time=2026-04-17T20:38:21.011+05:30 level=INFO source=head.go:1482 msg="Head GC completed" component=tsdb caller=truncateMemory duration=2.884893ms
+time=2026-04-18T00:14:29.366+05:30 level=INFO source=compact.go:590 msg="write block started" component=tsdb mint=1776434607769 maxt=1776441600000 ulid=01KPEC4G1HT027R48Q6STPXYWC
+time=2026-04-18T00:14:34.041+05:30 level=INFO source=compact.go:627 msg="write block completed" component=tsdb mint=1776434607769 maxt=1776441600000 ulid=01KPEC4G1HT027R48Q6STPXYWC duration=1.940940427s ooo=false
+time=2026-04-18T00:14:34.050+05:30 level=INFO source=head.go:1478 msg="Head GC started" component=tsdb caller=truncateMemory
+time=2026-04-18T00:14:34.060+05:30 level=INFO source=head.go:1482 msg="Head GC completed" component=tsdb caller=truncateMemory duration=9.871798ms
+^Ctime=2026-04-18T00:31:29.096+05:30 level=WARN source=main.go:1191 msg="Received an OS signal, exiting gracefully..." signal=interrupt
+time=2026-04-18T00:31:29.099+05:30 level=INFO source=main.go:1216 msg="Stopping scrape discovery manager..."
+time=2026-04-18T00:31:29.099+05:30 level=INFO source=main.go:1230 msg="Stopping notify discovery manager..."
+time=2026-04-18T00:31:29.099+05:30 level=INFO source=main.go:1245 msg="Stopping rule manager manager..."
+time=2026-04-18T00:31:29.099+05:30 level=INFO source=main.go:1212 msg="Scrape discovery manager stopped"
+time=2026-04-18T00:31:29.099+05:30 level=INFO source=main.go:1226 msg="Notify discovery manager stopped"
+time=2026-04-18T00:31:29.100+05:30 level=INFO source=manager.go:223 msg="Stopping rule manager..." component="rule manager"
+time=2026-04-18T00:31:29.101+05:30 level=INFO source=manager.go:239 msg="Rule manager stopped" component="rule manager"
+time=2026-04-18T00:31:29.101+05:30 level=INFO source=main.go:1269 msg="Stopping scrape manager..."
+time=2026-04-18T00:31:29.101+05:30 level=INFO source=main.go:1241 msg="Rule manager stopped"
+time=2026-04-18T00:31:29.102+05:30 level=INFO source=main.go:1261 msg="Scrape manager stopped"
+time=2026-04-18T00:31:29.102+05:30 level=INFO source=main.go:1284 msg="Stopping tracing manager..."
+time=2026-04-18T00:31:29.103+05:30 level=INFO source=main.go:1369 msg="Stopping reloaders..."
+time=2026-04-18T00:31:29.103+05:30 level=INFO source=main.go:1280 msg="Tracing manager stopped"
+time=2026-04-18T00:31:29.103+05:30 level=INFO source=main.go:1361 msg="Reloaders stopped"
+time=2026-04-18T00:31:29.103+05:30 level=INFO source=main.go:1458 msg="Stopping storage..."
+time=2026-04-18T00:31:29.183+05:30 level=INFO source=main.go:1536 msg="Stopping web handler..."
+time=2026-04-18T00:31:29.183+05:30 level=INFO source=main.go:1559 msg="Stopping notifier manager..."
+time=2026-04-18T00:31:29.183+05:30 level=INFO source=main.go:1454 msg="TSDB stopped"
+time=2026-04-18T00:31:29.183+05:30 level=INFO source=manager.go:321 msg="Stopping notification manager..." component=notifier
+time=2026-04-18T00:31:29.184+05:30 level=INFO source=main.go:1555 msg="Notifier manager stopped"
+time=2026-04-18T00:31:29.184+05:30 level=INFO source=main.go:1532 msg="Web handler stopped"
+time=2026-04-18T00:31:29.184+05:30 level=INFO source=main.go:1570 msg="See you next time!"
+ prometheus-3.11.2.darwin-amd64  $ 
+
+
+ prometheus-3.11.2.darwin-amd64  $ cat prometheus.yml 
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+       # The label name is added as a label `label_name=<label_value>` to any timeseries scraped from this config.
+        labels:
+          app: "prometheus"
+ prometheus-3.11.2.darwin-amd64  $ 
+
