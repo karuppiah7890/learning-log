@@ -1,0 +1,2175 @@
+ ~  $ java -jar ~/Downloads/shadowtraffic.jar 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: org/graalvm/polyglot/Context has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 60.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1010)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:855)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:753)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:676)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:634)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:466)
+	at clojure.lang.RT.classForName(RT.java:2209)
+	at clojure.lang.RT.classForNameNonLoading(RT.java:2222)
+	at io.shadowtraffic.functions.custom_function$loading__6789__auto____3768.invoke(custom_function.clj:1)
+	at io.shadowtraffic.functions.custom_function__init.load(Unknown Source)
+	at io.shadowtraffic.functions.custom_function__init.<clinit>(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:466)
+	at clojure.lang.RT.classForName(RT.java:2209)
+	at clojure.lang.RT.classForName(RT.java:2218)
+	at clojure.lang.RT.loadClassForName(RT.java:2237)
+	at clojure.lang.RT.load(RT.java:449)
+	at clojure.lang.RT.load(RT.java:424)
+	at clojure.core$load$fn__6908.invoke(core.clj:6162)
+	at clojure.core$load.invokeStatic(core.clj:6161)
+	at clojure.core$load.doInvoke(core.clj:6145)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.core$load_one.invokeStatic(core.clj:5934)
+	at clojure.core$load_one.invoke(core.clj:5929)
+	at clojure.core$load_lib$fn__6850.invoke(core.clj:5976)
+	at clojure.core$load_lib.invokeStatic(core.clj:5975)
+	at clojure.core$load_lib.doInvoke(core.clj:5954)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$load_libs.invokeStatic(core.clj:6017)
+	at clojure.core$load_libs.doInvoke(core.clj:6001)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$require.invokeStatic(core.clj:6039)
+	at clojure.core$require.doInvoke(core.clj:6039)
+	at clojure.lang.RestFn.invoke(RestFn.java:3894)
+	at io.shadowtraffic.generator.clojure_only_functions$loading__6789__auto____3323.invoke(clojure_only_functions.clj:1)
+	at io.shadowtraffic.generator.clojure_only_functions__init.load(Unknown Source)
+	at io.shadowtraffic.generator.clojure_only_functions__init.<clinit>(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:466)
+	at clojure.lang.RT.classForName(RT.java:2209)
+	at clojure.lang.RT.classForName(RT.java:2218)
+	at clojure.lang.RT.loadClassForName(RT.java:2237)
+	at clojure.lang.RT.load(RT.java:449)
+	at clojure.lang.RT.load(RT.java:424)
+	at clojure.core$load$fn__6908.invoke(core.clj:6162)
+	at clojure.core$load.invokeStatic(core.clj:6161)
+	at clojure.core$load.doInvoke(core.clj:6145)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.core$load_one.invokeStatic(core.clj:5934)
+	at clojure.core$load_one.invoke(core.clj:5929)
+	at clojure.core$load_lib$fn__6850.invoke(core.clj:5976)
+	at clojure.core$load_lib.invokeStatic(core.clj:5975)
+	at clojure.core$load_lib.doInvoke(core.clj:5954)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$load_libs.invokeStatic(core.clj:6017)
+	at clojure.core$load_libs.doInvoke(core.clj:6001)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$require.invokeStatic(core.clj:6039)
+	at clojure.core$require.doInvoke(core.clj:6039)
+	at clojure.lang.RestFn.invoke(RestFn.java:1096)
+	at io.shadowtraffic.generator.core$loading__6789__auto____1026.invoke(core.cljc:1)
+	at io.shadowtraffic.generator.core__init.load(Unknown Source)
+	at io.shadowtraffic.generator.core__init.<clinit>(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:466)
+	at clojure.lang.RT.classForName(RT.java:2209)
+	at clojure.lang.RT.classForName(RT.java:2218)
+	at clojure.lang.RT.loadClassForName(RT.java:2237)
+	at clojure.lang.RT.load(RT.java:449)
+	at clojure.lang.RT.load(RT.java:424)
+	at clojure.core$load$fn__6908.invoke(core.clj:6162)
+	at clojure.core$load.invokeStatic(core.clj:6161)
+	at clojure.core$load.doInvoke(core.clj:6145)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.core$load_one.invokeStatic(core.clj:5934)
+	at clojure.core$load_one.invoke(core.clj:5929)
+	at clojure.core$load_lib$fn__6850.invoke(core.clj:5976)
+	at clojure.core$load_lib.invokeStatic(core.clj:5975)
+	at clojure.core$load_lib.doInvoke(core.clj:5954)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$load_libs.invokeStatic(core.clj:6017)
+	at clojure.core$load_libs.doInvoke(core.clj:6001)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:669)
+	at clojure.core$require.invokeStatic(core.clj:6039)
+	at clojure.core$require.doInvoke(core.clj:6039)
+	at clojure.lang.RestFn.invoke(RestFn.java:3894)
+	at io.shadowtraffic.generator.entrypoint$loading__6789__auto____171.invoke(entrypoint.clj:1)
+	at io.shadowtraffic.generator.entrypoint__init.load(Unknown Source)
+	at io.shadowtraffic.generator.entrypoint__init.<clinit>(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:466)
+	at clojure.lang.RT.classForName(RT.java:2209)
+	at clojure.lang.RT.classForName(RT.java:2218)
+	at clojure.lang.RT.loadClassForName(RT.java:2237)
+	at clojure.lang.RT.load(RT.java:449)
+	at clojure.lang.RT.load(RT.java:424)
+	at clojure.core$load$fn__6908.invoke(core.clj:6162)
+	at clojure.core$load.invokeStatic(core.clj:6161)
+	at clojure.core$load.doInvoke(core.clj:6145)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.lang.Var.invoke(Var.java:384)
+	at clojure.lang.Util.loadWithClass(Util.java:251)
+	at io.shadowtraffic.generator.entrypoint.<clinit>(Unknown Source)
+ ✘  ~  $ 
+Last login: Mon May 18 12:59:55 on ttys000
+ ~  $ labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  course       Start and stop course lessons from the comfort of your terminal
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  ide          Open a playground in a local IDE
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+ ~  $ labctl auth
+Authenticate the current CLI session with iximiuz Labs
+
+Usage:
+  labctl auth [command]
+
+Available Commands:
+  login       Log in as a Labs user (you will be prompted to open a browser page with a one-time use URL)
+  logout      Log out the current user by deleting the current CLI session
+  whoami      Print the current user info
+
+Flags:
+  -h, --help   help for auth
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl auth [command] --help" for more information about a command.
+ ~  $ labctl auth whoami
+Authentication session expired. Please log in again: labctl auth login
+ ~  $ labctl auth login
+Opening https://labs.iximiuz.com/auth/sessions/6a0ac16e77d01427bed202e7 in your browser...
+
+Waiting for the session to be authorized... Done.
+
+Session authorized. You can now use labctl commands.
+ ~  $ labctl auth whoami
+userId: 694a655e63c2f9c6e22cf727
+githubProfileId: "12808424"
+ ~  $ labctl api
+Error: accepts 1 arg(s), received 0
+Usage:
+  labctl api <path> [flags]
+
+Examples:
+  # Get user information
+  labctl api /auth/me
+
+  # Start a tutorial
+  echo '{"started": true}' | labctl api /tutorials/NAME --method PATCH --input -
+
+Flags:
+  -h, --help            help for api
+      --input string    File to use as body for the HTTP request (use "-" to read from standard input)
+  -X, --method string   HTTP method for the request (default "GET")
+  -s, --silent          Do not print the response body
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+ ✘  ~  $ labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  course       Start and stop course lessons from the comfort of your terminal
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  ide          Open a playground in a local IDE
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+ ~  $ labctl playground
+List, start and stop playgrounds
+
+Usage:
+  labctl playground [command]
+
+Aliases:
+  playground, p, playgrounds
+
+Available Commands:
+  catalog     List playgrounds from the catalog, optionally filtering by type
+  create      Create a new playground from a base and a manifest file
+  destroy     Destroy an active or stopped playground session, completely deleting its data
+  list        List recent playground sessions
+  machines    List machines of a specific playground session
+  manifest    View playground manifest
+  persist     Makes an active playground session persistent
+  remove      Remove a playground you authored
+  restart     Restart a stopped playground session, resuming its state
+  start       Start a new playground session, possibly opening it in a browser
+  stop        Stop a running playground session, preserving its state for future use
+  tasks       List tasks of a playground session
+  update      Update an existing playground from a manifest file
+
+Flags:
+  -h, --help   help for playground
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl playground [command] --help" for more information about a command.
+ ~  $ labctl playground ls
+PLAYGROUND ID             NAME    CREATED        STATUS                                 LINK
+6a0abfb477d01427bed1d6d1  docker  8 minutes ago  RUNNING (expires in 7 hours from now)  https://labs.iximiuz.com/playgrounds/docker/6a0abfb477d01427bed1d6d1
+ ~  $ labctl c[
+Error: unknown command "c[" for "labctl"
+
+Did you mean this?
+	cp
+
+Run 'labctl --help' for usage.
+ ✘  ~  $ labctl cp
+Error: requires at least 2 arg(s), only received 0
+Usage:
+  labctl cp [flags] <playground-id>:<source-path> <destination-path>
+  labctl cp [flags] <source-path> <playground-id>:<destination-path>
+
+Examples:
+  # Copy a file from local machine to playground
+  labctl cp ./some/file 65e78a64366c2b0cf9ddc34c:~/some/file
+
+  # Copy a directory from local machine to playground
+  labctl cp -r ./some/dir 65e78a64366c2b0cf9ddc34c:~/some/dir
+
+  # Copy a file from the playground to local machine
+  labctl cp 65e78a64366c2b0cf9ddc34c:~/some/file ./some/file
+
+  # Copy a directory from the playground to local machine
+  labctl cp 65e78a64366c2b0cf9ddc34c:~/some/dir ./some/dir
+
+
+Flags:
+  -h, --help             help for cp
+  -m, --machine string   Target machine (default: the first machine in the playground)
+  -r, --recursive        Copy directories recursively
+  -u, --user string      SSH user (default: the machine's default login user)
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+ ✘  ~  $ labctl cp 6a0abfb477d01427bed1d6d1:~/shadowtraffic.jar ~/Downloads/
+Warning: Permanently added '[127.0.0.1]:52923' (ED25519) to the list of known hosts.
+
+Done!
+ ~  $ 
+ ~  $ 
+
+laborant@docker-01:~$ docker build -t test .
+[+] Building 19.4s (8/8) FINISHED                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 169B                                                                                                         0.0s
+ => WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                             1.8s
+ => [internal] load metadata for docker.io/shadowtraffic/shadowtraffic:latest                                                                0.0s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                              0.0s
+ => [build 1/1] FROM docker.io/shadowtraffic/shadowtraffic:latest@sha256:8e884e931e06021cb74e1b480783a60b7e862efdd28fa9634a004dc355106999    0.1s
+ => => resolve docker.io/shadowtraffic/shadowtraffic:latest@sha256:8e884e931e06021cb74e1b480783a60b7e862efdd28fa9634a004dc355106999          0.0s
+ => [stage-1 1/2] FROM docker.io/library/ubuntu:latest@sha256:f3d28607ddd78734bb7f71f117f3c6706c666b8b76cbff7c9ff6e5718d46ff64               2.4s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f3d28607ddd78734bb7f71f117f3c6706c666b8b76cbff7c9ff6e5718d46ff64                       0.2s
+ => => sha256:1c24335ddd46023ff99bd665bd8ea6798464f7bbf501718edcf2eb4696e5f408 387B / 387B                                                   0.6s
+ => => sha256:6f5c5aa4e145204b113f983c003ff8ad6489394294ef95ec030bc94e3daded54 41.55MB / 41.55MB                                             0.9s
+ => => extracting sha256:6f5c5aa4e145204b113f983c003ff8ad6489394294ef95ec030bc94e3daded54                                                    1.3s
+ => => extracting sha256:1c24335ddd46023ff99bd665bd8ea6798464f7bbf501718edcf2eb4696e5f408                                                    0.0s
+ => [stage-1 2/2] COPY --from=build /home/shadowtraffic.jar .                                                                                1.3s
+ => exporting to image                                                                                                                      13.9s
+ => => exporting layers                                                                                                                     10.1s
+ => => exporting manifest sha256:f6f075b3887fb9180f3542250d89ff86bc66e4f4857e1c4e814c0d2b9244085f                                            0.0s
+ => => exporting config sha256:5a608fb971fcbbebc352e5981124b483942fc225bbfe30dd69acae5ab84cc499                                              0.0s
+ => => exporting attestation manifest sha256:24a160a4d3a9413f2570ac53f90d3acd382ed1d12bb3036dd10951210e71bc0e                                0.0s
+ => => exporting manifest list sha256:ee2c34d6780b03f28b1baa763dbd22b7de0b537b255cb7969f9578e7d6991c49                                       0.0s
+ => => naming to docker.io/library/test:latest                                                                                               0.0s
+ => => unpacking to docker.io/library/test:latest                                                                                            3.7s
+
+ 1 warning found (use docker --debug to expand):
+ - FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)
+laborant@docker-01:~$ docker images
+                                                                                                                              i Info →   U  In Use
+IMAGE                                ID             DISK USAGE   CONTENT SIZE   EXTRA
+shadowtraffic/shadowtraffic:latest   8e884e931e06       1.51GB          543MB        
+test:latest                          ee2c34d6780b       1.22GB          463MB        
+laborant@docker-01:~$ docker run --rm test
+laborant@docker-01:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+laborant@docker-01:~$ docker run --rm -it test 
+root@da602dbb2b07:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  shadowtraffic.jar  srv  sys  tmp  usr  var
+root@da602dbb2b07:/# java -jar shadowtraffic.jar 
+bash: java: command not found
+root@da602dbb2b07:/# pwd
+/
+root@da602dbb2b07:/# 
+
+laborant@docker-01:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+da602dbb2b07   test      "bash"    21 seconds ago   Up 21 seconds             hardcore_wright
+laborant@docker-01:~$ docker cp d /shadowtraffic.jar .
+docker: 'docker cp' requires 2 arguments
+
+Usage:  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+        docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+
+Run 'docker cp --help' for more information
+laborant@docker-01:~$ docker cp d:/shadowtraffic.jar .
+Successfully copied 637MB (transferred 637MB) to /home/laborant/.
+laborant@docker-01:~$ ls
+Dockerfile  shadowtraffic.jar
+laborant@docker-01:~$ 
+
+ ~  $ 
+ ~  $ 
+ ~  $ curl -k -i https://manamandira.com/check_payment_status/blah; echo
+HTTP/2 200 
+x-powered-by: PHP/8.1.34
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+set-cookie: ci_hd_session=05oqcau46b2dk2hq5phlb806chv67si9; expires=Mon, 18-May-2026 10:09:30 GMT; Max-Age=7200; path=/; HttpOnly
+vary: Accept-Encoding
+content-type: text/html; charset=UTF-8
+date: Mon, 18 May 2026 08:09:30 GMT
+server: Apache
+
+{"status":true,"redirect":"https:\/\/manamandira.com\/payment_error\/blah"}
+ ~  $ curl -X POST \
+>     -H 'Content-Type: application/x-www-form-urlencoded'
+curl: (2) no URL specified
+curl: try 'curl --help' or 'curl --manual' for more information
+ ✘  ~  $     -d 'name=ABC-DEF&email=abcdef%40gmail.com&phone=9938826129&dob=2005-11-18&gender=m&message=Booking&date=2026-06-05&service=3&appointment_doctor=26&appointment=12%3A00&booking_type=self&consultation_type=clinic&meeting_type=consultation' \
+>     https://www.manamandira.com/checkout_init
+-bash: -d: command not found
+ ✘  ~  $ curl -X POST \
+>     -H 'Content-Type: application/x-www-form-urlencoded' \
+>     -d 'name=ABC-DEF&email=abcdef%40gmail.com&phone=9938826129&dob=2005-11-18&gender=m&message=Booking&date=2026-06-05&service=3&appointment_doctor=26&appointment=12%3A00&booking_type=self&consultation_type=clinic&meeting_type=consultation' \
+>     https://www.manamandira.com/checkout_init
+{"status":true,"error":"","data":{"razorpay_order_id":"order_SqlLIwX4JrSZOk","key_id":"rzp_live_swV0dLFQYxkLSn","price":250000,"order_id":"MM-AP-137-5605","sub_name":"Mana Mandira","store_name":"Mana Mandira","logo":"https:\/\/www.manamandira.com\/assets\/uploads\/logos\/032808554bdac7aba459ffb831b1b961.JPG","url":"https:\/\/www.manamandira.com\/razorpay_status","mobile_number":null,"name":"Mana Mandira","color":"#3e4095"},"payment_mode":null} ~  $ 
+ ~  $ 
+ ~  $ 
+laborant@docker-01:~$ docker run --rm ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04 
+Unable to find image 'ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04' locally
+ubuntu-26-04: Pulling from iximiuz/labs/rootfs
+155c7f6b6fb8: Pull complete 
+f9f0475f3f4f: Pull complete 
+5556aeeca91a: Pull complete 
+6f980ffb7e89: Pull complete 
+5f528443f346: Pull complete 
+e687f25c5b13: Pull complete 
+9d7db96ef8a1: Pull complete 
+4e4c1b56a9db: Pull complete 
+1044a9465166: Pull complete 
+858e16dbd758: Pull complete 
+48635cd3a4fe: Pull complete 
+1227ff6f1bb2: Pull complete 
+3703dabe412e: Pull complete 
+426601953dbf: Pull complete 
+62e5c8668606: Pull complete 
+b43520b20ef8: Pull complete 
+340d1283c652: Pull complete 
+488348e6b58d: Pull complete 
+9182cf3b6d1f: Pull complete 
+c7beae1bada2: Pull complete 
+ae91fcdd252f: Pull complete 
+c48720bbf59d: Pull complete 
+ab1c3109a3c9: Pull complete 
+270e499aa9c0: Pull complete 
+bc108bbc0a92: Pull complete 
+7f862cc36fa8: Download complete 
+Digest: sha256:234deff4f3e1d84bc74ff6742f206d8b43971f3e9e62c699e4a7c3c472292f16
+Status: Downloaded newer image for ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+laborant@docker-01:~$ docker build -t test .
+[+] Building 26.1s (7/7) FINISHED                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 680B                                                                                                         0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04                                                                    0.1s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                              0.0s
+ => [1/3] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:234deff4f3e1d84bc74ff6742f206d8b43971f3e9e62c699e4a7c3c472292f16              0.1s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:234deff4f3e1d84bc74ff6742f206d8b43971f3e9e62c699e4a7c3c472292f16              0.0s
+ => [2/3] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.or  16.7s
+ => [3/3] RUN { echo "Welcome to iximiuz Labs' PostgreSQL 18 Playground! 🚀\n";       echo "Run `sudo -u postgres psql` to connect to the     0.2s 
+ => exporting to image                                                                                                                       8.8s 
+ => => exporting layers                                                                                                                      6.5s 
+ => => exporting manifest sha256:db1dc28e6932d8755e6db98d0a2bd8bad7a0e0673b8c4cc236c98eea2a60ec41                                            0.0s 
+ => => exporting config sha256:dbec0a4422f5e4b6ab9898d096afb26a26340dc52c496b96a892bec514517739                                              0.0s 
+ => => exporting attestation manifest sha256:aaea0fc2a2602cb5085a529862ba7da5b2bcf17362706493800b9a878e35743a                                0.0s 
+ => => exporting manifest list sha256:993bf065959b539f7c5ac0f2f41c2d69bf86248e5869a471e6634a66ae1255ec                                       0.0s
+ => => naming to docker.io/library/test:latest                                                                                               0.0s
+ => => unpacking to docker.io/library/test:latest                                                                                            2.2s
+laborant@docker-01:~$ docker run --rm test -- bash
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "--": executable file not found in $PATH
+
+Run 'docker run --help' for more information
+laborant@docker-01:~$ docker run --rm test bash
+laborant@docker-01:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+laborant@docker-01:~$ docker run --rm -it test bash
+Welcome to iximiuz Labs' PostgreSQL 18 Playground! 🚀
+
+Run  to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@bd3d5674314d:/$ psql
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+laborant@bd3d5674314d:/$ psql --version
+psql (PostgreSQL) 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+laborant@bd3d5674314d:/$ 
+exit
+laborant@docker-01:~$ docker build -t test .
+[+] Building 0.5s (7/7) FINISHED                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 682B                                                                                                         0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                              0.0s
+ => [1/3] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:234deff4f3e1d84bc74ff6742f206d8b43971f3e9e62c699e4a7c3c472292f16              0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:234deff4f3e1d84bc74ff6742f206d8b43971f3e9e62c699e4a7c3c472292f16              0.0s
+ => CACHED [2/3] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgre  0.0s
+ => [3/3] RUN { echo "Welcome to iximiuz Labs' PostgreSQL 18 Playground! 🚀\n";       echo "Run \`sudo -u postgres psql\` to connect to t     0.2s
+ => exporting to image                                                                                                                       0.1s
+ => => exporting layers                                                                                                                      0.0s
+ => => exporting manifest sha256:3703d825a7f742123796fce46a560cf1f9b5abead8573414039e13befb863416                                            0.0s
+ => => exporting config sha256:e31b41e29476e7ba0bda87821941f7a24dd85b9e8d3e5271aa1aa0d3c92c2974                                              0.0s
+ => => exporting attestation manifest sha256:0becc630964e2a634ee1a7f685d9543fe86065f960af0271c1a87a1e40bbdd70                                0.0s
+ => => exporting manifest list sha256:3ef00954de1be97eeb2cab4fad140a35c7e2815b3b969d315780e747e2f2cb77                                       0.0s
+ => => naming to docker.io/library/test:latest                                                                                               0.0s
+ => => unpacking to docker.io/library/test:latest                                                                                            0.0s
+laborant@docker-01:~$ docker run --rm -it test bash
+Welcome to iximiuz Labs' PostgreSQL 18 Playground! 🚀
+
+Run `sudo -u postgres psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@e43c12341283:/$ 
+exit
+laborant@docker-01:~$ 
+
+Welcome to iximiuz Labs' PostgreSQL 18 Playground! 🚀
+
+Run `sudo -u postgres psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ cat /etc/os-release 
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+laborant@ubuntu-01:~$ sudo -u postgres psql
+psql (18.4 (Ubuntu 18.4-1.pgdg26.04+1))
+Type "help" for help.
+
+postgres=# select * from pg_se
+pg_seclabel   pg_seclabels  pg_sequence   pg_sequences  pg_settings   
+postgres=# select * from pg_settings ;
+postgres=# select * from pg_settings where name='version';
+postgres=# select * from pg_settings where name='server-version';
+postgres=# select * from pg_settings where name='server_version';
+postgres=# \G
+invalid command \G
+Try \? for help.
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name='server_version';
+-[ RECORD 1 ]---+---------------------------------
+name            | server_version
+setting         | 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+reset_val       | 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
+\q
+laborant@ubuntu-01:~$ systemctl status postgres
+Unit postgres.service could not be found.
+laborant@ubuntu-01:~$ systemctl status postgresql
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: enabled)
+     Active: active (exited) since Mon 2026-05-18 12:13:58 UTC; 1min 21s ago
+ Invocation: 4b2a3882939941908b78a715f720229a
+    Process: 1118 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1118 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.9M
+        CPU: 4ms
+laborant@ubuntu-01:~$ cat /usr/lib/systemd/system/postgresql.service
+# postgresql.service is the meta unit for managing all PostgreSQL clusters on
+# the system at once. Conceptually, this unit is more like a systemd target,
+# but we are using a service since targets cannot be reloaded.
+#
+# The unit actually managing PostgreSQL clusters is postgresql@.service,
+# instantiated as postgresql@15-main.service for individual clusters.
+
+[Unit]
+Description=PostgreSQL RDBMS
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecReload=/bin/true
+RemainAfterExit=on
+
+[Install]
+WantedBy=multi-user.target
+laborant@ubuntu-01:~$ cat /usr/lib/systemd/system/postgresql
+postgresql.service   postgresql@.service  
+laborant@ubuntu-01:~$ cat /usr/lib/systemd/system/postgresql@.service 
+# systemd service template for PostgreSQL clusters. The actual instances will
+# be called "postgresql@version-cluster", e.g. "postgresql@9.3-main". The
+# variable %i expands to "version-cluster", %I expands to "version/cluster".
+# (%I breaks for cluster names containing dashes.)
+
+[Unit]
+Description=PostgreSQL Cluster %i
+AssertPathExists=/etc/postgresql/%I/postgresql.conf
+RequiresMountsFor=/etc/postgresql/%I /var/lib/postgresql/%I
+PartOf=postgresql.service
+ReloadPropagatedFrom=postgresql.service
+Before=postgresql.service
+# stop server before networking goes down on shutdown
+After=network.target
+
+[Service]
+Type=forking
+# -: ignore startup failure (recovery might take arbitrarily long)
+# the actual pg_ctl timeout is configured in pg_ctl.conf
+ExecStart=-/usr/bin/pg_ctlcluster --skip-systemctl-redirect %i start
+TimeoutStartSec=infinity
+ExecStop=/usr/bin/pg_ctlcluster --skip-systemctl-redirect -m fast %i stop
+TimeoutStopSec=1h
+ExecReload=/usr/bin/pg_ctlcluster --skip-systemctl-redirect %i reload
+PIDFile=/run/postgresql/%i.pid
+SyslogIdentifier=postgresql@%i
+# prevent OOM killer from choosing the postmaster (individual backends will
+# reset the score to 0)
+OOMScoreAdjust=-900
+# restarting automatically will prevent "pg_ctlcluster ... stop" from working,
+# so we disable it here. Also, the postmaster will restart by itself on most
+# problems anyway, so it is questionable if one wants to enable external
+# automatic restarts.
+#Restart=on-failure
+# (This should make pg_ctlcluster stop work, but doesn't:)
+#RestartPreventExitStatus=SIGINT SIGTERM
+
+[Install]
+WantedBy=multi-user.target
+laborant@ubuntu-01:~$ 
+laborant@box-01:~$ curl localhost:8080
+404 page not found
+laborant@box-01:~$ curl localhost:8080/livez
+laborant@box-01:~$ curl -i localhost:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:39:46 GMT
+Content-Length: 0
+
+laborant@box-01:~$ ifconfig 
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 06:92:3c:f5:a8:5f  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.0.2  netmask 255.255.255.0  broadcast 172.16.0.255
+        inet6 fe80::b082:81ff:fef4:5cad  prefixlen 64  scopeid 0x20<link>
+        ether 3e:30:59:f2:18:1e  txqueuelen 1000  (Ethernet)
+        RX packets 16580  bytes 73062468 (73.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9374  bytes 807215 (807.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 40  bytes 3764 (3.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3764 (3.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+laborant@box-01:~$ curl -i 172.16.0.2:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:40:03 GMT
+Content-Length: 0
+
+laborant@box-01:~$ curl -i 172.17.0.1:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:40:09 GMT
+Content-Length: 0
+
+laborant@box-01:~$ curl -i box-01:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:40:16 GMT
+Content-Length: 0
+
+laborant@box-01:~$ curl -i box-02:8080/livez
+curl: (7) Failed to connect to box-02 port 8080 after 0 ms: Couldn't connect to server
+laborant@box-01:~$ curl -i http://box-01:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:40:23 GMT
+Content-Length: 0
+
+laborant@box-01:~$ 
+
+Welcome to iximiuz Labs' Go Programming Playground! 🚀
+
+Get a disposable Go development environment in seconds.
+
+Batteries included:
+
+- VS Code: A powerful web IDE with Go addons installed.
+- Docker: No dev environment is complete without them.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@box-01:~$ alias g=git
+
+g clone https://github.com/karuppiah7890/go-experiments
+
+cd go-experiments
+
+go build -v ./cmd/simple-http-server/
+Cloning into 'go-experiments'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 0), reused 10 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (10/10), done.
+go: downloading go1.26.3 (linux/amd64)
+
+internal/unsafeheader
+internal/goarch
+internal/byteorder
+internal/cpu
+internal/coverage/rtcov
+internal/abi
+internal/godebugs
+internal/goexperiment
+internal/goos
+internal/profilerecord
+internal/runtime/atomic
+internal/chacha8rand
+internal/bytealg
+internal/runtime/syscall/linux
+math/bits
+internal/strconv
+internal/runtime/exithook
+internal/runtime/gc
+internal/runtime/sys
+internal/asan
+internal/msan
+internal/race
+internal/runtime/math
+internal/runtime/gc/scan
+internal/runtime/maps
+internal/runtime/pprof/label
+internal/stringslite
+internal/runtime/cgroup
+internal/trace/tracev2
+cmp
+math
+unicode/utf8
+sync/atomic
+internal/synctest
+unicode
+runtime
+internal/sync
+log/internal
+container/list
+crypto/internal/fips140/alias
+crypto/internal/fips140deps/byteorder
+crypto/internal/fips140deps/cpu
+crypto/internal/constanttime
+crypto/internal/boring/sig
+unicode/utf16
+crypto/internal/fips140/subtle
+vendor/golang.org/x/crypto/cryptobyte/asn1
+vendor/golang.org/x/crypto/internal/alias
+internal/nettrace
+crypto/subtle
+internal/reflectlite
+iter
+sync
+weak
+slices
+maps
+errors
+sort
+internal/testlog
+internal/bisect
+strconv
+io
+internal/oserror
+reflect
+path
+internal/godebug
+syscall
+bytes
+strings
+hash
+hash/crc32
+bufio
+crypto
+crypto/internal/fips140deps/godebug
+crypto/internal/impl
+crypto/internal/fips140
+time
+internal/syscall/unix
+internal/syscall/execenv
+crypto/internal/fips140/sha256
+crypto/internal/fips140/sha3
+crypto/internal/fips140/sha512
+math/rand/v2
+crypto/internal/fips140/hmac
+crypto/internal/randutil
+internal/fmtsort
+encoding/binary
+crypto/internal/fips140/check
+io/fs
+internal/poll
+context
+internal/filepathlite
+crypto/internal/fips140/aes
+crypto/internal/fips140deps/time
+crypto/fips140
+os
+crypto/internal/entropy/v1.0.0
+math/rand
+crypto/internal/fips140/nistec/fiat
+crypto/internal/fips140/edwards25519/field
+crypto/internal/fips140/bigmod
+crypto/internal/fips140cache
+crypto/sha3
+crypto/internal/fips140hash
+internal/saferio
+crypto/internal/fips140/edwards25519
+crypto/internal/fips140/hkdf
+vendor/golang.org/x/crypto/internal/poly1305
+crypto/internal/fips140/tls12
+crypto/internal/fips140/nistec
+crypto/internal/fips140/tls13
+crypto/tls/internal/fips140tls
+encoding/base64
+vendor/golang.org/x/net/dns/dnsmessage
+fmt
+crypto/internal/sysrand
+crypto/internal/fips140/drbg
+crypto/internal/fips140/aes/gcm
+crypto/internal/fips140only
+log
+compress/flate
+crypto/cipher
+math/big
+crypto/internal/fips140/ecdh
+crypto/internal/boring
+crypto/des
+crypto/internal/rand
+compress/gzip
+crypto/aes
+crypto/ecdh
+crypto/internal/fips140/ecdsa
+crypto/sha512
+crypto/internal/fips140/ed25519
+crypto/hkdf
+crypto/hmac
+crypto/internal/fips140/mlkem
+crypto/sha256
+vendor/golang.org/x/crypto/chacha20
+vendor/golang.org/x/sys/cpu
+crypto/md5
+crypto/mlkem
+vendor/golang.org/x/crypto/chacha20poly1305
+crypto/rc4
+crypto/internal/fips140/rsa
+crypto/sha1
+crypto/rand
+crypto/elliptic
+crypto/internal/boring/bbig
+encoding/asn1
+crypto/ed25519
+crypto/hpke
+crypto/rsa
+encoding/hex
+crypto/dsa
+encoding/pem
+internal/singleflight
+unique
+vendor/golang.org/x/crypto/cryptobyte
+crypto/x509/pkix
+path/filepath
+net/netip
+crypto/ecdsa
+net/url
+vendor/golang.org/x/text/transform
+vendor/golang.org/x/text/unicode/bidi
+vendor/golang.org/x/text/unicode/norm
+runtime/cgo
+vendor/golang.org/x/text/secure/bidirule
+vendor/golang.org/x/net/http2/hpack
+mime
+mime/quotedprintable
+net/http/internal
+net/http/internal/ascii
+vendor/golang.org/x/net/idna
+net
+net/textproto
+crypto/x509
+vendor/golang.org/x/net/http/httpproxy
+vendor/golang.org/x/net/http/httpguts
+mime/multipart
+crypto/tls
+net/http/httptrace
+net/http/internal/httpcommon
+net/http
+experiments/cmd/simple-http-server
+laborant@box-01:go-experiments$ 
+laborant@box-01:go-experiments$ which go
+/usr/local/go/bin/go
+laborant@box-01:go-experiments$ ls -al /usr/local/go/bin/go
+-rwxr-xr-x 1 root root 15405555 Mar 27 21:58 /usr/local/go/bin/go
+laborant@box-01:go-experiments$ file /usr/local/go/bin/go
+/usr/local/go/bin/go: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=jelXDo_mr6g9fHNvtIWd/z1q339LMhLdSVizH-1wm/DnRO4F-wcYrRLEYbj6NI/aVoQgSDyC1UzFg7S8zle, BuildID[sha1]=2afee1eaf40a2c9fa5436e005aa639db64747d5e, not stripped
+laborant@box-01:go-experiments$ type go
+go is hashed (/usr/local/go/bin/go)
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+experiments/cmd/simple-http-server
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+experiments/cmd/simple-http-server
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+experiments/cmd/simple-http-server
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+2026/05/18 12:42:19 an error occurred while running the server: listen tcp: lookup *: no such host
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ vi cmd/simple-http-server/simple-http-server.go 
+laborant@box-01:go-experiments$ go build -v ./cmd/simple-http-server/
+laborant@box-01:go-experiments$ ./simple-http-server 
+Simple HTTP Server is running
+^C
+laborant@box-01:go-experiments$ 
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@box-02:~$ sudo apt update
+
+sudo apt install -y apache2-utils
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [50.1 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [27.9 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [48.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [62.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [48.9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [93.3 kB]
+Fetched 603 kB in 1s (557 kB/s)    
+14 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing:                     
+  apache2-utils
+
+Installing dependencies:
+  libapr1t64  libaprutil1t64
+
+Summary:
+  Upgrading: 0, Installing: 3, Removing: 0, Not Upgrading: 14
+  Download size: 297 kB
+  Space needed: 918 kB / 28.3 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapr1t64 amd64 1.7.6-3 [109 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libaprutil1t64 amd64 1.6.3-3ubuntu3 [93.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-utils amd64 2.4.66-2ubuntu2.1 [93.7 kB]
+Fetched 297 kB in 0s (7820 kB/s)         
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 3.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libapr1t64:amd64.
+(Reading database ... 40316 files and directories currently installed.)
+Preparing to unpack .../libapr1t64_1.7.6-3_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.6-3) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../libaprutil1t64_1.6.3-3ubuntu3_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-3ubuntu3) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.66-2ubuntu2.1_amd64.deb ...
+Unpacking apache2-utils (2.4.66-2ubuntu2.1) ...
+Setting up libapr1t64:amd64 (1.7.6-3) ...
+Setting up libaprutil1t64:amd64 (1.6.3-3ubuntu3) ...
+Setting up apache2-utils (2.4.66-2ubuntu2.1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+laborant@box-02:~$ ab -n 10 -c 10 http://box-01/livez
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)...apr_socket_recv: Connection refused (111)
+laborant@box-02:~$ ab -n 10 -c 10 http://box-01/livez
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)...apr_socket_recv: Connection refused (111)
+laborant@box-02:~$ ab -n 10 -c 10 http://box-01/livez
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)...apr_socket_recv: Connection refused (111)
+laborant@box-02:~$ ab -n 10 -c 10 http://box-01/livez/
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)...apr_socket_recv: Connection refused (111)
+laborant@box-02:~$ curl localhost
+curl: (7) Failed to connect to localhost port 80 after 0 ms: Could not connect to server
+laborant@box-02:~$ curl box-01
+curl: (7) Failed to connect to box-01 port 80 after 0 ms: Could not connect to server
+laborant@box-02:~$ curl box-01:8080
+404 page not found
+laborant@box-02:~$ curl box-01:8080
+404 page not found
+laborant@box-02:~$ curl box-01:8080
+curl: (7) Failed to connect to box-01 port 8080 after 0 ms: Could not connect to server
+laborant@box-02:~$ curl box-01:8080
+curl: (7) Failed to connect to box-01 port 8080 after 0 ms: Could not connect to server
+laborant@box-02:~$ curl box-01:8080
+404 page not found
+laborant@box-02:~$ curl -i box-01:8080/livez
+HTTP/1.1 200 OK
+Date: Mon, 18 May 2026 12:42:55 GMT
+Content-Length: 0
+
+laborant@box-02:~$ ab box-01:8080/livez
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.001 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      75 bytes
+HTML transferred:       0 bytes
+Requests per second:    1733.10 [#/sec] (mean)
+Time per request:       0.577 [ms] (mean)
+Time per request:       0.577 [ms] (mean, across all concurrent requests)
+Transfer rate:          126.94 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.0      0       0
+Waiting:        0    0   0.0      0       0
+Total:          1    1   0.0      1       1
+laborant@box-02:~$ URL="http://box-01:8080/livez"
+laborant@box-02:~$ ab -n 10 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.001 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      750 bytes
+HTML transferred:       0 bytes
+Requests per second:    8326.39 [#/sec] (mean)
+Time per request:       1.201 [ms] (mean)
+Time per request:       0.120 [ms] (mean, across all concurrent requests)
+Transfer rate:          609.84 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.1      0       1
+Waiting:        0    0   0.1      0       0
+Total:          0    0   0.1      0       1
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      1
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      1 (longest request)
+laborant@box-02:~$ ab -n 100 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.005 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      7500 bytes
+HTML transferred:       0 bytes
+Requests per second:    21213.41 [#/sec] (mean)
+Time per request:       0.471 [ms] (mean)
+Time per request:       0.047 [ms] (mean, across all concurrent requests)
+Transfer rate:          1553.72 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.1      0       1
+Waiting:        0    0   0.1      0       1
+Total:          0    0   0.1      0       1
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      1 (longest request)
+laborant@box-02:~$ ab -n 1000 -c 10 $URL
+
+ab -n 10000 -c 10 $URL
+
+ab -n 100000 -c 10 $URL
+
+ab -n 100000 -c 100 $URL
+
+ab -n 100000 -c 1000 $URL
+
+ab -n 1000000 -c 1000 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.040 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      75000 bytes
+HTML transferred:       0 bytes
+Requests per second:    25003.75 [#/sec] (mean)
+Time per request:       0.400 [ms] (mean)
+Time per request:       0.040 [ms] (mean, across all concurrent requests)
+Transfer rate:          1831.33 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.1      0       1
+Waiting:        0    0   0.1      0       1
+Total:          0    0   0.1      0       2
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      2 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.402 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      750000 bytes
+HTML transferred:       0 bytes
+Requests per second:    24850.46 [#/sec] (mean)
+Time per request:       0.402 [ms] (mean)
+Time per request:       0.040 [ms] (mean, across all concurrent requests)
+Transfer rate:          1820.10 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   0.1      0       4
+Waiting:        0    0   0.1      0       3
+Total:          0    0   0.1      0       4
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      4 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   3.325 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    30071.67 [#/sec] (mean)
+Time per request:       0.333 [ms] (mean)
+Time per request:       0.033 [ms] (mean, across all concurrent requests)
+Transfer rate:          2202.51 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   0.2      0       5
+Waiting:        0    0   0.1      0       5
+Total:          0    0   0.2      0       5
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      0
+  95%      1
+  98%      1
+  99%      1
+ 100%      5 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      100
+Time taken for tests:   3.573 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    27991.06 [#/sec] (mean)
+Time per request:       3.573 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          2050.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.6      1       6
+Processing:     0    3   1.1      2      10
+Waiting:        0    2   1.3      2       9
+Total:          1    4   0.8      4      10
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      4
+  75%      4
+  80%      4
+  90%      4
+  95%      5
+  98%      5
+  99%      5
+ 100%     10 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   3.591 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    27849.06 [#/sec] (mean)
+Time per request:       35.908 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          2039.73 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   17   2.8     17      27
+Processing:     6   19   3.1     18      35
+Waiting:        0   13   2.7     13      29
+Total:         22   36   2.6     35      50
+
+Percentage of the requests served within a certain time (ms)
+  50%     35
+  66%     36
+  75%     37
+  80%     37
+  90%     40
+  95%     41
+  98%     43
+  99%     44
+ 100%     50 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   29.746 seconds
+Complete requests:      1000000
+Failed requests:        0
+Total transferred:      75000000 bytes
+HTML transferred:       0 bytes
+Requests per second:    33618.48 [#/sec] (mean)
+Time per request:       29.746 [ms] (mean)
+Time per request:       0.030 [ms] (mean, across all concurrent requests)
+Transfer rate:          2462.29 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   13   4.3     13    1027
+Processing:     4   16   3.2     16     228
+Waiting:        0   11   3.0     11     218
+Total:         17   30   4.4     29    1042
+
+Percentage of the requests served within a certain time (ms)
+  50%     29
+  66%     31
+  75%     31
+  80%     32
+  90%     33
+  95%     35
+  98%     37
+  99%     38
+ 100%   1042 (longest request)
+laborant@box-02:~$ 
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@box-02:~$ sudo apt update
+
+sudo apt install -y apache2-utils
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [50.1 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [27.9 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [48.9 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [93.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [48.9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [62.3 kB]
+Fetched 603 kB in 1s (465 kB/s)    
+14 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing:                     
+  apache2-utils
+
+Installing dependencies:
+  libapr1t64  libaprutil1t64
+
+Summary:
+  Upgrading: 0, Installing: 3, Removing: 0, Not Upgrading: 14
+  Download size: 297 kB
+  Space needed: 918 kB / 28.3 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapr1t64 amd64 1.7.6-3 [109 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libaprutil1t64 amd64 1.6.3-3ubuntu3 [93.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-utils amd64 2.4.66-2ubuntu2.1 [93.7 kB]
+Fetched 297 kB in 0s (8296 kB/s)         
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 3.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libapr1t64:amd64.
+(Reading database ... 40316 files and directories currently installed.)
+Preparing to unpack .../libapr1t64_1.7.6-3_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.6-3) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../libaprutil1t64_1.6.3-3ubuntu3_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-3ubuntu3) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.66-2ubuntu2.1_amd64.deb ...
+Unpacking apache2-utils (2.4.66-2ubuntu2.1) ...
+Setting up libapr1t64:amd64 (1.7.6-3) ...
+Setting up libaprutil1t64:amd64 (1.6.3-3ubuntu3) ...
+Setting up apache2-utils (2.4.66-2ubuntu2.1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+laborant@box-02:~$ URL="http://box-01:8080/livez"
+laborant@box-02:~$ ab -n 10 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /livez
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.002 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      750 bytes
+HTML transferred:       0 bytes
+Requests per second:    4826.25 [#/sec] (mean)
+Time per request:       2.072 [ms] (mean)
+Time per request:       0.207 [ms] (mean, across all concurrent requests)
+Transfer rate:          353.49 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:     0    0   0.3      0       1
+Waiting:        0    0   0.2      0       1
+Total:          0    1   0.4      0       2
+ERROR: The median and mean for the total time are more than twice the standard
+       deviation apart. These results are NOT reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      1
+  75%      1
+  80%      1
+  90%      2
+  95%      2
+  98%      2
+  99%      2
+ 100%      2 (longest request)
+laborant@box-02:~$ URL="http://box-01:8080/"
+laborant@box-02:~$ ab -n 10 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.001 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      750 bytes
+HTML transferred:       0 bytes
+Requests per second:    7241.13 [#/sec] (mean)
+Time per request:       1.381 [ms] (mean)
+Time per request:       0.138 [ms] (mean, across all concurrent requests)
+Transfer rate:          530.36 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.1      0       1
+Waiting:        0    0   0.1      0       0
+Total:          0    0   0.1      0       1
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      1
+  80%      1
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      1 (longest request)
+laborant@box-02:~$ ab -n 100 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient).....done
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.009 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      7500 bytes
+HTML transferred:       0 bytes
+Requests per second:    11693.17 [#/sec] (mean)
+Time per request:       0.855 [ms] (mean)
+Time per request:       0.086 [ms] (mean, across all concurrent requests)
+Transfer rate:          856.43 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:     0    0   0.2      0       1
+Waiting:        0    0   0.1      0       1
+Total:          0    1   0.3      1       1
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      1
+  80%      1
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      1 (longest request)
+laborant@box-02:~$ ab -n 1000 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.042 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      75000 bytes
+HTML transferred:       0 bytes
+Requests per second:    24055.23 [#/sec] (mean)
+Time per request:       0.416 [ms] (mean)
+Time per request:       0.042 [ms] (mean, across all concurrent requests)
+Transfer rate:          1761.86 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.2      0       2
+Waiting:        0    0   0.2      0       2
+Total:          0    0   0.2      0       2
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      2 (longest request)
+laborant@box-02:~$ ab -n 10000 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.351 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      750000 bytes
+HTML transferred:       0 bytes
+Requests per second:    28485.24 [#/sec] (mean)
+Time per request:       0.351 [ms] (mean)
+Time per request:       0.035 [ms] (mean, across all concurrent requests)
+Transfer rate:          2086.32 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   0.2      0       3
+Waiting:        0    0   0.1      0       3
+Total:          0    0   0.1      0       3
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      0
+  95%      1
+  98%      1
+  99%      1
+ 100%      3 (longest request)
+laborant@box-02:~$ ab -n 100000 -c 10 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   3.997 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    25019.60 [#/sec] (mean)
+Time per request:       0.400 [ms] (mean)
+Time per request:       0.040 [ms] (mean, across all concurrent requests)
+Transfer rate:          1832.49 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:     0    0   0.1      0       4
+Waiting:        0    0   0.1      0       3
+Total:          0    0   0.1      0       4
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%      4 (longest request)
+laborant@box-02:~$ ab -n 100000 -c 100 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      100
+Time taken for tests:   4.099 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    24395.88 [#/sec] (mean)
+Time per request:       4.099 [ms] (mean)
+Time per request:       0.041 [ms] (mean, across all concurrent requests)
+Transfer rate:          1786.81 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.9      1       4
+Processing:     0    3   1.0      3      10
+Waiting:        0    3   1.2      2       8
+Total:          0    4   0.8      4      10
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      4
+  75%      5
+  80%      5
+  90%      5
+  95%      5
+  98%      6
+  99%      6
+ 100%     10 (longest request)
+laborant@box-02:~$ ab -n 100000 -c 1000 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   3.586 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      7500000 bytes
+HTML transferred:       0 bytes
+Requests per second:    27887.20 [#/sec] (mean)
+Time per request:       35.859 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          2042.52 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   17   2.9     17      27
+Processing:     6   19   3.4     18      35
+Waiting:        0   13   3.0     13      26
+Total:         23   36   2.8     35      52
+
+Percentage of the requests served within a certain time (ms)
+  50%     35
+  66%     36
+  75%     37
+  80%     38
+  90%     40
+  95%     41
+  98%     43
+  99%     44
+ 100%     52 (longest request)
+laborant@box-02:~$ ab -n 1000000 -c 1000 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   35.763 seconds
+Complete requests:      1000000
+Failed requests:        0
+Total transferred:      75000000 bytes
+HTML transferred:       0 bytes
+Requests per second:    27961.99 [#/sec] (mean)
+Time per request:       35.763 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          2048.00 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   17   5.7     17    1044
+Processing:     5   19   3.7     18      71
+Waiting:        0   13   3.4     13      61
+Total:         22   36   6.1     35    1060
+
+Percentage of the requests served within a certain time (ms)
+  50%     35
+  66%     36
+  75%     37
+  80%     38
+  90%     40
+  95%     42
+  98%     45
+  99%     49
+ 100%   1060 (longest request)
+laborant@box-02:~$ ab -n 1000000 -c 1000 $URL
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking box-01 (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        
+Server Hostname:        box-01
+Server Port:            8080
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   29.284 seconds
+Complete requests:      1000000
+Failed requests:        0
+Total transferred:      75000000 bytes
+HTML transferred:       0 bytes
+Requests per second:    34147.97 [#/sec] (mean)
+Time per request:       29.284 [ms] (mean)
+Time per request:       0.029 [ms] (mean, across all concurrent requests)
+Transfer rate:          2501.07 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   13   2.7     13      24
+Processing:     5   16   3.4     16     225
+Waiting:        0   11   3.1     11     223
+Total:         17   29   3.2     29     237
+
+Percentage of the requests served within a certain time (ms)
+  50%     29
+  66%     30
+  75%     31
+  80%     32
+  90%     33
+  95%     35
+  98%     37
+  99%     38
+ 100%    237 (longest request)
+laborant@box-02:~$ 
