@@ -100,6 +100,25 @@ https://github.com/dimdenGD/ultimate-express
 
 ----------
 
+In Golang, check and try some things around the following
+- `CGO_ENABLED=0` vs `CGO_ENABLED=1`
+- Number of CPU Cores the program is using
+- Performance Profiling
+- If all CPU Cores are used equally or if just one or a few are overloaded
+    - Load balancing across CPU Cores
+- How many golang routines are running
+- How many OS threads are running
+- How many golang routines are tied to or assigned to each of the OS threads
+- CPU bound processing and it's speed
+- IO bound processing and it's speed
+- Custom HTTP server
+    - Custom Implementation with only the basics
+        - Remove TLS stuff
+        - Remove any mux stuff
+        - Remove a lot of stuff that won't be required for a HTTP server just serving 200 OK
+
+----------
+
 Use nginx HTTP Server
 
 Use Golang HTTP Server

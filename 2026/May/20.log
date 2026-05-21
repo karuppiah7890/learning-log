@@ -1,0 +1,642 @@
+Welcome to iximiuz Labs' Docker Playground! 🚀
+
+Experiment with Docker in a safe and isolated environment.
+
+Batteries included:
+
+- dive: A CLI to explore container images and layers.
+- cdebug: A swiss army knife of container debugging.
+- crane: A CLI to manipulate container images.
+- regctl: A CLI to interact with container registries.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@docker-01:~$ curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  134M  100  134M    0     0  21.2M      0  0:00:06  0:00:06 --:--:-- 18.8M
+laborant@docker-01:~$ kvm
+-bash: kvm: command not found
+laborant@docker-01:~$ minikube status
+-bash: /usr/local/bin/minikube: cannot execute binary file: Exec format error
+laborant@docker-01:~$ curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  128M  100  128M    0     0  19.9M      0  0:00:06  0:00:06 --:--:-- 18.7M
+laborant@docker-01:~$ minikube status
+🤷  Profile "minikube" not found. Run "minikube profile list" to view all profiles.
+👉  To start a cluster, run: "minikube start"
+laborant@docker-01:~$ minikube start
+😄  minikube v1.38.1 on Ubuntu 24.04 (amd64)
+✨  Automatically selected the docker driver. Other choices: ssh, none
+❗  Starting v1.39.0, minikube will default to "containerd" container runtime. See #21973 for more info.
+📌  Using Docker driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.50 ...
+💾  Downloading Kubernetes v1.35.1 preload ...
+    > gcr.io/k8s-minikube/kicbase...:  94.92 MiB / 519.58 MiB  18.27% 5.17 MiB 
+    > preloaded-images-k8s-v18-v1...:  209.31 MiB / 272.45 MiB  76.82% 10.75 Mi
+    > preloaded-images-k8s-v18-v1...:  230.15 MiB / 272.45 MiB  84.47% 10.69 Mi
+    > preloaded-images-k8s-v18-v1...:  242.28 MiB / 272.45 MiB  88.93% 10.62 Mi
+    > gcr.io/k8s-minikube/kicbase...:  133.83 MiB / 519.58 MiB  25.76% 6.35 MiB
+    > gcr.io/k8s-minikube/kicbase...:  145.73 MiB / 519.58 MiB  28.05% 6.62 MiB
+    > preloaded-images-k8s-v18-v1...:  261.78 MiB / 272.45 MiB  96.08% 10.20 Mi
+    > preloaded-images-k8s-v18-v1...:  262.47 MiB / 272.45 MiB  96.33% 10.20 Mi
+    > gcr.io/k8s-minikube/kicbase...:  162.11 MiB / 519.58 MiB  31.20% 7.38 MiB
+    > preloaded-images-k8s-v18-v1...:  272.45 MiB / 272.45 MiB  100.00% 10.99 M
+    > gcr.io/k8s-minikube/kicbase...:  302.32 MiB / 519.58 MiB  58.18% 12.73 Mi
+    > gcr.io/k8s-minikube/kicbase...:  306.01 MiB / 519.58 MiB  58.90% 13.10 Mi
+    > gcr.io/k8s-minikube/kicbase...:  313.35 MiB / 519.58 MiB  60.31% 13.10 Mi
+    > gcr.io/k8s-minikube/kicbase...:  315.66 MiB / 519.58 MiB  60.75% 13.17 Mi
+    > gcr.io/k8s-minikube/kicbase...:  322.86 MiB / 519.58 MiB  62.14% 13.22 Mi
+    > gcr.io/k8s-minikube/kicbase...:  330.30 MiB / 519.58 MiB  63.57% 13.22 Mi
+    > gcr.io/k8s-minikube/kicbase...:  337.66 MiB / 519.58 MiB  64.99% 13.56 Mi
+    > gcr.io/k8s-minikube/kicbase...:  345.86 MiB / 519.58 MiB  66.57% 13.66 Mi
+    > gcr.io/k8s-minikube/kicbase...:  367.12 MiB / 519.58 MiB  70.66% 14.09 Mi
+    > gcr.io/k8s-minikube/kicbase...:  377.65 MiB / 519.58 MiB  72.68% 14.36 Mi
+    > gcr.io/k8s-minikube/kicbase...:  383.39 MiB / 519.58 MiB  73.79% 14.40 Mi
+    > gcr.io/k8s-minikube/kicbase...:  519.58 MiB / 519.58 MiB  100.00% 11.41 M
+🔥  Creating docker container (CPUs=2, Memory=3072MB) ...-
+🔥  Creating docker container (CPUs=2, Memory=3072MB) ...
+🐳  Preparing Kubernetes v1.35.1 on Docker 29.2.1 ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+💡  kubectl not found. If you need it, try: 'minikube kubectl -- get pods -A'
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+laborant@docker-01:~$ 
+laborant@docker-01:~$ g
+-bash: g: command not found
+laborant@docker-01:~$ git clone https://github.com/karuppiah/github-gist-proxy
+Cloning into 'github-gist-proxy'...
+Username for 'https://github.com': ^C
+laborant@docker-01:~$ git clone https://github.com/karuppiah7890/github-gist-proxy
+Cloning into 'github-gist-proxy'...
+remote: Enumerating objects: 71, done.
+remote: Counting objects: 100% (71/71), done.
+remote: Compressing objects: 100% (40/40), done.
+remote: Total 71 (delta 28), reused 65 (delta 22), pack-reused 0 (from 0)
+Receiving objects: 100% (71/71), 22.95 KiB | 22.95 MiB/s, done.
+Resolving deltas: 100% (28/28), done.
+laborant@docker-01:~$ cd github-gist-proxy/
+laborant@docker-01:github-gist-proxy$ helm create service
+-bash: helm: command not found
+laborant@docker-01:github-gist-proxy$ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 11929  100 11929    0     0  33119      0 --:--:-- --:--:-- --:--:-- 33044
+Downloading https://get.helm.sh/helm-v4.2.0-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+laborant@docker-01:github-gist-proxy$ helm
+The Kubernetes package manager
+
+Common actions for Helm:
+
+- helm search:    search for charts
+- helm pull:      download a chart to your local directory to view
+- helm install:   upload the chart to Kubernetes
+- helm list:      list releases of charts
+
+Environment variables:
+
+| Name                               | Description                                                                                                |
+|------------------------------------|------------------------------------------------------------------------------------------------------------|
+| $HELM_CACHE_HOME                   | set an alternative location for storing cached files.                                                      |
+| $HELM_CONFIG_HOME                  | set an alternative location for storing Helm configuration.                                                |
+| $HELM_DATA_HOME                    | set an alternative location for storing Helm data.                                                         |
+| $HELM_DEBUG                        | indicate whether or not Helm is running in Debug mode                                                      |
+| $HELM_DRIVER                       | set the backend storage driver. Values are: configmap, secret, memory, sql.                                |
+| $HELM_DRIVER_SQL_CONNECTION_STRING | set the connection string the SQL storage driver should use.                                               |
+| $HELM_MAX_HISTORY                  | set the maximum number of helm release history.                                                            |
+| $HELM_NAMESPACE                    | set the namespace used for the helm operations.                                                            |
+| $HELM_NO_PLUGINS                   | disable plugins. Set HELM_NO_PLUGINS=1 to disable plugins.                                                 |
+| $HELM_PLUGINS                      | set the path to the plugins directory                                                                      |
+| $HELM_REGISTRY_CONFIG              | set the path to the registry config file.                                                                  |
+| $HELM_REPOSITORY_CACHE             | set the path to the repository cache directory                                                             |
+| $HELM_REPOSITORY_CONFIG            | set the path to the repositories file.                                                                     |
+| $KUBECONFIG                        | set an alternative Kubernetes configuration file (default "~/.kube/config")                                |
+| $HELM_KUBEAPISERVER                | set the Kubernetes API Server Endpoint for authentication                                                  |
+| $HELM_KUBECAFILE                   | set the Kubernetes certificate authority file.                                                             |
+| $HELM_KUBEASGROUPS                 | set the Groups to use for impersonation using a comma-separated list.                                      |
+| $HELM_KUBEASUSER                   | set the Username to impersonate for the operation.                                                         |
+| $HELM_KUBECONTEXT                  | set the name of the kubeconfig context.                                                                    |
+| $HELM_KUBETOKEN                    | set the Bearer KubeToken used for authentication.                                                          |
+| $HELM_KUBEINSECURE_SKIP_TLS_VERIFY | indicate if the Kubernetes API server's certificate validation should be skipped (insecure)                |
+| $HELM_KUBETLS_SERVER_NAME          | set the server name used to validate the Kubernetes API server certificate                                 |
+| $HELM_BURST_LIMIT                  | set the default burst limit in the case the server contains many CRDs (default 100, -1 to disable)         |
+| $HELM_QPS                          | set the Queries Per Second in cases where a high number of calls exceed the option for higher burst values |
+| $HELM_COLOR                        | set color output mode. Allowed values: never, always, auto (default: never)                                |
+| $NO_COLOR                          | set to any non-empty value to disable all colored output (overrides $HELM_COLOR)                           |
+
+Helm stores cache, configuration, and data based on the following configuration order:
+
+- If a HELM_*_HOME environment variable is set, it will be used
+- Otherwise, on systems supporting the XDG base directory specification, the XDG variables will be used
+- When no other location is set a default location will be used based on the operating system
+
+By default, the default directories depend on the Operating System. The defaults are listed below:
+
+| Operating System | Cache Path                | Configuration Path             | Data Path               |
+|------------------|---------------------------|--------------------------------|-------------------------|
+| Linux            | $HOME/.cache/helm         | $HOME/.config/helm             | $HOME/.local/share/helm |
+| macOS            | $HOME/Library/Caches/helm | $HOME/Library/Preferences/helm | $HOME/Library/helm      |
+| Windows          | %TEMP%\helm               | %APPDATA%\helm                 | %APPDATA%\helm          |
+
+Usage:
+  helm [command]
+
+Available Commands:
+  completion  generate autocompletion scripts for the specified shell
+  create      create a new chart with the given name
+  dependency  manage a chart's dependencies
+  env         helm client environment information
+  get         download extended information of a named release
+  help        Help about any command
+  history     fetch release history
+  install     install a chart
+  lint        examine a chart for possible issues
+  list        list releases
+  package     package a chart directory into a chart archive
+  plugin      install, list, or uninstall Helm plugins
+  pull        download a chart from a repository and (optionally) unpack it in local directory
+  push        push a chart to remote
+  registry    login to or logout from a registry
+  repo        add, list, remove, update, and index chart repositories
+  rollback    roll back a release to a previous revision
+  search      search for a keyword in charts
+  show        show information of a chart
+  status      display the status of the named release
+  template    locally render templates
+  test        run tests for a release
+  uninstall   uninstall a release
+  upgrade     upgrade a release
+  verify      verify that a chart at the given path has been signed and is valid
+  version     print the helm version information
+
+Flags:
+      --burst-limit int                 client-side default throttling limit (default 100)
+      --color string                    use colored output (never, auto, always) (default "auto")
+      --colour string                   use colored output (never, auto, always) (default "auto")
+      --content-cache string            path to the directory containing cached content (e.g. charts) (default "/home/laborant/.cache/helm/content")
+      --debug                           enable verbose output
+  -h, --help                            help for helm
+      --kube-apiserver string           the address and the port for the Kubernetes API server
+      --kube-as-group stringArray       group to impersonate for the operation, this flag can be repeated to specify multiple groups.
+      --kube-as-user string             username to impersonate for the operation
+      --kube-ca-file string             the certificate authority file for the Kubernetes API server connection
+      --kube-context string             name of the kubeconfig context to use
+      --kube-insecure-skip-tls-verify   if true, the Kubernetes API server's certificate will not be checked for validity. This will make your HTTPS connections insecure
+      --kube-tls-server-name string     server name to use for Kubernetes API server certificate validation. If it is not provided, the hostname used to contact the server is used
+      --kube-token string               bearer token used for authentication
+      --kubeconfig string               path to the kubeconfig file
+  -n, --namespace string                namespace scope for this request
+      --qps float32                     queries per second used when communicating with the Kubernetes API, not including bursting
+      --registry-config string          path to the registry config file (default "/home/laborant/.config/helm/registry/config.json")
+      --repository-cache string         path to the directory containing cached repository indexes (default "/home/laborant/.cache/helm/repository")
+      --repository-config string        path to the file containing repository names and URLs (default "/home/laborant/.config/helm/repositories.yaml")
+
+Use "helm [command] --help" for more information about a command.
+laborant@docker-01:github-gist-proxy$ helm create service
+Creating service
+laborant@docker-01:github-gist-proxy$ minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+laborant@docker-01:github-gist-proxy$ minikube docker-env
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.49.2:2376"
+export DOCKER_CERT_PATH="/home/laborant/.minikube/certs"
+export MINIKUBE_ACTIVE_DOCKERD="minikube"
+
+# To point your shell to minikube's docker-daemon, run:
+# eval $(minikube -p minikube docker-env)
+laborant@docker-01:github-gist-proxy$ eval $(minikube docker-env)
+laborant@docker-01:github-gist-proxy$ docker images
+                                                                                                                              i Info →   U  In Use
+IMAGE                                             ID             DISK USAGE   CONTENT SIZE   EXTRA
+gcr.io/k8s-minikube/storage-provisioner:v5        6e38f40d628d       31.5MB             0B    U   
+registry.k8s.io/coredns/coredns:v1.13.1           aa5e3ebc0dfe       78.1MB             0B    U   
+registry.k8s.io/etcd:3.6.6-0                      0a108f718956       62.5MB             0B    U   
+registry.k8s.io/kube-apiserver:v1.35.1            6f9eeb0cff98       89.8MB             0B    U   
+registry.k8s.io/kube-controller-manager:v1.35.1   8d7002962c48       75.8MB             0B    U   
+registry.k8s.io/kube-proxy:v1.35.1                6521110cdb01       70.4MB             0B    U   
+registry.k8s.io/kube-scheduler:v1.35.1            5f2a969bc7a4       51.7MB             0B    U   
+registry.k8s.io/pause:3.10.1                      cd073f4c5f6a        736kB             0B    U   
+laborant@docker-01:github-gist-proxy$ docker ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS     NAMES
+c4a7fe3f1968   6e38f40d628d                   "/storage-provisioner"   2 minutes ago   Up 2 minutes             k8s_storage-provisioner_storage-provisioner_kube-system_77941fe5-0df7-4a7f-95a1-b8ec6288583f_0
+5b0b22fe4bdd   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_storage-provisioner_kube-system_77941fe5-0df7-4a7f-95a1-b8ec6288583f_0
+b6bb4fbbdec5   aa5e3ebc0dfe                   "/coredns -conf /etc…"   2 minutes ago   Up 2 minutes             k8s_coredns_coredns-7d764666f9-2k942_kube-system_d62e93bc-553b-4f42-ade1-e34898410f9f_0
+bba0ef598bfd   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_coredns-7d764666f9-2k942_kube-system_d62e93bc-553b-4f42-ade1-e34898410f9f_0
+1021b0fdbad0   6521110cdb01                   "/usr/local/bin/kube…"   2 minutes ago   Up 2 minutes             k8s_kube-proxy_kube-proxy-gcs8d_kube-system_5c59c3f7-ee2f-4eff-ba51-cbc2a3246638_0
+edca4306b193   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_kube-proxy-gcs8d_kube-system_5c59c3f7-ee2f-4eff-ba51-cbc2a3246638_0
+64391a5c6e31   6f9eeb0cff98                   "kube-apiserver --ad…"   2 minutes ago   Up 2 minutes             k8s_kube-apiserver_kube-apiserver-minikube_kube-system_a6dc00f40d27725f15407f95751ce5f7_0
+913b9936084e   8d7002962c48                   "kube-controller-man…"   2 minutes ago   Up 2 minutes             k8s_kube-controller-manager_kube-controller-manager-minikube_kube-system_740363cf4388c2d0df59fc97f96b889c_0
+76df3a31b428   0a108f718956                   "etcd --advertise-cl…"   2 minutes ago   Up 2 minutes             k8s_etcd_etcd-minikube_kube-system_5ff8e3b06bbaa8cb7ebc2bf531e48a2f_0
+434d9b8b5e50   5f2a969bc7a4                   "kube-scheduler --au…"   2 minutes ago   Up 2 minutes             k8s_kube-scheduler_kube-scheduler-minikube_kube-system_1c7123a121598343200ffd5b015ca580_0
+3a760fe7a51b   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_kube-apiserver-minikube_kube-system_a6dc00f40d27725f15407f95751ce5f7_0
+21c6faa6deee   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_etcd-minikube_kube-system_5ff8e3b06bbaa8cb7ebc2bf531e48a2f_0
+b52591a42576   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_kube-scheduler-minikube_kube-system_1c7123a121598343200ffd5b015ca580_0
+ceb4a098b6ba   registry.k8s.io/pause:3.10.1   "/pause"                 2 minutes ago   Up 2 minutes             k8s_POD_kube-controller-manager-minikube_kube-system_740363cf4388c2d0df59fc97f96b889c_0
+laborant@docker-01:github-gist-proxy$ docker compose build
+[+] Building 14.5s (12/12) FINISHED                                                                                                               
+ => [internal] load local bake definitions                                                                                                   0.0s
+ => => reading from stdin 514B                                                                                                               0.0s
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 422B                                                                                                         0.0s
+ => [internal] load metadata for docker.io/library/golang:1.26.3-alpine                                                                      2.2s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                              0.0s
+ => [builder 1/4] FROM docker.io/library/golang:1.26.3-alpine@sha256:91eda9776261207ea25fd06b5b7fed8d397dd2c0a283e77f2ab6e91bfa71079d        5.2s
+ => => resolve docker.io/library/golang:1.26.3-alpine@sha256:91eda9776261207ea25fd06b5b7fed8d397dd2c0a283e77f2ab6e91bfa71079d                0.0s
+ => => sha256:b8fbd9862b05789bb9e5462bf7d67300660e2ab5217aeb637b8db103ac45ea21 2.19kB / 2.19kB                                               0.0s
+ => => sha256:6a0ac1617861a677b045b7ff88545213ec31c0ff08763195a70a4a5adda577bb 3.86MB / 3.86MB                                               0.3s
+ => => sha256:17423c887b377ec28c3923bc88337384a7a0c1f2b50b7faf4912760e8d503ebb 290.24kB / 290.24kB                                           0.5s
+ => => sha256:1a70bdedd442d430ea119cf8db8c0031b4eedeb5bde886892773876ded7629e8 67.29MB / 67.29MB                                             2.7s
+ => => sha256:91eda9776261207ea25fd06b5b7fed8d397dd2c0a283e77f2ab6e91bfa71079d 10.29kB / 10.29kB                                             0.0s
+ => => sha256:f44b851aa23dfa219d18db6eab743203245429d355cb619cf96a2ffe2a84ba7a 1.92kB / 1.92kB                                               0.0s
+ => => extracting sha256:6a0ac1617861a677b045b7ff88545213ec31c0ff08763195a70a4a5adda577bb                                                    0.0s
+ => => sha256:1512b43389a873b0519ae3d6c1a3c4d9b19295b8e3330b040d95d73c50ba2f9e 124B / 124B                                                   0.8s
+ => => extracting sha256:17423c887b377ec28c3923bc88337384a7a0c1f2b50b7faf4912760e8d503ebb                                                    0.0s
+ => => sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B                                                     0.8s
+ => => extracting sha256:1a70bdedd442d430ea119cf8db8c0031b4eedeb5bde886892773876ded7629e8                                                    2.4s
+ => => extracting sha256:1512b43389a873b0519ae3d6c1a3c4d9b19295b8e3330b040d95d73c50ba2f9e                                                    0.0s
+ => => extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1                                                    0.0s
+ => [internal] load build context                                                                                                            0.0s
+ => => transferring context: 3.98kB                                                                                                          0.0s
+ => [builder 2/4] WORKDIR /app                                                                                                               0.4s
+ => [builder 3/4] COPY go.mod main.go pkg/ ./                                                                                                0.0s
+ => [builder 4/4] RUN CGO_ENABLED=0 go build -v -o /proxy .                                                                                  6.3s
+ => [final 1/1] COPY --from=builder /proxy /proxy                                                                                            0.0s 
+ => exporting to image                                                                                                                       0.0s 
+ => => exporting layers                                                                                                                      0.0s 
+ => => writing image sha256:a0e6ce8968cb1fa66620778653d7863454af4fa243cc95ca15485741f3c1df9d                                                 0.0s 
+ => => naming to docker.io/library/proxy                                                                                                     0.0s
+ => resolving provenance for metadata file                                                                                                   0.0s
+[+] build 1/1
+ ✔ Image proxy Built                                                                                                                         14.5s
+laborant@docker-01:github-gist-proxy$ docker images
+                                                                                                                              i Info →   U  In Use
+IMAGE                                             ID             DISK USAGE   CONTENT SIZE   EXTRA
+gcr.io/k8s-minikube/storage-provisioner:v5        6e38f40d628d       31.5MB             0B    U   
+proxy:latest                                      a0e6ce8968cb       8.35MB             0B        
+registry.k8s.io/coredns/coredns:v1.13.1           aa5e3ebc0dfe       78.1MB             0B    U   
+registry.k8s.io/etcd:3.6.6-0                      0a108f718956       62.5MB             0B    U   
+registry.k8s.io/kube-apiserver:v1.35.1            6f9eeb0cff98       89.8MB             0B    U   
+registry.k8s.io/kube-controller-manager:v1.35.1   8d7002962c48       75.8MB             0B    U   
+registry.k8s.io/kube-proxy:v1.35.1                6521110cdb01       70.4MB             0B    U   
+registry.k8s.io/kube-scheduler:v1.35.1            5f2a969bc7a4       51.7MB             0B    U   
+registry.k8s.io/pause:3.10.1                      cd073f4c5f6a        736kB             0B    U   
+laborant@docker-01:github-gist-proxy$ helm install payment-gateway helm-chart --set image.repository=proxy --set image.tag=latest --set service.port=8080 --set livenessProbe.httpGet.path=/livez --set readinessProbe.httpGet.path=/livez
+Error: INSTALLATION FAILED: non-absolute URLs should be in form of repo_name/path_to_chart, got: helm-chart
+laborant@docker-01:github-gist-proxy$ helm install --help
+
+This command installs a chart archive.
+
+The install argument must be a chart reference, a path to a packaged chart,
+a path to an unpacked chart directory or a URL.
+
+To override values in a chart, use either the '--values' flag and pass in a file
+or use the '--set' flag and pass configuration from the command line, to force
+a string value use '--set-string'. You can use '--set-file' to set individual
+values from a file when the value itself is too long for the command line
+or is dynamically generated. You can also use '--set-json' to set json values
+(scalars/objects/arrays) from the command line. Additionally, you can use '--set-json' and passing json object as a string.
+
+    $ helm install -f myvalues.yaml myredis ./redis
+
+or
+
+    $ helm install --set name=prod myredis ./redis
+
+or
+
+    $ helm install --set-string long_int=1234567890 myredis ./redis
+
+or
+
+    $ helm install --set-file my_script=dothings.sh myredis ./redis
+
+or
+
+    $ helm install --set-json 'master.sidecars=[{"name":"sidecar","image":"myImage","imagePullPolicy":"Always","ports":[{"name":"portname","containerPort":1234}]}]' myredis ./redis
+
+or
+
+    $ helm install --set-json '{"master":{"sidecars":[{"name":"sidecar","image":"myImage","imagePullPolicy":"Always","ports":[{"name":"portname","containerPort":1234}]}]}}' myredis ./redis
+
+You can specify the '--values'/'-f' flag multiple times. The priority will be given to the
+last (right-most) file specified. For example, if both myvalues.yaml and override.yaml
+contained a key called 'Test', the value set in override.yaml would take precedence:
+
+    $ helm install -f myvalues.yaml -f override.yaml  myredis ./redis
+
+You can specify the '--set' flag multiple times. The priority will be given to the
+last (right-most) set specified. For example, if both 'bar' and 'newbar' values are
+set for a key called 'foo', the 'newbar' value would take precedence:
+
+    $ helm install --set foo=bar --set foo=newbar  myredis ./redis
+
+Similarly, in the following example 'foo' is set to '["four"]':
+
+    $ helm install --set-json='foo=["one", "two", "three"]' --set-json='foo=["four"]' myredis ./redis
+
+And in the following example, 'foo' is set to '{"key1":"value1","key2":"bar"}':
+
+    $ helm install --set-json='foo={"key1":"value1","key2":"value2"}' --set-json='foo.key2="bar"' myredis ./redis
+
+To check the generated manifests of a release without installing the chart,
+the --debug and --dry-run flags can be combined.
+
+The --dry-run flag will output all generated chart manifests, including Secrets
+which can contain sensitive values. To hide Kubernetes Secrets use the
+--hide-secret flag. Please carefully consider how and when these flags are used.
+
+If --verify is set, the chart MUST have a provenance file, and the provenance
+file MUST pass all verification steps.
+
+There are six different ways you can express the chart you want to install:
+
+1. By chart reference: helm install mymaria example/mariadb
+2. By path to a packaged chart: helm install mynginx ./nginx-1.2.3.tgz
+3. By path to an unpacked chart directory: helm install mynginx ./nginx
+4. By absolute URL: helm install mynginx https://example.com/charts/nginx-1.2.3.tgz
+5. By chart reference and repo url: helm install --repo https://example.com/charts/ mynginx nginx
+6. By OCI registries: helm install mynginx --version 1.2.3 oci://example.com/charts/nginx
+
+CHART REFERENCES
+
+A chart reference is a convenient way of referencing a chart in a chart repository.
+
+When you use a chart reference with a repo prefix ('example/mariadb'), Helm will look in the local
+configuration for a chart repository named 'example', and will then look for a
+chart in that repository whose name is 'mariadb'. It will install the latest stable version of that chart
+until you specify '--devel' flag to also include development version (alpha, beta, and release candidate releases), or
+supply a version number with the '--version' flag.
+
+To see the list of chart repositories, use 'helm repo list'. To search for
+charts in a repository, use 'helm search'.
+
+Usage:
+  helm install [NAME] [CHART] [flags]
+
+Flags:
+      --ca-file string                             verify certificates of HTTPS-enabled servers using this CA bundle
+      --cert-file string                           identify HTTPS client using this SSL certificate file
+      --create-namespace                           create the release namespace if not present
+      --dependency-update                          update dependencies if they are missing before installing the chart
+      --description string                         add a custom description
+      --devel                                      use development versions, too. Equivalent to version '>0.0.0-0'. If --version is set, this is ignored
+      --disable-openapi-validation                 if set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+      --dry-run string[="unset"]                   simulates the operation without persisting changes. Must be one of: "none" (default), "client", or "server". '--dry-run=none' executes the operation normally and persists changes (no simulation). '--dry-run=client' simulates the operation client-side only and avoids cluster connections. '--dry-run=server' simulates the operation on the server, requiring cluster connectivity. (default "none")
+      --enable-dns                                 enable DNS lookups when rendering templates
+      --force-conflicts                            if set server-side apply will force changes against conflicts
+      --force-replace                              force resource updates by replacement
+  -g, --generate-name                              generate the name (and omit the NAME parameter)
+  -h, --help                                       help for install
+      --hide-notes                                 if set, do not show notes in install output. Does not affect presence in chart metadata
+      --hide-secret                                hide Kubernetes Secrets when also using the --dry-run flag
+      --insecure-skip-tls-verify                   skip tls certificate checks for the chart download
+      --key-file string                            identify HTTPS client using this SSL key file
+      --keyring string                             location of public keys used for verification (default "/home/laborant/.gnupg/pubring.gpg")
+  -l, --labels stringToString                      Labels that would be added to release metadata. Should be divided by comma. (default [])
+      --name-template string                       specify template used to name the release
+      --no-hooks                                   prevent hooks from running during install
+  -o, --output format                              prints the output in the specified format. Allowed values: table, json, yaml (default table)
+      --pass-credentials                           pass credentials to all domains
+      --password string                            chart repository password where to locate the requested chart
+      --plain-http                                 use insecure HTTP connections for the chart download
+      --post-renderer postRendererString           the name of a postrenderer type plugin to be used for post rendering. If it exists, the plugin will be used
+      --post-renderer-args postRendererArgsSlice   an argument to the post-renderer (can specify multiple) (default [])
+      --render-subchart-notes                      if set, render subchart notes along with the parent
+      --replace                                    reuse the given name, only if that name is a deleted release which remains in the history. This is unsafe in production
+      --repo string                                chart repository url where to locate the requested chart
+      --rollback-on-failure                        if set, Helm will rollback (uninstall) the installation upon failure. The --wait flag will be default to "watcher" if --rollback-on-failure is set
+      --server-side                                object updates run in the server instead of the client (default true)
+      --set stringArray                            set values on the command line (can specify multiple or separate values with commas: key1=val1,key2=val2)
+      --set-file stringArray                       set values from respective files specified via the command line (can specify multiple or separate values with commas: key1=path1,key2=path2)
+      --set-json stringArray                       set JSON values on the command line (can specify multiple or separate values with commas: key1=jsonval1,key2=jsonval2 or using json format: {"key1": jsonval1, "key2": "jsonval2"})
+      --set-literal stringArray                    set a literal STRING value on the command line
+      --set-string stringArray                     set STRING values on the command line (can specify multiple or separate values with commas: key1=val1,key2=val2)
+      --skip-crds                                  if set, no CRDs will be installed. By default, CRDs are installed if not already present
+      --skip-schema-validation                     if set, disables JSON schema validation
+      --take-ownership                             if set, install will ignore the check for helm annotations and take ownership of the existing resources
+      --timeout duration                           time to wait for any individual Kubernetes operation (like Jobs for hooks) (default 5m0s)
+      --username string                            chart repository username where to locate the requested chart
+  -f, --values strings                             specify values in a YAML file or a URL (can specify multiple)
+      --verify                                     verify the package before using it
+      --version string                             specify a version constraint for the chart version to use. This constraint can be a specific tag (e.g. 1.1.1) or it may reference a valid range (e.g. ^2.0.0). If this is not specified, the latest version is used
+      --wait WaitStrategy[=watcher]                wait until resources are ready (up to --timeout). Use '--wait' alone for 'watcher' strategy, or specify one of: 'watcher', 'hookOnly', 'legacy'. Default when flag is omitted: 'hookOnly'. (default hookOnly)
+      --wait-for-jobs                              if set and --wait enabled, will wait until all Jobs have been completed before marking the release as successful. It will wait for as long as --timeout
+
+Global Flags:
+      --burst-limit int                 client-side default throttling limit (default 100)
+      --color string                    use colored output (never, auto, always) (default "auto")
+      --colour string                   use colored output (never, auto, always) (default "auto")
+      --content-cache string            path to the directory containing cached content (e.g. charts) (default "/home/laborant/.cache/helm/content")
+      --debug                           enable verbose output
+      --kube-apiserver string           the address and the port for the Kubernetes API server
+      --kube-as-group stringArray       group to impersonate for the operation, this flag can be repeated to specify multiple groups.
+      --kube-as-user string             username to impersonate for the operation
+      --kube-ca-file string             the certificate authority file for the Kubernetes API server connection
+      --kube-context string             name of the kubeconfig context to use
+      --kube-insecure-skip-tls-verify   if true, the Kubernetes API server's certificate will not be checked for validity. This will make your HTTPS connections insecure
+      --kube-tls-server-name string     server name to use for Kubernetes API server certificate validation. If it is not provided, the hostname used to contact the server is used
+      --kube-token string               bearer token used for authentication
+      --kubeconfig string               path to the kubeconfig file
+  -n, --namespace string                namespace scope for this request
+      --qps float32                     queries per second used when communicating with the Kubernetes API, not including bursting
+      --registry-config string          path to the registry config file (default "/home/laborant/.config/helm/registry/config.json")
+      --repository-cache string         path to the directory containing cached repository indexes (default "/home/laborant/.cache/helm/repository")
+      --repository-config string        path to the file containing repository names and URLs (default "/home/laborant/.config/helm/repositories.yaml")
+laborant@docker-01:github-gist-proxy$ helm install proxy helm-chart --set image.repository=proxy --set image.tag=latest --set service.port=8080 --
+set livenessProbe.httpGet.path=/livez --set readinessProbe.httpGet.path=/livez
+Error: INSTALLATION FAILED: non-absolute URLs should be in form of repo_name/path_to_chart, got: helm-chart
+laborant@docker-01:github-gist-proxy$ ls
+CONTRIBUTING.md  Dockerfile  README.md  docker-compose.yml  go.mod  main.go  pkg  service
+laborant@docker-01:github-gist-proxy$ helm install proxy service --set image.repository=proxy --set image.tag=latest --set service.port=8080 --set
+ livenessProbe.httpGet.path=/livez --set readinessProbe.httpGet.path=/livez
+NAME: proxy
+LAST DEPLOYED: Wed May 20 14:21:30 2026
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=service,app.kubernetes.io/instance=proxy" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
+laborant@docker-01:github-gist-proxy$ k get pod
+-bash: k: command not found
+laborant@docker-01:github-gist-proxy$ alias k=kubectl
+laborant@docker-01:github-gist-proxy$ k get pod
+-bash: kubectl: command not found
+laborant@docker-01:github-gist-proxy$ wget https://dl.k8s.io/v1.36.1/bin/linux/amd64/kubectl
+--2026-05-20 14:22:17--  https://dl.k8s.io/v1.36.1/bin/linux/amd64/kubectl
+Resolving dl.k8s.io (dl.k8s.io)... 151.101.1.91, 151.101.193.91, 151.101.65.91, ...
+Connecting to dl.k8s.io (dl.k8s.io)|151.101.1.91|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 59502754 (57M) [application/octet-stream]
+Saving to: ‘kubectl’
+
+kubectl                              100%[====================================================================>]  56.75M  29.2MB/s    in 1.9s    
+
+2026-05-20 14:22:19 (29.2 MB/s) - ‘kubectl’ saved [59502754/59502754]
+
+laborant@docker-01:github-gist-proxy$ mv kubectl /usr/local/bin/
+mv: cannot move 'kubectl' to '/usr/local/bin/kubectl': Permission denied
+laborant@docker-01:github-gist-proxy$ sudo mv kubectl /usr/local/bin/
+laborant@docker-01:github-gist-proxy$ kubectl
+-bash: /usr/local/bin/kubectl: Permission denied
+laborant@docker-01:github-gist-proxy$ ls -al /usr/local/bin/kubectl 
+-rw-rw-r-- 1 laborant laborant 59502754 May 12 16:38 /usr/local/bin/kubectl
+laborant@docker-01:github-gist-proxy$ sudo chmod 744 /usr/local/bin/kubectl 
+laborant@docker-01:github-gist-proxy$ k
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/
+
+Basic Commands (Beginner):
+  create          Create a resource from a file or from stdin
+  expose          Take a replication controller, service, deployment or pod and expose it as a new Kubernetes service
+  run             Run a particular image on the cluster
+  set             Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain         Get documentation for a resource
+  get             Display one or many resources
+  edit            Edit a resource on the server
+  delete          Delete resources by file names, stdin, resources and names, or by resources and label selector
+
+Deploy Commands:
+  rollout         Manage the rollout of a resource
+  scale           Set a new size for a deployment, replica set, or replication controller
+  autoscale       Auto-scale a deployment, replica set, stateful set, or replication controller
+
+Cluster Management Commands:
+  certificate     Modify certificate resources
+  cluster-info    Display cluster information
+  top             Display resource (CPU/memory) usage
+  cordon          Mark node as unschedulable
+  uncordon        Mark node as schedulable
+  drain           Drain node in preparation for maintenance
+  taint           Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe        Show details of a specific resource or group of resources
+  logs            Print the logs for a container in a pod
+  attach          Attach to a running container
+  exec            Execute a command in a container
+  port-forward    Forward one or more local ports to a pod
+  proxy           Run a proxy to the Kubernetes API server
+  cp              Copy files and directories to and from containers
+  auth            Inspect authorization
+  debug           Create debugging sessions for troubleshooting workloads and nodes
+  events          List events
+
+Advanced Commands:
+  diff            Diff the live version against a would-be applied version
+  apply           Apply a configuration to a resource by file name or stdin
+  patch           Update fields of a resource
+  replace         Replace a resource by file name or stdin
+  wait            Wait for a specific condition on one or many resources
+  kustomize       Build a kustomization target from a directory or URL
+
+Settings Commands:
+  label           Update the labels on a resource
+  annotate        Update the annotations on a resource
+  completion      Output shell completion code for the specified shell (bash, zsh, fish, or powershell)
+
+Subcommands provided by plugins:
+
+Other Commands:
+  api-resources   Print the supported API resources on the server
+  api-versions    Print the supported API versions on the server, in the form of "group/version"
+  config          Modify kubeconfig files
+  kuberc          Manage kuberc configuration files
+  plugin          Provides utilities for interacting with plugins
+  version         Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+laborant@docker-01:github-gist-proxy$ k get pod
+NAME                             READY   STATUS    RESTARTS   AGE
+proxy-service-67f65f7bd6-slh4n   1/1     Running   0          85s
+laborant@docker-01:github-gist-proxy$ helm ls
+NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+proxy   default         1               2026-05-20 14:21:30.241423242 +0000 UTC deployed        service-0.1.0   1.16.0     
+laborant@docker-01:github-gist-proxy$ k get deploy
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+proxy-service   1/1     1            1           95s
+laborant@docker-01:github-gist-proxy$ k get svc
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP    7m14s
+proxy-service   ClusterIP   10.103.35.191   <none>        8080/TCP   97s
+laborant@docker-01:github-gist-proxy$ helm uninstall proxy
+release "proxy" uninstalled
+laborant@docker-01:github-gist-proxy$ helm install proxy helm-chart --values helm-values.yaml 
+Error: INSTALLATION FAILED: non-absolute URLs should be in form of repo_name/path_to_chart, got: helm-chart
+laborant@docker-01:github-gist-proxy$ helm install proxy service --values helm-values.yaml 
+Error: INSTALLATION FAILED: open helm-values.yaml: no such file or directory
+laborant@docker-01:github-gist-proxy$ helm install proxy service --values helm-values.yaml 
+NAME: proxy
+LAST DEPLOYED: Wed May 20 14:23:46 2026
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=service,app.kubernetes.io/instance=proxy" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
+laborant@docker-01:github-gist-proxy$ k get pod
+NAME                             READY   STATUS    RESTARTS   AGE
+proxy-service-67f65f7bd6-rrk9q   1/1     Running   0          2s
+laborant@docker-01:github-gist-proxy$ k get pod
+NAME                             READY   STATUS    RESTARTS   AGE
+proxy-service-67f65f7bd6-rrk9q   1/1     Running   0          3s
+laborant@docker-01:github-gist-proxy$ k get service
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP    8m
+proxy-service   ClusterIP   10.104.207.216   <none>        8080/TCP   7s
+laborant@docker-01:github-gist-proxy$ k get svc
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP    8m2s
+proxy-service   ClusterIP   10.104.207.216   <none>        8080/TCP   9s
+laborant@docker-01:github-gist-proxy$ k get deploy
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+proxy-service   1/1     1            1           11s
+laborant@docker-01:github-gist-proxy$ 
