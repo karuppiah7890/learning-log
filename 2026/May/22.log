@@ -1,0 +1,80 @@
+ justok  main ✘  $ go build -v ./...
+h2_bundle.go:51:2: no required module provides package golang.org/x/net/http/httpguts; to add it:
+	go get golang.org/x/net/http/httpguts
+transport.go:38:2: no required module provides package golang.org/x/net/http/httpproxy; to add it:
+	go get golang.org/x/net/http/httpproxy
+h2_bundle.go:52:2: no required module provides package golang.org/x/net/http2/hpack; to add it:
+	go get golang.org/x/net/http2/hpack
+h2_bundle.go:53:2: no required module provides package golang.org/x/net/idna; to add it:
+	go get golang.org/x/net/idna
+package http
+	cookie.go:10:2: use of internal package internal/godebug not allowed
+package http/cookiejar
+	cookiejar/jar.go:14:2: use of internal package net/http/internal/ascii not allowed
+package http/httptest
+	httptest/server.go:18:2: use of internal package net/http/internal/testcert not allowed
+package http/httptrace
+	httptrace/trace.go:12:2: use of internal package internal/nettrace not allowed
+package http/httputil
+	httputil/reverseproxy.go:13:2: use of internal package internal/godebug not allowed
+package http/pprof
+	pprof/pprof.go:79:2: use of internal package internal/godebug not allowed
+ ✘  justok  main ✘  $ 
+
+ ✘  justok  main ✘  $ go test -v
+# http
+h2_bundle.go:51:2: no required module provides package golang.org/x/net/http/httpguts; to add it:
+	go get golang.org/x/net/http/httpguts
+# http
+transport.go:38:2: no required module provides package golang.org/x/net/http/httpproxy; to add it:
+	go get golang.org/x/net/http/httpproxy
+# http
+h2_bundle.go:52:2: no required module provides package golang.org/x/net/http2/hpack; to add it:
+	go get golang.org/x/net/http2/hpack
+# http
+h2_bundle.go:53:2: no required module provides package golang.org/x/net/idna; to add it:
+	go get golang.org/x/net/idna
+# http
+package http
+	cookie.go:10:2: use of internal package internal/godebug not allowed
+FAIL	http [setup failed]
+ ✘  justok  main ✘  $ 
+
+
+ ✘  justok  main ✘  $ go build
+h2_bundle.go:51:2: no required module provides package golang.org/x/net/http/httpguts; to add it:
+	go get golang.org/x/net/http/httpguts
+transport.go:38:2: no required module provides package golang.org/x/net/http/httpproxy; to add it:
+	go get golang.org/x/net/http/httpproxy
+h2_bundle.go:52:2: no required module provides package golang.org/x/net/http2/hpack; to add it:
+	go get golang.org/x/net/http2/hpack
+h2_bundle.go:53:2: no required module provides package golang.org/x/net/idna; to add it:
+	go get golang.org/x/net/idna
+package http
+	cookie.go:10:2: use of internal package internal/godebug not allowed
+ ✘  justok  main ✘  $ 
+
+ ✘  justok  main ✘  $ go build
+h2_bundle.go:51:2: no required module provides package golang.org/x/net/http/httpguts; to add it:
+	go get golang.org/x/net/http/httpguts
+transport.go:38:2: no required module provides package golang.org/x/net/http/httpproxy; to add it:
+	go get golang.org/x/net/http/httpproxy
+h2_bundle.go:52:2: no required module provides package golang.org/x/net/http2/hpack; to add it:
+	go get golang.org/x/net/http2/hpack
+h2_bundle.go:53:2: no required module provides package golang.org/x/net/idna; to add it:
+	go get golang.org/x/net/idna
+package http
+	cookie.go:10:2: use of internal package internal/godebug not allowed
+ ✘  justok  main ✘  $ go mod tidy
+go: finding module for package golang.org/x/net/http/httpguts
+go: finding module for package golang.org/x/net/idna
+go: finding module for package golang.org/x/net/http/httpproxy
+go: finding module for package golang.org/x/net/http2/hpack
+go: downloading golang.org/x/net v0.55.0
+go: found golang.org/x/net/http/httpguts in golang.org/x/net v0.55.0
+go: found golang.org/x/net/http/httpproxy in golang.org/x/net v0.55.0
+go: found golang.org/x/net/http2/hpack in golang.org/x/net v0.55.0
+go: found golang.org/x/net/idna in golang.org/x/net v0.55.0
+go: downloading golang.org/x/text v0.37.0
+ justok  main ✘  $ 
+

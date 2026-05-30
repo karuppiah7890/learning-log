@@ -1,7 +1,7 @@
 ```bash
 sudo apt update
 
-sudo apt install -y apache2-utils
+sudo apt install -y apache2-utils graphviz
 ```
 
 ```bash
@@ -31,6 +31,18 @@ sudo nginx -s reload
 ```bash
 alias g=git
 
+g clone https://github.com/karuppiah7890/c-experiments
+
+cd c-experiments
+```
+
+```bash
+
+```
+
+```bash
+alias g=git
+
 g clone https://github.com/karuppiah7890/go-experiments
 
 cd go-experiments
@@ -49,24 +61,36 @@ go build -v ./cmd/no-mux-http-server/
 ```
 
 ```bash
-# URL="http://box-01:8080/"
-URL="http://box-01:8080/livez"
+URL="http://box-01:8080/"
+# URL="http://box-01:8080/livez"
 
-ab -n 10 -c 10 $URL
+time ab -n 10 -c 10 $URL
 
-ab -n 100 -c 10 $URL
+time ab -n 100 -c 10 $URL
 
-ab -n 1000 -c 10 $URL
+time ab -n 1000 -c 10 $URL
 
-ab -n 10000 -c 10 $URL
+time ab -n 10000 -c 10 $URL
 
-ab -n 100000 -c 10 $URL
+time ab -n 100000 -c 10 $URL
 
-ab -n 100000 -c 100 $URL
+time ab -n 100000 -c 100 $URL
 
-ab -n 100000 -c 1000 $URL
+time ab -n 100000 -c 1000 $URL
 
-ab -n 1000000 -c 1000 $URL
+time ab -n 100000 -c 10000 $URL
+
+time ab -n 1000000 -c 1000 $URL
+
+time ab -n 1000000 -c 10000 $URL
+
+time ab -n 1000000 -c 20000 $URL
+```
+
+```bash
+curl -o profile.out http://localhost:6060/debug/pprof/profile?seconds=50
+
+go tool pprof -no_browser -http 0.0.0.0:6061 profile.out
 ```
 
 ----------
@@ -100,6 +124,36 @@ https://github.com/dimdenGD/ultimate-express
 
 ----------
 
+https://gist.github.com/denji/8333630
+
+hey (alternative to ab)
+
+ab - Apache Benchmark
+
+Bombardier
+
+h2load
+
+plow
+
+Apache JMeter
+
+k6
+
+Locust
+
+Gatling
+
+Artillery
+
+Vegeta
+
+Siege
+
+Wrk
+
+----------
+
 In Golang, check and try some things around the following
 - `CGO_ENABLED=0` vs `CGO_ENABLED=1`
 - Number of CPU Cores the program is using
@@ -116,6 +170,26 @@ In Golang, check and try some things around the following
         - Remove TLS stuff
         - Remove any mux stuff
         - Remove a lot of stuff that won't be required for a HTTP server just serving 200 OK
+
+----------
+
+For Golang:
+
+https://go.dev/doc/diagnostics
+
+https://go.dev/src/net/http/pprof/pprof.go
+
+Try Profiling - CPU and Memory
+
+https://github.com/golang/go/issues/74544
+
+https://eng.d2iq.com/blog/etcd-performance-benchmarking/
+
+https://perfwiki.github.io/main/
+
+----------
+
+For any HTTP server, understand how to find out throughput - requests per second - from client side and server side. Find out response times and check P90, P95, P99, and P100
 
 ----------
 
