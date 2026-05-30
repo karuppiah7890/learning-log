@@ -61,6 +61,24 @@ go build -v ./cmd/no-mux-http-server/
 ```
 
 ```bash
+cat /proc/sys/fs/file-max
+
+ulimit
+
+ulimit -a
+
+ulimit -n
+
+# Soft Limit
+ulimit -Sn
+
+# Hard Limit
+ulimit -Hn
+
+sudo su
+```
+
+```bash
 URL="http://box-01:8080/"
 # URL="http://box-01:8080/livez"
 
