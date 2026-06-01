@@ -1,8 +1,12 @@
 ```bash
 sudo apt update
 
-sudo apt install -y apache2-utils graphviz
+sudo apt install -y gdb apache2-utils graphviz linux-tools-common linux-tools-$(uname -r) strace ltrace tcpdump tcptrace tshark wireshark
 ```
+
+Explore the following CLI tools: `ab`, `gdb`, `strace`, `ltrace`, `tcpdump`, `perf`, `wireshark`, `tshark`, `termshark`, `tcpreplay`, `tcptrace`, `tcpslice`, `nstreams`
+
+Explore the following system calls: `ptrace`
 
 ```bash
 sudo apt update
@@ -109,6 +113,36 @@ time ab -n 1000000 -c 20000 $URL
 curl -o profile.out http://localhost:6060/debug/pprof/profile?seconds=50
 
 go tool pprof -no_browser -http 0.0.0.0:6061 profile.out
+```
+
+For `perf` tool in Linux -
+
+For Ubuntu/Debian:
+
+```bash
+cd /tmp
+
+# For Ubuntu/Debian:
+sudo apt install build-essential flex bison libelf-dev libtraceevent-dev libaudit-dev libslang2-dev libperl-dev binutils-dev libdw-dev
+
+# Download the kernel source. For example -
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.167.tar.xz
+
+# uncompress the compressed file. For example -
+tar -xf linux-6.1.167.tar.xz
+
+# go inside the `perf` directory in the `tools` directory
+cd linux-6.1.167/tools/perf
+
+# check if `nproc` works
+nproc
+
+make -j$(nproc)
+
+sudo make install
+
+# check perf version
+./perf version
 ```
 
 ----------
