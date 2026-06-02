@@ -1,0 +1,606 @@
+laborant@ubuntu-01:~$ man pthread_create 
+laborant@ubuntu-01:~$ errno
+-bash: errno: command not found
+laborant@ubuntu-01:~$ apt install moreutils
+Error: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+Error: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+laborant@ubuntu-01:~$ sudo apt install moreutils
+Installing:                     
+  moreutils
+
+Installing dependencies:
+  libio-pty-perl  libipc-run-perl  libtime-duration-perl  libtimedate-perl
+
+Summary:
+  Upgrading: 0, Installing: 5, Removing: 0, Not Upgrading: 22
+  Download size: 229 kB
+  Space needed: 773 kB / 78.3 GB available
+
+Continue? [Y/n] 
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libio-pty-perl amd64 1:1.20-1build3 [31.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libipc-run-perl all 20250809.0-1build1 [94.5 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtime-duration-perl all 1.21-2 [12.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtimedate-perl all 2.3300-2 [34.0 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 moreutils amd64 0.69-1build1 [57.0 kB]
+Fetched 229 kB in 1s (445 kB/s)     
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 5.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libio-pty-perl.
+(Reading database ... 40987 files and directories currently installed.)
+Preparing to unpack .../libio-pty-perl_1%3a1.20-1build3_amd64.deb ...
+Unpacking libio-pty-perl (1:1.20-1build3) ...
+Selecting previously unselected package libipc-run-perl.
+Preparing to unpack .../libipc-run-perl_20250809.0-1build1_all.deb ...
+Unpacking libipc-run-perl (20250809.0-1build1) ...
+Selecting previously unselected package libtime-duration-perl.
+Preparing to unpack .../libtime-duration-perl_1.21-2_all.deb ...
+Unpacking libtime-duration-perl (1.21-2) ...
+Selecting previously unselected package libtimedate-perl.
+Preparing to unpack .../libtimedate-perl_2.3300-2_all.deb ...
+Unpacking libtimedate-perl (2.3300-2) ...
+Selecting previously unselected package moreutils.
+Preparing to unpack .../moreutils_0.69-1build1_amd64.deb ...
+Unpacking moreutils (0.69-1build1) ...
+Setting up libio-pty-perl (1:1.20-1build3) ...
+Setting up libipc-run-perl (20250809.0-1build1) ...
+Setting up libtime-duration-perl (1.21-2) ...
+Setting up libtimedate-perl (2.3300-2) ...
+Setting up moreutils (0.69-1build1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+laborant@ubuntu-01:~$ errno 
+laborant@ubuntu-01:~$ errno -h
+Usage: errno [-lsS] [--list] [--search] [--search-all-locales] [keyword]
+laborant@ubuntu-01:~$ errno --search 1
+laborant@ubuntu-01:~$ errno --search 11
+laborant@ubuntu-01:~$ errno --search 
+EPERM 1 Operation not permitted
+ENOENT 2 No such file or directory
+ESRCH 3 No such process
+EINTR 4 Interrupted system call
+EIO 5 Input/output error
+ENXIO 6 No such device or address
+E2BIG 7 Argument list too long
+ENOEXEC 8 Exec format error
+EBADF 9 Bad file descriptor
+ECHILD 10 No child processes
+EAGAIN 11 Resource temporarily unavailable
+ENOMEM 12 Cannot allocate memory
+EACCES 13 Permission denied
+EFAULT 14 Bad address
+ENOTBLK 15 Block device required
+EBUSY 16 Device or resource busy
+EEXIST 17 File exists
+EXDEV 18 Invalid cross-device link
+ENODEV 19 No such device
+ENOTDIR 20 Not a directory
+EISDIR 21 Is a directory
+EINVAL 22 Invalid argument
+ENFILE 23 Too many open files in system
+EMFILE 24 Too many open files
+ENOTTY 25 Inappropriate ioctl for device
+ETXTBSY 26 Text file busy
+EFBIG 27 File too large
+ENOSPC 28 No space left on device
+ESPIPE 29 Illegal seek
+EROFS 30 Read-only file system
+EMLINK 31 Too many links
+EPIPE 32 Broken pipe
+EDOM 33 Numerical argument out of domain
+ERANGE 34 Numerical result out of range
+EDEADLK 35 Resource deadlock avoided
+ENAMETOOLONG 36 File name too long
+ENOLCK 37 No locks available
+ENOSYS 38 Function not implemented
+ENOTEMPTY 39 Directory not empty
+ELOOP 40 Too many levels of symbolic links
+EWOULDBLOCK 11 Resource temporarily unavailable
+ENOMSG 42 No message of desired type
+EIDRM 43 Identifier removed
+ECHRNG 44 Channel number out of range
+EL2NSYNC 45 Level 2 not synchronized
+EL3HLT 46 Level 3 halted
+EL3RST 47 Level 3 reset
+ELNRNG 48 Link number out of range
+EUNATCH 49 Protocol driver not attached
+ENOCSI 50 No CSI structure available
+EL2HLT 51 Level 2 halted
+EBADE 52 Invalid exchange
+EBADR 53 Invalid request descriptor
+EXFULL 54 Exchange full
+ENOANO 55 No anode
+EBADRQC 56 Invalid request code
+EBADSLT 57 Invalid slot
+EDEADLOCK 35 Resource deadlock avoided
+EBFONT 59 Bad font file format
+ENOSTR 60 Device not a stream
+ENODATA 61 No data available
+ETIME 62 Timer expired
+ENOSR 63 Out of streams resources
+ENONET 64 Machine is not on the network
+ENOPKG 65 Package not installed
+EREMOTE 66 Object is remote
+ENOLINK 67 Link has been severed
+EADV 68 Advertise error
+ESRMNT 69 Srmount error
+ECOMM 70 Communication error on send
+EPROTO 71 Protocol error
+EMULTIHOP 72 Multihop attempted
+EDOTDOT 73 RFS specific error
+EBADMSG 74 Bad message
+EOVERFLOW 75 Value too large for defined data type
+ENOTUNIQ 76 Name not unique on network
+EBADFD 77 File descriptor in bad state
+EREMCHG 78 Remote address changed
+ELIBACC 79 Can not access a needed shared library
+ELIBBAD 80 Accessing a corrupted shared library
+ELIBSCN 81 .lib section in a.out corrupted
+ELIBMAX 82 Attempting to link in too many shared libraries
+ELIBEXEC 83 Cannot exec a shared library directly
+EILSEQ 84 Invalid or incomplete multibyte or wide character
+ERESTART 85 Interrupted system call should be restarted
+ESTRPIPE 86 Streams pipe error
+EUSERS 87 Too many users
+ENOTSOCK 88 Socket operation on non-socket
+EDESTADDRREQ 89 Destination address required
+EMSGSIZE 90 Message too long
+EPROTOTYPE 91 Protocol wrong type for socket
+ENOPROTOOPT 92 Protocol not available
+EPROTONOSUPPORT 93 Protocol not supported
+ESOCKTNOSUPPORT 94 Socket type not supported
+EOPNOTSUPP 95 Operation not supported
+EPFNOSUPPORT 96 Protocol family not supported
+EAFNOSUPPORT 97 Address family not supported by protocol
+EADDRINUSE 98 Address already in use
+EADDRNOTAVAIL 99 Cannot assign requested address
+ENETDOWN 100 Network is down
+ENETUNREACH 101 Network is unreachable
+ENETRESET 102 Network dropped connection on reset
+ECONNABORTED 103 Software caused connection abort
+ECONNRESET 104 Connection reset by peer
+ENOBUFS 105 No buffer space available
+EISCONN 106 Transport endpoint is already connected
+ENOTCONN 107 Transport endpoint is not connected
+ESHUTDOWN 108 Cannot send after transport endpoint shutdown
+ETOOMANYREFS 109 Too many references: cannot splice
+ETIMEDOUT 110 Connection timed out
+ECONNREFUSED 111 Connection refused
+EHOSTDOWN 112 Host is down
+EHOSTUNREACH 113 No route to host
+EALREADY 114 Operation already in progress
+EINPROGRESS 115 Operation now in progress
+ESTALE 116 Stale file handle
+EUCLEAN 117 Structure needs cleaning
+ENOTNAM 118 Not a XENIX named type file
+ENAVAIL 119 No XENIX semaphores available
+EISNAM 120 Is a named type file
+EREMOTEIO 121 Remote I/O error
+EDQUOT 122 Disk quota exceeded
+ENOMEDIUM 123 No medium found
+EMEDIUMTYPE 124 Wrong medium type
+ECANCELED 125 Operation canceled
+ENOKEY 126 Required key not available
+EKEYEXPIRED 127 Key has expired
+EKEYREVOKED 128 Key has been revoked
+EKEYREJECTED 129 Key was rejected by service
+EOWNERDEAD 130 Owner died
+ENOTRECOVERABLE 131 State not recoverable
+ERFKILL 132 Operation not possible due to RF-kill
+EHWPOISON 133 Memory page has hardware error
+ENOTSUP 95 Operation not supported
+laborant@ubuntu-01:~$ errno 11
+EAGAIN 11 Resource temporarily unavailable
+laborant@ubuntu-01:~$ errno 111
+ECONNREFUSED 111 Connection refused
+laborant@ubuntu-01:~$ errno 1111
+laborant@ubuntu-01:~$ errno 111
+ECONNREFUSED 111 Connection refused
+laborant@ubuntu-01:~$ errno 112
+EHOSTDOWN 112 Host is down
+laborant@ubuntu-01:~$ errno 113
+EHOSTUNREACH 113 No route to host
+laborant@ubuntu-01:~$ errno 11
+EAGAIN 11 Resource temporarily unavailable
+laborant@ubuntu-01:~$ errno EAGAIN
+EAGAIN 11 Resource temporarily unavailable
+laborant@ubuntu-01:~$ errno BLAH
+ERROR: Not understood: BLAH
+laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ man --help
+Usage: man [OPTION...] [SECTION] PAGE...
+
+  -C, --config-file=FILE     use this user configuration file
+  -d, --debug                emit debugging messages
+  -D, --default              reset all options to their default values
+      --warnings[=WARNINGS]  enable warnings from groff
+
+ Main modes of operation:
+  -f, --whatis               equivalent to whatis
+  -k, --apropos              equivalent to apropos
+  -K, --global-apropos       search for text in all pages
+  -l, --local-file           interpret PAGE argument(s) as local filename(s)
+  -w, --where, --path, --location
+                             print physical location of man page(s)
+  -W, --where-cat, --location-cat
+                             print physical location of cat file(s)
+
+  -c, --catman               used by catman to reformat out of date cat pages
+  -R, --recode=ENCODING      output source page encoded in ENCODING
+
+ Finding manual pages:
+  -L, --locale=LOCALE        define the locale for this particular man search
+  -m, --systems=SYSTEM       use manual pages from other systems
+  -M, --manpath=PATH         set search path for manual pages to PATH
+
+  -S, -s, --sections=LIST    use colon separated section list
+
+  -e, --extension=EXTENSION  limit search to extension type EXTENSION
+
+  -i, --ignore-case          look for pages case-insensitively (default)
+  -I, --match-case           look for pages case-sensitively
+
+      --regex                show all pages matching regex
+      --wildcard             show all pages matching wildcard
+
+      --names-only           make --regex and --wildcard match page names only,
+                             not descriptions
+
+  -a, --all                  find all matching manual pages
+  -u, --update               force a cache consistency check
+
+      --no-subpages          don't try subpages, e.g. 'man foo bar' => 'man
+                             foo-bar'
+
+ Controlling formatted output:
+  -P, --pager=PAGER          use program PAGER to display output
+  -r, --prompt=STRING        provide the `less' pager with a prompt
+
+  -7, --ascii                display ASCII translation of certain latin1 chars
+  -E, --encoding=ENCODING    use selected output encoding
+      --no-hyphenation, --nh turn off hyphenation
+      --no-justification,                              --nj   turn off justification
+  -p, --preprocessor=STRING  STRING indicates which preprocessors to run:
+                             e - [n]eqn, p - pic, t - tbl,
+g - grap, r - refer, v - vgrind
+
+  -t, --troff                use groff to format pages
+  -T, --troff-device[=DEVICE]   use groff with selected device
+
+  -H, --html[=BROWSER]       use www-browser or BROWSER to display HTML output
+  -X, --gxditview[=RESOLUTION]   use groff and display through gxditview
+                             (X11):
+                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12
+  -Z, --ditroff              use groff and force it to produce ditroff
+
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+Report bugs to cjwatson@debian.org.
+laborant@ubuntu-01:~$ man -k write
+_llseek (2)          - reposition read/write file offset
+_sysctl (2)          - read/write system parameters
+aio_write (3)        - asynchronous write
+dcb-rewr (8)         - show / manipulate the rewrite table of the DC...
+dconf-service (1)    - D-Bus service for writes to the dconf database
+eventfd_write (3)    - create a file descriptor for event notification
+F_GET_FILE_RW_HINT (2const) - get/set file read/write hints
+F_GET_RW_HINT (2const) - get/set file read/write hints
+F_SET_FILE_RW_HINT (2const) - get/set file read/write hints
+F_SET_RW_HINT (2const) - get/set file read/write hints
+fold (1)             - Writes each file (or standard input if no fil...
+fputwc (3)           - write a wide character to a FILE stream
+fputws (3)           - write a wide-character string to a FILE stream
+fwrite (3)           - binary stream input/output
+fwrite_unlocked (3)  - nonlocking stdio functions
+git-commit-graph (1) - Write and verify Git commit-graph files
+git-filter-branch (1) - Rewrite branches
+git-multi-pack-index (1) - Write and verify multi-pack-indexes
+git-write-tree (1)   - Create a tree object from the current index
+gnushred (1)         - overwrite a file to hide its contents, and op...
+gnusync (1)          - Synchronize cached writes to persistent storage
+gnutee (1)           - read from standard input and write to standar...
+grotty (1)           - groff output driver for typewriter-like (term...
+join (1)             - For each pair of input lines with identical j...
+llseek (2)           - reposition read/write file offset
+login (3)            - write utmp and wtmp entries
+logout (3)           - write utmp and wtmp entries
+lseek (2)            - reposition read/write file offset
+lseek64 (3)          - reposition 64-bit read/write file offset
+paste (1)            - Write lines consisting of the sequentially co...
+pciconfig_write (2)  - pci device information handling
+PR_GET_MDWE (2const) - get the Memory-Deny-Write-Execute protection ...
+PR_SET_MDWE (2const) - set the Memory-Deny-Write-Execute protection ...
+pread (2)            - read from or write to a file descriptor at a ...
+pread64 (2)          - read from or write to a file descriptor at a ...
+preadv (2)           - read or write data into multiple buffers
+preadv2 (2)          - read or write data into multiple buffers
+process_vm_writev (2) - transfer data between process address spaces
+pthread_rwlockattr_getkind_np (3) - set/get the read-write lock kind...
+pthread_rwlockattr_setkind_np (3) - set/get the read-write lock kind...
+putgrent (3)         - write a group database entry to a file
+putpwent (3)         - write a password file entry
+putwc (3)            - write a wide character to a FILE stream
+putwchar (3)         - write a wide character to standard output
+pwrite (2)           - read from or write to a file descriptor at a ...
+pwrite64 (2)         - read from or write to a file descriptor at a ...
+pwritev (2)          - read or write data into multiple buffers
+pwritev2 (2)         - read or write data into multiple buffers
+readv (2)            - read or write data into multiple buffers
+rust-fold (1)        - Writes each file (or standard input if no fil...
+rust-join (1)        - For each pair of input lines with identical j...
+rust-paste (1)       - Write lines consisting of the sequentially co...
+rust-shred (1)       - Overwrite the specified FILE(s) repeatedly, i...
+rust-sync (1)        - Synchronize cached writes to persistent storage
+rust-tac (1)         - Write each file to standard output, last line...
+s390_pci_mmio_write (2) - transfer data to/from PCI MMIO memory page
+shred (1)            - Overwrite the specified FILE(s) repeatedly, i...
+sponge (1)           - soak up standard input and write to a file
+sync (1)             - Synchronize cached writes to persistent storage
+sysctl (2)           - read/write system parameters
+tac (1)              - Write each file to standard output, last line...
+UFFDIO_WRITEPROTECT (2const) - write-protect or write-unprotect a us...
+wall (1)             - write a message to all users
+write (2)            - write to a file descriptor
+writev (2)           - read or write data into multiple buffers
+laborant@ubuntu-01:~$ apropos --help
+Usage: apropos [OPTION...] KEYWORD...
+
+  -d, --debug                emit debugging messages
+  -v, --verbose              print verbose warning messages
+  -e, --exact                search each keyword for exact match
+  -r, --regex                interpret each keyword as a regex
+  -w, --wildcard             the keyword(s) contain wildcards
+  -a, --and                  require all keywords to match
+  -l, --long                 do not trim output to terminal width
+  -C, --config-file=FILE     use this user configuration file
+  -L, --locale=LOCALE        define the locale for this search
+  -m, --systems=SYSTEM       use manual pages from other systems
+  -M, --manpath=PATH         set search path for manual pages to PATH
+  -s, --sections=LIST, --section=LIST
+                             search only these sections (colon-separated)
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+The --regex option is enabled by default.
+
+Report bugs to cjwatson@debian.org.
+laborant@ubuntu-01:~$ man apropos 
+laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ gcc thread.c -o thread
+laborant@ubuntu-01:~$ ./thread 
+checking if there's any error: Success
+pthread_create failed: Resource temporarily unavailable
+pthread_create failed. status: Resource temporarily unavailable
+status code: 11
+Threads created: 26435
+laborant@ubuntu-01:~$ gcc thread.c -o thread && ./thread 
+pthread_create failed. status: Resource temporarily unavailable
+Threads created: 26435
+laborant@ubuntu-01:~$ ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 40063
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 40063
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+laborant@ubuntu-01:~$ ulimit -u unlimited 
+-bash: ulimit: max user processes: cannot modify limit: Operation not permitted
+laborant@ubuntu-01:~$ sudo ulimit -u unlimited 
+sudo: 'ulimit': command not found
+laborant@ubuntu-01:~$ ulimit -u unlimited 
+-bash: ulimit: max user processes: cannot modify limit: Operation not permitted
+laborant@ubuntu-01:~$ sudo
+expected one of these actions: --help, --version, --remove-timestamp, --validate, --list, --edit, --login, --shell, a command as a positional argument, --reset-timestamp
+usage: sudo -h | -K | -k | -V
+usage: sudo [-ABbknS] [-p prompt] [-D directory] [-g group] [-u user] [-i | -s] [command [arg ...]]
+usage: sudo -v [-ABknS] [-p prompt] [-g group] [-u user]
+usage: sudo -l [-ABknS] [-p prompt] [-U user] [-g group] [-u user] [command [arg ...]]
+usage: sudo -e [-ABknS] [-p prompt] [-D directory] [-g group] [-u user] file ...
+laborant@ubuntu-01:~$ sudo su
+root@ubuntu-01:laborant# ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 40063
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 40063
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+root@ubuntu-01:laborant# ulimit -u unlimited 
+root@ubuntu-01:laborant# ulimit -u 
+unlimited
+root@ubuntu-01:laborant# gcc thread.c -o thread && ./thread 
+pthread_create failed. status: Resource temporarily unavailable
+Threads created: 26431
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max
+sysctl: command line(0): invalid syntax, continuing...
+root@ubuntu-01:laborant# sudo sysctl kernel.threads-max
+kernel.threads-max = 80127
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=2000000
+kernel.threads-max = 2000000
+root@ubuntu-01:laborant# sudo sysctl kernel.threads-max
+kernel.threads-max = 2000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=20000000
+kernel.threads-max = 20000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=200000000
+kernel.threads-max = 200000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=2000000000
+sysctl: setting key "kernel.threads-max": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=200000000
+kernel.threads-max = 200000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=900000000
+kernel.threads-max = 900000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=990000000
+kernel.threads-max = 990000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999000000
+kernel.threads-max = 999000000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999900000
+kernel.threads-max = 999900000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999990000
+kernel.threads-max = 999990000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999999000
+kernel.threads-max = 999999000
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999999900
+kernel.threads-max = 999999900
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999999990
+kernel.threads-max = 999999990
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999999999
+kernel.threads-max = 999999999
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=9999999990
+sysctl: setting key "kernel.threads-max": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w kernel.threads-max=999999999
+kernel.threads-max = 999999999
+root@ubuntu-01:laborant# gcc thread.c -o thread && ./thread 
+pthread_create failed. status: Resource temporarily unavailable
+Threads created: 26431
+root@ubuntu-01:laborant# 
+laborant@ubuntu-01:~$ sudo su
+root@ubuntu-01:laborant# sudo sysctl -w ^C
+root@ubuntu-01:laborant# sudo sysctl kernel.threads-max
+kernel.threads-max = 999999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000000
+vm.max_map_count = 1000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=10000000
+vm.max_map_count = 10000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=100000000
+vm.max_map_count = 100000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000000000
+vm.max_map_count = 1000000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=10000000000
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000000009
+vm.max_map_count = 1000000009
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000000099
+vm.max_map_count = 1000000099
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000000999
+vm.max_map_count = 1000000999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=1000009999
+vm.max_map_count = 1000009999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=9000009999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000009999
+vm.max_map_count = 2000009999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=3000009999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000009999
+vm.max_map_count = 2000009999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000099999
+vm.max_map_count = 2000099999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000999999
+vm.max_map_count = 2000999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2009999999
+vm.max_map_count = 2009999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2099999999
+vm.max_map_count = 2099999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2999999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2199999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2099999999
+vm.max_map_count = 2099999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=20999999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000000000
+vm.max_map_count = 2000000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000000000-
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=20000000000
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2000000000
+vm.max_map_count = 2000000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100000000
+vm.max_map_count = 2100000000
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2200000000
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2190000000
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100000009
+vm.max_map_count = 2100000009
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100000099
+vm.max_map_count = 2100000099
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100000999
+vm.max_map_count = 2100000999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100009999
+vm.max_map_count = 2100009999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100099999
+vm.max_map_count = 2100099999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2100999999
+vm.max_map_count = 2100999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2109999999
+vm.max_map_count = 2109999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2199999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2119999999
+vm.max_map_count = 2119999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2129999999
+vm.max_map_count = 2129999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2139999999
+vm.max_map_count = 2139999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2149999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2139999999
+vm.max_map_count = 2139999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2140099999
+vm.max_map_count = 2140099999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2140009999
+vm.max_map_count = 2140009999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2140099999
+vm.max_map_count = 2140099999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2140999999
+vm.max_map_count = 2140999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2149999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2141999999
+vm.max_map_count = 2141999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2142999999
+vm.max_map_count = 2142999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2143999999
+vm.max_map_count = 2143999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2144999999
+vm.max_map_count = 2144999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2145999999
+vm.max_map_count = 2145999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2146999999
+vm.max_map_count = 2146999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2147999999
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2146999999
+vm.max_map_count = 2146999999
+root@ubuntu-01:laborant# sudo sysctl -w vm.max_map_count=2150000000
+sysctl: setting key "vm.max_map_count": Invalid argument
+root@ubuntu-01:laborant# 
+root@ubuntu-01:laborant# sudo sysctl vm.max_map_count
+vm.max_map_count = 2146999999
+root@ubuntu-01:laborant# 
+root@ubuntu-01:laborant# gcc thread.c -o thread && ./thread 
+pthread_create failed. status: Resource temporarily unavailable
+Threads created: 26431
+root@ubuntu-01:laborant# 
