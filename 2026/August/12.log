@@ -70,3 +70,1449 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
  learning-log  master ✔  $ 
+Welcome to iximiuz Labs' Docker Playground! 🚀
+
+Experiment with Docker in a safe and isolated environment.
+
+Batteries included:
+
+- dive: A CLI to explore container images and layers.
+- cdebug: A swiss army knife of container debugging.
+- crane: A CLI to manipulate container images.
+- regctl: A CLI to interact with container registries.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@docker-01:~$ git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+laborant@docker-01:~$ git clone https://github.com/karuppiah7890/iximiuz-labs-postgresql-19-playground
+Cloning into 'iximiuz-labs-postgresql-19-playground'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 12 (delta 0), reused 12 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (12/12), done.
+laborant@docker-01:~$ cd iximiuz-labs-postgresql-19-playground/
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ ls
+CONTRIBUTING.md  Dockerfile  Dockerfile.debug  README.md
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  4.096kB
+Step 1/3 : FROM busybox
+latest: Pulling from library/busybox
+b05093807bb0: Pulling fs layer
+7270b3e1860c: Download complete
+b05093807bb0: Download complete
+b05093807bb0: Pull complete
+Digest: sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616
+Status: Downloaded newer image for busybox:latest
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> b960cce23343
+Step 3/3 : RUN find /build_context
+ ---> Running in 3404cd804d41
+/build_context
+/build_context/CONTRIBUTING.md
+ ---> Removed intermediate container 3404cd804d41
+ ---> f8fed662640e
+Successfully built f8fed662640e
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat Dockerfile
+Dockerfile        Dockerfile.debug  
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat Dockerfile.debug 
+# To debug Dockerfile.
+# For example - to debug the build context sent for build
+FROM busybox
+
+COPY . /build_context
+
+# To list out all the files included in the build context
+RUN find /build_context
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ git pull
+Already up to date.
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 986 bytes | 986.00 KiB/s, done.
+From https://github.com/karuppiah7890/iximiuz-labs-postgresql-19-playground
+   4f28de5..e64559a  main       -> origin/main
+Updating 4f28de5..e64559a
+Fast-forward
+ .dockerignore | 2 ++
+ 1 file changed, 2 insertions(+)
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> 8e0b1c134fb4
+Step 3/3 : RUN find /build_context
+ ---> Running in 942f01d89c54
+/build_context
+ ---> Removed intermediate container 942f01d89c54
+ ---> bcaa5f9ac059
+Successfully built bcaa5f9ac059
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> Using cache
+ ---> 8e0b1c134fb4
+Step 3/3 : RUN find /build_context
+ ---> Using cache
+ ---> bcaa5f9ac059
+Successfully built bcaa5f9ac059
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> Using cache
+ ---> 8e0b1c134fb4
+Step 3/3 : RUN find /build_context
+ ---> Using cache
+ ---> bcaa5f9ac059
+Successfully built bcaa5f9ac059
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --no-cache --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> baab7ae2a4be
+Step 3/3 : RUN find /build_context
+ ---> Running in f3fabfdf44d5
+/build_context
+ ---> Removed intermediate container f3fabfdf44d5
+ ---> 2b33769ac969
+Successfully built 2b33769ac969
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> Using cache
+ ---> baab7ae2a4be
+Step 3/3 : RUN find /build_context
+ ---> Using cache
+ ---> 2b33769ac969
+Successfully built 2b33769ac969
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> Using cache
+ ---> baab7ae2a4be
+Step 3/3 : RUN find /build_context
+ ---> Using cache
+ ---> 2b33769ac969
+Successfully built 2b33769ac969
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --no-cache --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> b4505e6c927f
+Step 3/3 : RUN find /build_context
+ ---> Running in 09ac2b61aea0
+/build_context
+ ---> Removed intermediate container 09ac2b61aea0
+ ---> ad3ce8117ac0
+Successfully built ad3ce8117ac0
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --no-cache --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> 029f3b784ccc
+Step 3/3 : RUN find /build_context
+ ---> Running in 9141c6c5a7a0
+/build_context
+ ---> Removed intermediate container 9141c6c5a7a0
+ ---> 1d763e0a1a34
+Successfully built 1d763e0a1a34
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19 .
+[+] Building 336.0s (20/20) FINISHED                                                                                               docker:default
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 1.35kB                                                                                                       0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                    2.7s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 288B                                                                                                            0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a           40.8s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a              0.0s
+ => => sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6 759B / 759B                                                   0.5s
+ => => sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75 237B / 237B                                                   0.5s
+ => => sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612 2.21kB / 2.21kB                                               0.4s
+ => => sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c 2.99MB / 2.99MB                                               0.7s
+ => => sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86 24.44MB / 24.44MB                                             2.5s
+ => => sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935 715B / 715B                                                   0.5s
+ => => sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5 320.51MB / 320.51MB                                          32.0s
+ => => sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b 4.01kB / 4.01kB                                               0.4s
+ => => sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04 723B / 723B                                                   0.4s
+ => => sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d 203B / 203B                                                   0.5s
+ => => sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d 1.85kB / 1.85kB                                               0.5s
+ => => sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4 2.99MB / 2.99MB                                               1.1s
+ => => sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53 9.01MB / 9.01MB                                               0.8s
+ => => sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715 27.52MB / 27.52MB                                             8.8s
+ => => sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9 3.16MB / 3.16MB                                               1.3s
+ => => sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5 1.07MB / 1.07MB                                               0.9s
+ => => sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0 5.56MB / 5.56MB                                               1.5s
+ => => sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c 701B / 701B                                                   0.5s
+ => => sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f 25.25MB / 25.25MB                                             5.8s
+ => => sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e 5.37MB / 5.37MB                                               1.4s
+ => => sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973 198.57MB / 198.57MB                                          26.7s
+ => => sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb 1.39kB / 1.39kB                                               0.9s
+ => => sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84 118B / 118B                                                   0.9s
+ => => sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257 29.73MB / 29.73MB                                             5.3s
+ => => extracting sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257                                                    0.5s
+ => => extracting sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84                                                    0.0s
+ => => extracting sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb                                                    0.0s
+ => => extracting sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973                                                    3.9s
+ => => extracting sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e                                                    0.3s
+ => => extracting sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f                                                    0.1s
+ => => extracting sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c                                                    0.0s
+ => => extracting sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0                                                    0.0s
+ => => extracting sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86                                                    0.2s
+ => => extracting sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5                                                    0.0s
+ => => extracting sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715                                                    0.2s
+ => => extracting sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9                                                    0.0s
+ => => extracting sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53                                                    0.0s
+ => => extracting sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4                                                    0.0s
+ => => extracting sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d                                                    0.0s
+ => => extracting sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d                                                    0.0s
+ => => extracting sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04                                                    0.0s
+ => => extracting sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b                                                    0.0s
+ => => extracting sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935                                                    0.0s
+ => => extracting sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5                                                    2.4s
+ => => extracting sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c                                                    0.0s
+ => => extracting sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612                                                    0.0s
+ => => extracting sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75                                                    0.0s
+ => => extracting sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6                                                    0.0s
+ => [ 2/16] WORKDIR /home/laborant                                                                                                           1.4s
+ => [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libper  36.6s
+ => [ 4/16] RUN wget https://ftp.postgresql.org/pub/source/v19beta1/postgresql-19beta1.tar.gz                                               12.1s
+ => [ 5/16] RUN tar -xvzf postgresql-19beta1.tar.gz                                                                                          1.1s
+ => [ 6/16] WORKDIR /home/laborant/postgresql-19beta1                                                                                        0.1s
+ => [ 7/16] RUN ./configure                                                                                                                  7.7s
+ => [ 8/16] RUN make world                                                                                                                 197.9s
+ => [ 9/16] RUN make check                                                                                                                   9.7s
+ => [10/16] RUN sudo make install-world                                                                                                      2.2s
+ => [11/16] RUN sudo adduser postgres                                                                                                        0.2s
+ => [12/16] RUN sudo mkdir -p /usr/local/pgsql/data                                                                                          0.2s
+ => [13/16] RUN sudo chown postgres /usr/local/pgsql/data                                                                                    0.2s
+ => [14/16] RUN echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /home/laborant/.bashrc && echo 'export PATH="$PATH:/usr/loca  0.3s
+ => [15/16] WORKDIR /home/laborant                                                                                                           0.0s
+ => [16/16] RUN { echo "Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀\n";       echo "Run \`psql\` to connect to the PostgreSQL s     0.2s
+ => exporting to image                                                                                                                      22.4s
+ => => exporting layers                                                                                                                     16.3s
+ => => exporting manifest sha256:fb88b15dd922d4bc4ba5e21c766983e5eef28a716be553a1f2a34ef62ae16546                                            0.0s
+ => => exporting config sha256:49b7589d5e3be45c823c970e0583c38b474686452a4a1a8a2ca8d33f5f064790                                              0.0s
+ => => exporting attestation manifest sha256:cf83839957385465d171001f4d54be68b6af4b1b95dc428bb6fddb571b927dfb                                0.0s
+ => => exporting manifest list sha256:b4a0371d613d9fdd21013d50ee05278bb827c147b7b53b27e38052c5f4eae206                                       0.0s
+ => => naming to docker.io/library/postgresql-19:latest                                                                                      0.0s
+ => => unpacking to docker.io/library/postgresql-19:latest                                                                                   6.1s
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19 -- bash
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "--": executable file not found in $PATH
+
+Run 'docker run --help' for more information
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19 bash
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@2bef67ccae30:~$ 
+exit
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19 bash
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@50151b68985c:~$ psql
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+laborant@50151b68985c:~$ postgres 
+.bash_logout               .fzf/                      .profile                   .vimrc                     
+.bashrc                    .fzf.bash                  .rootfs/                   .wget-hsts                 
+.cache/                    .gitconfig                 .sudo_as_admin_successful  postgresql-19beta1/        
+.config/                   .local/                    .vim/                      postgresql-19beta1.tar.gz  
+laborant@50151b68985c:~$ postgres 
+postgres does not know where to find the server configuration file.
+You must specify the --config-file or -D invocation option or set the PGDATA environment variable.
+laborant@50151b68985c:~$ postgres -h
+option requires an argument -- h
+Try "postgres --help" for more information.
+laborant@50151b68985c:~$ pg_c
+pg_checksums         pg_combinebackup     pg_config            pg_controldata       pg_createsubscriber  pg_ctl
+laborant@50151b68985c:~$ pg_ctl --help
+pg_ctl is a utility to initialize, start, stop, or control a PostgreSQL server.
+
+Usage:
+  pg_ctl init[db]   [-D DATADIR] [-s] [-o OPTIONS]
+  pg_ctl start      [-D DATADIR] [-l FILENAME] [-W] [-t SECS] [-s]
+                    [-o OPTIONS] [-p PATH] [-c]
+  pg_ctl stop       [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]
+  pg_ctl restart    [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]
+                    [-o OPTIONS] [-c]
+  pg_ctl reload     [-D DATADIR] [-s]
+  pg_ctl status     [-D DATADIR]
+  pg_ctl promote    [-D DATADIR] [-W] [-t SECS] [-s]
+  pg_ctl logrotate  [-D DATADIR] [-s]
+  pg_ctl kill       SIGNALNAME PID
+
+Common options:
+  -D, --pgdata=DATADIR   location of the database storage area
+  -s, --silent           only print errors, no informational messages
+  -t, --timeout=SECS     seconds to wait when using -w option
+  -V, --version          output version information, then exit
+  -w, --wait             wait until operation completes (default)
+  -W, --no-wait          do not wait until operation completes
+  -?, --help             show this help, then exit
+If the -D option is omitted, the environment variable PGDATA is used.
+
+Options for start or restart:
+  -c, --core-files       allow postgres to produce core files
+  -l, --log=FILENAME     write (or append) server log to FILENAME
+  -o, --options=OPTIONS  command line options to pass to postgres
+                         (PostgreSQL server executable) or initdb
+  -p PATH-TO-POSTGRES    normally not necessary
+
+Options for stop or restart:
+  -m, --mode=MODE        MODE can be "smart", "fast", or "immediate"
+
+Shutdown modes are:
+  smart       quit after all clients have disconnected
+  fast        quit directly, with proper shutdown (default)
+  immediate   quit without complete shutdown; will lead to recovery on restart
+
+Allowed signal names for kill:
+  ABRT HUP INT KILL QUIT TERM USR1 USR2
+
+Report bugs to <pgsql-bugs@lists.postgresql.org>.
+PostgreSQL home page: <https://www.postgresql.org/>
+laborant@50151b68985c:~$ pg_ctl 
+pg_ctl: no operation specified
+Try "pg_ctl --help" for more information.
+laborant@50151b68985c:~$ pg_ctl init
+pg_ctl: no database directory specified and environment variable PGDATA unset
+Try "pg_ctl --help" for more information.
+laborant@50151b68985c:~$ ls /usr/local/
+bin  etc  games  include  lib  man  pgsql  sbin  share  src
+laborant@50151b68985c:~$ ls /usr/local/pgsql/
+bin  data  include  lib  share
+laborant@50151b68985c:~$ ls /usr/local/pgsql/data/
+laborant@50151b68985c:~$ pg_ctl init -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "laborant".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... initdb: error: could not change permissions of directory "/usr/local/pgsql/data": Operation not permitted
+pg_ctl: database system initialization failed
+laborant@50151b68985c:~$ su - postgres 
+Password: 
+su: Authentication failure
+laborant@50151b68985c:~$ sudo su - postgres 
+postgres@50151b68985c:~$ pg_ctl init -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... 
+ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+
+postgres@50151b68985c:~$ 
+postgres@50151b68985c:~$ pg_ctl init -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+initdb: error: directory "/usr/local/pgsql/data" exists but is not empty
+initdb: hint: If you want to create a new database system, either remove or empty the directory "/usr/local/pgsql/data" or run initdb with an argument other than "/usr/local/pgsql/data".
+pg_ctl: database system initialization failed
+postgres@50151b68985c:~$ pg_ctl initd -D /usr/local/pgsql/data/
+pg_ctl: unrecognized operation mode "initd"
+Try "pg_ctl --help" for more information.
+postgres@50151b68985c:~$ pg_ctl initdb -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+initdb: error: directory "/usr/local/pgsql/data" exists but is not empty
+initdb: hint: If you want to create a new database system, either remove or empty the directory "/usr/local/pgsql/data" or run initdb with an argument other than "/usr/local/pgsql/data".
+pg_ctl: database system initialization failed
+postgres@50151b68985c:~$ 
+postgres@50151b68985c:~$ pg_ctl -D /usr/local/pgsql/data/
+pg_ctl: no operation specified
+Try "pg_ctl --help" for more information.
+postgres@50151b68985c:~$ pg_ctl -D /usr/local/pgsql/data/ --help
+Try "pg_ctl --help" for more information.
+postgres@50151b68985c:~$ pg_ctl --help
+pg_ctl is a utility to initialize, start, stop, or control a PostgreSQL server.
+
+Usage:
+  pg_ctl init[db]   [-D DATADIR] [-s] [-o OPTIONS]
+  pg_ctl start      [-D DATADIR] [-l FILENAME] [-W] [-t SECS] [-s]
+                    [-o OPTIONS] [-p PATH] [-c]
+  pg_ctl stop       [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]
+  pg_ctl restart    [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]
+                    [-o OPTIONS] [-c]
+  pg_ctl reload     [-D DATADIR] [-s]
+  pg_ctl status     [-D DATADIR]
+  pg_ctl promote    [-D DATADIR] [-W] [-t SECS] [-s]
+  pg_ctl logrotate  [-D DATADIR] [-s]
+  pg_ctl kill       SIGNALNAME PID
+
+Common options:
+  -D, --pgdata=DATADIR   location of the database storage area
+  -s, --silent           only print errors, no informational messages
+  -t, --timeout=SECS     seconds to wait when using -w option
+  -V, --version          output version information, then exit
+  -w, --wait             wait until operation completes (default)
+  -W, --no-wait          do not wait until operation completes
+  -?, --help             show this help, then exit
+If the -D option is omitted, the environment variable PGDATA is used.
+
+Options for start or restart:
+  -c, --core-files       allow postgres to produce core files
+  -l, --log=FILENAME     write (or append) server log to FILENAME
+  -o, --options=OPTIONS  command line options to pass to postgres
+                         (PostgreSQL server executable) or initdb
+  -p PATH-TO-POSTGRES    normally not necessary
+
+Options for stop or restart:
+  -m, --mode=MODE        MODE can be "smart", "fast", or "immediate"
+
+Shutdown modes are:
+  smart       quit after all clients have disconnected
+  fast        quit directly, with proper shutdown (default)
+  immediate   quit without complete shutdown; will lead to recovery on restart
+
+Allowed signal names for kill:
+  ABRT HUP INT KILL QUIT TERM USR1 USR2
+
+Report bugs to <pgsql-bugs@lists.postgresql.org>.
+PostgreSQL home page: <https://www.postgresql.org/>
+postgres@50151b68985c:~$ pg_ctl start -D /usr/local/pgsql/data/
+waiting for server to start....2026-08-12 16:09:27.607 UTC [114] LOG:  starting PostgreSQL 19beta1 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+2026-08-12 16:09:27.607 UTC [114] LOG:  listening on IPv6 address "::1", port 5432
+2026-08-12 16:09:27.607 UTC [114] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-08-12 16:09:27.608 UTC [114] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-08-12 16:09:27.609 UTC [119] LOG:  database system was shut down at 2026-08-12 16:08:00 UTC
+2026-08-12 16:09:27.611 UTC [114] LOG:  database system is ready to accept connections
+ done
+server started
+postgres@50151b68985c:~$ ps 
+    PID TTY          TIME CMD
+     62 pts/1    00:00:00 bash
+    123 pts/1    00:00:00 ps
+postgres@50151b68985c:~$ ps aux | grep postg
+root          59  0.0  0.0  14148  6928 pts/0    S+   16:07   0:00 sudo su - postgres
+root          60  0.0  0.0  14148  1196 pts/1    Ss   16:07   0:00 sudo su - postgres
+root          61  0.0  0.0   6792  4228 pts/1    S    16:07   0:00 su - postgres
+postgres      62  0.0  0.0   8448  7660 pts/1    S    16:07   0:00 -bash
+postgres     114  0.0  0.2 209612 28716 ?        Ss   16:09   0:00 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data
+postgres     115  0.0  0.0 209744  3896 ?        Ss   16:09   0:00 postgres: io worker 0
+postgres     116  0.0  0.0 209612  2700 ?        Ss   16:09   0:00 postgres: io worker 1
+postgres     117  0.0  0.0 209744  2700 ?        Ss   16:09   0:00 postgres: checkpointer 
+postgres     118  0.0  0.0 209612  2636 ?        Ss   16:09   0:00 postgres: background writer 
+postgres     120  0.0  0.0 209744  2636 ?        Ss   16:09   0:00 postgres: walwriter 
+postgres     121  0.0  0.0 211196  4984 ?        Ss   16:09   0:00 postgres: autovacuum launcher 
+postgres     122  0.0  0.0 211196  4744 ?        Ss   16:09   0:00 postgres: logical replication launcher 
+postgres     124  0.0  0.0   8280  4256 pts/1    R+   16:09   0:00 ps aux
+postgres     125  0.0  0.0   4088  2096 pts/1    S+   16:09   0:00 grep --color=auto postg
+postgres@50151b68985c:~$ psql
+psql (19beta1)
+Type "help" for help.
+
+postgres=# 
+\q
+postgres@50151b68985c:~$ man psql
+postgres@50151b68985c:~$ man pg_c
+pg_checksums         pg_combinebackup     pg_config            pg_controldata       pg_createsubscriber  pg_ctl
+postgres@50151b68985c:~$ man pg_ctl 
+postgres@50151b68985c:~$ ls /etc/m
+machine-id      magic.mime      mime.types      modprobe.d/     modules-load.d/ 
+magic           manpath.config  mke2fs.conf     modules         mtab            
+postgres@50151b68985c:~$ ls /etc/m
+machine-id      magic.mime      mime.types      modprobe.d/     modules-load.d/ 
+magic           manpath.config  mke2fs.conf     modules         mtab            
+postgres@50151b68985c:~$ ls /etc/ma
+machine-id      magic           magic.mime      manpath.config  
+postgres@50151b68985c:~$ ls /etc/ma
+machine-id      magic           magic.mime      manpath.config  
+postgres@50151b68985c:~$ cat /etc/manpath.config 
+# manpath.config
+#
+# This file is used by the man-db package to configure the man and cat paths.
+# It is also used to provide a manpath for those without one by examining
+# their PATH environment variable. For details see the manpath(5) man page.
+#
+# Lines beginning with `#' are comments and are ignored. Any combination of
+# tabs or spaces may be used as `whitespace' separators.
+#
+# There are three mappings allowed in this file:
+# --------------------------------------------------------
+# MANDATORY_MANPATH                     manpath_element
+# MANPATH_MAP           path_element    manpath_element
+# MANDB_MAP             global_manpath  [relative_catpath]
+#---------------------------------------------------------
+# every automatically generated MANPATH includes these fields
+#
+#MANDATORY_MANPATH                      /usr/src/pvm3/man
+#
+MANDATORY_MANPATH                       /usr/man
+MANDATORY_MANPATH                       /usr/share/man
+MANDATORY_MANPATH                       /usr/local/share/man
+#---------------------------------------------------------
+# set up PATH to MANPATH mapping
+# ie. what man tree holds man pages for what binary directory.
+#
+#               *PATH*        ->        *MANPATH*
+#
+MANPATH_MAP     /bin                    /usr/share/man
+MANPATH_MAP     /usr/bin                /usr/share/man
+MANPATH_MAP     /sbin                   /usr/share/man
+MANPATH_MAP     /usr/sbin               /usr/share/man
+MANPATH_MAP     /usr/local/bin          /usr/local/man
+MANPATH_MAP     /usr/local/bin          /usr/local/share/man
+MANPATH_MAP     /usr/local/sbin         /usr/local/man
+MANPATH_MAP     /usr/local/sbin         /usr/local/share/man
+MANPATH_MAP     /usr/X11R6/bin          /usr/X11R6/man
+MANPATH_MAP     /usr/bin/X11            /usr/X11R6/man
+MANPATH_MAP     /usr/games              /usr/share/man
+MANPATH_MAP     /opt/bin                /opt/man
+MANPATH_MAP     /opt/sbin               /opt/man
+#---------------------------------------------------------
+# For a manpath element to be treated as a system manpath (as most of those
+# above should normally be), it must be mentioned below. Each line may have
+# an optional extra string indicating the catpath associated with the
+# manpath. If no catpath string is used, the catpath will default to the
+# given manpath.
+#
+# You *must* provide all system manpaths, including manpaths for alternate
+# operating systems, locale specific manpaths, and combinations of both, if
+# they exist, otherwise the permissions of the user running man/mandb will
+# be used to manipulate the manual pages. Also, mandb will not initialise
+# the database cache for any manpaths not mentioned below unless explicitly
+# requested to do so.
+#
+# In a per-user configuration file, this directive only controls the
+# location of catpaths and the creation of database caches; it has no effect
+# on privileges.
+#
+# Any manpaths that are subdirectories of other manpaths must be mentioned
+# *before* the containing manpath. E.g. /usr/man/preformat must be listed
+# before /usr/man.
+#
+#               *MANPATH*     ->        *CATPATH*
+#
+MANDB_MAP       /usr/man                /var/cache/man/fsstnd
+MANDB_MAP       /usr/share/man          /var/cache/man
+MANDB_MAP       /usr/local/man          /var/cache/man/oldlocal
+MANDB_MAP       /usr/local/share/man    /var/cache/man/local
+MANDB_MAP       /usr/X11R6/man          /var/cache/man/X11R6
+MANDB_MAP       /opt/man                /var/cache/man/opt
+MANDB_MAP       /snap/man               /var/cache/man/snap
+#
+#---------------------------------------------------------
+# Program definitions.  These are commented out by default as the value
+# of the definition is already the default.  To change: uncomment a
+# definition and modify it.
+#
+#DEFINE         pager   pager
+#DEFINE         cat     cat
+#DEFINE         tr      tr '\255\267\264\327' '\055\157\047\170'
+#DEFINE         grep    grep
+#DEFINE         troff   groff -mandoc
+#DEFINE         nroff   nroff -mandoc
+#DEFINE         eqn     eqn
+#DEFINE         neqn    neqn
+#DEFINE         tbl     tbl
+#DEFINE         col     col
+#DEFINE         vgrind  vgrind
+#DEFINE         refer   refer
+#DEFINE         grap    grap
+#DEFINE         pic     pic -S
+#
+#DEFINE         compressor      gzip -c7
+#---------------------------------------------------------
+# Misc definitions: same as program definitions above.
+#
+#DEFINE         whatis_grep_flags               -i
+#DEFINE         apropos_grep_flags              -iEw
+#DEFINE         apropos_regex_grep_flags        -iE
+#---------------------------------------------------------
+# Section names. Manual sections will be searched in the order listed here;
+# the default is 1, n, l, 8, 3, 0, 2, 3type, 5, 4, 9, 6, 7. Multiple SECTION
+# directives may be given for clarity, and will be concatenated together in
+# the expected way.
+# If a particular extension is not in this list (say, 1mh), it will be
+# displayed with the rest of the section it belongs to. The effect of this
+# is that you only need to explicitly list extensions if you want to force a
+# particular order. Sections with extensions should usually be adjacent to
+# their main section (e.g. "1 1mh 8 ...").
+#
+SECTION         1 n l 8 3 0 2 3type 3posix 3pm 3perl 3am 5 4 9 6 7
+#
+#---------------------------------------------------------
+# Range of terminal widths permitted when displaying cat pages. If the
+# terminal falls outside this range, cat pages will not be created (if
+# missing) or displayed.
+#
+#MINCATWIDTH    80
+#MAXCATWIDTH    80
+#
+# If CATWIDTH is set to a non-zero number, cat pages will always be
+# formatted for a terminal of the given width, regardless of the width of
+# the terminal actually being used. This should generally be within the
+# range set by MINCATWIDTH and MAXCATWIDTH.
+#
+#CATWIDTH       0
+#
+#---------------------------------------------------------
+# Flags.
+# NOCACHE keeps man from creating cat pages.
+#NOCACHE
+postgres@50151b68985c:~$ ls /usr/local/share/
+applications/    btop/            ca-certificates/ fonts/           icons/           man/             sgml/            xml/
+postgres@50151b68985c:~$ ls /usr/local/share/man/
+postgres@50151b68985c:~$ 
+postgres@50151b68985c:~$ psql
+psql (19beta1)
+Type "help" for help.
+
+postgres=# 
+\q
+postgres@50151b68985c:~$ 
+logout
+laborant@50151b68985c:~$ psql
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  role "laborant" does not exist
+laborant@50151b68985c:~$ psql -U postgres
+psql (19beta1)
+Type "help" for help.
+
+postgres=# 
+\q
+laborant@50151b68985c:~$ 
+exit
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19 bash
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@8846577ad804:~$ 
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19 bash
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@2cf6c7ab01ae:~$ ls /usr/share/m
+man/        man-db/     maven-repo/ menu/       mime/       misc/       motd        
+laborant@2cf6c7ab01ae:~$ ls /usr/share/m
+man/        man-db/     maven-repo/ menu/       mime/       misc/       motd        
+laborant@2cf6c7ab01ae:~$ ls /usr/share/m
+man/        man-db/     maven-repo/ menu/       mime/       misc/       motd        
+laborant@2cf6c7ab01ae:~$ ls /usr/share/ma
+man/        man-db/     maven-repo/ 
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man
+cs  de  fi  hr  id  ja  man1  man3  man5  man7  nl  pt     ro  sl  sv  uk     zh_TW
+da  es  fr  hu  it  ko  man2  man4  man6  man8  pl  pt_BR  ru  sr  tr  zh_CN
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man/p
+pl/    pt/    pt_BR/ 
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man/pl/
+man1  man3  man5  man8
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man/pl/man1/
+apropos.1.gz  dpkg-distaddfile.1.gz  lexgrog.1.gz     manconv.1.gz  pgrep.1.gz  rvim.1.gz    vim.1.gz       whatis.1.gz             xxd.1.gz
+chage.1.gz    expiry.1.gz            man-recode.1.gz  manpath.1.gz  pmap.1.gz   sg.1.gz      vimdiff.1.gz   which.1.gz              zsoelim.1.gz
+chsh.1.gz     free.1.gz              man.1.gz         newgrp.1.gz   rview.1.gz  uptime.1.gz  vimtutor.1.gz  which.debianutils.1.gz
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man/pl/man1/vim
+vim.1.gz       vimdiff.1.gz   vimtutor.1.gz  
+laborant@2cf6c7ab01ae:~$ ls /usr/share/man/pl/man1/vim.1.gz 
+/usr/share/man/pl/man1/vim.1.gz
+laborant@2cf6c7ab01ae:~$ vi /usr/share/man/pl/man1/vim.1.gz 
+laborant@2cf6c7ab01ae:~$ ls /usr/local/share/man/
+laborant@2cf6c7ab01ae:~$ man psql
+laborant@2cf6c7ab01ae:~$ man 
+What manual page do you want?
+For example, try 'man man'.
+laborant@2cf6c7ab01ae:~$ man -w psql
+/usr/local/pgsql/share/man/man1/psql.1
+laborant@2cf6c7ab01ae:~$ ls /usr/local/
+bin  etc  games  include  lib  man  pgsql  sbin  share  src
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/
+bin  data  include  lib  share
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/lib/
+_int.so                 earthdistance.so       libecpg_compat.so.3.19  moddatetime.so         pgrowlocks.so         utf8_and_euc_cn.so
+amcheck.so              euc2004_sjis2004.so    libpgcommon.a           pageinspect.so         pgstattuple.so        utf8_and_euc_jp.so
+auth_delay.so           euc_jp_and_sjis.so     libpgcommon_shlib.a     passwordcheck.so       pgxs                  utf8_and_euc_kr.so
+auto_explain.so         euc_tw_and_big5.so     libpgfeutils.a          pg_buffercache.so      pkgconfig             utf8_and_euc_tw.so
+autoinc.so              file_fdw.so            libpgport.a             pg_freespacemap.so     plpgsql.so            utf8_and_gb18030.so
+basebackup_to_shell.so  fuzzystrmatch.so       libpgport_shlib.a       pg_logicalinspect.so   postgres_fdw.so       utf8_and_gbk.so
+basic_archive.so        hstore.so              libpgtypes.a            pg_overexplain.so      refint.so             utf8_and_iso8859.so
+bloom.so                insert_username.so     libpgtypes.so           pg_plan_advice.so      seg.so                utf8_and_iso8859_1.so
+btree_gin.so            isn.so                 libpgtypes.so.3         pg_prewarm.so          tablefunc.so          utf8_and_johab.so
+btree_gist.so           latin2_and_win1250.so  libpgtypes.so.3.19      pg_stash_advice.so     tcn.so                utf8_and_sjis.so
+citext.so               libecpg.a              libpq.a                 pg_stat_statements.so  test_decoding.so      utf8_and_sjis2004.so
+cube.so                 libecpg.so             libpq.so                pg_surgery.so          tsm_system_rows.so    utf8_and_uhc.so
+cyrillic.so             libecpg.so.6           libpq.so.5              pg_trgm.so             tsm_system_time.so    utf8_and_win.so
+dblink.so               libecpg.so.6.19        libpq.so.5.19           pg_visibility.so       unaccent.so
+dict_int.so             libecpg_compat.a       libpqwalreceiver.so     pg_walinspect.so       utf8_and_big5.so
+dict_snowball.so        libecpg_compat.so      lo.so                   pgoutput.so            utf8_and_cyrillic.so
+dict_xsyn.so            libecpg_compat.so.3    ltree.so                pgrepack.so            utf8_and_euc2004.so
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/
+doc           information_schema.sql  pg_hosts.conf.sample    postgres.bki            snowball_create.sql     system_functions.sql  timezonesets
+errcodes.txt  man                     pg_ident.conf.sample    postgresql.conf.sample  sql_features.txt        system_views.sql      tsearch_data
+extension     pg_hba.conf.sample      pg_service.conf.sample  psqlrc.sample           system_constraints.sql  timezone
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/doc/
+extension  html
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/doc/html/
+acronyms.html                              indexes-index-only-scans.html                      spi-spi-execute-plan-with-paramlist.html
+admin.html                                 indexes-intro.html                                 spi-spi-execute-plan.html
+amcheck.html                               indexes-multicolumn.html                           spi-spi-execute-with-args.html
+app-clusterdb.html                         indexes-opclass.html                               spi-spi-execute.html
+app-createdb.html                          indexes-ordering.html                              spi-spi-finish.html
+app-createuser.html                        indexes-partial.html                               spi-spi-fname.html
+app-dropdb.html                            indexes-types.html                                 spi-spi-fnumber.html
+app-dropuser.html                          indexes-unique.html                                spi-spi-freeplan.html
+app-ecpg.html                              indexes.html                                       spi-spi-freetuple.html
+app-initdb.html                            indextypes.html                                    spi-spi-freetupletable.html
+app-pg-ctl.html                            information-schema.html                            spi-spi-getargcount.html
+app-pg-dumpall.html                        infoschema-administrable-role-authorizations.html  spi-spi-getargtypeid.html
+app-pg-isready.html                        infoschema-applicable-roles.html                   spi-spi-getbinval.html
+app-pgamcheck.html                         infoschema-attributes.html                         spi-spi-getnspname.html
+app-pgbasebackup.html                      infoschema-character-sets.html                     spi-spi-getrelname.html
+app-pgchecksums.html                       infoschema-check-constraint-routine-usage.html     spi-spi-gettype.html
+app-pgcombinebackup.html                   infoschema-check-constraints.html                  spi-spi-gettypeid.html
+app-pgconfig.html                          infoschema-collation-character-set-applicab.html   spi-spi-getvalue.html
+app-pgcontroldata.html                     infoschema-collations.html                         spi-spi-is-cursor-plan.html
+app-pgcreatesubscriber.html                infoschema-column-column-usage.html                spi-spi-keepplan.html
+app-pgdump.html                            infoschema-column-domain-usage.html                spi-spi-modifytuple.html
+app-pgreceivewal.html                      infoschema-column-options.html                     spi-spi-palloc.html
+app-pgreceivexlog.html                     infoschema-column-privileges.html                  spi-spi-pfree.html
+app-pgrecvlogical.html                     infoschema-column-udt-usage.html                   spi-spi-prepare-cursor.html
+app-pgresetwal.html                        infoschema-columns.html                            spi-spi-prepare-extended.html
+app-pgresetxlog.html                       infoschema-constraint-column-usage.html            spi-spi-prepare-params.html
+app-pgrestore.html                         infoschema-constraint-table-usage.html             spi-spi-prepare.html
+app-pgrewind.html                          infoschema-data-type-privileges.html               spi-spi-register-relation.html
+app-pgverifybackup.html                    infoschema-datatypes.html                          spi-spi-register-trigger-data.html
+app-pgwalsummary.html                      infoschema-domain-constraints.html                 spi-spi-result-code-string.html
+app-postgres.html                          infoschema-domain-udt-usage.html                   spi-spi-returntuple.html
+app-psql.html                              infoschema-domains.html                            spi-spi-rollback.html
+app-reindexdb.html                         infoschema-element-types.html                      spi-spi-saveplan.html
+app-vacuumdb.html                          infoschema-enabled-roles.html                      spi-spi-scroll-cursor-fetch.html
+appendix-obsolete.html                     infoschema-foreign-data-wrapper-options.html       spi-spi-scroll-cursor-move.html
+appendixes.html                            infoschema-foreign-data-wrappers.html              spi-spi-start-transaction.html
+applevel-consistency.html                  infoschema-foreign-server-options.html             spi-spi-unregister-relation.html
+archive-module-callbacks.html              infoschema-foreign-servers.html                    spi-transaction.html
+archive-module-init.html                   infoschema-foreign-table-options.html              spi-visibility.html
+archive-modules.html                       infoschema-foreign-tables.html                     spi.html
+arrays.html                                infoschema-information-schema-catalog-name.html    sql-abort.html
+auth-bsd.html                              infoschema-key-column-usage.html                   sql-alter-property-graph.html
+auth-cert.html                             infoschema-parameters.html                         sql-alteraggregate.html
+auth-delay.html                            infoschema-pg-edge-table-components.html           sql-altercollation.html
+auth-ident.html                            infoschema-pg-element-table-key-columns.html       sql-alterconversion.html
+auth-ldap.html                             infoschema-pg-element-table-labels.html            sql-alterdatabase.html
+auth-methods.html                          infoschema-pg-element-table-properties.html        sql-alterdefaultprivileges.html
+auth-oauth.html                            infoschema-pg-element-tables.html                  sql-alterdomain.html
+auth-pam.html                              infoschema-pg-label-properties.html                sql-altereventtrigger.html
+auth-password.html                         infoschema-pg-labels.html                          sql-alterextension.html
+auth-peer.html                             infoschema-pg-property-data-types.html             sql-alterforeigndatawrapper.html
+auth-pg-hba-conf.html                      infoschema-pg-property-graph-privileges.html       sql-alterforeigntable.html
+auth-radius.html                           infoschema-property-graphs.html                    sql-alterfunction.html
+auth-trust.html                            infoschema-referential-constraints.html            sql-altergroup.html
+auth-username-maps.html                    infoschema-role-column-grants.html                 sql-alterindex.html
+auto-explain.html                          infoschema-role-routine-grants.html                sql-alterlanguage.html
+backup-dump.html                           infoschema-role-table-grants.html                  sql-alterlargeobject.html
+backup-file.html                           infoschema-role-udt-grants.html                    sql-altermaterializedview.html
+backup-manifest-files.html                 infoschema-role-usage-grants.html                  sql-alteropclass.html
+backup-manifest-format.html                infoschema-routine-column-usage.html               sql-alteroperator.html
+backup-manifest-toplevel.html              infoschema-routine-privileges.html                 sql-alteropfamily.html
+backup-manifest-wal-ranges.html            infoschema-routine-routine-usage.html              sql-alterpolicy.html
+backup.html                                infoschema-routine-sequence-usage.html             sql-alterprocedure.html
+basebackup-to-shell.html                   infoschema-routine-table-usage.html                sql-alterpublication.html
+basic-archive.html                         infoschema-routines.html                           sql-alterrole.html
+bgworker.html                              infoschema-schema.html                             sql-alterroutine.html
+biblio.html                                infoschema-schemata.html                           sql-alterrule.html
+bki-commands.html                          infoschema-sequences.html                          sql-alterschema.html
+bki-example.html                           infoschema-sql-features.html                       sql-altersequence.html
+bki-format.html                            infoschema-sql-implementation-info.html            sql-alterserver.html
+bki-structure.html                         infoschema-sql-parts.html                          sql-alterstatistics.html
+bki.html                                   infoschema-sql-sizing.html                         sql-altersubscription.html
+bloom.html                                 infoschema-table-constraints.html                  sql-altersystem.html
+bookindex.html                             infoschema-table-privileges.html                   sql-altertable.html
+brin.html                                  infoschema-tables.html                             sql-altertablespace.html
+btree-gin.html                             infoschema-transforms.html                         sql-altertrigger.html
+btree-gist.html                            infoschema-triggered-update-columns.html           sql-altertsconfig.html
+btree.html                                 infoschema-triggers.html                           sql-altertsdictionary.html
+bug-reporting.html                         infoschema-udt-privileges.html                     sql-altertsparser.html
+catalog-pg-aggregate.html                  infoschema-usage-privileges.html                   sql-altertstemplate.html
+catalog-pg-am.html                         infoschema-user-defined-types.html                 sql-altertype.html
+catalog-pg-amop.html                       infoschema-user-mapping-options.html               sql-alteruser.html
+catalog-pg-amproc.html                     infoschema-user-mappings.html                      sql-alterusermapping.html
+catalog-pg-attrdef.html                    infoschema-view-column-usage.html                  sql-alterview.html
+catalog-pg-attribute.html                  infoschema-view-routine-usage.html                 sql-analyze.html
+catalog-pg-auth-members.html               infoschema-view-table-usage.html                   sql-begin.html
+catalog-pg-authid.html                     infoschema-views.html                              sql-call.html
+catalog-pg-cast.html                       install-binaries.html                              sql-checkpoint.html
+catalog-pg-class.html                      install-getsource.html                             sql-close.html
+catalog-pg-collation.html                  install-make.html                                  sql-cluster.html
+catalog-pg-constraint.html                 install-meson.html                                 sql-commands.html
+catalog-pg-conversion.html                 install-post.html                                  sql-comment.html
+catalog-pg-database.html                   install-requirements.html                          sql-commit-prepared.html
+catalog-pg-db-role-setting.html            installation-platform-notes.html                   sql-commit.html
+catalog-pg-default-acl.html                installation.html                                  sql-copy.html
+catalog-pg-depend.html                     intagg.html                                        sql-create-access-method.html
+catalog-pg-description.html                intarray.html                                      sql-create-property-graph.html
+catalog-pg-enum.html                       internals.html                                     sql-createaggregate.html
+catalog-pg-event-trigger.html              intro-whatis.html                                  sql-createcast.html
+catalog-pg-extension.html                  isn.html                                           sql-createcollation.html
+catalog-pg-foreign-data-wrapper.html       jit-configuration.html                             sql-createconversion.html
+catalog-pg-foreign-server.html             jit-decision.html                                  sql-createdatabase.html
+catalog-pg-foreign-table.html              jit-extensibility.html                             sql-createdomain.html
+catalog-pg-index.html                      jit-reason.html                                    sql-createeventtrigger.html
+catalog-pg-inherits.html                   jit.html                                           sql-createextension.html
+catalog-pg-init-privs.html                 kernel-resources.html                              sql-createforeigndatawrapper.html
+catalog-pg-language.html                   largeobjects.html                                  sql-createforeigntable.html
+catalog-pg-largeobject-metadata.html       legalnotice.html                                   sql-createfunction.html
+catalog-pg-largeobject.html                libpq-async.html                                   sql-creategroup.html
+catalog-pg-namespace.html                  libpq-build.html                                   sql-createindex.html
+catalog-pg-opclass.html                    libpq-cancel.html                                  sql-createlanguage.html
+catalog-pg-operator.html                   libpq-connect.html                                 sql-creatematerializedview.html
+catalog-pg-opfamily.html                   libpq-control.html                                 sql-createopclass.html
+catalog-pg-parameter-acl.html              libpq-copy.html                                    sql-createoperator.html
+catalog-pg-partitioned-table.html          libpq-envars.html                                  sql-createopfamily.html
+catalog-pg-policy.html                     libpq-events.html                                  sql-createpolicy.html
+catalog-pg-proc.html                       libpq-example.html                                 sql-createprocedure.html
+catalog-pg-propgraph-element-label.html    libpq-exec.html                                    sql-createpublication.html
+catalog-pg-propgraph-element.html          libpq-fastpath.html                                sql-createrole.html
+catalog-pg-propgraph-label-property.html   libpq-ldap.html                                    sql-createrule.html
+catalog-pg-propgraph-label.html            libpq-misc.html                                    sql-createschema.html
+catalog-pg-propgraph-property.html         libpq-notice-processing.html                       sql-createsequence.html
+catalog-pg-publication-namespace.html      libpq-notify.html                                  sql-createserver.html
+catalog-pg-publication-rel.html            libpq-oauth.html                                   sql-createstatistics.html
+catalog-pg-publication.html                libpq-pgpass.html                                  sql-createsubscription.html
+catalog-pg-range.html                      libpq-pgservice.html                               sql-createtable.html
+catalog-pg-replication-origin.html         libpq-pipeline-mode.html                           sql-createtableas.html
+catalog-pg-rewrite.html                    libpq-single-row-mode.html                         sql-createtablespace.html
+catalog-pg-seclabel.html                   libpq-ssl.html                                     sql-createtransform.html
+catalog-pg-sequence.html                   libpq-status.html                                  sql-createtrigger.html
+catalog-pg-shdepend.html                   libpq-threading.html                               sql-createtsconfig.html
+catalog-pg-shdescription.html              libpq.html                                         sql-createtsdictionary.html
+catalog-pg-shseclabel.html                 limits.html                                        sql-createtsparser.html
+catalog-pg-statistic-ext-data.html         lo-examplesect.html                                sql-createtstemplate.html
+catalog-pg-statistic-ext.html              lo-funcs.html                                      sql-createtype.html
+catalog-pg-statistic.html                  lo-implementation.html                             sql-createuser.html
+catalog-pg-subscription-rel.html           lo-interfaces.html                                 sql-createusermapping.html
+catalog-pg-subscription.html               lo-intro.html                                      sql-createview.html
+catalog-pg-tablespace.html                 lo.html                                            sql-deallocate.html
+catalog-pg-transform.html                  locale.html                                        sql-declare.html
+catalog-pg-trigger.html                    locking-indexes.html                               sql-delete.html
+catalog-pg-ts-config-map.html              logfile-maintenance.html                           sql-discard.html
+catalog-pg-ts-config.html                  logical-replication-architecture.html              sql-do.html
+catalog-pg-ts-dict.html                    logical-replication-col-lists.html                 sql-drop-access-method.html
+catalog-pg-ts-parser.html                  logical-replication-config.html                    sql-drop-owned.html
+catalog-pg-ts-template.html                logical-replication-conflicts.html                 sql-drop-property-graph.html
+catalog-pg-type.html                       logical-replication-failover.html                  sql-dropaggregate.html
+catalog-pg-user-mapping.html               logical-replication-gencols.html                   sql-dropcast.html
+catalogs-overview.html                     logical-replication-monitoring.html                sql-dropcollation.html
+catalogs.html                              logical-replication-publication.html               sql-dropconversion.html
+charset.html                               logical-replication-quick-setup.html               sql-dropdatabase.html
+checksums.html                             logical-replication-restrictions.html              sql-dropdomain.html
+citext.html                                logical-replication-row-filter.html                sql-dropeventtrigger.html
+client-authentication-problems.html        logical-replication-security.html                  sql-dropextension.html
+client-authentication.html                 logical-replication-sequences.html                 sql-dropforeigndatawrapper.html
+client-interfaces.html                     logical-replication-subscription.html              sql-dropforeigntable.html
+collation.html                             logical-replication-upgrade.html                   sql-dropfunction.html
+color-when.html                            logical-replication.html                           sql-dropgroup.html
+color-which.html                           logicaldecoding-catalogs.html                      sql-dropindex.html
+color.html                                 logicaldecoding-example.html                       sql-droplanguage.html
+config-setting.html                        logicaldecoding-explanation.html                   sql-dropmaterializedview.html
+connect-estab.html                         logicaldecoding-output-plugin-writing.html         sql-dropopclass.html
+continuous-archiving.html                  logicaldecoding-output-plugin.html                 sql-dropoperator.html
+contrib-dblink-build-sql-delete.html       logicaldecoding-sql.html                           sql-dropopfamily.html
+contrib-dblink-build-sql-insert.html       logicaldecoding-streaming.html                     sql-droppolicy.html
+contrib-dblink-build-sql-update.html       logicaldecoding-synchronous.html                   sql-dropprocedure.html
+contrib-dblink-cancel-query.html           logicaldecoding-two-phase-commits.html             sql-droppublication.html
+contrib-dblink-close.html                  logicaldecoding-walsender.html                     sql-droprole.html
+contrib-dblink-connect-u.html              logicaldecoding-writer.html                        sql-droproutine.html
+contrib-dblink-connect.html                logicaldecoding.html                               sql-droprule.html
+contrib-dblink-disconnect.html             ltree.html                                         sql-dropschema.html
+contrib-dblink-error-message.html          maintenance.html                                   sql-dropsequence.html
+contrib-dblink-exec.html                   manage-ag-config.html                              sql-dropserver.html
+contrib-dblink-fetch.html                  manage-ag-createdb.html                            sql-dropstatistics.html
+contrib-dblink-function.html               manage-ag-dropdb.html                              sql-dropsubscription.html
+contrib-dblink-get-connections.html        manage-ag-overview.html                            sql-droptable.html
+contrib-dblink-get-notify.html             manage-ag-tablespaces.html                         sql-droptablespace.html
+contrib-dblink-get-pkey.html               manage-ag-templatedbs.html                         sql-droptransform.html
+contrib-dblink-get-result.html             managing-databases.html                            sql-droptrigger.html
+contrib-dblink-is-busy.html                monitoring-locks.html                              sql-droptsconfig.html
+contrib-dblink-open.html                   monitoring-ps.html                                 sql-droptsdictionary.html
+contrib-dblink-send-query.html             monitoring-stats.html                              sql-droptsparser.html
+contrib-prog-client.html                   monitoring.html                                    sql-droptstemplate.html
+contrib-prog-server.html                   multibyte.html                                     sql-droptype.html
+contrib-prog.html                          multivariate-statistics-examples.html              sql-dropuser.html
+contrib-spi.html                           mvcc-caveats.html                                  sql-dropusermapping.html
+contrib.html                               mvcc-intro.html                                    sql-dropview.html
+creating-cluster.html                      mvcc-serialization-failure-handling.html           sql-end.html
+cube.html                                  mvcc.html                                          sql-execute.html
+custom-rmgr.html                           nls-programmer.html                                sql-explain.html
+custom-scan-execution.html                 nls-translator.html                                sql-expressions.html
+custom-scan-path.html                      nls.html                                           sql-fetch.html
+custom-scan-plan.html                      non-durability.html                                sql-grant.html
+custom-scan.html                           notation.html                                      sql-importforeignschema.html
+database-roles.html                        oauth-validator-callbacks.html                     sql-insert.html
+datachecksums.svg                          oauth-validator-design.html                        sql-keywords-appendix.html
+datatype-binary.html                       oauth-validator-hba.html                           sql-listen.html
+datatype-bit.html                          oauth-validator-init.html                          sql-load.html
+datatype-boolean.html                      oauth-validators.html                              sql-lock.html
+datatype-character.html                    oid2name.html                                      sql-merge.html
+datatype-datetime.html                     overview.html                                      sql-move.html
+datatype-enum.html                         pageinspect.html                                   sql-notify.html
+datatype-geometric.html                    pagelayout.svg                                     sql-prepare-transaction.html
+datatype-json.html                         parallel-plans.html                                sql-prepare.html
+datatype-money.html                        parallel-query.html                                sql-reassign-owned.html
+datatype-net-types.html                    parallel-safety.html                               sql-refreshmaterializedview.html
+datatype-numeric.html                      parser-stage.html                                  sql-reindex.html
+datatype-oid.html                          passwordcheck.html                                 sql-release-savepoint.html
+datatype-pg-lsn.html                       performance-tips.html                              sql-repack.html
+datatype-pseudo.html                       perm-functions.html                                sql-reset.html
+datatype-textsearch.html                   pgarchivecleanup.html                              sql-revoke.html
+datatype-uuid.html                         pgbench.html                                       sql-rollback-prepared.html
+datatype-xml.html                          pgbuffercache.html                                 sql-rollback-to.html
+datatype.html                              pgcrypto.html                                      sql-rollback.html
+datetime-appendix.html                     pgfreespacemap.html                                sql-savepoint.html
+datetime-config-files.html                 pglogicalinspect.html                              sql-security-label.html
+datetime-input-rules.html                  pgoverexplain.html                                 sql-select.html
+datetime-invalid-input.html                pgplanadvice.html                                  sql-selectinto.html
+datetime-julian-dates.html                 pgprewarm.html                                     sql-set-constraints.html
+datetime-keywords.html                     pgrowlocks.html                                    sql-set-role.html
+datetime-posix-timezone-specs.html         pgstashadvice.html                                 sql-set-session-authorization.html
+datetime-units-history.html                pgstatstatements.html                              sql-set-transaction.html
+dblink.html                                pgstattuple.html                                   sql-set.html
+ddl-alter.html                             pgsurgery.html                                     sql-show.html
+ddl-basics.html                            pgtestfsync.html                                   sql-start-transaction.html
+ddl-constraints.html                       pgtesttiming.html                                  sql-syntax-calling-funcs.html
+ddl-default.html                           pgtrgm.html                                        sql-syntax-lexical.html
+ddl-depend.html                            pgupgrade.html                                     sql-syntax.html
+ddl-foreign-data.html                      pgvisibility.html                                  sql-truncate.html
+ddl-generated-columns.html                 pgwaldump.html                                     sql-unlisten.html
+ddl-identity-columns.html                  pgwalinspect.html                                  sql-update.html
+ddl-inherit.html                           pgxlogdump.html                                    sql-vacuum.html
+ddl-others.html                            planner-optimizer.html                             sql-values.html
+ddl-partitioning.html                      planner-stats-details.html                         sql-wait-for.html
+ddl-priv.html                              planner-stats-security.html                        sql.html
+ddl-property-graphs.html                   planner-stats.html                                 ssh-tunnels.html
+ddl-rowsecurity.html                       plhandler.html                                     ssl-tcp.html
+ddl-schemas.html                           plperl-builtins.html                               sslinfo.html
+ddl-system-columns.html                    plperl-data.html                                   sspi-auth.html
+ddl-temporal-tables.html                   plperl-event-triggers.html                         storage-file-layout.html
+ddl.html                                   plperl-funcs.html                                  storage-fsm.html
+default-roles.html                         plperl-global.html                                 storage-hot.html
+dict-int.html                              plperl-triggers.html                               storage-init.html
+dict-xsyn.html                             plperl-trusted.html                                storage-page-layout.html
+different-replication-solutions.html       plperl-under-the-hood.html                         storage-toast.html
+diskusage.html                             plperl.html                                        storage-vm.html
+dml-application-time-update-delete.html    plpgsql-control-structures.html                    storage.html
+dml-delete.html                            plpgsql-cursors.html                               stylesheet.css
+dml-insert.html                            plpgsql-declarations.html                          subxacts.html
+dml-returning.html                         plpgsql-development-tips.html                      supported-platforms.html
+dml-update.html                            plpgsql-errors-and-messages.html                   system-catalog-declarations.html
+dml.html                                   plpgsql-expressions.html                           system-catalog-initial-data.html
+docguide-authoring.html                    plpgsql-implementation.html                        tableam.html
+docguide-build-meson.html                  plpgsql-overview.html                              tablefunc.html
+docguide-build.html                        plpgsql-porting.html                               tablesample-method.html
+docguide-docbook.html                      plpgsql-statements.html                            tablesample-support-functions.html
+docguide-style.html                        plpgsql-structure.html                             tcn.html
+docguide-toolsets.html                     plpgsql-transactions.html                          temporal-delete.svg
+docguide.html                              plpgsql-trigger.html                               temporal-entities.svg
+domains.html                               plpgsql.html                                       temporal-isolation.svg
+dynamic-trace.html                         plpython-data.html                                 temporal-references.svg
+earthdistance.html                         plpython-database.html                             temporal-update.svg
+ecpg-commands.html                         plpython-do.html                                   test-decoding.html
+ecpg-concept.html                          plpython-envar.html                                textsearch-configuration.html
+ecpg-connect.html                          plpython-event-trigger.html                        textsearch-controls.html
+ecpg-cpp.html                              plpython-funcs.html                                textsearch-debugging.html
+ecpg-descriptors.html                      plpython-python23.html                             textsearch-dictionaries.html
+ecpg-develop.html                          plpython-sharing.html                              textsearch-features.html
+ecpg-dynamic.html                          plpython-subtransaction.html                       textsearch-indexes.html
+ecpg-errors.html                           plpython-transactions.html                         textsearch-intro.html
+ecpg-informix-compat.html                  plpython-trigger.html                              textsearch-limitations.html
+ecpg-library.html                          plpython-util.html                                 textsearch-parsers.html
+ecpg-lo.html                               plpython.html                                      textsearch-psql.html
+ecpg-oracle-compat.html                    pltcl-config.html                                  textsearch-tables.html
+ecpg-pgtypes.html                          pltcl-data.html                                    textsearch.html
+ecpg-preproc.html                          pltcl-dbaccess.html                                transaction-id.html
+ecpg-process.html                          pltcl-error-handling.html                          transaction-iso.html
+ecpg-sql-allocate-descriptor.html          pltcl-event-trigger.html                           transactions.html
+ecpg-sql-commands.html                     pltcl-functions.html                               trigger-datachanges.html
+ecpg-sql-connect.html                      pltcl-global.html                                  trigger-definition.html
+ecpg-sql-deallocate-descriptor.html        pltcl-overview.html                                trigger-example.html
+ecpg-sql-declare-statement.html            pltcl-procnames.html                               trigger-interface.html
+ecpg-sql-declare.html                      pltcl-subtransactions.html                         triggers.html
+ecpg-sql-describe.html                     pltcl-transactions.html                            tsm-system-rows.html
+ecpg-sql-disconnect.html                   pltcl-trigger.html                                 tsm-system-time.html
+ecpg-sql-execute-immediate.html            pltcl.html                                         tutorial-accessdb.html
+ecpg-sql-get-descriptor.html               populate.html                                      tutorial-advanced-intro.html
+ecpg-sql-open.html                         postgres-fdw.html                                  tutorial-advanced.html
+ecpg-sql-prepare.html                      postgres-user.html                                 tutorial-agg.html
+ecpg-sql-set-autocommit.html               predefined-roles.html                              tutorial-arch.html
+ecpg-sql-set-connection.html               preface.html                                       tutorial-concepts.html
+ecpg-sql-set-descriptor.html               preventing-server-spoofing.html                    tutorial-conclusion.html
+ecpg-sql-type.html                         progress-reporting.html                            tutorial-createdb.html
+ecpg-sql-var.html                          protocol-changes.html                              tutorial-delete.html
+ecpg-sql-whenever.html                     protocol-error-fields.html                         tutorial-fk.html
+ecpg-variables.html                        protocol-flow.html                                 tutorial-inheritance.html
+ecpg.html                                  protocol-logical-replication.html                  tutorial-install.html
+encryption-options.html                    protocol-logicalrep-message-formats.html           tutorial-join.html
+errcodes-appendix.html                     protocol-message-formats.html                      tutorial-populate.html
+error-message-reporting.html               protocol-message-types.html                        tutorial-select.html
+error-style-guide.html                     protocol-overview.html                             tutorial-sql-intro.html
+event-log-registration.html                protocol-replication.html                          tutorial-sql.html
+event-trigger-database-login-example.html  protocol.html                                      tutorial-start.html
+event-trigger-definition.html              queries-graph.html                                 tutorial-table.html
+event-trigger-example.html                 queries-limit.html                                 tutorial-transactions.html
+event-trigger-interface.html               queries-order.html                                 tutorial-update.html
+event-trigger-table-rewrite-example.html   queries-overview.html                              tutorial-views.html
+event-triggers.html                        queries-select-lists.html                          tutorial-window.html
+executor.html                              queries-table-expressions.html                     tutorial.html
+explicit-joins.html                        queries-union.html                                 two-phase.html
+explicit-locking.html                      queries-values.html                                typeconv-func.html
+extend-extensions.html                     queries-with.html                                  typeconv-oper.html
+extend-how.html                            queries.html                                       typeconv-overview.html
+extend-pgxs.html                           query-path.html                                    typeconv-query.html
+extend-type-system.html                    querytree.html                                     typeconv-select.html
+extend.html                                rangetypes.html                                    typeconv-union-case.html
+external-admin-tools.html                  recovery-config.html                               typeconv.html
+external-extensions.html                   reference-client.html                              unaccent.html
+external-interfaces.html                   reference-server.html                              unsupported-features-sql-standard.html
+external-pl.html                           reference.html                                     upgrading.html
+external-projects.html                     regress-coverage.html                              user-manag.html
+fdw-callbacks.html                         regress-evaluation.html                            using-explain.html
+fdw-functions.html                         regress-run.html                                   uuid-ossp.html
+fdw-helpers.html                           regress-tap.html                                   vacuumlo.html
+fdw-planning.html                          regress-variant.html                               view-pg-aios.html
+fdw-row-locking.html                       regress.html                                       view-pg-available-extension-versions.html
+fdwhandler.html                            release-19.html                                    view-pg-available-extensions.html
+features-sql-standard.html                 release-prior.html                                 view-pg-backend-memory-contexts.html
+features.html                              release.html                                       view-pg-config.html
+file-fdw.html                              replication-origins.html                           view-pg-cursors.html
+functions-admin.html                       resources.html                                     view-pg-dsm-registry-allocations.html
+functions-aggregate.html                   role-attributes.html                               view-pg-file-settings.html
+functions-array.html                       role-membership.html                               view-pg-group.html
+functions-binarystring.html                role-removal.html                                  view-pg-hba-file-rules.html
+functions-bitstring.html                   routine-reindex.html                               view-pg-ident-file-mappings.html
+functions-comparison.html                  routine-vacuuming.html                             view-pg-indexes.html
+functions-comparisons.html                 row-estimation-examples.html                       view-pg-locks.html
+functions-conditional.html                 rowtypes.html                                      view-pg-matviews.html
+functions-datetime.html                    rule-system.html                                   view-pg-policies.html
+functions-enum.html                        rules-materializedviews.html                       view-pg-prepared-statements.html
+functions-event-triggers.html              rules-privileges.html                              view-pg-prepared-xacts.html
+functions-formatting.html                  rules-status.html                                  view-pg-publication-sequences.html
+functions-geometry.html                    rules-triggers.html                                view-pg-publication-tables.html
+functions-info.html                        rules-update.html                                  view-pg-replication-origin-status.html
+functions-json.html                        rules-views.html                                   view-pg-replication-slots.html
+functions-logical.html                     rules.html                                         view-pg-roles.html
+functions-matching.html                    runtime-config-client.html                         view-pg-rules.html
+functions-math.html                        runtime-config-compatible.html                     view-pg-seclabels.html
+functions-merge-support.html               runtime-config-connection.html                     view-pg-sequences.html
+functions-net.html                         runtime-config-custom.html                         view-pg-settings.html
+functions-range.html                       runtime-config-developer.html                      view-pg-shadow.html
+functions-sequence.html                    runtime-config-error-handling.html                 view-pg-shmem-allocations-numa.html
+functions-srf.html                         runtime-config-file-locations.html                 view-pg-shmem-allocations.html
+functions-statistics.html                  runtime-config-locks.html                          view-pg-stats-ext-exprs.html
+functions-string.html                      runtime-config-logging.html                        view-pg-stats-ext.html
+functions-subquery.html                    runtime-config-preset.html                         view-pg-stats.html
+functions-textsearch.html                  runtime-config-query.html                          view-pg-tables.html
+functions-tid.html                         runtime-config-replication.html                    view-pg-timezone-abbrevs.html
+functions-trigger.html                     runtime-config-resource.html                       view-pg-timezone-names.html
+functions-uuid.html                        runtime-config-short.html                          view-pg-user-mappings.html
+functions-window.html                      runtime-config-statistics.html                     view-pg-user.html
+functions-xml.html                         runtime-config-vacuum.html                         view-pg-views.html
+functions.html                             runtime-config-wal.html                            view-pg-wait-events.html
+fuzzystrmatch.html                         runtime-config.html                                views-overview.html
+generic-wal.html                           runtime.html                                       views.html
+genetic-algorithm.svg                      sasl-authentication.html                           wal-async-commit.html
+geqo-biblio.html                           seg.html                                           wal-configuration.html
+geqo-intro.html                            sepgsql.html                                       wal-for-extensions.html
+geqo-intro2.html                           server-programming.html                            wal-internals.html
+geqo-pg-intro.html                         server-shutdown.html                               wal-intro.html
+geqo.html                                  server-start.html                                  wal-reliability.html
+gin.html                                   source-conventions.html                            wal.html
+gin.svg                                    source-format.html                                 warm-standby-failover.html
+gist.html                                  source.html                                        warm-standby.html
+git.html                                   sourcerepo.html                                    when-can-parallel-query-be-used.html
+glossary.html                              spgist.html                                        xact-locking.html
+gssapi-auth.html                           spi-examples.html                                  xaggr.html
+gssapi-enc.html                            spi-interface-support.html                         xfunc-c.html
+hash-index.html                            spi-interface.html                                 xfunc-internal.html
+high-availability.html                     spi-memory.html                                    xfunc-optimization.html
+history.html                               spi-realloc.html                                   xfunc-overload.html
+hot-standby.html                           spi-spi-commit.html                                xfunc-pl.html
+how-parallel-query-works.html              spi-spi-connect.html                               xfunc-sql.html
+hstore.html                                spi-spi-copytuple.html                             xfunc-volatility.html
+index-api.html                             spi-spi-cursor-close.html                          xfunc.html
+index-cost-estimation.html                 spi-spi-cursor-fetch.html                          xindex.html
+index-functions.html                       spi-spi-cursor-find.html                           xml-limits-conformance.html
+index-locking.html                         spi-spi-cursor-move.html                           xml2.html
+index-scanning.html                        spi-spi-cursor-open-with-args.html                 xoper-optimization.html
+index-unique-checks.html                   spi-spi-cursor-open-with-paramlist.html            xoper.html
+index.html                                 spi-spi-cursor-open.html                           xplang-install.html
+indexam.html                               spi-spi-cursor-parse-open.html                     xplang.html
+indexes-bitmap-scans.html                  spi-spi-exec.html                                  xproc.html
+indexes-collations.html                    spi-spi-execp.html                                 xtypes.html
+indexes-examine.html                       spi-spi-execute-extended.html
+indexes-expressional.html                  spi-spi-execute-plan-extended.html
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/
+doc           information_schema.sql  pg_hosts.conf.sample    postgres.bki            snowball_create.sql     system_functions.sql  timezonesets
+errcodes.txt  man                     pg_ident.conf.sample    postgresql.conf.sample  sql_features.txt        system_views.sql      tsearch_data
+extension     pg_hba.conf.sample      pg_service.conf.sample  psqlrc.sample           system_constraints.sql  timezone
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/man/
+man1  man3  man7
+laborant@2cf6c7ab01ae:~$ ls /usr/local/pgsql/share/man/man1/
+clusterdb.1   ecpg.1               pg_basebackup.1     pg_createsubscriber.1  pg_receivewal.1   pg_test_fsync.1    pg_walsummary.1  vacuumdb.1
+createdb.1    initdb.1             pg_checksums.1      pg_ctl.1               pg_recvlogical.1  pg_test_timing.1   pgbench.1        vacuumlo.1
+createuser.1  oid2name.1           pg_combinebackup.1  pg_dump.1              pg_resetwal.1     pg_upgrade.1       postgres.1
+dropdb.1      pg_amcheck.1         pg_config.1         pg_dumpall.1           pg_restore.1      pg_verifybackup.1  psql.1
+dropuser.1    pg_archivecleanup.1  pg_controldata.1    pg_isready.1           pg_rewind.1       pg_waldump.1       reindexdb.1
+laborant@2cf6c7ab01ae:~$ 
+exit
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ 
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19-ubuntu-26-04 .
+[+] Building 48.7s (6/19)                                                                                                          docker:default
+ => [internal] load build definition from Dockerfile                                                                                         0.0s
+ => => transferring dockerfile: 1.35kB                                                                                                       0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04                                                                    1.6s
+ => [internal] load .dockerignore                                                                                                            0.0s
+ => => transferring context: 288B                                                                                                            0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:445c70a6e5b4286294098915f714d89cd970d34758fe6851e661b9147e97ac89           41.4s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04@sha256:445c70a6e5b4286294098915f714d89cd970d34758fe6851e661b9147e97ac89              0.0s
+ => => sha256:f15351824ffd1bf413bdc456fac7bcb5b5010de0e1fb8d608089fb9a6886dc4c 759B / 759B                                                   0.4s
+ => => sha256:1bf87554af333722478584c1fa47aeb507e4ba52e9ada710dce24190ac1059da 2.21kB / 2.21kB                                               0.5s
+ => => sha256:be72f7c1222b46250fe6303e4cee8261e2897f05309566cc65a44af45b8a7d86 237B / 237B                                                   0.5s
+ => => sha256:577a9cd743a59877066c9e346d7027cff2df540a7fb9f0671cde0f9ec279cf21 2.99MB / 2.99MB                                               1.3s
+ => => sha256:d61497c2d52249c0c4602e037bab4e68558d0c25786117648a92baa83411c67b 320.50MB / 320.50MB                                          38.6s
+ => => sha256:9870cb150f58e3c7d199bc63d422cc59759f2fd034fd06fd998283f7de0c0dcd 712B / 712B                                                   0.4s
+ => => sha256:14ac5f35f0dd8a073571690577ada228d614f5111561ed282a85aa10419b36f7 4.04kB / 4.04kB                                               0.5s
+ => => sha256:1a91f31119cdadc86e6ab4b3308ef40baceb16a8a025a49c3273a37cd29da18a 723B / 723B                                                   0.4s
+ => => sha256:ca2bb2124cdcbe0fd729eb1b7b5816ca41d3ff306cfe068bfd1cfd9d84a7f3b7 204B / 204B                                                   0.5s
+ => => sha256:efda168a4db78a7185cc520b68db3529f34861e185a9ad94c15f46c326807e1e 1.85kB / 1.85kB                                               0.5s
+ => => sha256:bd6f728274e6f73df3d9d5372eb8f950966669963eb7aeb66ef4e76653c872a4 2.99MB / 2.99MB                                               0.7s
+ => => sha256:b7d5bb955f11c41244b3759b63e248c0c39981f1281f6ec17766eca95db2b92d 9.01MB / 9.01MB                                               1.5s
+ => => sha256:9fb4ce8f1fdb756dba9c70326edda8791e52c44dc86d310fd32c78a7a978cbd3 3.16MB / 3.16MB                                               0.6s
+ => => sha256:ccab984361cce2f803c705c21f1a01d864b88475f658a99091b67a2aa390342d 27.52MB / 27.52MB                                             3.7s
+ => => sha256:f8f19cd6ea11b8e90674668f4e2030518069aa67a891d10b1d713d75f95b8a7a 1.07MB / 1.07MB                                               0.7s
+ => => sha256:e90a2eac24f6a9936b0b8ae0dd3111423f5622791af910e220bc37aefbb13d61 24.44MB / 24.44MB                                             2.7s
+ => => sha256:f8e089e96419618ff337342add1c1be5ce057fdd58a20458ff7eedb2cdc90848 5.56MB / 5.56MB                                               1.7s
+ => => sha256:61c0f98467dd476a2fa73153b7afbb59cbdf5207af9e4ecf43650184182b7cf8 703B / 703B                                                   0.8s
+ => => sha256:1585f086fca633b9d00758a605f2ad80f8732b67bdfad99191b336b990b7f477 25.25MB / 25.25MB                                             5.3s
+ => => sha256:99da708071e0840ad76e54f43e3782d4e5495e99c3bf37b93aa11c4c7d5c824f 10.50MB / 10.50MB                                             3.2s
+ => => sha256:8152887621b649354d42f2864c573967d632fd6682488751dff8da232fa4e6c8 193.58MB / 193.58MB                                          24.0s
+ => => sha256:3a51ea730ce8fdebdad47e316542712fa961ff92daeb1a0fcee99ff37af40a16 1.39kB / 1.39kB                                               1.1s
+ => => sha256:ab21590a433ada6ba2ee091dc5710f68550292b7ad2f12d16c4a5b8b35e04d89 118B / 118B                                                   1.1s
+ => => sha256:1c24335ddd46023ff99bd665bd8ea6798464f7bbf501718edcf2eb4696e5f408 387B / 387B                                                   0.9s
+ => => sha256:6f5c5aa4e145204b113f983c003ff8ad6489394294ef95ec030bc94e3daded54 41.55MB / 41.55MB                                             7.3s
+ => => extracting sha256:6f5c5aa4e145204b113f983c003ff8ad6489394294ef95ec030bc94e3daded54                                                    0.8s
+ => => extracting sha256:1c24335ddd46023ff99bd665bd8ea6798464f7bbf501718edcf2eb4696e5f408                                                    0.0s
+ => => extracting sha256:ab21590a433ada6ba2ee091dc5710f68550292b7ad2f12d16c4a5b8b35e04d89                                                    0.0s
+ => => extracting sha256:3a51ea730ce8fdebdad47e316542712fa961ff92daeb1a0fcee99ff37af40a16                                                    0.0s
+ => => extracting sha256:8152887621b649354d42f2864c573967d632fd6682488751dff8da232fa4e6c8                                                    3.3s
+ => => extracting sha256:99da708071e0840ad76e54f43e3782d4e5495e99c3bf37b93aa11c4c7d5c824f                                                    0.5s
+ => => extracting sha256:1585f086fca633b9d00758a605f2ad80f8732b67bdfad99191b336b990b7f477                                                    0.1s
+ => => extracting sha256:61c0f98467dd476a2fa73153b7afbb59cbdf5207af9e4ecf43650184182b7cf8                                                    0.0s
+ => => extracting sha256:f8e089e96419618ff337342add1c1be5ce057fdd58a20458ff7eedb2cdc90848                                                    0.1s
+ => => extracting sha256:e90a2eac24f6a9936b0b8ae0dd3111423f5622791af910e220bc37aefbb13d61                                                    0.2s
+ => => extracting sha256:f8f19cd6ea11b8e90674668f4e2030518069aa67a891d10b1d713d75f95b8a7a                                                    0.0s
+ => => extracting sha256:ccab984361cce2f803c705c21f1a01d864b88475f658a99091b67a2aa390342d                                                    0.2s
+ => => extracting sha256:9fb4ce8f1fdb756dba9c70326edda8791e52c44dc86d310fd32c78a7a978cbd3                                                    0.0s
+ => => extracting sha256:b7d5bb955f11c41244b3759b63e248c0c39981f1281f6ec17766eca95db2b92d                                                    0.1s
+ => => extracting sha256:bd6f728274e6f73df3d9d5372eb8f950966669963eb7aeb66ef4e76653c872a4                                                    0.1s
+ => => extracting sha256:efda168a4db78a7185cc520b68db3529f34861e185a9ad94c15f46c326807e1e                                                    0.0s
+ => => extracting sha256:ca2bb2124cdcbe0fd729eb1b7b5816ca41d3ff306cfe068bfd1cfd9d84a7f3b7                                                    0.0s
+ => => extracting sha256:1a91f31119cdadc86e6ab4b3308ef40baceb16a8a025a49c3273a37cd29da18a                                                    0.0s
+ => => extracting sha256:14ac5f35f0dd8a073571690577ada228d614f5111561ed282a85aa10419b36f7                                                    0.0s
+ => => extracting sha256:9870cb150f58e3c7d199bc63d422cc59759f2fd034fd06fd998283f7de0c0dcd                                                    0.0s
+ => => extracting sha256:d61497c2d52249c0c4602e037bab4e68558d0c25786117648a92baa83411c67b                                                    2.2s
+ => => extracting sha256:577a9cd743a59877066c9e346d7027cff2df540a7fb9f0671cde0f9ec279cf21                                                    0.0s
+ => => extracting sha256:1bf87554af333722478584c1fa47aeb507e4ba52e9ada710dce24190ac1059da                                                    0.0s
+ => => extracting sha256:be72f7c1222b46250fe6303e4cee8261e2897f05309566cc65a44af45b8a7d86                                                    0.0s
+ => => extracting sha256:f15351824ffd1bf413bdc456fac7bcb5b5010de0e1fb8d608089fb9a6886dc4c                                                    0.0s
+ => [ 2/16] WORKDIR /home/laborant                                                                                                           0.4s
+ => ERROR [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl l  5.2s
+------
+ > [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tcl zlib1g-dev libicu-dev gettext python3 python3-pip python3-venv python3-dev libpython3-dev libpython3.12 docbook-xml docbook-xsl libxml2-utils xsltproc fop:
+0.135 
+0.135 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+0.135 
+0.532 Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+0.666 Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+0.915 Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+1.420 Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [462 kB]
+2.050 Get:5 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [11.2 kB]
+2.050 Get:6 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [397 kB]
+2.154 Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+2.288 Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+2.852 Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+3.302 Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [561 kB]
+3.745 Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [14.3 kB]
+3.748 Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [412 kB]
+4.103 Get:13 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [567 B]
+4.124 Fetched 2756 kB in 4s (693 kB/s)
+4.124 Reading package lists...
+4.581 Building dependency tree...
+4.689 Reading state information...
+4.703 76 packages can be upgraded. Run 'apt list --upgradable' to see them.
+4.712 
+4.712 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+4.712 
+4.714 Reading package lists...
+5.093 Building dependency tree...
+5.197 Reading state information...
+5.224 Error: Unable to locate package libpython3.12
+5.224 Error: Couldn't find any package by glob 'libpython3.12'
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN sudo apt update \
+   6 | >>>     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tcl zlib1g-dev libicu-dev gettext python3 python3-pip python3-venv python3-dev libpython3-dev libpython3.12 docbook-xml docbook-xsl libxml2-utils xsltproc fop
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tcl zlib1g-dev libicu-dev gettext python3 python3-pip python3-venv python3-dev libpython3-dev libpython3.12 docbook-xml docbook-xsl libxml2-utils xsltproc fop" did not complete successfully: exit code: 100
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat /etc/o
+opt/        os-release  
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat /etc/os-release 
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ 
