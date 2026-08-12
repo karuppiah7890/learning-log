@@ -1,0 +1,72 @@
+ learning-log  master ✔  $ gpg --full-generate-key
+gpg (GnuPG/MacGPG2) 2.2.41; Copyright (C) 2022 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Karuppiah Natarajan
+Email address: 12808424+karuppiah7890@users.noreply.github.com
+Comment: 
+You selected this USER-ID:
+    "Karuppiah Natarajan <12808424+karuppiah7890@users.noreply.github.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: revocation certificate stored as '/Users/karuppiahn/.gnupg/openpgp-revocs.d/6CF6F943067B47DA2267D6C1785AE42F2A253ADD.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2026-08-12 [SC]
+      6CF6F943067B47DA2267D6C1785AE42F2A253ADD
+uid                      Karuppiah Natarajan <12808424+karuppiah7890@users.noreply.github.com>
+sub   rsa4096 2026-08-12 [E]
+
+ learning-log  master ✔  $ gpg --list-secret-keys --keyid-format=long
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+/Users/karuppiahn/.gnupg/pubring.kbx
+------------------------------------
+sec   rsa4096/C674A28337662A96 2019-06-04 [SC]
+      D92E92C12F3E7D3C0BABA73BC674A28337662A96
+uid                 [ unknown] Karuppiah Natarajan <karuppiah7890@gmail.com>
+ssb   rsa4096/2553FD20CE20765C 2019-06-04 [E]
+
+sec   rsa4096/785AE42F2A253ADD 2026-08-12 [SC]
+      6CF6F943067B47DA2267D6C1785AE42F2A253ADD
+uid                 [ultimate] Karuppiah Natarajan <12808424+karuppiah7890@users.noreply.github.com>
+ssb   rsa4096/EED92CA91675F2D3 2026-08-12 [E]
+
+ learning-log  master ✔  $ gst
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ learning-log  master ✔  $ 
