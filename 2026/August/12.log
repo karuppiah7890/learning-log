@@ -1516,3 +1516,362 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=noble
 LOGO=ubuntu-logo
 laborant@docker-01:iximiuz-labs-postgresql-19-playground$ 
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ apt update
+Error: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+Error: Unable to lock directory /var/lib/apt/lists/
+laborant@ubuntu-01:~$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [462 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [561 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [412 kB]
+Fetched 2197 kB in 2s (930 kB/s)                       
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt search libpython3
+libpython3-all-dbg/resolute 3.14.3-0ubuntu2 amd64
+  package depending on all supported Python 3 debugging packages
+
+libpython3-all-dev/resolute 3.14.3-0ubuntu2 amd64
+  package depending on all supported Python 3 development packages
+
+libpython3-dbg/resolute 3.14.3-0ubuntu2 amd64
+  debug build of the Python 3 Interpreter (version 3.14)
+
+libpython3-dev/resolute 3.14.3-0ubuntu2 amd64
+  header files and a static library for Python (default)
+
+libpython3-stdlib/resolute,now 3.14.3-0ubuntu2 amd64 [installed,automatic]
+  interactive high-level object-oriented language (default python3 version)
+
+libpython3.14/resolute-updates,resolute-security,now 3.14.4-1ubuntu0.1 amd64 [installed,automatic]
+  Shared Python runtime library (version 3.14)
+
+libpython3.14-dbg/resolute-updates,resolute-security 3.14.4-1ubuntu0.1 amd64
+  Debug Build of the Python Interpreter (version 3.14)
+
+libpython3.14-dev/resolute-updates,resolute-security 3.14.4-1ubuntu0.1 amd64
+  Header files and a static library for Python (v3.14)
+
+libpython3.14-minimal/resolute-updates,resolute-security,now 3.14.4-1ubuntu0.1 amd64 [installed,automatic]
+  Minimal subset of the Python language (version 3.14)
+
+libpython3.14-stdlib/resolute-updates,resolute-security,now 3.14.4-1ubuntu0.1 amd64 [installed,automatic]
+  Interactive high-level object-oriented language (standard library, version 3.14)
+
+libpython3.14-testsuite/resolute-updates,resolute-security 3.14.4-1ubuntu0.1 all
+  Testsuite for the Python standard library (v3.14)
+
+laborant@ubuntu-01:~$ 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@postgres-01:~$ su -c 'echo $HOME'
+Password: 
+laborant@postgres-01:~$ su -c 'echo $HOME' postgres 
+Password: 
+laborant@postgres-01:~$ sudo su -c 'echo $HOME' postgres 
+/home/postgres
+laborant@postgres-01:~$ sudo su -c 'echo $HOME' postgres ^C
+laborant@postgres-01:~$ man su
+laborant@postgres-01:~$ sudo su -c 'echo $HOME' 
+/root
+laborant@postgres-01:~$ sudo su -l postgres -c 'echo $HOME' 
+postgres
+laborant@postgres-01:~$ sudo su -l postgres -c 'echo $HOME' 
+/home/postgres
+laborant@postgres-01:~$ sudo su -l postgres -c 'pg_ctl init -D /usr/local/pgsql/data/' 
+-bash: line 1: pg_ctl: command not found
+laborant@postgres-01:~$ sudo - postgres
+sudo: -: command not found
+laborant@postgres-01:~$ sudo su - postgres
+postgres@postgres-01:~$ pg_ctl 
+pg_ctl: no operation specified
+Try "pg_ctl --help" for more information.
+postgres@postgres-01:~$ 
+logout
+laborant@postgres-01:~$ sudo su - postgres
+postgres@postgres-01:~$ pg_ctl init -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+
+postgres@postgres-01:~$ pg_ctl init -D /usr/local/pgsql/data/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+initdb: error: directory "/usr/local/pgsql/data" exists but is not empty
+initdb: hint: If you want to create a new database system, either remove or empty the directory "/usr/local/pgsql/data" or run initdb with an argument other than "/usr/local/pgsql/data".
+pg_ctl: database system initialization failed
+postgres@postgres-01:~$ echo $?
+1
+postgres@postgres-01:~$ 
+logout
+laborant@postgres-01:~$ /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+pg_ctl: could not open PID file "/usr/local/pgsql/data/postmaster.pid": Permission denied
+laborant@postgres-01:~$ sudo /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+pg_ctl: cannot be run as root
+Please log in (using, e.g., "su") as the (unprivileged) user that will
+own the server process.
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start"
+waiting for server to start..../bin/sh: 1: cannot create logfile: Permission denied
+ stopped waiting
+pg_ctl: could not start server
+Examine the log output.
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l $HOME/logfile start"
+waiting for server to start..../bin/sh: 1: cannot create /home/laborant/logfile: Permission denied
+ stopped waiting
+pg_ctl: could not start server
+Examine the log output.
+laborant@postgres-01:~$ sudo su postgres -u -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l $HOME/logfile start"
+Try 'su --help' for more information.
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgres-logfile start"
+waiting for server to start..../bin/sh: 1: cannot create /var/log/postgres-logfile: Permission denied
+ stopped waiting
+pg_ctl: could not start server
+Examine the log output.
+laborant@postgres-01:~$ 
+
+laborant@postgres-01:~$ RUN sudo mkdir -p /var/log/postgresql
+-bash: RUN: command not found
+laborant@postgres-01:~$ sudo mkdir -p /var/log/postgresql
+laborant@postgres-01:~$ sudo chown postgres /var/log/postgresql/
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgres/logfile start"
+waiting for server to start..../bin/sh: 1: cannot create /var/log/postgres/logfile: Directory nonexistent
+ stopped waiting
+pg_ctl: could not start server
+Examine the log output.
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+waiting for server to start.... done
+server started
+laborant@postgres-01:~$ psql
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  role "laborant" does not exist
+laborant@postgres-01:~$ psql -U postgresq
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  role "postgresq" does not exist
+laborant@postgres-01:~$ psql -U postgres
+psql (19beta1)
+Type "help" for help.
+
+postgres=# select * from pg_s
+pg_seclabel                      pg_stat_checkpointer             pg_stat_replication_slots        pg_statio_all_sequences
+pg_seclabels                     pg_stat_database                 pg_stat_slru                     pg_statio_all_tables
+pg_sequence                      pg_stat_database_conflicts       pg_stat_ssl                      pg_statio_sys_indexes
+pg_sequences                     pg_stat_gssapi                   pg_stat_subscription             pg_statio_sys_sequences
+pg_settings                      pg_stat_io                       pg_stat_subscription_stats       pg_statio_sys_tables
+pg_shadow                        pg_stat_lock                     pg_stat_sys_indexes              pg_statio_user_indexes
+pg_shdepend                      pg_stat_progress_analyze         pg_stat_sys_tables               pg_statio_user_sequences
+pg_shdescription                 pg_stat_progress_basebackup      pg_stat_user_functions           pg_statio_user_tables
+pg_shmem_allocations             pg_stat_progress_cluster         pg_stat_user_indexes             pg_statistic
+pg_shmem_allocations_numa        pg_stat_progress_copy            pg_stat_user_tables              pg_statistic_ext
+pg_shseclabel                    pg_stat_progress_create_index    pg_stat_wal                      pg_statistic_ext_data
+pg_stat_activity                 pg_stat_progress_data_checksums  pg_stat_wal_receiver             pg_stats
+pg_stat_all_indexes              pg_stat_progress_repack          pg_stat_xact_all_tables          pg_stats_ext
+pg_stat_all_tables               pg_stat_progress_vacuum          pg_stat_xact_sys_tables          pg_stats_ext_exprs
+pg_stat_archiver                 pg_stat_recovery                 pg_stat_xact_user_functions      pg_subscription
+pg_stat_autovacuum_scores        pg_stat_recovery_prefetch        pg_stat_xact_user_tables         pg_subscription_rel
+pg_stat_bgwriter                 pg_stat_replication              pg_statio_all_indexes            
+postgres=# select * from pg_se
+pg_seclabel   pg_seclabels  pg_sequence   pg_sequences  pg_settings   
+postgres=# select * from pg_settings where name = 'server_version';
+      name      | setting | unit |    category    |        short_desc         | extra_desc | context  | vartype | source  | min_val | max_val | en
+umvals | boot_val | reset_val | sourcefile | sourceline | pending_restart 
+----------------+---------+------+----------------+---------------------------+------------+----------+---------+---------+---------+---------+---
+-------+----------+-----------+------------+------------+-----------------
+ server_version | 19beta1 |      | Preset Options | Shows the server version. |            | internal | string  | default |         |         |   
+       | 19beta1  | 19beta1   |            |            | f
+(1 row)
+
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name = 'server_version';
+-[ RECORD 1 ]---+--------------------------
+name            | server_version
+setting         | 19beta1
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 19beta1
+reset_val       | 19beta1
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
+\q
+laborant@postgres-01:~$ 
+
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@postgres-01:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+
+laborant@postgres-01:~$ 
+
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@postgres-01:~$ psql -U postgres 
+psql (19beta1)
+Type "help" for help.
+
+postgres=# 
+\q
+laborant@postgres-01:~$ 
