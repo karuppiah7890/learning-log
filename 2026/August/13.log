@@ -320,3 +320,1899 @@ Notice: Can't select candidate version from package postgresql-19 as it has no c
 Notice: Can't select versions from package 'postgresql-19' as it is purely virtual
 Notice: No packages found
 laborant@ubuntu-01:~$ 
+
+iximiuz-labs-postgresql-19-playground > brew info labctl
+==> labctl ✘: stable 0.1.102 (bottled)
+CLI tool for interacting with iximiuz labs and playgrounds
+https://labs.iximiuz.com/playgrounds
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/l/labctl.rb
+License: Apache-2.0
+==> Downloading https://formulae.brew.sh/api/formula/labctl.json
+==> Analytics
+install: 88 (30 days), 332 (90 days), 753 (365 days)
+install-on-request: 88 (30 days), 332 (90 days), 753 (365 days)
+build-error: 0 (30 days)
+iximiuz-labs-postgresql-19-playground > brew install labctl
+==> Downloading Homebrew API data
+✔︎ JSON API packages.arm64_tahoe.jws.json                               Downloaded   15.6MB/ 15.6MB
+==> Downloading bottle manifests
+✔︎ Bottle Manifest labctl (0.1.102)                                     Downloaded   14.9KB/ 14.9KB
+==> Would install 1 formula:
+labctl
+==> Fetching downloads for: labctl
+✔︎ Bottle labctl (0.1.102)                                              Downloaded    4.0MB/  4.0MB
+==> Pouring labctl--0.1.102.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/labctl/0.1.102: 6 files, 10.2MB
+==> Running `brew cleanup labctl`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+iximiuz-labs-postgresql-19-playground > labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  course       Start and stop course lessons from the comfort of your terminal
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  ide          Open a playground in a local IDE
+  kube-proxy   Forward Kubernetes API port and set up kubeconfig for local kubectl access
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  search       Search iximiuz Labs content - challenges, tutorials, courses, and more
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > 
+
+iximiuz-labs-postgresql-19-playground > labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  course       Start and stop course lessons from the comfort of your terminal
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  ide          Open a playground in a local IDE
+  kube-proxy   Forward Kubernetes API port and set up kubeconfig for local kubectl access
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  search       Search iximiuz Labs content - challenges, tutorials, courses, and more
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl auth
+Authenticate the current CLI session with iximiuz Labs
+
+Usage:
+  labctl auth [command]
+
+Available Commands:
+  login       Log in as a Labs user (you will be prompted to open a browser page with a one-time use URL)
+  logout      Log out the current user by deleting the current CLI session
+  whoami      Print the current user info
+
+Flags:
+  -h, --help   help for auth
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl auth [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl auth login
+Opening https://labs.iximiuz.com/auth/sessions/6a7dc439599443decaa00da7 in your browser...
+
+Waiting for the session to be authorized... Done.
+
+Session authorized. You can now use labctl commands.
+iximiuz-labs-postgresql-19-playground > labctl auth login
+labctl: Already logged in. Use 'labctl auth logout' first if you want to log in as a different user.
+iximiuz-labs-postgresql-19-playground > labctl auth 
+Authenticate the current CLI session with iximiuz Labs
+
+Usage:
+  labctl auth [command]
+
+Available Commands:
+  login       Log in as a Labs user (you will be prompted to open a browser page with a one-time use URL)
+  logout      Log out the current user by deleting the current CLI session
+  whoami      Print the current user info
+
+Flags:
+  -h, --help   help for auth
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl auth [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl auth whoami
+userId: 694a655e63c2f9c6e22cf727
+githubProfileId: "12808424"
+preferredRegion: ap
+iximiuz-labs-postgresql-19-playground > labctl 
+labctl - iximiuz Labs command line interface.
+
+Usage:
+  labctl [command]
+
+Available Commands:
+  api          Send requests to iximiuz Labs API
+  auth         Authenticate the current CLI session with iximiuz Labs
+  challenge    Solve DevOps challenges from the comfort of your terminal
+  completion   Generate the autocompletion script for the specified shell
+  content      Author and manage content (challenge, tutorial, course, etc.)
+  course       Start and stop course lessons from the comfort of your terminal
+  cp           Copy files to and from the target playground
+  expose       Expose HTTP(s) ports and web terminals for a running playground
+  help         Help about any command
+  ide          Open a playground in a local IDE
+  kube-proxy   Forward Kubernetes API port and set up kubeconfig for local kubectl access
+  playground   List, start and stop playgrounds
+  port-forward Forward one or more local or remote ports to a running playground
+  search       Search iximiuz Labs content - challenges, tutorials, courses, and more
+  ssh          Start SSH session to the target playground
+  ssh-proxy    Start SSH proxy to the playground's machine
+  tutorial     Follow tutorials from the comfort of your local command line
+  version      Print the version of labctl
+
+Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -h, --help               help for labctl
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+  -v, --version            version for labctl
+
+Use "labctl [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl playground
+List, start and stop playgrounds
+
+Usage:
+  labctl playground [command]
+
+Aliases:
+  playground, p, playgrounds
+
+Available Commands:
+  catalog     List playgrounds from the catalog, optionally filtering by type
+  create      Create a new playground from a base and a manifest file
+  destroy     Destroy an active or stopped playground session, completely deleting its data
+  lifetime    Show or set a playground's lifetime - the total session duration counted from the playground's start (e.g., 90m, 3h, 2h30m)
+  list        List recent playground sessions
+  machine     Operate on a single machine of a playground session
+  machines    List machines of a specific playground session
+  manifest    View playground manifest
+  persist     Makes an active playground session persistent
+  region      Show or set your preferred region for new playgrounds (one of: eu, ap)
+  remove      Remove a playground you authored
+  restart     Restart a stopped playground session, resuming its state
+  start       Start a new playground session, possibly opening it in a browser
+  status      Show the status of a playground session
+  stop        Stop a running playground session, preserving its state for future use
+  tasks       List tasks of a playground session
+  update      Update an existing playground from a manifest file
+  wait        Wait until a playground's tasks are completed
+
+Flags:
+  -h, --help   help for playground
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl playground [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl playground region
+ap
+iximiuz-labs-postgresql-19-playground > labctl playground list
+PLAYGROUND RUN ID         PLAYGROUND NAME           PLAYGROUND RUN TITLE          CREATED        STATUS                                 LINK
+6a7dc27e1cb68d6fd08f144c  docker                                                  8 minutes ago  RUNNING (expires in 7 hours from now)  https://labs.iximiuz.com/playgrounds/docker/6a7dc27e1cb68d6fd08f144c
+6a709bad7d70f9985ade329b  my-nats-cluster-0c7f77c6  Run 6a709bad7d70f9985ade329b  1 week ago     STOPPED                                https://labs.iximiuz.com/playgrounds/my-nats-cluster-0c7f77c6/6a709bad7d70f9985ade329b
+iximiuz-labs-postgresql-19-playground > labctl playground catalog
+Available playgrounds:
+  - almalinux - A vanilla AlmaLinux server, for RHEL fans.
+  - alpine - A lightweight Alpine Linux server.
+  - archlinux - Arch Linux - for minimalists.
+  - coding-agent-base - Get a disposable agentic coding environment in seconds. Claude Code, Codex, Gemini CLI, and Opencode pre-installed and ready to use.
+  - dagger - A 4-in-1 playground (Docker, Podman, containerd, and Kubernetes hosts) to experiment with Dagger - a powerful development workflow automation engine.
+  - debian-oldstable - A vanilla Debian Bookworm (oldstable) server.
+  - debian-stable - A vanilla Debian Trixie (stable) server.
+  - debian-testing - A vanilla Debian Forky (testing) server.
+  - docker - A Linux server with Docker engine pre-installed.
+  - docker-swarm - A three-node swarm accompanied by an ephemeral registry for ease of experimentation. Batteries included!
+  - fedora - A vanilla Fedora Linux server, for RHEL fans.
+  - flexbox - Your perfect base playground. Create purpose-built sandbox environments by choosing up to five VMs with custom root filesystems and organizing them into any number of local networks.
+  - golang - A fresh Go version and a loaded VS Code (or Vim) is all you need.
+  - incus - Incus is an actively improved community fork of LXD. Do you need systemd inside your containers? Give Incus a try!
+  - k0s - A single-node K0s cluster.
+  - k3s - A multi-node K3s cluster with a load balancer, Helm, and more.
+  - k3s-bare - A single-node cluster with most of the K3s bells and whistles disabled.
+  - k8s-client-go - A collection of mini-programs demonstrating Kubernetes client-go usage and a loaded IDE. Handy if you need to write a controller or two.
+  - k8s-omni - A multi-node Kubernetes cluster provisioned with kubeadm, allowing you to choose your preferred container runtime and networking plugin. Perfect for CKA, CKAD, and CKS preparation.
+  - kali-linux - Kali Linux - for all sorts of information security testing.
+  - kamal - Kamal is a simple but handy tool to deploy containerized web apps on good old VMs.
+  - mini-lan-ubuntu - Four refined Ubuntu VMs connected into a single network.
+  - mini-lan-ubuntu-docker - Four Ubuntu servers with Docker pre-installed connected into a single network.
+  - mintoolkit - Don't change anything in your container image and minify it by up to 30x making it secure, too!
+  - nerdctl - nerdctl, containerd, and BuildKit packed together for true nerds.
+  - nixos - A ready-to-use NixOS server for exploring the full Nix experience without installing it on your own machine.
+  - nodejs - The latest Node.js, NVM, Docker, VS Code, and a bunch of extensions.
+  - opensuse-tumbleweed - A rolling, easy to use and complete multi-purpose distribution.
+  - podman - A Linux server with Podman, a daemonless Docker alternative, pre-installed.
+  - python - The latest Python 3.x, pyenv, uv, Docker, VS Code, and a bunch of extensions.
+  - rockylinux - A vanilla Rocky Linux server, for RHEL fans.
+  - shellgym - Try Shell Gym - an interactive Linux command-line trainer - in a ready-made Ubuntu VM: daemon running, web UI open, sample learning path loaded.
+  - tetragon - A 3-in-1 playground (Kubernetes, Docker, and vanilla Linux hosts) to experiment with Tetragon - an eBPF-powered security observability tool.
+  - ubuntu-22-04 - A vanilla Ubuntu 22.04 server.
+  - ubuntu-24-04 - A vanilla Ubuntu 24.04 server.
+  - ubuntu-26-04 - A vanilla Ubuntu 26.04 server.
+  - zig - Get started with Zig in no time using an in-browser VS Code with handy addons preinstalled.
+iximiuz-labs-postgresql-19-playground > labctl playground catalog -h
+List playgrounds from the catalog, optionally filtering by type
+
+Usage:
+  labctl playground catalog [flags]
+
+Aliases:
+  catalog, cat
+
+Flags:
+  -f, --filter string   Filter to use for catalog list. ("my-custom", "recent", "popular", "community") (default no filter, meaning only the official playgrounds)
+  -h, --help            help for catalog
+  -q, --quiet           Only print playground names
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+iximiuz-labs-postgresql-19-playground > 
+
+Welcome to iximiuz Labs' Docker Playground! 🚀
+
+Experiment with Docker in a safe and isolated environment.
+
+Batteries included:
+
+- dive: A CLI to explore container images and layers.
+- cdebug: A swiss army knife of container debugging.
+- crane: A CLI to manipulate container images.
+- regctl: A CLI to interact with container registries.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@docker-01:~$ git clone https://github.com/karuppiah7890/iximiuz-labs-postgresql-19-playground.git
+Cloning into 'iximiuz-labs-postgresql-19-playground'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 28 (delta 9), reused 25 (delta 6), pack-reused 0 (from 0)
+Receiving objects: 100% (28/28), 8.04 KiB | 8.04 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+laborant@docker-01:~$ cd iximiuz-labs-postgresql-19-playground/
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ ls
+CONTRIBUTING.md  Dockerfile  Dockerfile.debug  README.md  references.md  start-server.sh
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat CONTRIBUTING.md 
+## Debugging Docker builds
+
+To debug what's being sent as part of the build context, please use the `Dockerfile.debug` file like this -
+
+```bash
+DOCKER_BUILDKIT=0 docker build --file Dockerfile.debug .
+```
+
+Accordingly modify the `.dockerignore` file
+
+And if the build is cached, use below to create a new build without cache
+
+```bash
+DOCKER_BUILDKIT=0 docker build --no-cache --file Dockerfile.debug .
+```
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ DOCKER_BUILDKIT=0 docker build --no-cache --file Dockerfile.debug .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM busybox
+latest: Pulling from library/busybox
+b05093807bb0: Pulling fs layer
+b05093807bb0: Download complete
+b05093807bb0: Pull complete
+7270b3e1860c: Download complete
+Digest: sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616
+Status: Downloaded newer image for busybox:latest
+ ---> dc2d74b28e4c
+Step 2/3 : COPY . /build_context
+ ---> 6fb26186cd7e
+Step 3/3 : RUN find /build_context
+ ---> Running in de9b968bf68c
+/build_context
+ ---> Removed intermediate container de9b968bf68c
+ ---> 2090da5cf8a8
+Successfully built 2090da5cf8a8
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19-beta2 .
+[+] Building 106.9s (8/19)                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.36kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            1.9s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 321B                                                                                                                    0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                   39.5s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6 759B / 759B                                                           0.5s
+ => => sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612 2.21kB / 2.21kB                                                       0.4s
+ => => sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c 2.99MB / 2.99MB                                                       0.7s
+ => => sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75 237B / 237B                                                           0.5s
+ => => sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5 320.51MB / 320.51MB                                                  36.5s
+ => => sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0 5.56MB / 5.56MB                                                       0.7s
+ => => sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935 715B / 715B                                                           0.4s
+ => => sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04 723B / 723B                                                           0.4s
+ => => sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b 4.01kB / 4.01kB                                                       0.4s
+ => => sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d 203B / 203B                                                           0.4s
+ => => sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d 1.85kB / 1.85kB                                                       0.5s
+ => => sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4 2.99MB / 2.99MB                                                       1.5s
+ => => sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53 9.01MB / 9.01MB                                                       1.6s
+ => => sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9 3.16MB / 3.16MB                                                       0.5s
+ => => sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715 27.52MB / 27.52MB                                                     4.2s
+ => => sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5 0B / 1.07MB                                                         102.0s
+ => => sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86 24.44MB / 24.44MB                                                     2.9s
+ => => sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c 701B / 701B                                                           0.5s
+ => => sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f 25.25MB / 25.25MB                                                     4.5s
+ => => sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973 198.57MB / 198.57MB                                                  20.9s
+ => => sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e 5.37MB / 5.37MB                                                       1.9s
+ => => sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb 1.39kB / 1.39kB                                                       0.5s
+ => => sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84 118B / 118B                                                           0.5s
+ => => sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257 29.73MB / 29.73MB                                                     3.3s
+ => => extracting sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257                                                            0.5s
+ => => extracting sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84                                                            0.0s
+ => => extracting sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb                                                            0.0s
+ => => extracting sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973                                                            4.0s
+ => => extracting sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e                                                            0.3s
+ => => extracting sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f                                                            0.2s
+ => => extracting sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c                                                            0.0s
+ => => extracting sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0                                                            0.0s
+ => => extracting sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86                                                            0.2s
+ => => extracting sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5                                                            0.0s
+ => => extracting sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715                                                            0.2s
+ => => extracting sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9                                                            0.0s
+ => => extracting sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53                                                            0.1s
+ => => extracting sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4                                                            0.0s
+ => => extracting sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d                                                            0.0s
+ => => extracting sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d                                                            0.0s
+ => => extracting sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04                                                            0.0s
+ => => extracting sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b                                                            0.0s
+ => => extracting sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935                                                            0.0s
+ => => extracting sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5                                                            2.3s
+ => => extracting sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c                                                            0.0s
+ => => extracting sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612                                                            0.0s
+ => => extracting sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75                                                            0.0s
+ => => extracting sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6                                                            0.0s
+ => [ 2/16] WORKDIR /home/laborant                                                                                                                   1.2s
+ => [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tc  59.2s
+ => [ 4/16] RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz                                                        4.9s
+ => ERROR [ 5/16] RUN tar -xvzf postgresql-19beta1.tar.gz                                                                                            0.3s
+------
+ > [ 5/16] RUN tar -xvzf postgresql-19beta1.tar.gz:
+0.236 tar (child): postgresql-19beta1.tar.gz: Cannot open: No such file or directory
+0.236 tar (child): Error is not recoverable: exiting now
+0.236 tar: Child returned status 2
+0.236 tar: Error is not recoverable: exiting now
+------
+Dockerfile:10
+--------------------
+   8 |     RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz
+   9 |     
+  10 | >>> RUN tar -xvzf postgresql-19beta1.tar.gz
+  11 |     
+  12 |     WORKDIR /home/laborant/postgresql-19beta1
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c tar -xvzf postgresql-19beta1.tar.gz" did not complete successfully: exit code: 2
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19-beta2 .
+[+] Building 1.8s (10/19)                                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.36kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            0.5s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 321B                                                                                                                    0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                    0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => CACHED [ 2/16] WORKDIR /home/laborant                                                                                                            0.0s
+ => CACHED [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-  0.0s
+ => CACHED [ 4/16] RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz                                                 0.0s
+ => [ 5/16] RUN tar -xvzf postgresql-19beta2.tar.gz                                                                                                  0.9s
+ => [ 6/16] WORKDIR /home/laborant/postgresql-19beta1                                                                                                0.1s 
+ => ERROR [ 7/16] RUN ./configure                                                                                                                    0.2s 
+------                                                                                                                                                    
+ > [ 7/16] RUN ./configure:                                                                                                                               
+0.161 /bin/sh: 1: ./configure: not found                                                                                                                  
+------                                                                                                                                                    
+Dockerfile:14
+--------------------
+  12 |     WORKDIR /home/laborant/postgresql-19beta1
+  13 |     
+  14 | >>> RUN ./configure
+  15 |     
+  16 |     RUN make world
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c ./configure" did not complete successfully: exit code: 127
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19-beta2 .
+[+] Building 148.4s (10/19)                                                                                                                docker:default
+[+] Building 247.4s (20/20) FINISHED                                                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.36kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            0.2s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 321B                                                                                                                    0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                    0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => CACHED [ 2/16] WORKDIR /home/laborant                                                                                                            0.0s
+ => CACHED [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-  0.0s
+ => CACHED [ 4/16] RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz                                                 0.0s
+ => CACHED [ 5/16] RUN tar -xvzf postgresql-19beta2.tar.gz                                                                                           0.0s
+ => [ 6/16] WORKDIR /home/laborant/postgresql-19beta2                                                                                                0.0s
+ => [ 7/16] RUN ./configure                                                                                                                          7.7s 
+ => [ 8/16] RUN make world                                                                                                                         203.4s 
+ => [ 9/16] RUN make check                                                                                                                           9.9s 
+ => [10/16] RUN sudo make install-world                                                                                                              2.2s 
+ => [11/16] RUN sudo adduser postgres                                                                                                                0.2s 
+ => [12/16] RUN sudo mkdir -p /usr/local/pgsql/data                                                                                                  0.3s 
+ => [13/16] RUN sudo chown postgres /usr/local/pgsql/data                                                                                            0.2s 
+ => [14/16] RUN echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /home/laborant/.bashrc && echo 'export PATH="$PATH:/usr/local/pgsql/  0.3s 
+ => [15/16] WORKDIR /home/laborant                                                                                                                   0.0s 
+ => [16/16] RUN { echo "Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀\n";       echo "Run \`psql -U postgres\` to connect to the PostgreS     0.3s 
+ => exporting to image                                                                                                                              22.6s
+ => => exporting layers                                                                                                                             16.5s
+ => => exporting manifest sha256:91b2667574a06dab608cacd16a6d2320fb76a0052d24af0dd30147fa7548eaf1                                                    0.0s
+ => => exporting config sha256:8ae77346d2e08002d2ebec1ec2574780d3ac631dcf04cb5c95da63ddf8eb94ec                                                      0.0s
+ => => exporting attestation manifest sha256:36788c48fd01d1887e87cfd27201e987e8ea2d2388727397327a1564845f312b                                        0.0s
+ => => exporting manifest list sha256:dc20bc9e953667a7d30e56f50058d2e234aa910043ed0713c32912742b60accc                                               0.0s
+ => => naming to docker.io/library/postgresql-19-beta2:latest                                                                                        0.0s
+ => => unpacking to docker.io/library/postgresql-19-beta2:latest                                                                                     6.1s
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ 
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19-beta2 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@5c185153d015:~$ ls
+postgresql-19beta2  postgresql-19beta2.tar.gz
+laborant@5c185153d015:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+
+laborant@5c185153d015:~$ sudo mkdir -p /var/log/postgresql
+laborant@5c185153d015:~$ sudo chown postgres /var/log/postgresql
+laborant@5c185153d015:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+waiting for server to start.... done
+server started
+laborant@5c185153d015:~$ psql
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  role "laborant" does not exist
+laborant@5c185153d015:~$ psql -U postgres 
+psql (19beta2)
+Type "help" for help.
+
+postgres=# select * from pg_se
+pg_seclabel   pg_seclabels  pg_sequence   pg_sequences  pg_settings   
+postgres=# select * from pg_settings where name = 'server_version';
+      name      | setting | unit |    category    |        short_desc         | extra_desc | context  | vartype | source  | min_val | max_val | enumvals |
+ boot_val | reset_val | sourcefile | sourceline | pending_restart 
+----------------+---------+------+----------------+---------------------------+------------+----------+---------+---------+---------+---------+----------+
+----------+-----------+------------+------------+-----------------
+ server_version | 19beta2 |      | Preset Options | Shows the server version. |            | internal | string  | default |         |         |          |
+ 19beta2  | 19beta2   |            |            | f
+(1 row)
+
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name = 'server_version';
+-[ RECORD 1 ]---+--------------------------
+name            | server_version
+setting         | 19beta2
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 19beta2
+reset_val       | 19beta2
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
+\q
+laborant@5c185153d015:~$ 
+
+laborant@docker-01:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+laborant@docker-01:~$ docker run --rm -it postgresql-19-beta2 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@8debe2878d23:~$ 
+exit
+laborant@docker-01:~$ docker run --rm -it postgresql-19-beta2 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@3968be7eb537:~$ 
+
+laborant@docker-01:~$ cd iximiuz-labs-postgresql-19-playground/
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ cat Dockerfile
+FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04
+
+WORKDIR /home/laborant
+
+RUN sudo apt update \
+    && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tcl zlib1g-dev libicu-dev gettext python3 python3-pip python3-venv python3-dev libpython3-dev libpython3.12 docbook-xml docbook-xsl libxml2-utils xsltproc fop
+
+RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz
+
+RUN tar -xvzf postgresql-19beta2.tar.gz
+
+WORKDIR /home/laborant/postgresql-19beta2
+
+RUN ./configure
+
+RUN make world
+
+RUN make check
+
+RUN sudo make install-world
+
+RUN sudo adduser postgres
+
+RUN sudo mkdir -p /usr/local/pgsql/data
+
+RUN sudo chown postgres /usr/local/pgsql/data
+
+RUN echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /home/laborant/.bashrc && echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /home/postgres/.bashrc && echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /root/.bashrc
+
+WORKDIR /home/laborant
+
+RUN { echo "Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀\n"; \
+      echo "Run \`psql -U postgres\` to connect to the PostgreSQL server\n"; \
+      echo "This is also a Ubuntu Playground! Details below!\n"; \
+      cat $HOME/.welcome; \
+    } > $HOME/.new_welcome && mv $HOME/.new_welcome $HOME/.welcome
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ 
+
+iximiuz-labs-postgresql-19-playground > labctl playground list --all
+PLAYGROUND RUN ID         PLAYGROUND NAME                                PLAYGROUND RUN TITLE                  CREATED         STATUS                                 LINK
+6a7dc27e1cb68d6fd08f144c  docker                                                                               17 minutes ago  RUNNING (expires in 7 hours from now)  https://labs.iximiuz.com/playgrounds/docker/6a7dc27e1cb68d6fd08f144c
+6a7dc25a1cb68d6fd08f0171  ubuntu-26-04                                                                         17 minutes ago  DESTROYED                              
+6a7d6ee2c3c0c2145987e480  ubuntu-26-04                                                                         6 hours ago     DESTROYED                              
+6a7d6db4c62c2bb0a1b50800  ubuntu-26-04                                                                         6 hours ago     DESTROYED                              
+6a7ca44ec62c2bb0a18c49d3  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca240c3c0c214595ed7fb  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca3a9c62c2bb0a18c1c23  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca15ec62c2bb0a18b6153  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7c95d0c3c0c214595a8b78  docker                                                                               21 hours ago    DESTROYED                              
+6a7c9d5ec3c0c214595d4ef8  ubuntu-26-04                                                                         21 hours ago    DESTROYED                              
+6a7446ae90f96b9ceed10997  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a7453b8476a6ac24e921841  my-nats-cluster-200-million-messages-b69593f6                                        1 week ago      DESTROYED                              
+6a744673476a6ac24e8d29ad  my-nats-cluster-200-million-messages-b69593f6                                        1 week ago      DESTROYED                              
+6a71cb6cb9266907c8bad5f0  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b (clone)  1 week ago      DESTROYED                              
+6a71cad9b9266907c8ba9b4e  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b (clone)  1 week ago      DESTROYED                              
+6a709bad7d70f9985ade329b  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b          1 week ago      STOPPED                                https://labs.iximiuz.com/playgrounds/my-nats-cluster-0c7f77c6/6a709bad7d70f9985ade329b
+6a70494f9ef1d3d34812dd10  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f387d9ef1d3d348b2a15e  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f341d9ef1d3d348b1012a  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f136870a2340e41f4ca20  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f07039ef1d3d348a20231  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6efe589ef1d3d3489d7ab4  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6ca3cf0c7069ee898be373  ubuntu-desktop-on-web-df04797f                                                       1 week ago      DESTROYED                              
+6a6ca37fbc784accfacbd802  omakub-83894d18                                                                      1 week ago      DESTROYED                              
+6a6ca343bc784accfacbcfbf  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9d3d0c7069ee8988b10b  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9c8abc784accfac7f540  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9b440c7069ee8987a582  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c2e350c7069ee8966e070  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6b8752bc784accfa881231  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6b5cb854b4b713f10f63e0  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a69b993395bda02ff15d49c  my-nats-cluster-0c7f77c6                                                             2 weeks ago     DESTROYED                              
+6a69b63b395bda02ff148c47  nats-cluster-1a099c6b                                                                2 weeks ago     DESTROYED                              
+6a67674e395bda02ff974a14  shellgym                                                                             2 weeks ago     DESTROYED                              
+6a60b605727d69056e20eef8  wazuh-68fe85b0                                                                       3 weeks ago     DESTROYED                              
+6a58a06a67b3c9a7dc663246  wazuh-68fe85b0                                                                       4 weeks ago     DESTROYED                              
+6a589c3d5a441f90543ad152  ubuntu-26-04                                                                         4 weeks ago     DESTROYED                              
+6a58732067b3c9a7dc5780f3  ubuntu-26-04                                                                         4 weeks ago     DESTROYED                              
+6a5874195a441f9054307d0d  ubuntu-22-04                                                                         4 weeks ago     DESTROYED                              
+6a55ebe11af4cd3ddb217533  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cd51ad10af5721641517  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cc5fad10af572163b630  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cbcfad10af5721639998  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54ccf0cb5a0dcbe47308ff  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54ca9dad10af5721635c05  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c926ad10af57216188e9  ubuntu-26-04                                                                         1 month ago     DESTROYED                              
+6a54c832cb5a0dcbe46f39a4  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c761cb5a0dcbe46eb7f1  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c672cb5a0dcbe46e690f  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c5a0ad10af57215f9265  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+iximiuz-labs-postgresql-19-playground > labctl playground 
+List, start and stop playgrounds
+
+Usage:
+  labctl playground [command]
+
+Aliases:
+  playground, p, playgrounds
+
+Available Commands:
+  catalog     List playgrounds from the catalog, optionally filtering by type
+  create      Create a new playground from a base and a manifest file
+  destroy     Destroy an active or stopped playground session, completely deleting its data
+  lifetime    Show or set a playground's lifetime - the total session duration counted from the playground's start (e.g., 90m, 3h, 2h30m)
+  list        List recent playground sessions
+  machine     Operate on a single machine of a playground session
+  machines    List machines of a specific playground session
+  manifest    View playground manifest
+  persist     Makes an active playground session persistent
+  region      Show or set your preferred region for new playgrounds (one of: eu, ap)
+  remove      Remove a playground you authored
+  restart     Restart a stopped playground session, resuming its state
+  start       Start a new playground session, possibly opening it in a browser
+  status      Show the status of a playground session
+  stop        Stop a running playground session, preserving its state for future use
+  tasks       List tasks of a playground session
+  update      Update an existing playground from a manifest file
+  wait        Wait until a playground's tasks are completed
+
+Flags:
+  -h, --help   help for playground
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl playground [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl playground manifest -h
+View playground manifest
+
+Usage:
+  labctl playground manifest <playground-name> [flags]
+
+Flags:
+  -h, --help   help for manifest
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+iximiuz-labs-postgresql-19-playground > labctl playground manifest 
+Error: accepts 1 arg(s), received 0
+Usage:
+  labctl playground manifest <playground-name> [flags]
+
+Flags:
+  -h, --help   help for manifest
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19
+labctl: Couldn't get playground: not found.
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19-e92a0d56
+kind: playground
+name: postgresql-19-e92a0d56
+base: flexbox
+title: PostgreSQL 19
+description: PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+cover: /content/files/playgrounds/postgresql-19-e92a0d56/__static__/postgresql.png
+categories:
+    - linux
+    - networking
+markdown: |-
+    PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+
+    PostgreSQL 19 Beta 1 Release - https://www.postgresql.org/about/news/postgresql-19-beta-1-released-3313/
+
+    Coming Soon: We'll soon update this playground to include PostgreSQL 19 Beta 2 which got released recently - https://www.postgresql.org/about/news/postgresql-19-beta-2-released-3350/
+playground:
+    networks:
+        - name: local
+          subnet: 172.16.0.0/24
+    machines:
+        - name: postgres-01
+          users:
+            - name: root
+            - name: laborant
+              default: true
+          drives:
+            - source: oci://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.1
+              mount: /
+          network:
+            interfaces:
+                - network: local
+          resources:
+            cpuCount: 4
+            ramSize: 10GiB
+    tabs:
+        - id: terminal-postgres-01
+          kind: terminal
+          name: postgres-01
+          machine: postgres-01
+    initTasks:
+        init_postgres_01_1:
+            name: init_postgres_01_1
+            machine: postgres-01
+            init: true
+            user: root
+            timeout_seconds: 300
+            run: |-
+                #!/bin/bash
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+
+                sudo mkdir -p /var/log/postgresql
+
+                sudo chown postgres /var/log/postgresql
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+    accessControl:
+        canList:
+            - anyone
+        canRead:
+            - anyone
+        canStart:
+            - anyone
+iximiuz-labs-postgresql-19-playground > 
+
+iximiuz-labs-postgresql-19-playground > labctl playground list --all
+PLAYGROUND RUN ID         PLAYGROUND NAME                                PLAYGROUND RUN TITLE                  CREATED         STATUS                                 LINK
+6a7dc27e1cb68d6fd08f144c  docker                                                                               17 minutes ago  RUNNING (expires in 7 hours from now)  https://labs.iximiuz.com/playgrounds/docker/6a7dc27e1cb68d6fd08f144c
+6a7dc25a1cb68d6fd08f0171  ubuntu-26-04                                                                         17 minutes ago  DESTROYED                              
+6a7d6ee2c3c0c2145987e480  ubuntu-26-04                                                                         6 hours ago     DESTROYED                              
+6a7d6db4c62c2bb0a1b50800  ubuntu-26-04                                                                         6 hours ago     DESTROYED                              
+6a7ca44ec62c2bb0a18c49d3  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca240c3c0c214595ed7fb  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca3a9c62c2bb0a18c1c23  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7ca15ec62c2bb0a18b6153  postgresql-19-e92a0d56                                                               20 hours ago    DESTROYED                              
+6a7c95d0c3c0c214595a8b78  docker                                                                               21 hours ago    DESTROYED                              
+6a7c9d5ec3c0c214595d4ef8  ubuntu-26-04                                                                         21 hours ago    DESTROYED                              
+6a7446ae90f96b9ceed10997  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a7453b8476a6ac24e921841  my-nats-cluster-200-million-messages-b69593f6                                        1 week ago      DESTROYED                              
+6a744673476a6ac24e8d29ad  my-nats-cluster-200-million-messages-b69593f6                                        1 week ago      DESTROYED                              
+6a71cb6cb9266907c8bad5f0  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b (clone)  1 week ago      DESTROYED                              
+6a71cad9b9266907c8ba9b4e  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b (clone)  1 week ago      DESTROYED                              
+6a709bad7d70f9985ade329b  my-nats-cluster-0c7f77c6                       Run 6a709bad7d70f9985ade329b          1 week ago      STOPPED                                https://labs.iximiuz.com/playgrounds/my-nats-cluster-0c7f77c6/6a709bad7d70f9985ade329b
+6a70494f9ef1d3d34812dd10  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f387d9ef1d3d348b2a15e  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f341d9ef1d3d348b1012a  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f136870a2340e41f4ca20  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6f07039ef1d3d348a20231  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6efe589ef1d3d3489d7ab4  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6ca3cf0c7069ee898be373  ubuntu-desktop-on-web-df04797f                                                       1 week ago      DESTROYED                              
+6a6ca37fbc784accfacbd802  omakub-83894d18                                                                      1 week ago      DESTROYED                              
+6a6ca343bc784accfacbcfbf  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9d3d0c7069ee8988b10b  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9c8abc784accfac7f540  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c9b440c7069ee8987a582  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6c2e350c7069ee8966e070  my-nats-cluster-0c7f77c6                                                             1 week ago      DESTROYED                              
+6a6b8752bc784accfa881231  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a6b5cb854b4b713f10f63e0  clickhouse-keeper-cluster-7f2a5d54                                                   1 week ago      DESTROYED                              
+6a69b993395bda02ff15d49c  my-nats-cluster-0c7f77c6                                                             2 weeks ago     DESTROYED                              
+6a69b63b395bda02ff148c47  nats-cluster-1a099c6b                                                                2 weeks ago     DESTROYED                              
+6a67674e395bda02ff974a14  shellgym                                                                             2 weeks ago     DESTROYED                              
+6a60b605727d69056e20eef8  wazuh-68fe85b0                                                                       3 weeks ago     DESTROYED                              
+6a58a06a67b3c9a7dc663246  wazuh-68fe85b0                                                                       4 weeks ago     DESTROYED                              
+6a589c3d5a441f90543ad152  ubuntu-26-04                                                                         4 weeks ago     DESTROYED                              
+6a58732067b3c9a7dc5780f3  ubuntu-26-04                                                                         4 weeks ago     DESTROYED                              
+6a5874195a441f9054307d0d  ubuntu-22-04                                                                         4 weeks ago     DESTROYED                              
+6a55ebe11af4cd3ddb217533  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cd51ad10af5721641517  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cc5fad10af572163b630  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54cbcfad10af5721639998  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54ccf0cb5a0dcbe47308ff  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54ca9dad10af5721635c05  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c926ad10af57216188e9  ubuntu-26-04                                                                         1 month ago     DESTROYED                              
+6a54c832cb5a0dcbe46f39a4  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c761cb5a0dcbe46eb7f1  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c672cb5a0dcbe46e690f  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+6a54c5a0ad10af57215f9265  nats-cluster-1a099c6b                                                                1 month ago     DESTROYED                              
+iximiuz-labs-postgresql-19-playground > labctl playground 
+List, start and stop playgrounds
+
+Usage:
+  labctl playground [command]
+
+Aliases:
+  playground, p, playgrounds
+
+Available Commands:
+  catalog     List playgrounds from the catalog, optionally filtering by type
+  create      Create a new playground from a base and a manifest file
+  destroy     Destroy an active or stopped playground session, completely deleting its data
+  lifetime    Show or set a playground's lifetime - the total session duration counted from the playground's start (e.g., 90m, 3h, 2h30m)
+  list        List recent playground sessions
+  machine     Operate on a single machine of a playground session
+  machines    List machines of a specific playground session
+  manifest    View playground manifest
+  persist     Makes an active playground session persistent
+  region      Show or set your preferred region for new playgrounds (one of: eu, ap)
+  remove      Remove a playground you authored
+  restart     Restart a stopped playground session, resuming its state
+  start       Start a new playground session, possibly opening it in a browser
+  status      Show the status of a playground session
+  stop        Stop a running playground session, preserving its state for future use
+  tasks       List tasks of a playground session
+  update      Update an existing playground from a manifest file
+  wait        Wait until a playground's tasks are completed
+
+Flags:
+  -h, --help   help for playground
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+Use "labctl playground [command] --help" for more information about a command.
+iximiuz-labs-postgresql-19-playground > labctl playground manifest -h
+View playground manifest
+
+Usage:
+  labctl playground manifest <playground-name> [flags]
+
+Flags:
+  -h, --help   help for manifest
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+iximiuz-labs-postgresql-19-playground > labctl playground manifest 
+Error: accepts 1 arg(s), received 0
+Usage:
+  labctl playground manifest <playground-name> [flags]
+
+Flags:
+  -h, --help   help for manifest
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19
+labctl: Couldn't get playground: not found.
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19-e92a0d56
+kind: playground
+name: postgresql-19-e92a0d56
+base: flexbox
+title: PostgreSQL 19
+description: PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+cover: /content/files/playgrounds/postgresql-19-e92a0d56/__static__/postgresql.png
+categories:
+    - linux
+    - networking
+markdown: |-
+    PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+
+    PostgreSQL 19 Beta 1 Release - https://www.postgresql.org/about/news/postgresql-19-beta-1-released-3313/
+
+    Coming Soon: We'll soon update this playground to include PostgreSQL 19 Beta 2 which got released recently - https://www.postgresql.org/about/news/postgresql-19-beta-2-released-3350/
+playground:
+    networks:
+        - name: local
+          subnet: 172.16.0.0/24
+    machines:
+        - name: postgres-01
+          users:
+            - name: root
+            - name: laborant
+              default: true
+          drives:
+            - source: oci://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.1
+              mount: /
+          network:
+            interfaces:
+                - network: local
+          resources:
+            cpuCount: 4
+            ramSize: 10GiB
+    tabs:
+        - id: terminal-postgres-01
+          kind: terminal
+          name: postgres-01
+          machine: postgres-01
+    initTasks:
+        init_postgres_01_1:
+            name: init_postgres_01_1
+            machine: postgres-01
+            init: true
+            user: root
+            timeout_seconds: 300
+            run: |-
+                #!/bin/bash
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+
+                sudo mkdir -p /var/log/postgresql
+
+                sudo chown postgres /var/log/postgresql
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+    accessControl:
+        canList:
+            - anyone
+        canRead:
+            - anyone
+        canStart:
+            - anyone
+iximiuz-labs-postgresql-19-playground > 
+
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19-e92a0d56 
+kind: playground
+name: postgresql-19-e92a0d56
+base: flexbox
+title: PostgreSQL 19
+description: PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+cover: /content/files/playgrounds/postgresql-19-e92a0d56/__static__/postgresql.png
+categories:
+    - linux
+    - networking
+markdown: |-
+    PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database
+
+    PostgreSQL 19 Beta 1 Release - https://www.postgresql.org/about/news/postgresql-19-beta-1-released-3313/
+
+    Coming Soon: We'll soon update this playground to include PostgreSQL 19 Beta 2 which got released recently - https://www.postgresql.org/about/news/postgresql-19-beta-2-released-3350/
+playground:
+    networks:
+        - name: local
+          subnet: 172.16.0.0/24
+    machines:
+        - name: postgres-01
+          users:
+            - name: root
+            - name: laborant
+              default: true
+          drives:
+            - source: oci://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.1
+              mount: /
+          network:
+            interfaces:
+                - network: local
+          resources:
+            cpuCount: 4
+            ramSize: 10GiB
+    tabs:
+        - id: terminal-postgres-01
+          kind: terminal
+          name: postgres-01
+          machine: postgres-01
+    initTasks:
+        init_postgres_01_1:
+            name: init_postgres_01_1
+            machine: postgres-01
+            init: true
+            user: root
+            timeout_seconds: 300
+            run: |-
+                #!/bin/bash
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+
+                sudo mkdir -p /var/log/postgresql
+
+                sudo chown postgres /var/log/postgresql
+
+                sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+    accessControl:
+        canList:
+            - anyone
+        canRead:
+            - anyone
+        canStart:
+            - anyone
+iximiuz-labs-postgresql-19-playground > labctl playground manifest postgresql-19-e92a0d56 > postgresql-19-e92a0d56-playground.yaml
+iximiuz-labs-postgresql-19-playground > 
+
+{
+  "id": "6a7dc8241cb68d6fd09141f3",
+  "createdAt": "2026-08-13T13:35:32.638Z",
+  "updatedAt": "2026-08-13T13:35:47.425Z",
+  "lastStateAt": "2026-08-13T13:35:46.169Z",
+  "maxPlayTime": "480m",
+  "maxIdleTime": "480m",
+  "destroyed": true,
+  "status": {
+    "factoryId": "8594985e",
+    "stateEvents": [
+      {
+        "state": "CREATED",
+        "at": "2026-08-13T13:35:33.926261955Z"
+      },
+      {
+        "state": "WARMING_UP",
+        "at": "2026-08-13T13:35:33.92647862Z"
+      },
+      {
+        "state": "FAILED",
+        "error": true,
+        "at": "2026-08-13T13:35:44.278696453Z"
+      },
+      {
+        "state": "DESTROYING",
+        "at": "2026-08-13T13:35:45.866383709Z"
+      },
+      {
+        "state": "DESTROYED",
+        "at": "2026-08-13T13:35:46.169326875Z"
+      }
+    ],
+    "conditions": [
+      {
+        "name": "WarmedUp",
+        "status": "False",
+        "lastTransitionAt": "2026-08-13T13:35:33.92656423Z"
+      }
+    ],
+    "machines": [
+      {
+        "name": "postgres-01",
+        "state": "STOPPED",
+        "conditions": [
+          {
+            "name": "DriveVolumeCreated",
+            "status": "False",
+            "lastTransitionAt": "2026-08-13T13:35:44.060888089Z",
+            "message": "drive 0: could not get dynamic volume for source oci://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.2 - is the source image public?"
+          }
+        ]
+      }
+    ]
+  },
+  "tasks": {
+    "init_postgres_01_1": {
+      "name": "init_postgres_01_1",
+      "version": 1,
+      "status": 10,
+      "machine": "postgres-01",
+      "init": true
+    }
+  },
+  "playground": {
+    "id": "6a59e7582d62fd1e8d63fcc7",
+    "name": "postgresql-19-e92a0d56",
+    "base": "flexbox",
+    "owner": "694a655e63c2f9c6e22cf727",
+    "official": false,
+    "title": "PostgreSQL 19",
+    "description": "PostgreSQL 19 Beta 1. The World's Most Advanced Open Source Relational Database",
+    "contentVersion": 1786553590182
+  },
+  "playgroundTabs": [
+    {
+      "id": "terminal-postgres-01",
+      "name": "postgres-01",
+      "kind": "terminal",
+      "machine": "postgres-01"
+    }
+  ],
+  "pageUrl": "https://labs.iximiuz.com/playgrounds/postgresql-19-e92a0d56/6a7dc8241cb68d6fd09141f3",
+  "tier": "premium",
+  "authorAccess": true,
+  "fullEgress": true,
+  "machines": [
+    {
+      "name": "postgres-01",
+      "kernel": {
+        "source": "6.1"
+      },
+      "drives": [
+        {
+          "source": "oci://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.2",
+          "mount": "/",
+          "filesystem": "ext4",
+          "size": "80GiB"
+        }
+      ],
+      "network": {
+        "interfaces": [
+          {
+            "name": "eth0",
+            "address": "172.16.0.2",
+            "network": "local"
+          }
+        ]
+      },
+      "users": [
+        {
+          "name": "root"
+        },
+        {
+          "name": "laborant",
+          "default": true
+        }
+      ],
+      "resources": {
+        "cpuCount": 4,
+        "ramSize": "10GiB"
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "id": "terminal-postgres-01",
+      "name": "postgres-01",
+      "kind": "terminal",
+      "machine": "postgres-01"
+    }
+  ],
+  "capabilities": {
+    "canPersist": true
+  }
+}
+
+laborant@postgres-01:~$ ps
+    PID TTY          TIME CMD
+   1061 pts/0    00:00:00 bash
+   1114 pts/0    00:00:00 ps
+laborant@postgres-01:~$ sudo su
+root@postgres-01:laborant# 
+exit
+laborant@postgres-01:~$ sudo su postgres 
+postgres@postgres-01:/home/laborant$ ps
+    PID TTY          TIME CMD
+   1146 pts/1    00:00:00 bash
+   1156 pts/1    00:00:00 ps
+postgres@postgres-01:/home/laborant$ ps u
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+postgres    1146  0.0  0.0   8176  7448 pts/1    S    13:42   0:00 bash
+postgres    1157  0.0  0.0   8280  4304 pts/1    R+   13:42   0:00 ps u
+postgres@postgres-01:/home/laborant$ ps au
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         968  0.0  0.0   3116  1072 tty1     Ss+  13:39   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         969  0.0  0.0   3160  1068 ttyS0    Ss+  13:39   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+laborant    1061  0.0  0.0   9340  8676 pts/0    Ss   13:39   0:00 -bash
+root        1143  0.0  0.0  14148  6876 pts/0    S+   13:42   0:00 sudo su postgres
+root        1144  0.0  0.0  14148  1196 pts/1    Ss   13:42   0:00 sudo su postgres
+root        1145  0.0  0.0   6800  3732 pts/1    S    13:42   0:00 su postgres
+postgres    1146  0.0  0.0   8176  7448 pts/1    S    13:42   0:00 bash
+postgres    1158  0.0  0.0   8280  4304 pts/1    R+   13:42   0:00 ps au
+postgres@postgres-01:/home/laborant$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.4  0.1  21124 12424 ?        Ss   13:39   0:00 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    13:39   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   13:39   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   13:39   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   13:39   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   13:39   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/0:0-inet_frag_wq]
+root           8  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/0:0H-kblockd]
+root           9  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:0-events_unbound]
+root          10  0.0  0.0      0     0 ?        I<   13:39   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    13:39   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    13:39   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    13:39   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    13:39   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    13:39   0:00 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    13:39   0:00 [migration/0]
+root          17  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/0:1-virtio_vsock]
+root          18  0.0  0.0      0     0 ?        S    13:39   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    13:39   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    13:39   0:00 [migration/1]
+root          21  0.0  0.0      0     0 ?        S    13:39   0:00 [ksoftirqd/1]
+root          22  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/1:0-events]
+root          23  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/1:0H-kblockd]
+root          24  0.0  0.0      0     0 ?        S    13:39   0:00 [cpuhp/2]
+root          25  0.0  0.0      0     0 ?        S    13:39   0:00 [migration/2]
+root          26  0.0  0.0      0     0 ?        S    13:39   0:00 [ksoftirqd/2]
+root          27  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/2:0-rcu_gp]
+root          28  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/2:0H-kblockd]
+root          29  0.0  0.0      0     0 ?        S    13:39   0:00 [cpuhp/3]
+root          30  0.0  0.0      0     0 ?        S    13:39   0:00 [migration/3]
+root          31  0.0  0.0      0     0 ?        S    13:39   0:00 [ksoftirqd/3]
+root          32  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/3:0-virtio_vsock]
+root          33  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/3:0H-events_highpri]
+root          35  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:1-events_unbound]
+root          36  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:2-flush-253:0]
+root          37  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:3-flush-253:0]
+root          38  0.0  0.0      0     0 ?        S    13:39   0:00 [kdevtmpfs]
+root          39  0.0  0.0      0     0 ?        I<   13:39   0:00 [inet_frag_wq]
+root          40  0.0  0.0      0     0 ?        S    13:39   0:00 [kauditd]
+root          41  0.0  0.0      0     0 ?        S    13:39   0:00 [khungtaskd]
+root          42  0.0  0.0      0     0 ?        S    13:39   0:00 [oom_reaper]
+root          43  0.0  0.0      0     0 ?        I<   13:39   0:00 [writeback]
+root          44  0.0  0.0      0     0 ?        S    13:39   0:00 [kcompactd0]
+root          45  0.0  0.0      0     0 ?        SN   13:39   0:00 [ksmd]
+root          46  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/3:1-events]
+root          47  0.0  0.0      0     0 ?        SN   13:39   0:00 [khugepaged]
+root          48  0.0  0.0      0     0 ?        I<   13:39   0:00 [kintegrityd]
+root          49  0.0  0.0      0     0 ?        I<   13:39   0:00 [kblockd]
+root          50  0.0  0.0      0     0 ?        I<   13:39   0:00 [blkcg_punt_bio]
+root          51  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/1:1-cgwb_release]
+root          52  0.0  0.0      0     0 ?        I<   13:39   0:00 [md]
+root          53  0.0  0.0      0     0 ?        S    13:39   0:00 [watchdogd]
+root          54  0.0  0.0      0     0 ?        I<   13:39   0:00 [rpciod]
+root          55  0.0  0.0      0     0 ?        I<   13:39   0:00 [xprtiod]
+root          56  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/3:1H-kblockd]
+root          87  0.0  0.0      0     0 ?        S    13:39   0:00 [kswapd0]
+root          90  0.0  0.0      0     0 ?        I<   13:39   0:00 [nfsiod]
+root          91  0.0  0.0      0     0 ?        I<   13:39   0:00 [xfsalloc]
+root          92  0.0  0.0      0     0 ?        I<   13:39   0:00 [xfs_mru_cache]
+root          94  0.0  0.0      0     0 ?        I<   13:39   0:00 [kthrotld]
+root          97  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/3:2]
+root         101  0.0  0.0      0     0 ?        S    13:39   0:00 [irq/24-ACPI:Ged]
+root         102  0.0  0.0      0     0 ?        S    13:39   0:00 [irq/25-ACPI:Ged]
+root         107  0.0  0.0      0     0 ?        I<   13:39   0:00 [acpi_thermal_pm]
+root         124  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/2:1-virtio_vsock]
+root         143  0.0  0.0      0     0 ?        S    13:39   0:00 [hwrng]
+root         164  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/1:1H-kblockd]
+root         174  0.0  0.0      0     0 ?        I<   13:39   0:00 [iscsi_conn_clea]
+root         178  0.0  0.0      0     0 ?        I<   13:39   0:00 [bond0]
+root         230  0.0  0.0      0     0 ?        I<   13:39   0:00 [raid5wq]
+root         240  0.0  0.0      0     0 ?        I<   13:39   0:00 [mld]
+root         241  0.0  0.0      0     0 ?        I<   13:39   0:00 [ipv6_addrconf]
+root         252  0.0  0.0    996     4 ?        S    13:39   0:00 bpfilter_umh
+root         253  0.0  0.0      0     0 ?        I<   13:39   0:00 [kstrp]
+root         265  0.0  0.0      0     0 ?        I<   13:39   0:00 [zswap-shrink]
+root         266  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/u9:0]
+root         325  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/1:2]
+root         348  0.0  0.0      0     0 ?        S    13:39   0:00 [jbd2/vda-8]
+root         349  0.0  0.0      0     0 ?        I<   13:39   0:00 [ext4-rsv-conver]
+root         353  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/2:1H-kblockd]
+root         368  0.0  0.0      0     0 ?        I<   13:39   0:00 [kworker/0:1H-kblockd]
+root         373  0.0  0.1  42244 16340 ?        S<s  13:39   0:00 /usr/lib/systemd/systemd-journald
+root         425  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/2:2-events]
+root         530  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:4-events_unbound]
+root         565  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:5-events_unbound]
+root         629  0.3  1.6 1381004 165540 ?      Ssl  13:39   0:00 /usr/local/bin/examiner
+root         779  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/u8:6-flush-253:0]
+root         884  0.0  0.0  24372  6416 ?        Ss   13:39   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     895  0.0  0.1  21460 12048 ?        Ss   13:39   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     896  0.0  0.0  91028  6436 ?        Ssl  13:39   0:00 /usr/lib/systemd/systemd-timesyncd
+root         928  0.0  0.0      0     0 ?        I<   13:39   0:00 [cryptd]
+root         931  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/1:3-mm_percpu_wq]
+message+     961  0.0  0.0   9604  5220 ?        Ss   13:39   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --sy
+root         963  0.0  0.0  18168  8284 ?        Ss   13:39   0:00 /usr/lib/systemd/systemd-logind
+root         968  0.0  0.0   3116  1072 tty1     Ss+  13:39   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         969  0.0  0.0   3160  1068 ttyS0    Ss+  13:39   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root         990  0.0  0.0      0     0 ?        I    13:39   0:00 [kworker/0:2-cgroup_free]
+root         996  0.0  0.0  12024  7800 ?        Ss   13:39   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+laborant    1006  0.0  0.1  20076 11220 ?        Ss   13:39   0:00 /usr/lib/systemd/systemd --user
+laborant    1007  0.0  0.0  21160  1728 ?        S    13:39   0:00 (sd-pam)
+root        1024  0.0  0.0  14784 10152 ?        Ss   13:39   0:00 sshd: laborant [priv]
+root        1028  0.0  0.1  19884 11044 ?        Ss   13:39   0:00 /usr/lib/systemd/systemd --user
+root        1029  0.0  0.0  21164  1712 ?        S    13:39   0:00 (sd-pam)
+laborant    1050  0.0  0.0  14944  6264 ?        S    13:39   0:00 sshd: laborant@pts/0
+laborant    1061  0.0  0.0   9340  8676 pts/0    Ss   13:39   0:00 -bash
+postgres    1101  0.0  0.2 209632 28492 ?        Ss   13:39   0:00 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data
+postgres    1102  0.0  0.0 209764  6272 ?        Ss   13:39   0:00 postgres: io worker 0
+postgres    1103  0.0  0.0 209764  3972 ?        Ss   13:39   0:00 postgres: io worker 1
+postgres    1104  0.0  0.0 209764  2792 ?        Ss   13:39   0:00 postgres: checkpointer 
+postgres    1105  0.0  0.0 209788  4352 ?        Ss   13:39   0:00 postgres: background writer 
+postgres    1107  0.0  0.0 209764  7980 ?        Ss   13:39   0:00 postgres: walwriter 
+postgres    1108  0.0  0.0 211208  6848 ?        Ss   13:39   0:00 postgres: autovacuum launcher 
+postgres    1109  0.0  0.0 211216  4872 ?        Ss   13:39   0:00 postgres: logical replication launcher 
+root        1143  0.0  0.0  14148  6876 pts/0    S+   13:42   0:00 sudo su postgres
+root        1144  0.0  0.0  14148  1196 pts/1    Ss   13:42   0:00 sudo su postgres
+root        1145  0.0  0.0   6800  3732 pts/1    S    13:42   0:00 su postgres
+postgres    1146  0.1  0.0   8176  7448 pts/1    S    13:42   0:00 bash
+postgres    1160  0.0  0.0   8280  4216 pts/1    R+   13:42   0:00 ps aux
+postgres@postgres-01:/home/laborant$ 
+exit
+laborant@postgres-01:~$ 
+
+Welcome to iximiuz Labs' Docker Playground! 🚀
+
+Experiment with Docker in a safe and isolated environment.
+
+Batteries included:
+
+- dive: A CLI to explore container images and layers.
+- cdebug: A swiss army knife of container debugging.
+- crane: A CLI to manipulate container images.
+- regctl: A CLI to interact with container registries.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@docker-01:~$ git clone https://github.com/karuppiah7890/iximiuz-labs-postgresql-19-playground
+Cloning into 'iximiuz-labs-postgresql-19-playground'...
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 31 (delta 11), reused 27 (delta 7), pack-reused 0 (from 0)
+Receiving objects: 100% (31/31), 8.69 KiB | 8.69 MiB/s, done.
+Resolving deltas: 100% (11/11), done.
+laborant@docker-01:~$ cd iximiuz-labs-postgresql-19-playground
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ vi Dockerfile
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ git diff
+diff --git a/Dockerfile b/Dockerfile
+index d870615..b5538f0 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -5,11 +5,11 @@ WORKDIR /home/laborant
+ RUN sudo apt update \
+     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tcl zlib1g-dev libicu-dev gettext python3 python3-pip python3-venv python3-dev libpython3-dev libpython3.12 docbook-xml docbook-xsl libxml2-utils xsltproc fop
+ 
+-RUN wget https://ftp.postgresql.org/pub/source/v19beta2/postgresql-19beta2.tar.gz
++RUN wget https://ftp.postgresql.org/pub/source/v19beta3/postgresql-19beta3.tar.gz
+ 
+-RUN tar -xvzf postgresql-19beta2.tar.gz
++RUN tar -xvzf postgresql-19beta3.tar.gz
+ 
+-WORKDIR /home/laborant/postgresql-19beta2
++WORKDIR /home/laborant/postgresql-19beta3
+ 
+ RUN ./configure
+ 
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker build -t postgresql-19-test .
+[+] Building 339.2s (20/20) FINISHED                                                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.36kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            1.9s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 321B                                                                                                                    0.0s
+ => [ 1/16] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                   39.6s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75 237B / 237B                                                           0.5s
+ => => sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6 759B / 759B                                                           0.4s
+ => => sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612 2.21kB / 2.21kB                                                       0.5s
+ => => sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c 2.99MB / 2.99MB                                                       0.9s
+ => => sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5 320.51MB / 320.51MB                                                  36.7s
+ => => sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935 715B / 715B                                                           0.4s
+ => => sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b 4.01kB / 4.01kB                                                       0.5s
+ => => sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04 723B / 723B                                                           0.4s
+ => => sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d 203B / 203B                                                           0.5s
+ => => sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d 1.85kB / 1.85kB                                                       0.6s
+ => => sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4 2.99MB / 2.99MB                                                       0.8s
+ => => sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53 9.01MB / 9.01MB                                                       0.9s
+ => => sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715 27.52MB / 27.52MB                                                     3.0s
+ => => sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9 3.16MB / 3.16MB                                                       0.9s
+ => => sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5 1.07MB / 1.07MB                                                       0.5s
+ => => sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86 24.44MB / 24.44MB                                                     4.1s
+ => => sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0 5.56MB / 5.56MB                                                       1.8s
+ => => sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c 701B / 701B                                                           0.5s
+ => => sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f 25.25MB / 25.25MB                                                     4.1s
+ => => sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e 5.37MB / 5.37MB                                                       1.4s
+ => => sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973 198.57MB / 198.57MB                                                  19.7s
+ => => sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb 1.39kB / 1.39kB                                                       0.8s
+ => => sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84 118B / 118B                                                           0.7s
+ => => sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257 29.73MB / 29.73MB                                                     4.5s
+ => => extracting sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257                                                            0.5s
+ => => extracting sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84                                                            0.0s
+ => => extracting sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb                                                            0.0s
+ => => extracting sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973                                                            4.0s
+ => => extracting sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e                                                            0.3s
+ => => extracting sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f                                                            0.1s
+ => => extracting sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c                                                            0.0s
+ => => extracting sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0                                                            0.1s
+ => => extracting sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86                                                            0.2s
+ => => extracting sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5                                                            0.0s
+ => => extracting sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715                                                            0.2s
+ => => extracting sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9                                                            0.0s
+ => => extracting sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53                                                            0.0s
+ => => extracting sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4                                                            0.0s
+ => => extracting sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d                                                            0.0s
+ => => extracting sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d                                                            0.0s
+ => => extracting sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04                                                            0.0s
+ => => extracting sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b                                                            0.0s
+ => => extracting sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935                                                            0.0s
+ => => extracting sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5                                                            2.3s
+ => => extracting sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c                                                            0.0s
+ => => extracting sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612                                                            0.0s
+ => => extracting sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75                                                            0.0s
+ => => extracting sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6                                                            0.0s
+ => [ 2/16] WORKDIR /home/laborant                                                                                                                   0.9s
+ => [ 3/16] RUN sudo apt update     && sudo apt install -y make pkg-config gcc flex bison libedit-dev libedit2 libreadline-dev perl libperl-dev tc  35.9s
+ => [ 4/16] RUN wget https://ftp.postgresql.org/pub/source/v19beta3/postgresql-19beta3.tar.gz                                                        9.9s
+ => [ 5/16] RUN tar -xvzf postgresql-19beta3.tar.gz                                                                                                  1.0s
+ => [ 6/16] WORKDIR /home/laborant/postgresql-19beta3                                                                                                0.0s
+ => [ 7/16] RUN ./configure                                                                                                                          7.1s
+ => [ 8/16] RUN make world                                                                                                                         206.7s
+ => [ 9/16] RUN make check                                                                                                                          10.1s
+ => [10/16] RUN sudo make install-world                                                                                                              2.3s
+ => [11/16] RUN sudo adduser postgres                                                                                                                0.2s
+ => [12/16] RUN sudo mkdir -p /usr/local/pgsql/data                                                                                                  0.2s
+ => [13/16] RUN sudo chown postgres /usr/local/pgsql/data                                                                                            0.2s
+ => [14/16] RUN echo 'export PATH="$PATH:/usr/local/pgsql/bin/"' | sudo tee -a /home/laborant/.bashrc && echo 'export PATH="$PATH:/usr/local/pgsql/  0.3s
+ => [15/16] WORKDIR /home/laborant                                                                                                                   0.0s
+ => [16/16] RUN { echo "Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀\n";       echo "Run \`psql -U postgres\` to connect to the PostgreS     0.2s
+ => exporting to image                                                                                                                              22.5s
+ => => exporting layers                                                                                                                             16.5s
+ => => exporting manifest sha256:ff2c1bb9135a6ecbec614d3177208d9cce487a4eadfe9242ec816bebbdc071c5                                                    0.0s
+ => => exporting config sha256:6b4dd9865f8fc59b84bab63b6b8bcdf692d88ea6ece5187bccaadcbdc9482ac3                                                      0.0s
+ => => exporting attestation manifest sha256:4fdafbdb969dc7dbd35da277c0b81ca302deae804d14f24bf2fa6ba904050d60                                        0.0s
+ => => exporting manifest list sha256:e88b1919309734af8039432fcad76793ec38e7c222a2e266260a52232d69cc69                                               0.0s
+ => => naming to docker.io/library/postgresql-19-test:latest                                                                                         0.0s
+ => => unpacking to docker.io/library/postgresql-19-test:latest                                                                                      6.0s
+laborant@docker-01:iximiuz-labs-postgresql-19-playground$ docker run --rm -it postgresql-19-test 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@272c3121faa7:~$ sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data initdb"
+
+sudo mkdir -p /var/log/postgresql
+
+sudo chown postgres /var/log/postgresql
+
+sudo su postgres -c "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /var/log/postgresql/logfile start"
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /usr/local/pgsql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+
+waiting for server to start.... done
+server started
+laborant@272c3121faa7:~$ psql -U postgres 
+psql (19beta3)
+Type "help" for help.
+
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name = 'server_version';
+-[ RECORD 1 ]---+--------------------------
+name            | server_version
+setting         | 19beta3
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 19beta3
+reset_val       | 19beta3
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
+\q
+laborant@272c3121faa7:~$ 
+
+iximiuz-labs-postgresql-19-playground > tig
+iximiuz-labs-postgresql-19-playground > labctl playground update -f postgresql-19-e92a0d56-playground.yaml 
+Error: accepts 1 arg(s), received 0
+Usage:
+  labctl playground update <playground-name> [flags]
+
+Flags:
+  -d, --dir string    Local directory with the manifest YAML file and possibly other content files to accompany the playground (default: $CWD/<playground-name>)
+  -f, --file string   Path to the playground manifest YAML file
+      --force         Overwrite existing remote files with the local ones and delete remote files that don't exist locally without confirmation
+  -h, --help          help for update
+  -q, --quiet         Only print the playground name
+
+Global Flags:
+      --endpoint string    iximiuz Labs API endpoint URL
+  -l, --log-level string   log level for labctl ("debug" | "info" | "warn" | "error" | "fatal") (default "info")
+
+iximiuz-labs-postgresql-19-playground > labctl playground update postgresql-19-e92a0d56 -f postgresql-19-e92a0d56-playground.yaml 
+Updating playground postgresql-19-e92a0d56 from /Users/kp/github.com/karuppiah7890/iximiuz-labs-postgresql-19-playground/postgresql-19-e92a0d56-playground.yaml
+Playground URL: https://labs.iximiuz.com/playgrounds/postgresql-19-e92a0d56
+postgresql-19-e92a0d56
+iximiuz-labs-postgresql-19-playground > 
+docker pull ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.3
+
+iximiuz-labs-postgresql-19-playground > docker images
+                                                                               i Info →   U  In Use
+IMAGE                                              ID             DISK USAGE   CONTENT SIZE   EXTRA
+771151923073.dkr.ecr.us-east-1.amazonaws.com/ner-triton-sagemaker:v1
+                                                   66cef28b4fbb       34.5GB         12.2GB        
+busybox:latest                                     dc2d74b28e4c       6.14MB         1.92MB        
+clickhouse/clickhouse-server:25.3                  b627d7a9bc0e        861MB          197MB        
+gotenberg/gotenberg:8                              bddd8ea9d076       2.42GB          683MB        
+localstack/localstack:3.5.0                        c0d346a4b726       1.69GB          433MB        
+nats:2.10.0                                        6b95fec9562b       18.3MB         5.03MB        
+postgres:16.3                                      d0f363f8366f        635MB          157MB        
+ravenclaw-keycloak:latest                          db0d6ee7d06d        712MB          246MB        
+ravenclaw:latest                                   9a0ead0de204        335MB         86.8MB        
+iximiuz-labs-postgresql-19-playground > docker prune
+docker: unknown command: docker prune
+
+Run 'docker --help' for more information
+iximiuz-labs-postgresql-19-playground > docker system
+Usage:  docker system COMMAND
+
+Manage Docker
+
+Commands:
+  df          Show docker disk usage
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+
+Run 'docker system COMMAND --help' for more information on a command.
+iximiuz-labs-postgresql-19-playground > docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - unused build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Images:
+untagged: sha256:4fc92997b506b25274c71960994c20de404218f4c5584b142bb1c57792b6a317
+deleted: sha256:4fc92997b506b25274c71960994c20de404218f4c5584b142bb1c57792b6a317
+untagged: sha256:ff3d7d2487e828bedc75e9ca521aa621c4fbbea046e2ef38ab5994dd6258b2c7
+deleted: sha256:ff3d7d2487e828bedc75e9ca521aa621c4fbbea046e2ef38ab5994dd6258b2c7
+untagged: sha256:1a4b00d8ec86dde5d61f6ecbc863dbb348419b3d4e912c2531b0fc80593ac0b4
+deleted: sha256:1a4b00d8ec86dde5d61f6ecbc863dbb348419b3d4e912c2531b0fc80593ac0b4
+untagged: sha256:38ec858524fb8121ca0d14d314809352637f9fbfb898918b8a85c665c4d8c876
+deleted: sha256:38ec858524fb8121ca0d14d314809352637f9fbfb898918b8a85c665c4d8c876
+
+
+Deleted build cache objects:
+3g0lspql3ug0wza34jtxjmqo0
+se0ix3epbdsh0z1bm8ji6r9ze
+1ro882oizvnp5bcp44n1zutkz
+fsc0mp893uuhfe0vgiqh6la28
+kclcq1pp3gt67f3umbkto47xf
+2g4yx4sai3kfa6hw8fftmcfc4
+v7p1ehetkls57ezvda1237mgp
+bg25wysum19swyfiacnmpxy0u
+hvdgshi21zx76n7nfkkw6r5vc
+z9taib896ndi3f5d2327yx4h6
+pgf7kkf6rrixhw3kqt78x4d3a
+494qi2d58lr0emqheft6z54w3
+sdeiaebmtgqp4492l5y6o7plk
+pnstv8bfaqm3aa429p1qoxed7
+9j7bblk1wh58pomfegh0r47wm
+ealbeebuh3xbhvufm189c495j
+usea898fgakih8c0o839fn5kp
+ss9do8dad49a24rmwj9s0m6c3
+
+Total reclaimed space: 15.52GB
+iximiuz-labs-postgresql-19-playground > 
+iximiuz-labs-postgresql-19-playground > 
+
+iximiuz-labs-postgresql-19-playground > docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - unused build cache
+
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
+iximiuz-labs-postgresql-19-playground > docker system 
+Usage:  docker system COMMAND
+
+Manage Docker
+
+Commands:
+  df          Show docker disk usage
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+
+Run 'docker system COMMAND --help' for more information on a command.
+iximiuz-labs-postgresql-19-playground > docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - unused build cache
+
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
+iximiuz-labs-postgresql-19-playground > docker system prune -h
+Flag shorthand -h has been deprecated, use --help
+Usage:  docker system prune [OPTIONS]
+
+Remove unused data
+
+Options:
+  -a, --all             Remove all unused images not just dangling ones
+      --filter filter   Provide filter values (e.g. "label=<key>=<value>")
+  -f, --force           Do not prompt for confirmation
+      --volumes         Prune anonymous volumes
+iximiuz-labs-postgresql-19-playground > docker system prune --all --volumes
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all anonymous volumes not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Images:
+untagged: localstack/localstack:3.5.0
+deleted: sha256:c0d346a4b726f167e16451d01a217dfe17f07994ac30f7ab61b57aa321b3e4d6
+deleted: sha256:fa741927ced9e27485c0fc4cc45ecc8c4111cc7eb48ce7cc096a628d45638e55
+untagged: clickhouse/clickhouse-server:25.3
+deleted: sha256:b627d7a9bc0e0c1bac26cdbe9d2fc6316faa29c5d8a174f28f5abd57d0fa6ba2
+deleted: sha256:d5c3cca98e455c0b2403ccfe9fb05814489cafedee0c22071e73d2725de2af3b
+deleted: sha256:818e33612e0ef60394109f2759521734897fb400fbdaab4a1de2921ae5cc4bcf
+untagged: gotenberg/gotenberg:8
+deleted: sha256:bddd8ea9d076e2d08b6ddaa6efae6403185202c6dab65a6488ed0a6923d6d8e8
+deleted: sha256:9a46aa99f86e44257c45a0f13cdccbfe0a7b5d68f7c26b18143449da8193eb6f
+untagged: nats:2.10.0
+deleted: sha256:6b95fec9562ba2cf711142c40e922bd0419a97b3b6b5052116740aa7f1325bdd
+deleted: sha256:dd0bcaa689e244c1836c63f697b4229f1add60bfd786e0e02a9f37c6cb4408b8
+untagged: ravenclaw-keycloak:latest
+deleted: sha256:db0d6ee7d06d55140c02fe462adc5d3a9b3220a4c584976f15c7c78045a46ecb
+deleted: sha256:2eb646e604eebdb5ed9d4337f5a9be7d952f06307670b90f956e94e03f4d0659
+deleted: sha256:099504bb7a59b2fffc24a441ac70b7b5ea2e9fd87b04b0fb04f68e2da3509760
+untagged: ravenclaw:latest
+deleted: sha256:9a0ead0de20410723ef5de30af702994e28cdd1fddef8282f4186958cf26a149
+deleted: sha256:ae4949bc29c2324aa595cfb2770e9366d374c83ea8c43ab18265088e726a15d7
+deleted: sha256:4ee494f4217929304af9b8a894ea0cde7732b82d39227259fa80108dac27b6ca
+untagged: 771151923073.dkr.ecr.us-east-1.amazonaws.com/ner-triton-sagemaker:v1
+deleted: sha256:66cef28b4fbbdd531143e88d2bbb0627e98717c52d312d99922f752d0b070d30
+untagged: busybox:latest
+deleted: sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616
+deleted: sha256:8f2ffdcb46f1b83e46665954ec130e497b979db766854f79ca9eee43242b7e4c
+deleted: sha256:89542d28a599025269d4dfc0546c2bd85773a8c489cedebd57f02f05c01eba2d
+untagged: postgres:16.3
+deleted: sha256:d0f363f8366fbc3f52d172c6e76bc27151c3d643b870e1062b4e8bfe65baf609
+deleted: sha256:7c5f032614297f561716f82d069837db5e7648d38059cc7e07585a6e9bbd6ba1
+deleted: sha256:7fef127df1b7e9a75c2c92e4d81a9673f351f4003f3a4fb66739b918aa54876e
+
+Deleted build cache objects:
+tzowbsq3lukaopld4y70e4rol
+1o51764xyddbkcew47ybeg14b
+1jo05eyl0bwvfyslg4ktuo8f3
+mz6f8iseqf99uz5ig1tgdag6e
+
+Total reclaimed space: 14.27GB
+iximiuz-labs-postgresql-19-playground > 
+
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `psql -U postgres` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 24.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@postgres-01:~$ psql -U postgres
+psql (19beta3)
+Type "help" for help.
+
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name = 'server_version';
+-[ RECORD 1 ]---+--------------------------
+name            | server_version
+setting         | 19beta3
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 19beta3
+reset_val       | 19beta3
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
+\q
+laborant@postgres-01:~$ 
