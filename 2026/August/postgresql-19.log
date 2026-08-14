@@ -6452,3 +6452,53 @@ sourceline      |
 pending_restart | f
 
 postgres=# 
+postgresql-experiments > docker pull ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+0.0.4: Pulling from karuppiah7890/iximiuz-labs/playgrounds/postgresql-19
+40517da9b3c5: Pulling fs layer 
+40517da9b3c5: Pull complete 
+1c24335ddd46: Pull complete 
+ab21590a433a: Pull complete 
+3a51ea730ce8: Pull complete 
+8152887621b6: Pull complete 
+99da708071e0: Pull complete 
+1585f086fca6: Pull complete 
+61c0f98467dd: Pull complete 
+f8e089e96419: Pull complete 
+e90a2eac24f6: Pull complete 
+f8f19cd6ea11: Pull complete 
+ccab984361cc: Pull complete 
+9fb4ce8f1fdb: Pull complete 
+b7d5bb955f11: Pull complete 
+bd6f728274e6: Pull complete 
+efda168a4db7: Pull complete 
+ca2bb2124cdc: Pull complete 
+1a91f31119cd: Pull complete 
+14ac5f35f0dd: Pull complete 
+9870cb150f58: Pull complete 
+d61497c2d522: Pull complete 
+577a9cd743a5: Pull complete 
+1bf87554af33: Pull complete 
+be72f7c1222b: Pull complete 
+f15351824ffd: Pull complete 
+5a7850d1860b: Pull complete 
+122b83bb8d50: Pull complete 
+Digest: sha256:cacfd780df8aa684ad1b8a45b879f35699d35a3f3f0f4c9df740254edfa498b4
+Status: Downloaded newer image for ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+postgresql-experiments > docker images ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+                                                                               i Info →   U  In Use
+IMAGE                                              ID             DISK USAGE   CONTENT SIZE   EXTRA
+ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+                                                   cacfd780df8a        2.8GB          775MB        
+postgresql-experiments > dive ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+Image Source: docker://ghcr.io/karuppiah7890/iximiuz-labs/playgrounds/postgresql-19:0.0.4
+Extracting image from docker-engine... (this can take a while for large images)
+Analyzing image...
+Building cache...
+postgresql-experiments > 
+Last login: Fri Aug 14 07:52:36 on ttys003
+postgresql-experiments > docker pull ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+Error response from daemon: no matching manifest for linux/arm64/v8 in the manifest list entries: no match for platform in manifest: not found
+postgresql-experiments > docker pull ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+Error response from daemon: no matching manifest for linux/arm64/v8 in the manifest list entries: no match for platform in manifest: not found
+postgresql-experiments > 
