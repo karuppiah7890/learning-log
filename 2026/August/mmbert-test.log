@@ -462,3 +462,353 @@ model.safetensors: downloading bytes: ██████████████
 model.safetensors: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 1.23GB / 1.23GB, 63.5MB/s  
 (.venv) laborant@python-01:mmbert-test$ 
 (.venv) laborant@python-01:mmbert-test$ 
+
+
+(.venv) mmbert-test > python main.py 
+Loading model...
+config.json: 100%|███████████████████████████████████████████| 1.19k/1.19k [00:00<00:00, 2.29MB/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100%|█████████████████████████████████| 46.4k/46.4k [00:00<00:00, 76.5MB/s]
+tokenizer.json: downloading bytes: ███████████████████████████████████████████| 7.50MB,  695kB/s  
+tokenizer.json: reconstructing file: 100%|███████████████████████████| 17.5MB / 17.5MB, 1.65MB/s  
+special_tokens_map.json: 100%|███████████████████████████████████| 636/636 [00:00<00:00, 3.87MB/s]
+pytorch_model.bin: downloading bytes: ████████████████████████████████████████| 1.16GB, 12.6MB/s  
+pytorch_model.bin: reconstructing file: 100%|████████████████████████| 1.23GB / 1.23GB, 65.0MB/s  
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 64609.35it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.bias      | UNEXPECTED |  | 
+decoder.weight    | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+
+How do I reset my password?
+  0.992  Where can I change my password?
+  0.928  What is the weather today?
+  0.824  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.921  मेरा पासवर्ड कैसे रीसेट करूं?
+
+Where can I change my password?
+  0.992  How do I reset my password?
+  0.929  What is the weather today?
+  0.823  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.914  मेरा पासवर्ड कैसे रीसेट करूं?
+
+What is the weather today?
+  0.928  How do I reset my password?
+  0.929  Where can I change my password?
+  0.810  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.870  मेरा पासवर्ड कैसे रीसेट करूं?
+
+எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.824  How do I reset my password?
+  0.823  Where can I change my password?
+  0.810  What is the weather today?
+  0.885  मेरा पासवर्ड कैसे रीसेट करूं?
+
+मेरा पासवर्ड कैसे रीसेट करूं?
+  0.921  How do I reset my password?
+  0.914  Where can I change my password?
+  0.870  What is the weather today?
+  0.885  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+model.safetensors: downloading bytes: ████████████████████████████████████████| 1.16GB, 12.7MB/s  
+model.safetensors: reconstructing file: 100%|████████████████████████| 1.23GB / 1.23GB, 81.9MB/s  
+(.venv) mmbert-test > 
+
+(.venv) mmbert-test > python main.py 
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 61164.08it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+decoder.weight    | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+
+How do I reset my password?
+  0.992  Where can I change my password?
+  0.928  What is the weather today?
+  0.824  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.921  मेरा पासवर्ड कैसे रीसेट करूं?
+
+Where can I change my password?
+  0.992  How do I reset my password?
+  0.929  What is the weather today?
+  0.823  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.914  मेरा पासवर्ड कैसे रीसेट करूं?
+
+What is the weather today?
+  0.928  How do I reset my password?
+  0.929  Where can I change my password?
+  0.810  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.870  मेरा पासवर्ड कैसे रीसेट करूं?
+
+எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.824  How do I reset my password?
+  0.823  Where can I change my password?
+  0.810  What is the weather today?
+  0.885  मेरा पासवर्ड कैसे रीसेट करूं?
+
+मेरा पासवर्ड कैसे रीसेट करूं?
+  0.921  How do I reset my password?
+  0.914  Where can I change my password?
+  0.870  What is the weather today?
+  0.885  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+(.venv) mmbert-test > 
+
+(.venv) mmbert-test > code .
+(.venv) mmbert-test > python main.py 
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using: mps
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 55526.25it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.weight    | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+Traceback (most recent call last):
+  File "/Users/kp/model-experiments/mmbert-test/main.py", line 49, in <module>
+    embeddings = embed(texts)
+  File "/Users/kp/model-experiments/mmbert-test/main.py", line 33, in embed
+    outputs = model(**inputs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/transformers/utils/generic.py", line 1068, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/transformers/utils/output_capturing.py", line 262, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/transformers/models/modernbert/modeling_modernbert.py", line 451, in forward
+    hidden_states = self.embeddings(input_ids=input_ids, inputs_embeds=inputs_embeds)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/transformers/models/modernbert/modeling_modernbert.py", line 70, in forward
+    hidden_states = self.drop(self.norm(self.tok_embeddings(input_ids)))
+                                        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/modules/sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/kp/model-experiments/mmbert-test/.venv/lib/python3.14/site-packages/torch/nn/functional.py", line 2615, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Placeholder storage has not been allocated on MPS device!
+(.venv) mmbert-test > 
+(.venv) mmbert-test > 
+(.venv) mmbert-test > 
+(.venv) mmbert-test > python main.py 
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using: mps
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 68717.05it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+decoder.weight    | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+Traceback (most recent call last):
+  File "/Users/kp/model-experiments/mmbert-test/main.py", line 57, in <module>
+    embeddings.numpy()
+    ~~~~~~~~~~~~~~~~^^
+TypeError: can't convert mps:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+(.venv) mmbert-test > 
+
+
+(.venv) mmbert-test > gst
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   main.py
+
+(.venv) mmbert-test > python main.py
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using: mps
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 47804.43it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.weight    | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+
+How do I reset my password?
+  0.992  Where can I change my password?
+  0.928  What is the weather today?
+  0.824  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.921  मेरा पासवर्ड कैसे रीसेट करूं?
+
+Where can I change my password?
+  0.992  How do I reset my password?
+  0.929  What is the weather today?
+  0.823  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.914  मेरा पासवर्ड कैसे रीसेट करूं?
+
+What is the weather today?
+  0.928  How do I reset my password?
+  0.929  Where can I change my password?
+  0.810  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.870  मेरा पासवर्ड कैसे रीसेट करूं?
+
+எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.824  How do I reset my password?
+  0.823  Where can I change my password?
+  0.810  What is the weather today?
+  0.885  मेरा पासवर्ड कैसे रीसेट करूं?
+
+मेरा पासवर्ड कैसे रीसेट करूं?
+  0.921  How do I reset my password?
+  0.914  Where can I change my password?
+  0.870  What is the weather today?
+  0.885  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+(.venv) mmbert-test > python main.py
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using: mps
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 41304.97it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+decoder.weight    | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+
+How do I reset my password?
+  0.992  Where can I change my password?
+  0.928  What is the weather today?
+  0.824  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.921  मेरा पासवर्ड कैसे रीसेट करूं?
+
+Where can I change my password?
+  0.992  How do I reset my password?
+  0.929  What is the weather today?
+  0.823  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.914  मेरा पासवर्ड कैसे रीसेट करूं?
+
+What is the weather today?
+  0.928  How do I reset my password?
+  0.929  Where can I change my password?
+  0.810  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.870  मेरा पासवर्ड कैसे रीसेट करूं?
+
+எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.824  How do I reset my password?
+  0.823  Where can I change my password?
+  0.810  What is the weather today?
+  0.885  मेरा पासवर्ड कैसे रीसेट करूं?
+
+मेरा पासवर्ड कैसे रीसेट करूं?
+  0.921  How do I reset my password?
+  0.914  Where can I change my password?
+  0.870  What is the weather today?
+  0.885  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+(.venv) mmbert-test > 
+
+(.venv) mmbert-test > gst
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(.venv) mmbert-test > python main.py
+Loading model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using: mps
+Loading weights: 100%|███████████████████████████████████████| 134/134 [00:00<00:00, 54387.14it/s]
+[transformers] ModernBertModel LOAD REPORT from: jhu-clsp/mmBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.weight    | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model loaded!
+
+How do I reset my password?
+  0.963  Where can I change my password?
+  0.792  What is the weather today?
+  0.749  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.823  मेरा पासवर्ड कैसे रीसेट करूं?
+
+Where can I change my password?
+  0.963  How do I reset my password?
+  0.791  What is the weather today?
+  0.760  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.817  मेरा पासवर्ड कैसे रीसेट करूं?
+
+What is the weather today?
+  0.792  How do I reset my password?
+  0.791  Where can I change my password?
+  0.734  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.731  मेरा पासवर्ड कैसे रीसेट करूं?
+
+எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+  0.749  How do I reset my password?
+  0.760  Where can I change my password?
+  0.734  What is the weather today?
+  0.865  मेरा पासवर्ड कैसे रीसेट करूं?
+
+मेरा पासवर्ड कैसे रीसेट करूं?
+  0.823  How do I reset my password?
+  0.817  Where can I change my password?
+  0.731  What is the weather today?
+  0.865  எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?
+(.venv) mmbert-test > 
