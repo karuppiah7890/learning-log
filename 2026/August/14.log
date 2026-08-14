@@ -1,0 +1,817 @@
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ sudo apt install -y postgresql-common
+Installing:                     
+  postgresql-common
+
+Installing dependencies:
+  libcommon-sense-perl  libjson-perl  libjson-xs-perl  libpopt0  libtypes-serialiser-perl  logrotate  postgresql-client-common  ssl-cert
+
+Suggested packages:
+  bsd-mailx  | mailx
+
+Summary:
+  Upgrading: 0, Installing: 9, Removing: 0, Not Upgrading: 0
+  Download size: 451 kB
+  Space needed: 1396 kB / 78.1 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-client-common all 290ubuntu1 [49.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-common all 290ubuntu1 [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpopt0 amd64 1.19+dfsg-2build1 [29.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 logrotate amd64 3.22.0-1build1 [53.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcommon-sense-perl amd64 3.75-3build5 [20.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-xs-perl amd64 4.040-1 [84.4 kB]
+Fetched 451 kB in 2s (211 kB/s)          
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 9.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libjson-perl.
+(Reading database ... 39338 files and directories currently installed.)
+Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../1-postgresql-client-common_290ubuntu1_all.deb ...
+Unpacking postgresql-client-common (290ubuntu1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../2-ssl-cert_1.1.3ubuntu2_all.deb ...
+Unpacking ssl-cert (1.1.3ubuntu2) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../3-postgresql-common_290ubuntu1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (290ubuntu1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../4-libpopt0_1.19+dfsg-2build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-2build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../5-logrotate_3.22.0-1build1_amd64.deb ...
+Unpacking logrotate (3.22.0-1build1) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../6-libcommon-sense-perl_3.75-3build5_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3build5) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../8-libjson-xs-perl_4.040-1_amd64.deb ...
+Unpacking libjson-xs-perl (4.040-1) ...
+Setting up postgresql-client-common (290ubuntu1) ...
+Setting up libcommon-sense-perl:amd64 (3.75-3build5) ...
+Setting up ssl-cert (1.1.3ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start ssl-cert.service'
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up libpopt0:amd64 (1.19+dfsg-2build1) ...
+Setting up logrotate (3.22.0-1build1) ...
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+/usr/sbin/policy-rc.d returned 101, not running 'start logrotate.service logrotate.timer'
+Setting up libjson-xs-perl (4.040-1) ...
+Setting up postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start postgresql.service'
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB] 
+Get:3 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]          
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease                   
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [565 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [471 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [422 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [400 kB]
+Fetched 2621 kB in 2s (1058 kB/s)                        
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt install -y postgresql-common
+postgresql-common is already the newest version (290ubuntu1).
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 11
+laborant@ubuntu-01:~$ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+Writing /etc/apt/sources.list.d/pgdg.sources ...
+
+Running apt-get update ...
+Get:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease [189 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease                 
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease 
+Get:4 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1280 kB in 1s (1735 kB/s)
+Reading package lists... Done
+
+You can now start installing packages from apt.postgresql.org.
+
+Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+laborant@ubuntu-01:~$ ls /etc/
+Display all 139 possibilities? (y or n)
+laborant@ubuntu-01:~$ ls /etc/ap
+apparmor.d/ apt/        
+laborant@ubuntu-01:~$ ls /etc/ap
+apparmor.d/ apt/        
+laborant@ubuntu-01:~$ ls /etc/apt/
+apt.conf.d  auth.conf.d  keyrings  preferences.d  sources.list  sources.list.d  trusted.gpg.d
+laborant@ubuntu-01:~$ ls /etc/apt/sources.list
+/etc/apt/sources.list
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list
+# Ubuntu sources have moved to the /etc/apt/sources.list.d/ubuntu.sources
+# file, which uses the deb822 format. Use deb822-formatted .sources files
+# to manage package sources in the /etc/apt/sources.list.d/ directory.
+# See the sources.list(5) manual page for details.
+laborant@ubuntu-01:~$ ls /etc/apt/sources.list.d/
+pgdg.sources  ubuntu.sources
+laborant@ubuntu-01:~$ ls /etc/apt/sources.list.d/pgdg.sources 
+/etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources 
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ apt update
+Error: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+Error: Unable to lock directory /var/lib/apt/lists/
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease                                    
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                                              
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt search postgres | rg 19
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+barman/resolute-pgdg 3.19.1-3.pgdg26.04+1 all
+barman-cli/resolute-pgdg 3.19.1-3.pgdg26.04+1 all
+barman-cli-cloud/resolute-pgdg 3.19.1-3.pgdg26.04+1 all
+librust-postgres-dev/resolute 0.19.10-1 amd64
+pg-rage-terminator-19/resolute-pgdg 0.1.7-12.pgdg26.04+1 amd64
+pike8.0-pg/resolute 8.0.1956-4 amd64
+postgresql-10-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-10-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-11-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-11-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-12-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-12-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-13-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-13-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-14-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-14-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-15-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-15-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-16-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-16-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-17-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-17-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-18-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-18-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-19-address-standardizer/resolute-pgdg 3.7.0-1.pgdg26.04+1 amd64
+postgresql-19-address-standardizer-dbgsym/resolute-pgdg 3.7.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-address-standardizer
+postgresql-19-asn1oid/resolute-pgdg 1.6-3.pgdg26.04+1 amd64
+postgresql-19-asn1oid-dbgsym/resolute-pgdg 1.6-3.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-asn1oid
+postgresql-19-bgw-replstatus/resolute-pgdg 1.0.8-2.pgdg26.04+1 amd64
+postgresql-19-bgw-replstatus-dbgsym/resolute-pgdg 1.0.8-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-bgw-replstatus
+postgresql-19-credcheck/resolute-pgdg 5.0-2.pgdg26.04+1 amd64
+postgresql-19-credcheck-dbgsym/resolute-pgdg 5.0-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-credcheck
+postgresql-19-cron/resolute-pgdg 1.6.7-3.pgdg26.04+1 amd64
+postgresql-19-cron-dbgsym/resolute-pgdg 1.6.7-3.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-cron
+postgresql-19-debversion/resolute-pgdg 1.2.0-3.pgdg26.04+1 amd64
+postgresql-19-debversion-dbgsym/resolute-pgdg 1.2.0-3.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-debversion
+postgresql-19-dirtyread/resolute-pgdg 2.8-1.pgdg26.04+1 amd64
+postgresql-19-dirtyread-dbgsym/resolute-pgdg 2.8-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-dirtyread
+postgresql-19-extra-window-functions/resolute-pgdg 1.0-7.pgdg26.04+1 amd64
+postgresql-19-extra-window-functions-dbgsym/resolute-pgdg 1.0-7.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-extra-window-functions
+postgresql-19-hll/resolute-pgdg 2.21-1.pgdg26.04+1 amd64
+postgresql-19-hll-dbgsym/resolute-pgdg 2.21-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-hll
+postgresql-19-http/resolute-pgdg 1.7.2-2.pgdg26.04+1 amd64
+postgresql-19-http-dbgsym/resolute-pgdg 1.7.2-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-http
+postgresql-19-hypopg/resolute-pgdg 1.4.3-1.pgdg26.04+1 amd64
+postgresql-19-hypopg-dbgsym/resolute-pgdg 1.4.3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-hypopg
+postgresql-19-icu-ext/resolute-pgdg 1.11.0-1.pgdg26.04+1 amd64
+postgresql-19-icu-ext-dbgsym/resolute-pgdg 1.11.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-icu-ext
+postgresql-19-ip4r/resolute-pgdg 2.4.3-1.pgdg26.04+1 amd64
+  IPv4 and IPv6 types for PostgreSQL 19
+postgresql-19-ip4r-dbgsym/resolute-pgdg 2.4.3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-ip4r
+postgresql-19-mimeo/resolute-pgdg 1.5.1-20.pgdg26.04+1 all
+postgresql-19-numeral/resolute-pgdg 1.3-9.pgdg26.04+1 amd64
+postgresql-19-numeral-dbgsym/resolute-pgdg 1.3-9.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-numeral
+postgresql-19-ogr-fdw/resolute-pgdg 1.1.9-1.pgdg26.04+1 amd64
+postgresql-19-ogr-fdw-dbgsym/resolute-pgdg 1.1.9-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-ogr-fdw
+postgresql-19-oracle-fdw/resolute-pgdg 2.9.0-1.pgdg26.04+1 amd64
+postgresql-19-oracle-fdw-dbgsym/resolute-pgdg 2.9.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-oracle-fdw
+postgresql-19-orafce/resolute-pgdg 4.16.7-1.pgdg26.04+1 amd64
+  Oracle support functions for PostgreSQL 19
+postgresql-19-orafce-dbgsym/resolute-pgdg 4.16.7-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-orafce
+postgresql-19-partman/resolute-pgdg 5.5.0-1.pgdg26.04+1 amd64
+postgresql-19-partman-dbgsym/resolute-pgdg 5.5.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-partman
+postgresql-19-pg-background/resolute-pgdg 2.0.2-1.pgdg26.04+1 amd64
+postgresql-19-pg-background-dbgsym/resolute-pgdg 2.0.2-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-background
+postgresql-19-pg-catcheck/resolute-pgdg 1.6.0-2.pgdg26.04+1 amd64
+postgresql-19-pg-catcheck-dbgsym/resolute-pgdg 1.6.0-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-catcheck
+postgresql-19-pg-crash/resolute-pgdg 0.3-2.pgdg26.04+1 amd64
+postgresql-19-pg-crash-dbgsym/resolute-pgdg 0.3-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-crash
+postgresql-19-pg-csv/resolute-pgdg 1.0.2-1.pgdg26.04+1 amd64
+postgresql-19-pg-csv-dbgsym/resolute-pgdg 1.0.2-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-csv
+postgresql-19-pg-gvm/resolute-pgdg 22.6.17-1.pgdg26.04+1 amd64
+postgresql-19-pg-gvm-dbgsym/resolute-pgdg 22.6.17-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-gvm
+postgresql-19-pg-permissions/resolute-pgdg 1.4.1-1.pgdg26.04+1 all
+postgresql-19-pg-pwhash/resolute-pgdg 1.0-2.pgdg26.04+3 amd64
+postgresql-19-pg-pwhash-dbgsym/resolute-pgdg 1.0-2.pgdg26.04+3 amd64
+  debug symbols for postgresql-19-pg-pwhash
+postgresql-19-pg-qualstats/resolute-pgdg 2.1.4-1.pgdg26.04+1 amd64
+postgresql-19-pg-qualstats-dbgsym/resolute-pgdg 2.1.4-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-qualstats
+postgresql-19-pg-rewrite/resolute-pgdg 2.2-2.pgdg26.04+1 amd64
+postgresql-19-pg-rewrite-dbgsym/resolute-pgdg 2.2-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-rewrite
+postgresql-19-pg-rrule/resolute-pgdg 0.3.0-1.pgdg26.04+1 amd64
+postgresql-19-pg-rrule-dbgsym/resolute-pgdg 0.3.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-rrule
+postgresql-19-pg-stat-kcache/resolute-pgdg 2.3.2-1.pgdg26.04+1 amd64
+postgresql-19-pg-stat-kcache-dbgsym/resolute-pgdg 2.3.2-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-stat-kcache
+postgresql-19-pg-stat-plans/resolute-pgdg 2.1.0-1.pgdg26.04+1 amd64
+postgresql-19-pg-stat-plans-dbgsym/resolute-pgdg 2.1.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-stat-plans
+postgresql-19-pg-track-settings/resolute-pgdg 2.1.2-5.pgdg26.04+1 all
+postgresql-19-pg-uuidv7/resolute-pgdg 1.7.0-1.pgdg26.04+1 amd64
+postgresql-19-pg-uuidv7-dbgsym/resolute-pgdg 1.7.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-uuidv7
+postgresql-19-pg-wait-sampling/resolute-pgdg 1.1.11-1.pgdg26.04+1 amd64
+postgresql-19-pg-wait-sampling-dbgsym/resolute-pgdg 1.1.11-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pg-wait-sampling
+postgresql-19-pgaudit/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+postgresql-19-pgaudit-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgaudit
+postgresql-19-pgauditlogtofile/resolute-pgdg 1.8.5-1.pgdg26.04+1 amd64
+postgresql-19-pgauditlogtofile-dbgsym/resolute-pgdg 1.8.5-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgauditlogtofile
+postgresql-19-pgextwlist/resolute-pgdg 1.20-1.pgdg26.04+1 amd64
+postgresql-19-pgextwlist-dbgsym/resolute-pgdg 1.20-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgextwlist
+postgresql-19-pgfincore/resolute-pgdg 1.4.0-1.pgdg26.04+1 amd64
+postgresql-19-pgfincore-dbgsym/resolute-pgdg 1.4.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgfincore
+postgresql-19-pglogical/resolute-pgdg 2.4.8-1.pgdg26.04+1 amd64
+postgresql-19-pglogical-dbgsym/resolute-pgdg 2.4.8-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pglogical
+postgresql-19-pgmemcache/resolute-pgdg 2.3.0-16.pgdg26.04+1 amd64
+postgresql-19-pgmemcache-dbgsym/resolute-pgdg 2.3.0-16.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgmemcache
+postgresql-19-pgmp/resolute-pgdg 1.0.6-1.pgdg26.04+1 amd64
+  arbitrary precision integers and rationals for PostgreSQL 19
+postgresql-19-pgmp-dbgsym/resolute-pgdg 1.0.6-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgmp
+postgresql-19-pgpcre/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+postgresql-19-pgpcre-dbgsym/resolute-pgdg 0.20190509-9.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgpcre
+postgresql-19-pgrouting/resolute-pgdg 4.0.1-1.pgdg26.04+1 amd64
+postgresql-19-pgrouting-dbgsym/resolute-pgdg 4.0.1-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgrouting
+postgresql-19-pgrouting-scripts/resolute-pgdg 4.0.1-1.pgdg26.04+1 all
+postgresql-19-pgsentinel/resolute-pgdg 1.4.2-1.pgdg26.04+1 amd64
+postgresql-19-pgsentinel-dbgsym/resolute-pgdg 1.4.2-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgsentinel
+postgresql-19-pgtap/resolute-pgdg 1.3.4-1.pgdg26.04+1 all
+  Unit testing framework extension for PostgreSQL 19
+postgresql-19-pgtt/resolute-pgdg 4.6-1.pgdg26.04+1 amd64
+postgresql-19-pgtt-dbgsym/resolute-pgdg 4.6-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgtt
+postgresql-19-pgvector/resolute-pgdg 0.8.6-1.pgdg26.04+1 amd64
+postgresql-19-pgvector-dbgsym/resolute-pgdg 0.8.6-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-pgvector
+postgresql-19-plpgsql-check/resolute-pgdg 2.10.4-1.pgdg26.04+1 amd64
+postgresql-19-plpgsql-check-dbgsym/resolute-pgdg 2.10.4-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-plpgsql-check
+postgresql-19-plproxy/resolute-pgdg 2.12.0-1.pgdg26.04+1 amd64
+  database partitioning system for PostgreSQL 19
+postgresql-19-plproxy-dbgsym/resolute-pgdg 2.12.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-plproxy
+postgresql-19-plr/resolute-pgdg 1:8.4.8.6-1.pgdg26.04+1 amd64
+postgresql-19-plr-dbgsym/resolute-pgdg 1:8.4.8.6-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-plr
+postgresql-19-plsh/resolute-pgdg 1.20220917-4.pgdg26.04+1 amd64
+  PL/sh procedural language for PostgreSQL 19
+postgresql-19-plsh-dbgsym/resolute-pgdg 1.20220917-4.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-plsh
+postgresql-19-postgis-3/resolute-pgdg 3.6.4+dfsg-2.pgdg26.04+1 amd64
+  Geographic objects support for PostgreSQL 19
+postgresql-19-postgis-3-dbgsym/resolute-pgdg 3.6.4+dfsg-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-postgis-3
+postgresql-19-postgis-3-scripts/resolute-pgdg 3.6.4+dfsg-2.pgdg26.04+1 all
+  Geographic objects support for PostgreSQL 19 -- SQL scripts
+postgresql-19-powa/resolute-pgdg 5.2.0-1.pgdg26.04+1 amd64
+  PostgreSQL Workload Analyzer -- PostgreSQL 19 extension
+postgresql-19-powa-dbgsym/resolute-pgdg 5.2.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-powa
+postgresql-19-prefix/resolute-pgdg 1.2.11-1.pgdg26.04+1 amd64
+postgresql-19-prefix-dbgsym/resolute-pgdg 1.2.11-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-prefix
+postgresql-19-preprepare/resolute-pgdg 0.9-10.pgdg26.04+1 amd64
+postgresql-19-preprepare-dbgsym/resolute-pgdg 0.9-10.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-preprepare
+postgresql-19-q3c/resolute-pgdg 2.0.5-1.pgdg26.04+1 amd64
+  PostgreSQL 19 extension used for indexing the sky
+postgresql-19-q3c-dbgsym/resolute-pgdg 2.0.5-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-q3c
+postgresql-19-rational/resolute-pgdg 0.0.3-1.pgdg26.04+1 amd64
+postgresql-19-rational-dbgsym/resolute-pgdg 0.0.3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-rational
+postgresql-19-repack/resolute-pgdg 1.5.3-1.pgdg26.04+1 amd64
+postgresql-19-repack-dbgsym/resolute-pgdg 1.5.3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-repack
+postgresql-19-roaringbitmap/resolute-pgdg 1.2.0-1.pgdg26.04+1 amd64
+postgresql-19-roaringbitmap-dbgsym/resolute-pgdg 1.2.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-roaringbitmap
+postgresql-19-semver/resolute-pgdg 0.41.0-1.pgdg26.04+1 amd64
+postgresql-19-semver-dbgsym/resolute-pgdg 0.41.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-semver
+postgresql-19-set-user/resolute-pgdg 4.2.0-1.pgdg26.04+1 amd64
+postgresql-19-set-user-dbgsym/resolute-pgdg 4.2.0-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-set-user
+postgresql-19-show-plans/resolute-pgdg 2.1.8-1.pgdg26.04+1 amd64
+postgresql-19-show-plans-dbgsym/resolute-pgdg 2.1.8-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-show-plans
+postgresql-19-snakeoil/resolute-pgdg 1.4-4.pgdg26.04+1 amd64
+postgresql-19-snakeoil-dbgsym/resolute-pgdg 1.4-4.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-snakeoil
+postgresql-19-squeeze/resolute-pgdg 1.9.4-2.pgdg26.04+1 amd64
+postgresql-19-squeeze-dbgsym/resolute-pgdg 1.9.4-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-squeeze
+postgresql-19-stat-log/resolute-pgdg 0.1-2.pgdg26.04+1 amd64
+postgresql-19-stat-log-dbgsym/resolute-pgdg 0.1-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-stat-log
+postgresql-19-statviz/resolute-pgdg 1.1-1.pgdg26.04+1 all
+postgresql-19-tablelog/resolute-pgdg 0.6.4-4.pgdg26.04+1 amd64
+postgresql-19-tablelog-dbgsym/resolute-pgdg 0.6.4-4.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-tablelog
+postgresql-19-tdigest/resolute-pgdg 1.4.4-1.pgdg26.04+1 amd64
+postgresql-19-tdigest-dbgsym/resolute-pgdg 1.4.4-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-tdigest
+postgresql-19-timestamp9/resolute-pgdg 1.4.0-2.pgdg26.04+1 amd64
+postgresql-19-timestamp9-dbgsym/resolute-pgdg 1.4.0-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-timestamp9
+postgresql-19-toastinfo/resolute-pgdg 1.7-1.pgdg26.04+1 amd64
+postgresql-19-toastinfo-dbgsym/resolute-pgdg 1.7-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-toastinfo
+postgresql-19-unit/resolute-pgdg 7.10-2.pgdg26.04+1 amd64
+postgresql-19-unit-dbgsym/resolute-pgdg 7.10-2.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-unit
+postgresql-client-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-client-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-doc-15/resolute-pgdg 15.19-1.pgdg26.04+2 all
+postgresql-filedump/resolute-pgdg 19.0-1.pgdg26.04+1 amd64
+postgresql-filedump-dbgsym/resolute-pgdg 19.0-1.pgdg26.04+1 amd64
+postgresql-plperl-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-plperl-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-plpython3-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-plpython3-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-pltcl-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-pltcl-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-server-dev-15/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+postgresql-server-dev-15-dbgsym/resolute-pgdg 15.19-1.pgdg26.04+2 amd64
+prometheus-postgres-exporter/resolute 0.19.0-1 amd64
+python3-barman/resolute-pgdg 3.19.1-3.pgdg26.04+1 all
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources 
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ vi /etc/apt/sources.list.d/pgdg.sources 
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources 
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 Packages [30.1 kB]
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease                        
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease  
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 30.1 kB in 1s (21.6 kB/s)
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt search postgres | rg 19
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+libecpg-compat3/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+libecpg-dev/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+libecpg6/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+libpgtypes3/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  shared library libpgtypes for PostgreSQL 19
+libpq-dev/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+libpq-oauth/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+libpq5/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+librust-postgres-dev/resolute 0.19.10-1 amd64
+pike8.0-pg/resolute 8.0.1956-4 amd64
+postgresql-18-hll/resolute 2.19-2 amd64
+postgresql-18-pgextwlist/resolute 1.19-2 amd64
+postgresql-18-pgpcre/resolute 0.20190509-9 amd64
+postgresql-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+postgresql-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19
+postgresql-19-jit/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  LLVM JIT support for PostgreSQL 19
+postgresql-19-jit-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-19-jit
+postgresql-client-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  front-end programs for PostgreSQL 19
+postgresql-client-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-client-19
+postgresql-doc-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 all
+postgresql-plperl-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  PL/Perl procedural language for PostgreSQL 19
+postgresql-plperl-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-plperl-19
+postgresql-plpython3-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  PL/Python 3 procedural language for PostgreSQL 19
+postgresql-plpython3-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-plpython3-19
+postgresql-pltcl-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  PL/Tcl procedural language for PostgreSQL 19
+postgresql-pltcl-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-pltcl-19
+postgresql-server-dev-19/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  development files for PostgreSQL 19 server-side programming
+postgresql-server-dev-19-dbgsym/resolute-pgdg 19~beta3-1.pgdg26.04+1 amd64
+  debug symbols for postgresql-server-dev-19
+prometheus-postgres-exporter/resolute 0.19.0-1 amd64
+laborant@ubuntu-01:~$ 
+
+laborant@ubuntu-01:~$ sudo apt install postgres-19
+Error: Unable to locate package postgres-19
+laborant@ubuntu-01:~$ sudo apt install postgresql-19
+Installing:                     
+  postgresql-19
+
+Installing dependencies:
+  libicu78   libnuma1  libsensors-config  liburing2   postgresql-19-jit     sysstat
+  libllvm21  libpq5    libsensors5        libxslt1.1  postgresql-client-19  xz-utils
+
+Suggested packages:
+  libpq-oauth  lm-sensors  postgresql-doc-19  isag
+
+Summary:
+  Upgrading: 0, Installing: 13, Removing: 0, Not Upgrading: 11
+  Download size: 64.3 MB
+  Space needed: 257 MB / 78.1 GB available
+
+Continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnuma1 amd64 2.0.19-1build1 [23.7 kB]
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 libpq5 amd64 19~beta3-1.pgdg26.04+1 [262 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsensors-config all 1:3.6.2-2build1 [6862 B]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsensors5 amd64 1:3.6.2-2build1 [28.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 xz-utils amd64 5.8.3-1 [406 kB]
+Get:6 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-client-19 amd64 19~beta3-1.pgdg26.04+1 [2193 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 sysstat amd64 12.7.7-0ubuntu2 [517 kB]
+Get:8 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-19 amd64 19~beta3-1.pgdg26.04+1 [8033 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libicu78 amd64 78.2-2ubuntu1 [11.5 MB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libllvm21 amd64 1:21.1.8-6ubuntu1 [30.7 MB]
+Get:11 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-19-jit amd64 19~beta3-1.pgdg26.04+1 [10.5 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 liburing2 amd64 2.14-1 [25.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Fetched 64.3 MB in 6s (10.4 MB/s)                                                                                                                        
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 13.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libnuma1:amd64.
+(Reading database ... 39521 files and directories currently installed.)
+Preparing to unpack .../00-libnuma1_2.0.19-1build1_amd64.deb ...
+Unpacking libnuma1:amd64 (2.0.19-1build1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../01-libsensors-config_1%3a3.6.2-2build1_all.deb ...
+Unpacking libsensors-config (1:3.6.2-2build1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../02-libsensors5_1%3a3.6.2-2build1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.2-2build1) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../03-xz-utils_5.8.3-1_amd64.deb ...
+Unpacking xz-utils (5.8.3-1) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../04-sysstat_12.7.7-0ubuntu2_amd64.deb ...
+Unpacking sysstat (12.7.7-0ubuntu2) ...
+Selecting previously unselected package libicu78:amd64.
+Preparing to unpack .../05-libicu78_78.2-2ubuntu1_amd64.deb ...
+Unpacking libicu78:amd64 (78.2-2ubuntu1) ...
+Selecting previously unselected package libllvm21:amd64.
+Preparing to unpack .../06-libllvm21_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../07-libpq5_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking libpq5:amd64 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package liburing2:amd64.
+Preparing to unpack .../08-liburing2_2.14-1_amd64.deb ...
+Unpacking liburing2:amd64 (2.14-1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../09-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) ...
+Selecting previously unselected package postgresql-client-19.
+Preparing to unpack .../10-postgresql-client-19_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-client-19 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package postgresql-19.
+Preparing to unpack .../11-postgresql-19_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-19 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package postgresql-19-jit.
+Preparing to unpack .../12-postgresql-19-jit_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-19-jit (19~beta3-1.pgdg26.04+1) ...
+Setting up libsensors-config (1:3.6.2-2build1) ...
+Setting up libpq5:amd64 (19~beta3-1.pgdg26.04+1) ...
+Setting up libicu78:amd64 (78.2-2ubuntu1) ...
+Setting up libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up xz-utils (5.8.3-1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up libsensors5:amd64 (1:3.6.2-2build1) ...
+Setting up libnuma1:amd64 (2.0.19-1build1) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up liburing2:amd64 (2.14-1) ...
+Setting up sysstat (12.7.7-0ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-collect.timer' → '/usr/lib/systemd/system/sysstat-collect.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-rotate.timer' → '/usr/lib/systemd/system/sysstat-rotate.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-summary.timer' → '/usr/lib/systemd/system/sysstat-summary.timer'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/sysstat.service' → '/usr/lib/systemd/system/sysstat.service'.
+Setting up postgresql-client-19 (19~beta3-1.pgdg26.04+1) ...
+update-alternatives: using /usr/share/postgresql/19/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-19 (19~beta3-1.pgdg26.04+1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating new PostgreSQL cluster 19/main ...
+/usr/lib/postgresql/19/bin/initdb -D /var/lib/postgresql/19/main --auth-local peer --auth-host scram-sha-256 --no-instructions
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/19/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up postgresql-19-jit (19~beta3-1.pgdg26.04+1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+laborant@ubuntu-01:~$ psql
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+laborant@ubuntu-01:~$ psql -U postgres 
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+laborant@ubuntu-01:~$ pg_c
+pg_config         pg_conftool       pg_createcluster  pg_ctlcluster     
+laborant@ubuntu-01:~$ pg_c
+pg_config         pg_conftool       pg_createcluster  pg_ctlcluster     
+laborant@ubuntu-01:~$ pg_c
+pg_config         pg_conftool       pg_createcluster  pg_ctlcluster     
+laborant@ubuntu-01:~$ pg_ctlcluster --help
+Unknown option: help
+laborant@ubuntu-01:~$ pg_ctlcluster 
+Error: Usage: /usr/bin/pg_ctlcluster <version> <cluster> <action> [-- <pg_ctl options>]
+laborant@ubuntu-01:~$ pg_ctlcluster -h
+Unknown option: h
+laborant@ubuntu-01:~$ pg_ctlcluster version
+Error: Usage: /usr/bin/pg_ctlcluster <version> <cluster> <action> [-- <pg_ctl options>]
+laborant@ubuntu-01:~$ pg_ctlcluster -- pg_ctl
+Error: Usage: /usr/bin/pg_ctlcluster <version> <cluster> <action> [-- <pg_ctl options>]
+laborant@ubuntu-01:~$ pg_ctlcluster -- pg_ctl -help
+Error: Usage: /usr/bin/pg_ctlcluster <version> <cluster> <action> [-- <pg_ctl options>]
+laborant@ubuntu-01:~$ 
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ sudo apt update
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease                            
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]           
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [471 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [400 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease                    
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [422 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [565 kB]
+Fetched 2621 kB in 3s (762 kB/s)                         
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing:                     
+  postgresql-common
+
+Installing dependencies:
+  libcommon-sense-perl  libjson-perl  libjson-xs-perl  libpopt0  libtypes-serialiser-perl  logrotate  postgresql-client-common  ssl-cert
+
+Suggested packages:
+  bsd-mailx  | mailx
+
+Summary:
+  Upgrading: 0, Installing: 9, Removing: 0, Not Upgrading: 11
+  Download size: 451 kB
+  Space needed: 1396 kB / 78.1 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-client-common all 290ubuntu1 [49.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-common all 290ubuntu1 [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpopt0 amd64 1.19+dfsg-2build1 [29.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 logrotate amd64 3.22.0-1build1 [53.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcommon-sense-perl amd64 3.75-3build5 [20.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-xs-perl amd64 4.040-1 [84.4 kB]
+Fetched 451 kB in 2s (284 kB/s)          
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 9.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libjson-perl.
+(Reading database ... 39338 files and directories currently installed.)
+Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../1-postgresql-client-common_290ubuntu1_all.deb ...
+Unpacking postgresql-client-common (290ubuntu1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../2-ssl-cert_1.1.3ubuntu2_all.deb ...
+Unpacking ssl-cert (1.1.3ubuntu2) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../3-postgresql-common_290ubuntu1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (290ubuntu1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../4-libpopt0_1.19+dfsg-2build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-2build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../5-logrotate_3.22.0-1build1_amd64.deb ...
+Unpacking logrotate (3.22.0-1build1) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../6-libcommon-sense-perl_3.75-3build5_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3build5) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../8-libjson-xs-perl_4.040-1_amd64.deb ...
+Unpacking libjson-xs-perl (4.040-1) ...
+Setting up postgresql-client-common (290ubuntu1) ...
+Setting up libcommon-sense-perl:amd64 (3.75-3build5) ...
+Setting up ssl-cert (1.1.3ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start ssl-cert.service'
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up libpopt0:amd64 (1.19+dfsg-2build1) ...
+Setting up logrotate (3.22.0-1build1) ...
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+/usr/sbin/policy-rc.d returned 101, not running 'start logrotate.service logrotate.timer'
+Setting up libjson-xs-perl (4.040-1) ...
+Setting up postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start postgresql.service'
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+Writing /etc/apt/sources.list.d/pgdg.sources ...
+
+Running apt-get update ...
+Get:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease [189 kB]
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]                          
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                                                              
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease          
+Hit:5 http://security.ubuntu.com/ubuntu resolute-security InRelease        
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1280 kB in 1s (1244 kB/s)
+Reading package lists... Done
+
+You can now start installing packages from apt.postgresql.org.
+
+Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease                                                
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease                                      
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ 
