@@ -6502,3 +6502,113 @@ Error response from daemon: no matching manifest for linux/arm64/v8 in the manif
 postgresql-experiments > docker pull ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
 Error response from daemon: no matching manifest for linux/arm64/v8 in the manifest list entries: no match for platform in manifest: not found
 postgresql-experiments > 
+Welcome to iximiuz Labs' Docker Playground! 🚀
+
+Experiment with Docker in a safe and isolated environment.
+
+Batteries included:
+
+- dive: A CLI to explore container images and layers.
+- cdebug: A swiss army knife of container debugging.
+- crane: A CLI to manipulate container images.
+- regctl: A CLI to interact with container registries.
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@docker-01:~$ docker pull ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+ubuntu-26-04: Pulling from iximiuz/labs/rootfs
+6f5c5aa4e145: Pull complete 
+e90a2eac24f6: Pull complete 
+8152887621b6: Pull complete 
+f15351824ffd: Pull complete 
+99da708071e0: Pull complete 
+f8f19cd6ea11: Pull complete 
+1c24335ddd46: Pull complete 
+b7d5bb955f11: Pull complete 
+bd6f728274e6: Pull complete 
+efda168a4db7: Pull complete 
+ab21590a433a: Pull complete 
+9fb4ce8f1fdb: Pull complete 
+1a91f31119cd: Pull complete 
+14ac5f35f0dd: Pull complete 
+f8e089e96419: Pull complete 
+ca2bb2124cdc: Pull complete 
+61c0f98467dd: Pull complete 
+1bf87554af33: Pull complete 
+d61497c2d522: Pull complete 
+577a9cd743a5: Pull complete 
+ccab984361cc: Pull complete 
+3a51ea730ce8: Pull complete 
+1585f086fca6: Pull complete 
+be72f7c1222b: Pull complete 
+9870cb150f58: Pull complete 
+b64f109b32b6: Download complete 
+Digest: sha256:445c70a6e5b4286294098915f714d89cd970d34758fe6851e661b9147e97ac89
+Status: Downloaded newer image for ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+laborant@docker-01:~$ docker images ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04
+                                                                                                                                      i Info →   U  In Use
+IMAGE                                      ID             DISK USAGE   CONTENT SIZE   EXTRA
+ghcr.io/iximiuz/labs/rootfs:ubuntu-26-04   445c70a6e5b4       2.37GB          668MB        
+laborant@docker-01:~$ docker images ghcr.io/iximiuz/labs/rootfs:docker
+                                                                                                                                      i Info →   U  In Use
+IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
+laborant@docker-01:~$ docker pull ghcr.io/iximiuz/labs/rootfs:docker
+Error response from daemon: failed to resolve reference "ghcr.io/iximiuz/labs/rootfs:docker": ghcr.io/iximiuz/labs/rootfs:docker: not found
+laborant@docker-01:~$ docker pull ghcr.io/iximiuz/labs/rootfs:ubuntu-docker
+ubuntu-docker: Pulling from iximiuz/labs/rootfs
+2b9e03587bca: Pull complete 
+cb259a83ac3d: Pull complete 
+eeb6a5dadfc3: Pull complete 
+7f79782ba454: Pull complete 
+ee734f2861cb: Pull complete 
+df36212b5527: Pull complete 
+c74f6e4957d1: Pull complete 
+51b94dd614c7: Pull complete 
+bd17516a93b2: Pull complete 
+61b29938be89: Pull complete 
+c7b44bfed52c: Pull complete 
+4c8e5178bac1: Pull complete 
+18a48dd542a8: Pull complete 
+9364aa8dddb7: Pull complete 
+2101fc6a7bfd: Pull complete 
+dc024ebcfadc: Pull complete 
+79019c86bee8: Pull complete 
+873adda85985: Pull complete 
+435104e50864: Pull complete 
+dd5abb0b8fb8: Pull complete 
+0ab9c4013abd: Pull complete 
+01f991cbc53f: Pull complete 
+66cb3325c968: Pull complete 
+c1bdcc525afe: Pull complete 
+cdc156eee1c0: Pull complete 
+f965cc6cd37c: Pull complete 
+3797c7e6d4b7: Pull complete 
+01a56da45c02: Pull complete 
+e8582ba79ae7: Pull complete 
+cbd762572334: Pull complete 
+f2d567164f4b: Pull complete 
+56d2e9cd1cb8: Download complete 
+Digest: sha256:7beebb9d1fef878465bc01404354819ff08c273812f16543cb2eb3db6e7e6394
+Status: Downloaded newer image for ghcr.io/iximiuz/labs/rootfs:ubuntu-docker
+ghcr.io/iximiuz/labs/rootfs:ubuntu-docker
+laborant@docker-01:~$ 
+
+laborant@docker-01:~$ docker images ghcr.io/iximiuz/labs/rootfs:ubuntu-docker
+                                                                                                                                      i Info →   U  In Use
+IMAGE                                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+ghcr.io/iximiuz/labs/rootfs:ubuntu-docker   7beebb9d1fef       2.99GB          825MB        
+laborant@docker-01:~$ 
