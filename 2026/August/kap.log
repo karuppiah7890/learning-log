@@ -1,0 +1,11 @@
+learning-log > softwareupdate --install-rosetta
+I have read and agree to the terms of the software license agreement. A list of Apple SLAs may be found here: https://www.apple.com/legal/sla/
+Type A and press return to agree: A
+2026-08-14 07:07:29.546 softwareupdate[50835:520537] Package Authoring Error: 140-77965: Package reference com.apple.pkg.RosettaUpdateAuto is missing installKBytes attribute
+Install of Rosetta 2 finished successfully
+learning-log > softwareupdate --install-rosetta
+I have read and agree to the terms of the software license agreement. A list of Apple SLAs may be found here: https://www.apple.com/legal/sla/
+Type A and press return to agree: A
+2026-08-14 07:07:38.181 softwareupdate[50859:520757] Package Authoring Error: 140-77965: Package reference com.apple.pkg.RosettaUpdateAuto is missing installKBytes attribute
+Install of Rosetta 2 finished successfully
+learning-log > 

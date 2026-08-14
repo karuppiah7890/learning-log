@@ -4544,3 +4544,1099 @@ Notice: Unable to locate package postgresql-20
 Notice: Unable to locate package postgresql-20
 Error: No packages found
 laborant@ubuntu-01:~$ 
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB] 
+Get:3 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]         
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease                  
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [422 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [565 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [471 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [400 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+Fetched 2621 kB in 3s (830 kB/s)                         
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt install -y postgresql-common
+Installing:                     
+  postgresql-common
+
+Installing dependencies:
+  libcommon-sense-perl  libjson-perl  libjson-xs-perl  libpopt0  libtypes-serialiser-perl  logrotate  postgresql-client-common  ssl-cert
+
+Suggested packages:
+  bsd-mailx  | mailx
+
+Summary:
+  Upgrading: 0, Installing: 9, Removing: 0, Not Upgrading: 11
+  Download size: 451 kB
+  Space needed: 1396 kB / 78.1 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-client-common all 290ubuntu1 [49.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-common all 290ubuntu1 [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpopt0 amd64 1.19+dfsg-2build1 [29.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 logrotate amd64 3.22.0-1build1 [53.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcommon-sense-perl amd64 3.75-3build5 [20.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-xs-perl amd64 4.040-1 [84.4 kB]
+Fetched 451 kB in 2s (297 kB/s)          
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 9.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libjson-perl.
+(Reading database ... 39338 files and directories currently installed.)
+Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../1-postgresql-client-common_290ubuntu1_all.deb ...
+Unpacking postgresql-client-common (290ubuntu1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../2-ssl-cert_1.1.3ubuntu2_all.deb ...
+Unpacking ssl-cert (1.1.3ubuntu2) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../3-postgresql-common_290ubuntu1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (290ubuntu1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../4-libpopt0_1.19+dfsg-2build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-2build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../5-logrotate_3.22.0-1build1_amd64.deb ...
+Unpacking logrotate (3.22.0-1build1) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../6-libcommon-sense-perl_3.75-3build5_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3build5) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../8-libjson-xs-perl_4.040-1_amd64.deb ...
+Unpacking libjson-xs-perl (4.040-1) ...
+Setting up postgresql-client-common (290ubuntu1) ...
+Setting up libcommon-sense-perl:amd64 (3.75-3build5) ...
+Setting up ssl-cert (1.1.3ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start ssl-cert.service'
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up libpopt0:amd64 (1.19+dfsg-2build1) ...
+Setting up logrotate (3.22.0-1build1) ...
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+/usr/sbin/policy-rc.d returned 101, not running 'start logrotate.service logrotate.timer'
+Setting up libjson-xs-perl (4.040-1) ...
+Setting up postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start postgresql.service'
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+laborant@ubuntu-01:~$ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+Writing /etc/apt/sources.list.d/pgdg.sources ...
+
+Running apt-get update ...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease [189 kB]
+Get:5 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1280 kB in 1s (1614 kB/s)              
+Reading package lists... Done
+
+You can now start installing packages from apt.postgresql.org.
+
+Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+laborant@ubuntu-01:~$ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Press Enter to continue, or Ctrl-C to abort.^C
+laborant@ubuntu-01:~$ less /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+laborant@ubuntu-01:~$ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh y
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be y-pgdg.
+
+Press Enter to continue, or Ctrl-C to abort.^C
+laborant@ubuntu-01:~$ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+Writing /etc/apt/sources.list.d/pgdg.sources ...
+
+Running apt-get update ...
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease                                              
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease                                    
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Reading package lists... Done
+
+You can now start installing packages from apt.postgresql.org.
+
+Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ apt info postgresql-18
+Package: postgresql-18
+Version: 18.4-0ubuntu0.26.04.1
+Priority: optional
+Section: database
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 21.4 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.4-0ubuntu0.26.04.1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Task: postgresql-server
+Postgresql-Catversion: 202506291-1800
+Download-Size: 5989 kB
+APT-Sources: http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+
+Notice: There is 1 additional record. Please use the '-a' switch to see it
+laborant@ubuntu-01:~$ apt info -a postgresql-18
+Package: postgresql-18
+Version: 18.4-0ubuntu0.26.04.1
+Priority: optional
+Section: database
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 21.4 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.4-0ubuntu0.26.04.1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Task: postgresql-server
+Postgresql-Catversion: 202506291-1800
+Download-Size: 5989 kB
+APT-Sources: http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+
+Package: postgresql-18
+Version: 18.3-1
+Priority: optional
+Section: database
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 21.4 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.3-1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.0, libc6 (>=>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Task: postgresql-server
+Postgresql-Catversion: 202506291-1800
+Download-Size: 5979 kB
+APT-Sources: http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+
+laborant@ubuntu-01:~$ apt info -a postgresql-19
+Notice: Unable to locate package postgresql-19
+Error: No packages found
+laborant@ubuntu-01:~$ apt update
+Error: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+Error: Unable to lock directory /var/lib/apt/lists/
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 Packages [30.1 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                                              
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease        
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 30.1 kB in 1s (38.7 kB/s)
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ apt info -a postgresql-18
+Package: postgresql-18
+Version: 18.4-0ubuntu0.26.04.1
+Priority: optional
+Section: database
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 21.4 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.4-0ubuntu0.26.04.1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Task: postgresql-server
+Postgresql-Catversion: 202506291-1800
+Download-Size: 5989 kB
+APT-Sources: http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+
+Package: postgresql-18
+Version: 18.3-1
+Priority: optional
+Section: database
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 21.4 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.3-1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.0, libc6 (>=>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Task: postgresql-server
+Postgresql-Catversion: 202506291-1800
+laborant@ubuntu-01:~$ apt info -a postgresql-19
+Package: postgresql-19
+Version: 19~beta3-1.pgdg26.04+1
+Priority: optional
+Section: 19/database
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Installed-Size: 37.9 MB
+Provides: postgresql-contrib-19
+Depends: locales | locales-all, postgresql-client-19 (= 19~beta3-1.pgdg26.04+1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debcon>
+Recommends: postgresql-19-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Postgresql-Catversion: 202607272-1902
+Download-Size: 8033 kB
+APT-Sources: https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+ PostgreSQL, also known as Postgres, is a free and open-source relational
+ database management system (RDBMS) emphasizing extensibility and SQL
+ compliance. It features transactions with Atomicity, Consistency, Isolation,
+ Durability (ACID) properties, automatically updatable views, materialized
+ views, triggers, foreign keys, and stored procedures. It is designed to handle
+ a range of workloads, from single machines to data warehouses or Web services
+ with many concurrent users.
+ .
+ This package provides the database server for PostgreSQL 19.
+
+Package: postgresql-19
+Version: 19~beta2-1.pgdg26.04+1
+Priority: optional
+Section: 19/database
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Installed-Size: 37.8 MB
+Provides: postgresql-contrib-19
+Depends: locales | locales-all, postgresql-client-19 (= 19~beta2-1.pgdg26.04+1), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debcon>
+Recommends: postgresql-19-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+laborant@ubuntu-01:~$ 
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@ubuntu-01:~$ sudo apt update
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease 
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [565 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [400 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [297 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [422 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [190 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [471 kB]
+Fetched 2621 kB in 3s (937 kB/s)                         
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing:                     
+  postgresql-common
+
+Installing dependencies:
+  libcommon-sense-perl  libjson-perl  libjson-xs-perl  libpopt0  libtypes-serialiser-perl  logrotate  postgresql-client-common  ssl-cert
+
+Suggested packages:
+  bsd-mailx  | mailx
+
+Summary:
+  Upgrading: 0, Installing: 9, Removing: 0, Not Upgrading: 11
+  Download size: 451 kB
+  Space needed: 1396 kB / 78.1 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-client-common all 290ubuntu1 [49.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 postgresql-common all 290ubuntu1 [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpopt0 amd64 1.19+dfsg-2build1 [29.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 logrotate amd64 3.22.0-1build1 [53.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcommon-sense-perl amd64 3.75-3build5 [20.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-xs-perl amd64 4.040-1 [84.4 kB]
+Fetched 451 kB in 2s (281 kB/s)          
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 9.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libjson-perl.
+(Reading database ... 39338 files and directories currently installed.)
+Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../1-postgresql-client-common_290ubuntu1_all.deb ...
+Unpacking postgresql-client-common (290ubuntu1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../2-ssl-cert_1.1.3ubuntu2_all.deb ...
+Unpacking ssl-cert (1.1.3ubuntu2) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../3-postgresql-common_290ubuntu1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (290ubuntu1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../4-libpopt0_1.19+dfsg-2build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-2build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../5-logrotate_3.22.0-1build1_amd64.deb ...
+Unpacking logrotate (3.22.0-1build1) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../6-libcommon-sense-perl_3.75-3build5_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3build5) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../8-libjson-xs-perl_4.040-1_amd64.deb ...
+Unpacking libjson-xs-perl (4.040-1) ...
+Setting up postgresql-client-common (290ubuntu1) ...
+Setting up libcommon-sense-perl:amd64 (3.75-3build5) ...
+Setting up ssl-cert (1.1.3ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start ssl-cert.service'
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up libpopt0:amd64 (1.19+dfsg-2build1) ...
+Setting up logrotate (3.22.0-1build1) ...
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+/usr/sbin/policy-rc.d returned 101, not running 'start logrotate.service logrotate.timer'
+Setting up libjson-xs-perl (4.040-1) ...
+Setting up postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start postgresql.service'
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+your system. The distribution codename used will be resolute-pgdg.
+
+Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+Writing /etc/apt/sources.list.d/pgdg.sources ...
+
+Running apt-get update ...
+Get:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease [189 kB]
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]                                            
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease                                                                
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease                                              
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1280 kB in 1s (1225 kB/s)
+Reading package lists... Done
+
+You can now start installing packages from apt.postgresql.org.
+
+Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ sudo apt info postgresql-18
+Package: postgresql-18
+Version: 18.6-1.pgdg26.04+2
+Priority: optional
+Section: database
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Installed-Size: 36.7 MB
+Provides: postgresql-contrib-18
+Depends: locales | locales-all, postgresql-client-18 (= 18.6-1.pgdg26.04+2), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.>
+Recommends: postgresql-18-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Homepage: http://www.postgresql.org/
+Postgresql-Catversion: 202506291-1800
+Download-Size: 7704 kB
+APT-Sources: https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages
+Description: The World's Most Advanced Open Source Relational Database
+ PostgreSQL, also known as Postgres, is a free and open-source relational
+ database management system (RDBMS) emphasizing extensibility and SQL
+ compliance. It features transactions with Atomicity, Consistency, Isolation,
+ Durability (ACID) properties, automatically updatable views, materialized
+ views, triggers, foreign keys, and stored procedures. It is designed to handle
+ a range of workloads, from single machines to data warehouses or Web services
+ with many concurrent users.
+ .
+ This package provides the database server for PostgreSQL 18.
+
+Notice: There are 4 additional records. Please use the '-a' switch to see them.
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 Packages [30.1 kB]
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease                         
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease                   
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 30.1 kB in 1s (27.3 kB/s)
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ sudo apt update \
+    && sudo apt install -y postgresql-19 \
+    && sudo systemctl enable postgresql
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease                  
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease          
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease              
+Hit:4 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease           
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing:                     
+  postgresql-19
+
+Installing dependencies:
+  libicu78   libnuma1  libsensors-config  liburing2   postgresql-19-jit     sysstat
+  libllvm21  libpq5    libsensors5        libxslt1.1  postgresql-client-19  xz-utils
+
+Suggested packages:
+  libpq-oauth  lm-sensors  postgresql-doc-19  isag
+
+Summary:
+  Upgrading: 0, Installing: 13, Removing: 0, Not Upgrading: 13
+  Download size: 64.3 MB
+  Space needed: 257 MB / 78.1 GB available
+
+Get:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 libpq5 amd64 19~beta3-1.pgdg26.04+1 [262 kB]
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-client-19 amd64 19~beta3-1.pgdg26.04+1 [2193 kB]
+Get:3 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-19 amd64 19~beta3-1.pgdg26.04+1 [8033 kB]
+Get:4 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 postgresql-19-jit amd64 19~beta3-1.pgdg26.04+1 [10.5 MB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnuma1 amd64 2.0.19-1build1 [23.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsensors-config all 1:3.6.2-2build1 [6862 B]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsensors5 amd64 1:3.6.2-2build1 [28.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 xz-utils amd64 5.8.3-1 [406 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 sysstat amd64 12.7.7-0ubuntu2 [517 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libicu78 amd64 78.2-2ubuntu1 [11.5 MB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libllvm21 amd64 1:21.1.8-6ubuntu1 [30.7 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 liburing2 amd64 2.14-1 [25.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Fetched 64.3 MB in 6s (11.3 MB/s)     
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 13.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libnuma1:amd64.
+(Reading database ... 39521 files and directories currently installed.)
+Preparing to unpack .../00-libnuma1_2.0.19-1build1_amd64.deb ...
+Unpacking libnuma1:amd64 (2.0.19-1build1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../01-libsensors-config_1%3a3.6.2-2build1_all.deb ...
+Unpacking libsensors-config (1:3.6.2-2build1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../02-libsensors5_1%3a3.6.2-2build1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.2-2build1) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../03-xz-utils_5.8.3-1_amd64.deb ...
+Unpacking xz-utils (5.8.3-1) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../04-sysstat_12.7.7-0ubuntu2_amd64.deb ...
+Unpacking sysstat (12.7.7-0ubuntu2) ...
+Selecting previously unselected package libicu78:amd64.
+Preparing to unpack .../05-libicu78_78.2-2ubuntu1_amd64.deb ...
+Unpacking libicu78:amd64 (78.2-2ubuntu1) ...
+Selecting previously unselected package libllvm21:amd64.
+Preparing to unpack .../06-libllvm21_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../07-libpq5_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking libpq5:amd64 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package liburing2:amd64.
+Preparing to unpack .../08-liburing2_2.14-1_amd64.deb ...
+Unpacking liburing2:amd64 (2.14-1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../09-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) ...
+Selecting previously unselected package postgresql-client-19.
+Preparing to unpack .../10-postgresql-client-19_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-client-19 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package postgresql-19.
+Preparing to unpack .../11-postgresql-19_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-19 (19~beta3-1.pgdg26.04+1) ...
+Selecting previously unselected package postgresql-19-jit.
+Preparing to unpack .../12-postgresql-19-jit_19~beta3-1.pgdg26.04+1_amd64.deb ...
+Unpacking postgresql-19-jit (19~beta3-1.pgdg26.04+1) ...
+Setting up libsensors-config (1:3.6.2-2build1) ...
+Setting up libpq5:amd64 (19~beta3-1.pgdg26.04+1) ...
+Setting up libicu78:amd64 (78.2-2ubuntu1) ...
+Setting up libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up xz-utils (5.8.3-1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up libsensors5:amd64 (1:3.6.2-2build1) ...
+Setting up libnuma1:amd64 (2.0.19-1build1) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up liburing2:amd64 (2.14-1) ...
+Setting up sysstat (12.7.7-0ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-collect.timer' → '/usr/lib/systemd/system/sysstat-collect.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-rotate.timer' → '/usr/lib/systemd/system/sysstat-rotate.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-summary.timer' → '/usr/lib/systemd/system/sysstat-summary.timer'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/sysstat.service' → '/usr/lib/systemd/system/sysstat.service'.
+Setting up postgresql-client-19 (19~beta3-1.pgdg26.04+1) ...
+update-alternatives: using /usr/share/postgresql/19/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-19 (19~beta3-1.pgdg26.04+1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating new PostgreSQL cluster 19/main ...
+/usr/lib/postgresql/19/bin/initdb -D /var/lib/postgresql/19/main --auth-local peer --auth-host scram-sha-256 --no-instructions
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/19/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up postgresql-19-jit (19~beta3-1.pgdg26.04+1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for postgresql-common (290ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+laborant@ubuntu-01:~$ sudo systemctl enable postgresql
+Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+laborant@ubuntu-01:~$ sudo systemctl status postgresql
+○ postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: enabled)
+     Active: inactive (dead)
+laborant@ubuntu-01:~$ sudo systemctl start postgresql
+laborant@ubuntu-01:~$ sudo systemctl status postgresql
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: enabled)
+     Active: active (exited) since Fri 2026-08-14 01:54:05 UTC; 3s ago
+ Invocation: e069a862b7a0447e95871f49552b854f
+    Process: 3998 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 3998 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.7M
+        CPU: 3ms
+
+Aug 14 01:54:05 ubuntu-01 systemd[1]: Starting postgresql.service - PostgreSQL RDBMS...
+Aug 14 01:54:05 ubuntu-01 systemd[1]: Finished postgresql.service - PostgreSQL RDBMS.
+laborant@ubuntu-01:~$ 
+laborant@docker-01:postgresql$ docker build -t postgresql-19 .
+[+] Building 52.1s (6/8)                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.15kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            1.8s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [1/5] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                     36.6s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6 759B / 759B                                                           0.4s
+ => => sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75 237B / 237B                                                           0.5s
+ => => sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612 2.21kB / 2.21kB                                                       0.5s
+ => => sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c 2.99MB / 2.99MB                                                       0.9s
+ => => sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5 320.51MB / 320.51MB                                                  33.8s
+ => => sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935 715B / 715B                                                           0.4s
+ => => sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b 4.01kB / 4.01kB                                                       0.4s
+ => => sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04 723B / 723B                                                           0.4s
+ => => sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d 203B / 203B                                                           0.4s
+ => => sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d 1.85kB / 1.85kB                                                       0.6s
+ => => sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4 2.99MB / 2.99MB                                                       0.5s
+ => => sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53 9.01MB / 9.01MB                                                       1.4s
+ => => sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9 3.16MB / 3.16MB                                                       0.5s
+ => => sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715 27.52MB / 27.52MB                                                     4.6s
+ => => sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5 1.07MB / 1.07MB                                                       0.5s
+ => => sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86 24.44MB / 24.44MB                                                     4.1s
+ => => sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0 5.56MB / 5.56MB                                                       1.5s
+ => => sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c 701B / 701B                                                           0.6s
+ => => sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f 25.25MB / 25.25MB                                                     4.0s
+ => => sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e 5.37MB / 5.37MB                                                       2.6s
+ => => sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973 198.57MB / 198.57MB                                                  21.4s
+ => => sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb 1.39kB / 1.39kB                                                       0.7s
+ => => sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84 118B / 118B                                                           0.6s
+ => => sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257 29.73MB / 29.73MB                                                     4.1s
+ => => extracting sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257                                                            0.4s
+ => => extracting sha256:eeb6a5dadfc3880975255cd252f6f19b83cafe3eda7ae88f7aec9ae84a126d84                                                            0.0s
+ => => extracting sha256:7f79782ba4544a72213986ddb078b04c998757e5620e21185eb6079a3f00bbfb                                                            0.0s
+ => => extracting sha256:ee734f2861cb1d3445c12a4010327182e1d48b8aa7e630fef9f509acd7261973                                                            3.8s
+ => => extracting sha256:df36212b55270bac9951455d1c1a49b82ce0b14f003f57f9e68e5ee14f6d522e                                                            0.3s
+ => => extracting sha256:c74f6e4957d199f5f8a6a61d002de959a6d8c5a082a0f588eab1018c0aa79f9f                                                            0.1s
+ => => extracting sha256:51b94dd614c764fb4f611ca3633f66187e26bb7fee5f3db75180687a69a7cc1c                                                            0.0s
+ => => extracting sha256:bd17516a93b255727ce2be10b16726ab09e91d10a418f937aaf42675879ddba0                                                            0.1s
+ => => extracting sha256:61b29938be89f59b255c2cf0a69650c304957b53fda4b7ef4585eec1d4371a86                                                            0.2s
+ => => extracting sha256:c7b44bfed52c95e6467166098d2ff95be876c6534fd82046e9f63e1e47829cc5                                                            0.0s
+ => => extracting sha256:4c8e5178bac173f438ea5859975cb1c5948add0173a804797dedf41ee5706715                                                            0.2s
+ => => extracting sha256:18a48dd542a84051aa8a6eea508da5ea474972007bed85bd852fbd9e4743ceb9                                                            0.0s
+ => => extracting sha256:9364aa8dddb7de43659727b0f1f81b2113d15ef710175060bca54bbfde16df53                                                            0.0s
+ => => extracting sha256:2101fc6a7bfd0a207573c4013b50ee18e4741653234944351b2fa2ac7afe5bd4                                                            0.1s
+ => => extracting sha256:dc024ebcfadc18a6f7a69c16a85416e6f24dbb9b95beba8c495076462845ef2d                                                            0.0s
+ => => extracting sha256:79019c86bee89ff08ce5e05c67b1d15af1f7c48e4fb47bc6167ad85f9cb5775d                                                            0.0s
+ => => extracting sha256:873adda859854c68f50429d04bc75aeebf182bb8fb916ab63d4b774aa3eaec04                                                            0.0s
+ => => extracting sha256:435104e508641639a23c19d1723db44cd4c3a5a2205edd6ab34f9c02fca7bd7b                                                            0.0s
+ => => extracting sha256:dd5abb0b8fb869771dbdb51439799bcf3b9bec4ef7918ea3ebf5f007e782b935                                                            0.0s
+ => => extracting sha256:0ab9c4013abd417ae0c099fb1a7127c4f692c2c3481cc6549bd5db83b43a82e5                                                            2.2s
+ => => extracting sha256:01f991cbc53fb03ce453c6e49e45b1bde453f4a69c0e919d22ffc89c18b80d2c                                                            0.0s
+ => => extracting sha256:66cb3325c968e1f5d4c735ed537d846f2f7293419b9072735c615db9bbadb612                                                            0.0s
+ => => extracting sha256:c1bdcc525afeb4793e4642efb10d8073534d4a9273753abdf9bf7c6d83f4db75                                                            0.0s
+ => => extracting sha256:cdc156eee1c0b14e7ec7f9ffe7ad67b9f6ec82ed2e9da775cfbaff3df72046d6                                                            0.0s
+ => [2/5] WORKDIR /home/laborant                                                                                                                     0.9s
+ => ERROR [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.  12.8s
+------
+ > [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' > /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql:
+0.194 
+0.194 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+0.194 
+0.575 Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0.718 Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0.750 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+1.529 Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+1.841 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1478 kB]
+1.892 Get:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1655 kB]
+2.484 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1768 kB]
+2.680 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2141 kB]
+2.806 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+2.808 Get:10 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+3.188 Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+3.344 Get:12 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1153 kB]
+3.539 Get:13 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+3.574 Fetched 10.2 MB in 3s (3045 kB/s)
+3.574 Reading package lists...
+4.033 Building dependency tree...
+4.130 Reading state information...
+4.141 70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+4.150 
+4.150 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+4.150 
+4.152 Reading package lists...
+4.581 Building dependency tree...
+4.687 Reading state information...
+4.773 The following additional packages will be installed:
+4.773   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.773   libtypes-serialiser-perl logrotate postgresql-client-common ssl-cert
+4.774 Suggested packages:
+4.774   bsd-mailx | mailx
+4.797 The following NEW packages will be installed:
+4.798   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.798   libtypes-serialiser-perl logrotate postgresql-client-common
+4.798   postgresql-common ssl-cert
+5.317 0 upgraded, 9 newly installed, 0 to remove and 70 not upgraded.
+5.317 Need to get 494 kB of archives.
+5.317 After this operation, 1665 kB of additional disk space will be used.
+5.317 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+6.274 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-client-common all 257build1.1 [36.4 kB]
+6.376 Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+6.415 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-common all 257build1.1 [161 kB]
+6.834 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpopt0 amd64 1.19+dfsg-1build1 [28.6 kB]
+6.865 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 logrotate amd64 3.21.0-2build1 [52.2 kB]
+6.922 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libcommon-sense-perl amd64 3.75-3build3 [20.4 kB]
+6.943 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+6.956 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libjson-xs-perl amd64 4.040-0ubuntu0.24.04.1 [83.7 kB]
+7.179 debconf: delaying package configuration, since apt-utils is not installed
+7.246 Fetched 494 kB in 2s (221 kB/s)
+7.285 Selecting previously unselected package libjson-perl.
+(Reading database ... 44913 files and directories currently installed.)
+7.319 Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+7.325 Unpacking libjson-perl (4.10000-1) ...
+7.382 Selecting previously unselected package postgresql-client-common.
+7.387 Preparing to unpack .../1-postgresql-client-common_257build1.1_all.deb ...
+7.391 Unpacking postgresql-client-common (257build1.1) ...
+7.459 Selecting previously unselected package ssl-cert.
+7.472 Preparing to unpack .../2-ssl-cert_1.1.2ubuntu1_all.deb ...
+7.480 Unpacking ssl-cert (1.1.2ubuntu1) ...
+7.511 Selecting previously unselected package postgresql-common.
+7.515 Preparing to unpack .../3-postgresql-common_257build1.1_all.deb ...
+7.522 Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+7.549 Unpacking postgresql-common (257build1.1) ...
+7.587 Selecting previously unselected package libpopt0:amd64.
+7.589 Preparing to unpack .../4-libpopt0_1.19+dfsg-1build1_amd64.deb ...
+7.593 Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+7.622 Selecting previously unselected package logrotate.
+7.622 Preparing to unpack .../5-logrotate_3.21.0-2build1_amd64.deb ...
+7.624 Unpacking logrotate (3.21.0-2build1) ...
+7.653 Selecting previously unselected package libcommon-sense-perl:amd64.
+7.659 Preparing to unpack .../6-libcommon-sense-perl_3.75-3build3_amd64.deb ...
+7.660 Unpacking libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.679 Selecting previously unselected package libtypes-serialiser-perl.
+7.685 Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+7.686 Unpacking libtypes-serialiser-perl (1.01-1) ...
+7.710 Selecting previously unselected package libjson-xs-perl.
+7.713 Preparing to unpack .../8-libjson-xs-perl_4.040-0ubuntu0.24.04.1_amd64.deb ...
+7.716 Unpacking libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+7.761 Setting up postgresql-client-common (257build1.1) ...
+7.765 Setting up libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.768 Setting up ssl-cert (1.1.2ubuntu1) ...
+7.861 debconf: unable to initialize frontend: Dialog
+7.861 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+7.861 debconf: falling back to frontend: Readline
+7.867 debconf: unable to initialize frontend: Readline
+7.867 debconf: (This frontend requires a controlling tty.)
+7.867 debconf: falling back to frontend: Teletype
+8.272 Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+8.283 Setting up libtypes-serialiser-perl (1.01-1) ...
+8.284 Setting up libjson-perl (4.10000-1) ...
+8.286 Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+8.287 Setting up logrotate (3.21.0-2build1) ...
+8.371 Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+8.373 Setting up libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+8.374 Setting up postgresql-common (257build1.1) ...
+8.417 debconf: unable to initialize frontend: Dialog
+8.417 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+8.417 debconf: falling back to frontend: Readline
+8.421 debconf: unable to initialize frontend: Readline
+8.421 debconf: (This frontend requires a controlling tty.)
+8.421 debconf: falling back to frontend: Teletype
+8.561 
+8.561 Creating config file /etc/postgresql-common/createcluster.conf with new version
+8.637 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+8.637 Removing obsolete dictionary files:
+8.652 invoke-rc.d: could not determine current runlevel
+8.655 invoke-rc.d: policy-rc.d denied execution of start.
+8.716 Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+8.749 Processing triggers for man-db (2.12.0-4build2) ...
+9.234 Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+9.600 This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+9.600 your system. The distribution codename used will be noble-pgdg.
+9.600 
+9.600 Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+9.600 Writing /etc/apt/sources.list.d/pgdg.sources ...
+9.602 
+9.602 Running apt-get update ...
+9.990 Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+9.990 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+10.03 Get:3 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease [189 kB]
+10.12 Get:4 https://apt.postgresql.org/pub/repos/apt noble-pgdg/main amd64 Packages [1083 kB]
+10.17 Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+10.35 Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+10.40 Fetched 1272 kB in 1s (1637 kB/s)
+10.40 Reading package lists...
+10.82 
+10.82 You can now start installing packages from apt.postgresql.org.
+10.82 
+10.82 Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+10.82 most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+10.83 
+10.83 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+10.83 
+10.87 Hit:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease
+11.37 Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+11.83 Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+12.01 Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+12.19 Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+12.24 Reading package lists...
+12.64 Building dependency tree...
+12.75 Reading state information...
+12.76 72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+12.76 /bin/sh: 1: cannot create /etc/apt/sources.list.d/pgdg.sources: Permission denied
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN sudo apt update \
+   6 | >>>     && sudo apt install -y postgresql-common \
+   7 | >>>     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
+   8 | >>>     && sudo apt update \
+   9 | >>>     && echo 'Types: deb\
+  10 | >>> URIs: https://apt.postgresql.org/pub/repos/apt\
+  11 | >>> Suites: resolute-pgdg\
+  12 | >>> Components: main 19\
+  13 | >>> Architectures: amd64\
+  14 | >>> Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' > /etc/apt/sources.list.d/pgdg.sources \
+  15 | >>>     && sudo apt update \
+  16 | >>>     && sudo apt install -y postgresql-19 \
+  17 | >>>     && sudo systemctl enable postgresql
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' > /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql" did not complete successfully: exit code: 2
+laborant@docker-01:postgresql$ rm Dockerfile ; vi Dockerfile 
+laborant@docker-01:postgresql$ docker build -t postgresql-19 .
+[+] Building 14.0s (6/8)                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.15kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            1.4s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [1/5] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => CACHED [2/5] WORKDIR /home/laborant                                                                                                              0.0s
+ => ERROR [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.  12.5s
+------                                                                                                                                                    
+ > [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql:                                                                                                  
+0.155                                                                                                                                                     
+0.155 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+0.155 
+0.562 Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0.747 Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+1.584 Get:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+1.656 Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+1.917 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1478 kB]
+2.506 Get:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1655 kB]
+2.600 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2141 kB]
+2.837 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+2.841 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1768 kB]
+2.947 Get:10 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+3.426 Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1153 kB]
+3.510 Get:12 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+3.675 Get:13 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+3.723 Fetched 10.2 MB in 4s (2886 kB/s)
+3.723 Reading package lists...
+4.150 Building dependency tree...
+4.243 Reading state information...
+4.254 70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+4.263 
+4.263 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+4.263 
+4.265 Reading package lists...
+4.660 Building dependency tree...
+4.777 Reading state information...
+4.866 The following additional packages will be installed:
+4.866   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.866   libtypes-serialiser-perl logrotate postgresql-client-common ssl-cert
+4.867 Suggested packages:
+4.867   bsd-mailx | mailx
+4.890 The following NEW packages will be installed:
+4.890   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.890   libtypes-serialiser-perl logrotate postgresql-client-common
+4.890   postgresql-common ssl-cert
+5.430 0 upgraded, 9 newly installed, 0 to remove and 70 not upgraded.
+5.430 Need to get 494 kB of archives.
+5.430 After this operation, 1665 kB of additional disk space will be used.
+5.430 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+6.381 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-client-common all 257build1.1 [36.4 kB]
+6.470 Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+6.529 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-common all 257build1.1 [161 kB]
+6.915 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpopt0 amd64 1.19+dfsg-1build1 [28.6 kB]
+6.938 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 logrotate amd64 3.21.0-2build1 [52.2 kB]
+7.000 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libcommon-sense-perl amd64 3.75-3build3 [20.4 kB]
+7.008 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+7.018 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libjson-xs-perl amd64 4.040-0ubuntu0.24.04.1 [83.7 kB]
+7.249 debconf: delaying package configuration, since apt-utils is not installed
+7.340 Fetched 494 kB in 2s (223 kB/s)
+7.359 Selecting previously unselected package libjson-perl.
+(Reading database ... 44913 files and directories currently installed.)
+7.388 Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+7.412 Unpacking libjson-perl (4.10000-1) ...
+7.443 Selecting previously unselected package postgresql-client-common.
+7.447 Preparing to unpack .../1-postgresql-client-common_257build1.1_all.deb ...
+7.447 Unpacking postgresql-client-common (257build1.1) ...
+7.465 Selecting previously unselected package ssl-cert.
+7.469 Preparing to unpack .../2-ssl-cert_1.1.2ubuntu1_all.deb ...
+7.469 Unpacking ssl-cert (1.1.2ubuntu1) ...
+7.486 Selecting previously unselected package postgresql-common.
+7.490 Preparing to unpack .../3-postgresql-common_257build1.1_all.deb ...
+7.495 Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+7.500 Unpacking postgresql-common (257build1.1) ...
+7.530 Selecting previously unselected package libpopt0:amd64.
+7.533 Preparing to unpack .../4-libpopt0_1.19+dfsg-1build1_amd64.deb ...
+7.534 Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+7.547 Selecting previously unselected package logrotate.
+7.550 Preparing to unpack .../5-logrotate_3.21.0-2build1_amd64.deb ...
+7.550 Unpacking logrotate (3.21.0-2build1) ...
+7.562 Selecting previously unselected package libcommon-sense-perl:amd64.
+7.565 Preparing to unpack .../6-libcommon-sense-perl_3.75-3build3_amd64.deb ...
+7.566 Unpacking libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.577 Selecting previously unselected package libtypes-serialiser-perl.
+7.579 Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+7.580 Unpacking libtypes-serialiser-perl (1.01-1) ...
+7.590 Selecting previously unselected package libjson-xs-perl.
+7.593 Preparing to unpack .../8-libjson-xs-perl_4.040-0ubuntu0.24.04.1_amd64.deb ...
+7.593 Unpacking libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+7.611 Setting up postgresql-client-common (257build1.1) ...
+7.613 Setting up libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.614 Setting up ssl-cert (1.1.2ubuntu1) ...
+7.651 debconf: unable to initialize frontend: Dialog
+7.651 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+7.651 debconf: falling back to frontend: Readline
+7.656 debconf: unable to initialize frontend: Readline
+7.656 debconf: (This frontend requires a controlling tty.)
+7.656 debconf: falling back to frontend: Teletype
+7.968 Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+7.978 Setting up libtypes-serialiser-perl (1.01-1) ...
+7.979 Setting up libjson-perl (4.10000-1) ...
+7.980 Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+7.981 Setting up logrotate (3.21.0-2build1) ...
+8.050 Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+8.053 Setting up libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+8.054 Setting up postgresql-common (257build1.1) ...
+8.092 debconf: unable to initialize frontend: Dialog
+8.092 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+8.092 debconf: falling back to frontend: Readline
+8.096 debconf: unable to initialize frontend: Readline
+8.096 debconf: (This frontend requires a controlling tty.)
+8.096 debconf: falling back to frontend: Teletype
+8.230 
+8.230 Creating config file /etc/postgresql-common/createcluster.conf with new version
+8.299 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+8.299 Removing obsolete dictionary files:
+8.314 invoke-rc.d: could not determine current runlevel
+8.317 invoke-rc.d: policy-rc.d denied execution of start.
+8.377 Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+8.411 Processing triggers for man-db (2.12.0-4build2) ...
+8.881 Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+8.940 This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+8.940 your system. The distribution codename used will be noble-pgdg.
+8.940 
+8.940 Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+8.940 Writing /etc/apt/sources.list.d/pgdg.sources ...
+8.941 
+8.941 Running apt-get update ...
+8.975 Get:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease [189 kB]
+9.033 Get:2 https://apt.postgresql.org/pub/repos/apt noble-pgdg/main amd64 Packages [1083 kB]
+9.469 Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+9.473 Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+9.729 Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+9.984 Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+10.03 Fetched 1272 kB in 1s (1184 kB/s)
+10.03 Reading package lists...
+10.44 
+10.44 You can now start installing packages from apt.postgresql.org.
+10.44 
+10.44 Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+10.44 most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+10.45 
+10.45 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+10.45 
+10.49 Hit:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease
+10.85 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+11.04 Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+11.24 Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+11.91 Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+11.95 Reading package lists...
+12.39 Building dependency tree...
+12.48 Reading state information...
+12.50 72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+12.50 Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+12.51 
+12.51 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+12.51 
+12.51 E: Type 'debURIs:' is not known on stanza 1 in source list /etc/apt/sources.list.d/pgdg.sources
+12.51 E: The list of sources could not be read.
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN sudo apt update \
+   6 | >>>     && sudo apt install -y postgresql-common \
+   7 | >>>     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
+   8 | >>>     && sudo apt update \
+   9 | >>>     && echo 'Types: deb\
+  10 | >>> URIs: https://apt.postgresql.org/pub/repos/apt\
+  11 | >>> Suites: resolute-pgdg\
+  12 | >>> Components: main 19\
+  13 | >>> Architectures: amd64\
+  14 | >>> Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources \
+  15 | >>>     && sudo apt update \
+  16 | >>>     && sudo apt install -y postgresql-19 \
+  17 | >>>     && sudo systemctl enable postgresql
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql" did not complete successfully: exit code: 100
+laborant@docker-01:postgresql$ 

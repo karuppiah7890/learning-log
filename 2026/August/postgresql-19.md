@@ -1,7 +1,7 @@
 ```bash
 sudo apt update
 sudo apt install -y postgresql-common
-sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
 sudo apt update
 
 ls /etc/apt/sources.list.d/pgdg.sources
@@ -19,7 +19,7 @@ Example contents for `/etc/apt/sources.list.d/pgdg.sources` should be -
 Types: deb
 URIs: https://apt.postgresql.org/pub/repos/apt
 Suites: resolute-pgdg
-Components: 19
+Components: main 19
 Architectures: amd64
 Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
 ```
