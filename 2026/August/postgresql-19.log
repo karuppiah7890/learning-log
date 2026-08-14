@@ -5640,3 +5640,410 @@ Dockerfile:5
 --------------------
 ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: debURIs: https://apt.postgresql.org/pub/repos/aptSuites: resolute-pgdgComponents: main 19Architectures: amd64Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql" did not complete successfully: exit code: 100
 laborant@docker-01:postgresql$ 
+laborant@docker-01:postgresql$ rm Dockerfile ; vi Dockerfile 
+laborant@docker-01:postgresql$ docker build -t postgresql-19 .
+[+] Building 12.1s (6/8)                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.17kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            0.5s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [1/5] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => CACHED [2/5] WORKDIR /home/laborant                                                                                                              0.0s
+ => ERROR [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.  11.5s
+------                                                                                                                                                    
+ > [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo -e 'Types: deb\nURIs: https://apt.postgresql.org/pub/repos/apt\nSuites: resolute-pgdg\nComponents: main 19\nArchitectures: amd64\nSigned-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql:                                                                                     
+0.136                                                                                                                                                     
+0.136 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+0.136 
+0.514 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0.520 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+0.696 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+1.386 Get:4 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1655 kB]
+1.485 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+1.801 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1768 kB]
+2.320 Get:7 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+2.323 Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+2.437 Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1153 kB]
+2.511 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1478 kB]
+2.666 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+2.674 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2141 kB]
+2.799 Get:13 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+2.864 Fetched 10.2 MB in 3s (3787 kB/s)
+2.864 Reading package lists...
+3.363 Building dependency tree...
+3.553 Reading state information...
+3.582 70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+3.592 
+3.592 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+3.592 
+3.595 Reading package lists...
+4.321 Building dependency tree...
+4.566 Reading state information...
+4.913 The following additional packages will be installed:
+4.913   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.914   libtypes-serialiser-perl logrotate postgresql-client-common ssl-cert
+4.915 Suggested packages:
+4.915   bsd-mailx | mailx
+4.969 The following NEW packages will be installed:
+4.970   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.971   libtypes-serialiser-perl logrotate postgresql-client-common
+4.972   postgresql-common ssl-cert
+5.358 0 upgraded, 9 newly installed, 0 to remove and 70 not upgraded.
+5.358 Need to get 494 kB of archives.
+5.358 After this operation, 1665 kB of additional disk space will be used.
+5.358 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+6.031 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-client-common all 257build1.1 [36.4 kB]
+6.093 Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+6.124 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-common all 257build1.1 [161 kB]
+6.406 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpopt0 amd64 1.19+dfsg-1build1 [28.6 kB]
+6.420 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 logrotate amd64 3.21.0-2build1 [52.2 kB]
+6.454 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libcommon-sense-perl amd64 3.75-3build3 [20.4 kB]
+6.478 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+6.507 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libjson-xs-perl amd64 4.040-0ubuntu0.24.04.1 [83.7 kB]
+6.691 debconf: delaying package configuration, since apt-utils is not installed
+6.745 Fetched 494 kB in 2s (318 kB/s)
+6.765 Selecting previously unselected package libjson-perl.
+(Reading database ... 44913 files and directories currently installed.)
+6.793 Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+6.798 Unpacking libjson-perl (4.10000-1) ...
+6.823 Selecting previously unselected package postgresql-client-common.
+6.831 Preparing to unpack .../1-postgresql-client-common_257build1.1_all.deb ...
+6.831 Unpacking postgresql-client-common (257build1.1) ...
+6.863 Selecting previously unselected package ssl-cert.
+6.870 Preparing to unpack .../2-ssl-cert_1.1.2ubuntu1_all.deb ...
+6.876 Unpacking ssl-cert (1.1.2ubuntu1) ...
+6.915 Selecting previously unselected package postgresql-common.
+6.923 Preparing to unpack .../3-postgresql-common_257build1.1_all.deb ...
+6.939 Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+6.952 Unpacking postgresql-common (257build1.1) ...
+7.028 Selecting previously unselected package libpopt0:amd64.
+7.033 Preparing to unpack .../4-libpopt0_1.19+dfsg-1build1_amd64.deb ...
+7.034 Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+7.049 Selecting previously unselected package logrotate.
+7.052 Preparing to unpack .../5-logrotate_3.21.0-2build1_amd64.deb ...
+7.053 Unpacking logrotate (3.21.0-2build1) ...
+7.066 Selecting previously unselected package libcommon-sense-perl:amd64.
+7.068 Preparing to unpack .../6-libcommon-sense-perl_3.75-3build3_amd64.deb ...
+7.069 Unpacking libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.082 Selecting previously unselected package libtypes-serialiser-perl.
+7.084 Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+7.085 Unpacking libtypes-serialiser-perl (1.01-1) ...
+7.096 Selecting previously unselected package libjson-xs-perl.
+7.099 Preparing to unpack .../8-libjson-xs-perl_4.040-0ubuntu0.24.04.1_amd64.deb ...
+7.099 Unpacking libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+7.119 Setting up postgresql-client-common (257build1.1) ...
+7.120 Setting up libcommon-sense-perl:amd64 (3.75-3build3) ...
+7.121 Setting up ssl-cert (1.1.2ubuntu1) ...
+7.159 debconf: unable to initialize frontend: Dialog
+7.159 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+7.159 debconf: falling back to frontend: Readline
+7.164 debconf: unable to initialize frontend: Readline
+7.164 debconf: (This frontend requires a controlling tty.)
+7.164 debconf: falling back to frontend: Teletype
+7.380 Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+7.389 Setting up libtypes-serialiser-perl (1.01-1) ...
+7.391 Setting up libjson-perl (4.10000-1) ...
+7.392 Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+7.393 Setting up logrotate (3.21.0-2build1) ...
+7.461 Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+7.463 Setting up libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+7.464 Setting up postgresql-common (257build1.1) ...
+7.504 debconf: unable to initialize frontend: Dialog
+7.504 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+7.504 debconf: falling back to frontend: Readline
+7.509 debconf: unable to initialize frontend: Readline
+7.509 debconf: (This frontend requires a controlling tty.)
+7.509 debconf: falling back to frontend: Teletype
+7.656 
+7.656 Creating config file /etc/postgresql-common/createcluster.conf with new version
+7.728 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+7.728 Removing obsolete dictionary files:
+7.745 invoke-rc.d: could not determine current runlevel
+7.748 invoke-rc.d: policy-rc.d denied execution of start.
+7.815 Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+7.855 Processing triggers for man-db (2.12.0-4build2) ...
+8.351 Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+8.620 This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+8.620 your system. The distribution codename used will be noble-pgdg.
+8.620 
+8.621 Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+8.621 Writing /etc/apt/sources.list.d/pgdg.sources ...
+8.622 
+8.622 Running apt-get update ...
+9.015 Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+9.037 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+9.055 Get:3 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease [189 kB]
+9.159 Get:4 https://apt.postgresql.org/pub/repos/apt noble-pgdg/main amd64 Packages [1083 kB]
+9.232 Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+9.427 Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+9.481 Fetched 1272 kB in 1s (1515 kB/s)
+9.481 Reading package lists...
+9.999 
+9.999 You can now start installing packages from apt.postgresql.org.
+9.999 
+9.999 Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+9.999 most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+10.01 
+10.01 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+10.01 
+10.05 Hit:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease
+10.41 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+10.41 Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+10.60 Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+10.79 Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+10.84 Reading package lists...
+11.33 Building dependency tree...
+11.47 Reading state information...
+11.49 72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+11.49 -e Types: deb
+11.49 URIs: https://apt.postgresql.org/pub/repos/apt
+11.49 Suites: resolute-pgdg
+11.49 Components: main 19
+11.49 Architectures: amd64
+11.49 Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+11.50 
+11.50 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+11.50 
+11.50 E: Malformed stanza 1 in source list /etc/apt/sources.list.d/pgdg.sources (type)
+11.50 E: The list of sources could not be read.
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN sudo apt update \
+   6 | >>>     && sudo apt install -y postgresql-common \
+   7 | >>>     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
+   8 | >>>     && sudo apt update \
+   9 | >>>     && echo -e 'Types: deb\n\
+  10 | >>> URIs: https://apt.postgresql.org/pub/repos/apt\n\
+  11 | >>> Suites: resolute-pgdg\n\
+  12 | >>> Components: main 19\n\
+  13 | >>> Architectures: amd64\n\
+  14 | >>> Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources \
+  15 | >>>     && sudo apt update \
+  16 | >>>     && sudo apt install -y postgresql-19 \
+  17 | >>>     && sudo systemctl enable postgresql
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo -e 'Types: deb\\nURIs: https://apt.postgresql.org/pub/repos/apt\\nSuites: resolute-pgdg\\nComponents: main 19\\nArchitectures: amd64\\nSigned-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql" did not complete successfully: exit code: 100
+laborant@docker-01:postgresql$ rm Dockerfile ; vi Dockerfile 
+laborant@docker-01:postgresql$ docker build -t postgresql-19 .
+[+] Building 15.6s (6/8)                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 1.16kB                                                                                                               0.0s
+ => [internal] load metadata for ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04                                                                            0.3s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [1/5] FROM ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => => resolve ghcr.io/iximiuz/labs/rootfs:ubuntu-24-04@sha256:1315989631111fba475a77942f26e13fe1fef6396484bd0bdc45c223ed3cc77a                      0.0s
+ => CACHED [2/5] WORKDIR /home/laborant                                                                                                              0.0s
+ => ERROR [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.  15.3s
+------                                                                                                                                                    
+ > [3/5] RUN sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: deb\nURIs: https://apt.postgresql.org/pub/repos/apt\nSuites: resolute-pgdg\nComponents: main 19\nArchitectures: amd64\nSigned-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql:                                                                                        
+0.149                                                                                                                                                     
+0.149 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+0.149 
+0.526 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0.553 Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+0.739 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+1.373 Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+1.572 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+1.907 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+1.963 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2141 kB]
+2.268 Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1153 kB]
+2.359 Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1655 kB]
+2.543 Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+2.694 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1768 kB]
+2.853 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1478 kB]
+2.937 Get:13 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+2.984 Fetched 10.2 MB in 3s (3639 kB/s)
+2.984 Reading package lists...
+3.472 Building dependency tree...
+3.619 Reading state information...
+3.640 70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+3.650 
+3.650 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+3.650 
+3.652 Reading package lists...
+4.167 Building dependency tree...
+4.319 Reading state information...
+4.438 The following additional packages will be installed:
+4.439   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.439   libtypes-serialiser-perl logrotate postgresql-client-common ssl-cert
+4.439 Suggested packages:
+4.439   bsd-mailx | mailx
+4.463 The following NEW packages will be installed:
+4.463   libcommon-sense-perl libjson-perl libjson-xs-perl libpopt0
+4.463   libtypes-serialiser-perl logrotate postgresql-client-common
+4.463   postgresql-common ssl-cert
+4.865 0 upgraded, 9 newly installed, 0 to remove and 70 not upgraded.
+4.865 Need to get 494 kB of archives.
+4.865 After this operation, 1665 kB of additional disk space will be used.
+4.865 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-perl all 4.10000-1 [81.9 kB]
+5.765 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-client-common all 257build1.1 [36.4 kB]
+6.210 Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+6.448 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 postgresql-common all 257build1.1 [161 kB]
+7.085 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpopt0 amd64 1.19+dfsg-1build1 [28.6 kB]
+7.287 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 logrotate amd64 3.21.0-2build1 [52.2 kB]
+7.508 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libcommon-sense-perl amd64 3.75-3build3 [20.4 kB]
+7.703 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libtypes-serialiser-perl all 1.01-1 [11.6 kB]
+7.890 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libjson-xs-perl amd64 4.040-0ubuntu0.24.04.1 [83.7 kB]
+8.045 debconf: delaying package configuration, since apt-utils is not installed
+8.072 Fetched 494 kB in 3s (142 kB/s)
+8.084 Selecting previously unselected package libjson-perl.
+(Reading database ... 44913 files and directories currently installed.)
+8.099 Preparing to unpack .../0-libjson-perl_4.10000-1_all.deb ...
+8.099 Unpacking libjson-perl (4.10000-1) ...
+8.113 Selecting previously unselected package postgresql-client-common.
+8.116 Preparing to unpack .../1-postgresql-client-common_257build1.1_all.deb ...
+8.116 Unpacking postgresql-client-common (257build1.1) ...
+8.131 Selecting previously unselected package ssl-cert.
+8.133 Preparing to unpack .../2-ssl-cert_1.1.2ubuntu1_all.deb ...
+8.134 Unpacking ssl-cert (1.1.2ubuntu1) ...
+8.146 Selecting previously unselected package postgresql-common.
+8.149 Preparing to unpack .../3-postgresql-common_257build1.1_all.deb ...
+8.153 Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+8.158 Unpacking postgresql-common (257build1.1) ...
+8.185 Selecting previously unselected package libpopt0:amd64.
+8.188 Preparing to unpack .../4-libpopt0_1.19+dfsg-1build1_amd64.deb ...
+8.189 Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+8.203 Selecting previously unselected package logrotate.
+8.206 Preparing to unpack .../5-logrotate_3.21.0-2build1_amd64.deb ...
+8.207 Unpacking logrotate (3.21.0-2build1) ...
+8.219 Selecting previously unselected package libcommon-sense-perl:amd64.
+8.222 Preparing to unpack .../6-libcommon-sense-perl_3.75-3build3_amd64.deb ...
+8.222 Unpacking libcommon-sense-perl:amd64 (3.75-3build3) ...
+8.234 Selecting previously unselected package libtypes-serialiser-perl.
+8.237 Preparing to unpack .../7-libtypes-serialiser-perl_1.01-1_all.deb ...
+8.237 Unpacking libtypes-serialiser-perl (1.01-1) ...
+8.250 Selecting previously unselected package libjson-xs-perl.
+8.253 Preparing to unpack .../8-libjson-xs-perl_4.040-0ubuntu0.24.04.1_amd64.deb ...
+8.253 Unpacking libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+8.273 Setting up postgresql-client-common (257build1.1) ...
+8.275 Setting up libcommon-sense-perl:amd64 (3.75-3build3) ...
+8.276 Setting up ssl-cert (1.1.2ubuntu1) ...
+8.316 debconf: unable to initialize frontend: Dialog
+8.316 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+8.316 debconf: falling back to frontend: Readline
+8.321 debconf: unable to initialize frontend: Readline
+8.321 debconf: (This frontend requires a controlling tty.)
+8.321 debconf: falling back to frontend: Teletype
+8.677 Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+8.687 Setting up libtypes-serialiser-perl (1.01-1) ...
+8.688 Setting up libjson-perl (4.10000-1) ...
+8.689 Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+8.690 Setting up logrotate (3.21.0-2build1) ...
+8.756 Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+8.759 Setting up libjson-xs-perl (4.040-0ubuntu0.24.04.1) ...
+8.760 Setting up postgresql-common (257build1.1) ...
+8.802 debconf: unable to initialize frontend: Dialog
+8.802 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+8.802 debconf: falling back to frontend: Readline
+8.808 debconf: unable to initialize frontend: Readline
+8.808 debconf: (This frontend requires a controlling tty.)
+8.808 debconf: falling back to frontend: Teletype
+8.950 
+8.950 Creating config file /etc/postgresql-common/createcluster.conf with new version
+9.021 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+9.021 Removing obsolete dictionary files:
+9.037 invoke-rc.d: could not determine current runlevel
+9.040 invoke-rc.d: policy-rc.d denied execution of start.
+9.104 Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+9.138 Processing triggers for man-db (2.12.0-4build2) ...
+9.615 Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+9.675 This script will enable the PostgreSQL APT repository on apt.postgresql.org on
+9.675 your system. The distribution codename used will be noble-pgdg.
+9.675 
+9.675 Using keyring /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+9.675 Writing /etc/apt/sources.list.d/pgdg.sources ...
+9.676 
+9.676 Running apt-get update ...
+9.711 Get:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease [189 kB]
+9.769 Get:2 https://apt.postgresql.org/pub/repos/apt noble-pgdg/main amd64 Packages [1083 kB]
+10.08 Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+10.24 Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+10.27 Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+10.47 Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+10.52 Fetched 1272 kB in 1s (1548 kB/s)
+10.52 Reading package lists...
+10.99 
+10.99 You can now start installing packages from apt.postgresql.org.
+10.99 
+10.99 Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
+10.99 most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
+11.00 
+11.00 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+11.00 
+11.03 Hit:1 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease
+11.38 Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+11.53 Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+11.78 Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+12.04 Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+12.08 Reading package lists...
+12.54 Building dependency tree...
+12.66 Reading state information...
+12.67 72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+12.68 Types: deb
+12.68 URIs: https://apt.postgresql.org/pub/repos/apt
+12.68 Suites: resolute-pgdg
+12.68 Components: main 19
+12.68 Architectures: amd64
+12.68 Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+12.69 
+12.69 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+12.69 
+12.72 Get:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease [189 kB]
+12.78 Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/19 amd64 Packages [30.1 kB]
+12.79 Get:3 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]
+13.09 Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+13.22 Hit:5 http://archive.ubuntu.com/ubuntu noble InRelease
+13.47 Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+13.74 Hit:7 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+13.87 Fetched 1311 kB in 1s (1125 kB/s)
+13.87 Reading package lists...
+14.41 Building dependency tree...
+14.53 Reading state information...
+14.55 72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+14.55 
+14.55 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+14.55 
+14.56 Reading package lists...
+15.03 Building dependency tree...
+15.19 Reading state information...
+15.23 Some packages could not be installed. This may mean that you have
+15.23 requested an impossible situation or if you are using the unstable
+15.23 distribution that some required packages have not yet been created
+15.23 or been moved out of Incoming.
+15.23 The following information may help to resolve the situation:
+15.23 
+15.23 The following packages have unmet dependencies:
+15.27  postgresql-19 : Depends: libc6 (>= 2.43) but 2.39-0ubuntu8.7 is to be installed
+15.27                  Depends: libicu78 (>= 78.1-1~) but it is not installable
+15.27                  Depends: libssl3t64 (>= 3.4.0) but 3.0.13-0ubuntu3.11 is to be installed
+15.27                  Depends: libxml2-16 (>= 2.14.1) but it is not installable
+15.27                  Recommends: postgresql-19-jit but it is not going to be installed
+15.27                  Recommends: sysstat but it is not going to be installed
+15.28 E: Unable to correct problems, you have held broken packages.
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN sudo apt update \
+   6 | >>>     && sudo apt install -y postgresql-common \
+   7 | >>>     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
+   8 | >>>     && sudo apt update \
+   9 | >>>     && echo 'Types: deb\n\
+  10 | >>> URIs: https://apt.postgresql.org/pub/repos/apt\n\
+  11 | >>> Suites: resolute-pgdg\n\
+  12 | >>> Components: main 19\n\
+  13 | >>> Architectures: amd64\n\
+  14 | >>> Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources \
+  15 | >>>     && sudo apt update \
+  16 | >>>     && sudo apt install -y postgresql-19 \
+  17 | >>>     && sudo systemctl enable postgresql
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sudo apt update     && sudo apt install -y postgresql-common     && sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y     && sudo apt update     && echo 'Types: deb\\nURIs: https://apt.postgresql.org/pub/repos/apt\\nSuites: resolute-pgdg\\nComponents: main 19\\nArchitectures: amd64\\nSigned-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg' | sudo tee /etc/apt/sources.list.d/pgdg.sources     && sudo apt update     && sudo apt install -y postgresql-19     && sudo systemctl enable postgresql" did not complete successfully: exit code: 100
+laborant@docker-01:postgresql$ 
