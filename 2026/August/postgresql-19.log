@@ -4411,3 +4411,85 @@ RemainAfterExit=on
 [Install]
 WantedBy=multi-user.target
 laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ systemctl status postgresql@19-main.service 
+● postgresql@19-main.service - PostgreSQL Cluster 19-main
+     Loaded: loaded (/usr/lib/systemd/system/postgresql@.service; enabled-runtime; preset: enabled)
+     Active: active (running) since Fri 2026-08-14 01:02:08 UTC; 9min ago
+ Invocation: 60ab84bf6849449ab5cdb0cd4e5924a4
+    Process: 5099 ExecStart=/usr/bin/pg_ctlcluster --skip-systemctl-redirect 19-main start (code=exited, status=0/SUCCESS)
+   Main PID: 5104 (postgres)
+      Tasks: 8 (limit: 12019)
+     Memory: 30.9M (peak: 36.3M)
+        CPU: 243ms
+     CGroup: /system.slice/system-postgresql.slice/postgresql@19-main.service
+             ├─5104 /usr/lib/postgresql/19/bin/postgres -D /var/lib/postgresql/19/main -c config_file=/etc/postgresql/19/main/postgresql.conf
+             ├─5105 "postgres: 19/main: io worker 0"
+             ├─5106 "postgres: 19/main: io worker 1"
+             ├─5107 "postgres: 19/main: checkpointer "
+             ├─5108 "postgres: 19/main: background writer "
+             ├─5110 "postgres: 19/main: walwriter "
+             ├─5111 "postgres: 19/main: autovacuum launcher "
+             └─5112 "postgres: 19/main: logical replication launcher "
+laborant@ubuntu-01:~$ systemctl status postgresql.service 
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: enabled)
+     Active: active (exited) since Fri 2026-08-14 01:02:08 UTC; 9min ago
+ Invocation: be910b5ac12f4b12a69bf0a249ff084c
+    Process: 5124 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 5124 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.7M
+        CPU: 4ms
+laborant@ubuntu-01:~$ ls /usr/lib/postgresql/19/bin/
+clusterdb   dropuser    pg_archivecleanup  pg_config            pg_dump        pg_recvlogical  pg_test_fsync    pg_waldump     psql
+createdb    initdb      pg_basebackup      pg_controldata       pg_dumpall     pg_resetwal     pg_test_timing   pg_walsummary  reindexdb
+createuser  oid2name    pg_checksums       pg_createsubscriber  pg_isready     pg_restore      pg_upgrade       pgbench        vacuumdb
+dropdb      pg_amcheck  pg_combinebackup   pg_ctl               pg_receivewal  pg_rewind       pg_verifybackup  postgres       vacuumlo
+laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ ls /usr/lib/postgresql/19/
+bin  lib
+laborant@ubuntu-01:~$ ls /usr/lib/postgresql/19/lib/
+_int.so                 cube.so              hstore.so              pg_buffercache.so      pgcrypto.so      sslinfo.so            utf8_and_euc_kr.so
+amcheck.so              cyrillic.so          insert_username.so     pg_freespacemap.so     pgoutput.so      tablefunc.so          utf8_and_euc_tw.so
+auth_delay.so           dblink.so            isn.so                 pg_logicalinspect.so   pgrepack.so      tcn.so                utf8_and_gb18030.so
+auto_explain.so         dict_int.so          latin2_and_win1250.so  pg_overexplain.so      pgrowlocks.so    test_decoding.so      utf8_and_gbk.so
+autoinc.so              dict_snowball.so     libpqwalreceiver.so    pg_plan_advice.so      pgstattuple.so   tsm_system_rows.so    utf8_and_iso8859.so
+basebackup_to_shell.so  dict_xsyn.so         llvmjit.so             pg_prewarm.so          pgxml.so         tsm_system_time.so    utf8_and_iso8859_1.so
+basic_archive.so        earthdistance.so     llvmjit_types.bc       pg_stash_advice.so     pgxs             unaccent.so           utf8_and_johab.so
+bitcode                 euc2004_sjis2004.so  lo.so                  pg_stat_statements.so  plpgsql.so       utf8_and_big5.so      utf8_and_sjis.so
+bloom.so                euc_jp_and_sjis.so   ltree.so               pg_surgery.so          postgres_fdw.so  utf8_and_cyrillic.so  utf8_and_sjis2004.so
+btree_gin.so            euc_tw_and_big5.so   moddatetime.so         pg_trgm.so             refint.so        utf8_and_euc2004.so   utf8_and_uhc.so
+btree_gist.so           file_fdw.so          pageinspect.so         pg_visibility.so       seg.so           utf8_and_euc_cn.so    utf8_and_win.so
+citext.so               fuzzystrmatch.so     passwordcheck.so       pg_walinspect.so       sepgsql.so       utf8_and_euc_jp.so    uuid-ossp.so
+laborant@ubuntu-01:~$ ls /etc/
+Display all 143 possibilities? (y or n)
+laborant@ubuntu-01:~$ ls /etc/postgresql
+postgresql/        postgresql-common/ 
+laborant@ubuntu-01:~$ ls /etc/postgresql
+19
+laborant@ubuntu-01:~$ ls /etc/postgresql/19/
+main
+laborant@ubuntu-01:~$ ls /etc/postgresql/19/main/
+conf.d  environment  pg_ctl.conf  pg_hba.conf  pg_ident.conf  postgresql.conf  start.conf
+laborant@ubuntu-01:~$ ls /etc/postgresql/19/main/environment 
+/etc/postgresql/19/main/environment
+laborant@ubuntu-01:~$ file /etc/postgresql/19/main/environment 
+/etc/postgresql/19/main/environment: ASCII text
+laborant@ubuntu-01:~$ cat /etc/postgresql/19/main/environment 
+# environment variables for postgres processes
+# This file has the same syntax as postgresql.conf:
+#  VARIABLE = simple_value
+#  VARIABLE2 = 'any value!'
+# I. e. you need to enclose any value which does not only consist of letters,
+# numbers, and '-', '_', '.' in single quotes. Shell commands are not
+# evaluated.
+laborant@ubuntu-01:~$ ls /etc/postgresql/19/main/
+conf.d  environment  pg_ctl.conf  pg_hba.conf  pg_ident.conf  postgresql.conf  start.conf
+laborant@ubuntu-01:~$ ls /etc/postgresql-common/
+createcluster.conf  pg_upgradecluster.d  root.crt  user_clusters
+laborant@ubuntu-01:~$ ls /etc/postgresql-common/pg_upgradecluster.d/
+analyze
+laborant@ubuntu-01:~$ ls /etc/postgresql-common/pg_upgradecluster.d/analyze 
+/etc/postgresql-common/pg_upgradecluster.d/analyze
+laborant@ubuntu-01:~$ file /etc/postgresql-common/pg_upgradecluster.d/analyze 
+/etc/postgresql-common/pg_upgradecluster.d/analyze: POSIX shell script, ASCII text executable
+laborant@ubuntu-01:~$ 
