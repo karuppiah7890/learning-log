@@ -4493,3 +4493,54 @@ laborant@ubuntu-01:~$ ls /etc/postgresql-common/pg_upgradecluster.d/analyze
 laborant@ubuntu-01:~$ file /etc/postgresql-common/pg_upgradecluster.d/analyze 
 /etc/postgresql-common/pg_upgradecluster.d/analyze: POSIX shell script, ASCII text executable
 laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ cat /etc/apt/sources.list.d/pgdg.sources
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                 
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1091 kB in 1s (1479 kB/s)
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt install postgresql-19
+postgresql-19 is already the newest version (19~beta3-1.pgdg26.04+1).
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 13
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease                                      
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                                                
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo vi /etc/apt/sources.list.d/pgdg.sources
+laborant@ubuntu-01:~$ sudo apt update
+Hit:1 https://apt.postgresql.org/pub/repos/apt resolute-pgdg InRelease
+Get:2 https://apt.postgresql.org/pub/repos/apt resolute-pgdg/main amd64 Packages [1091 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease                                              
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 1091 kB in 1s (1397 kB/s)
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+laborant@ubuntu-01:~$ sudo apt install postgresql-19
+postgresql-19 is already the newest version (19~beta3-1.pgdg26.04+1).
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 13
+laborant@ubuntu-01:~$ sudo apt install postgresql-20
+Error: Unable to locate package postgresql-20
+laborant@ubuntu-01:~$ sudo apt info postgresql-20
+Notice: Unable to locate package postgresql-20
+Notice: Unable to locate package postgresql-20
+Error: No packages found
+laborant@ubuntu-01:~$ 
