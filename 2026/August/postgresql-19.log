@@ -6195,3 +6195,260 @@ laborant@0b2abee2e1f7:~$ echo $PATH
 laborant@0b2abee2e1f7:~$ 
 exit
 laborant@docker-01:postgresql$ 
+laborant@ubuntu-01:~$ sudo systemctl status postgresql
+postgresql.service          postgresql@19-main.service  
+laborant@ubuntu-01:~$ sudo systemctl status postgresql@19-main.service 
+● postgresql@19-main.service - PostgreSQL Cluster 19-main
+     Loaded: loaded (/usr/lib/systemd/system/postgresql@.service; enabled-runtime; preset: enabled)
+     Active: active (running) since Fri 2026-08-14 01:54:05 UTC; 19s ago
+ Invocation: 47ebc17a4eca4c35922eb9093a01d18f
+    Process: 3973 ExecStart=/usr/bin/pg_ctlcluster --skip-systemctl-redirect 19-main start (code=exited, status=0/SUCCESS)
+   Main PID: 3978 (postgres)
+      Tasks: 8 (limit: 12019)
+     Memory: 27.2M (peak: 36.5M)
+        CPU: 99ms
+     CGroup: /system.slice/system-postgresql.slice/postgresql@19-main.service
+             ├─3978 /usr/lib/postgresql/19/bin/postgres -D /var/lib/postgresql/19/main -c config_file=/etc/postgresql/19/main/postgresql.conf
+             ├─3979 "postgres: 19/main: io worker 0"
+             ├─3980 "postgres: 19/main: io worker 1"
+             ├─3981 "postgres: 19/main: checkpointer "
+             ├─3982 "postgres: 19/main: background writer "
+             ├─3984 "postgres: 19/main: walwriter "
+             ├─3985 "postgres: 19/main: autovacuum launcher "
+             └─3986 "postgres: 19/main: logical replication launcher "
+
+Aug 14 01:54:03 ubuntu-01 systemd[1]: Starting postgresql@19-main.service - PostgreSQL Cluster 19-main...
+Aug 14 01:54:05 ubuntu-01 systemd[1]: Started postgresql@19-main.service - PostgreSQL Cluster 19-main.
+laborant@ubuntu-01:~$ ls /var/lib/postgresql/19/
+main
+laborant@ubuntu-01:~$ ls /var/lib/postgresql/19/main/
+ls: cannot open directory '/var/lib/postgresql/19/main/': Permission denied
+laborant@ubuntu-01:~$ sudo ls /var/lib/postgresql/19/main/
+PG_VERSION  pg_commit_ts   pg_logical    pg_replslot   pg_stat      pg_tblspc    pg_xact               postmaster.pid
+base        pg_dynshmem    pg_multixact  pg_serial     pg_stat_tmp  pg_twophase  postgresql.auto.conf
+global      pg_hosts.conf  pg_notify     pg_snapshots  pg_subtrans  pg_wal       postmaster.opts
+laborant@ubuntu-01:~$ sudo ls -al /var/lib/postgresql/19/main/
+total 96
+drwx------ 19 postgres postgres 4096 Aug 14 01:54 .
+drwxr-xr-x  3 postgres postgres 4096 Aug 14 01:53 ..
+-rw-------  1 postgres postgres    3 Aug 14 01:53 PG_VERSION
+drwx------  5 postgres postgres 4096 Aug 14 01:53 base
+drwx------  2 postgres postgres 4096 Aug 14 01:54 global
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_commit_ts
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_dynshmem
+-rw-------  1 postgres postgres  194 Aug 14 01:53 pg_hosts.conf
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_logical
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_multixact
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_notify
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_replslot
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_serial
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_snapshots
+drwx------  2 postgres postgres 4096 Aug 14 01:54 pg_stat
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_stat_tmp
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_subtrans
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_tblspc
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_twophase
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_wal
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_xact
+-rw-------  1 postgres postgres   88 Aug 14 01:53 postgresql.auto.conf
+-rw-------  1 postgres postgres  130 Aug 14 01:54 postmaster.opts
+-rw-------  1 postgres postgres  108 Aug 14 01:54 postmaster.pid
+laborant@ubuntu-01:~$ ls /usr/lib/postgresql/19/bin/
+clusterdb   dropuser    pg_archivecleanup  pg_config            pg_dump        pg_recvlogical  pg_test_fsync    pg_waldump     psql
+createdb    initdb      pg_basebackup      pg_controldata       pg_dumpall     pg_resetwal     pg_test_timing   pg_walsummary  reindexdb
+createuser  oid2name    pg_checksums       pg_createsubscriber  pg_isready     pg_restore      pg_upgrade       pgbench        vacuumdb
+dropdb      pg_amcheck  pg_combinebackup   pg_ctl               pg_receivewal  pg_rewind       pg_verifybackup  postgres       vacuumlo
+laborant@ubuntu-01:~$ ls /usr/local/
+bin  etc  games  include  lib  libexec  man  sbin  share  src
+laborant@ubuntu-01:~$ ls /home/
+laborant  ubuntu
+laborant@ubuntu-01:~$ echo ''
+
+laborant@ubuntu-01:~$ echo 'Types: deb\
+URIs: https://apt.postgresql.org/pub/repos/apt\
+Suites: resolute-pgdg\
+Components: main 19\
+Architectures: amd64\
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg'
+Types: deb\
+URIs: https://apt.postgresql.org/pub/repos/apt\
+Suites: resolute-pgdg\
+Components: main 19\
+Architectures: amd64\
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ echo 'Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg'
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ echo 'p\np'
+p\np
+laborant@ubuntu-01:~$ echo "p\np"
+p\np
+laborant@ubuntu-01:~$ echo -e "p\np"
+p
+p
+laborant@ubuntu-01:~$ 
+laborant@ubuntu-01:~$ sudo systemctl status postgresql
+postgresql.service          postgresql@19-main.service  
+laborant@ubuntu-01:~$ sudo systemctl status postgresql@19-main.service 
+● postgresql@19-main.service - PostgreSQL Cluster 19-main
+     Loaded: loaded (/usr/lib/systemd/system/postgresql@.service; enabled-runtime; preset: enabled)
+     Active: active (running) since Fri 2026-08-14 01:54:05 UTC; 19s ago
+ Invocation: 47ebc17a4eca4c35922eb9093a01d18f
+    Process: 3973 ExecStart=/usr/bin/pg_ctlcluster --skip-systemctl-redirect 19-main start (code=exited, status=0/SUCCESS)
+   Main PID: 3978 (postgres)
+      Tasks: 8 (limit: 12019)
+     Memory: 27.2M (peak: 36.5M)
+        CPU: 99ms
+     CGroup: /system.slice/system-postgresql.slice/postgresql@19-main.service
+             ├─3978 /usr/lib/postgresql/19/bin/postgres -D /var/lib/postgresql/19/main -c config_file=/etc/postgresql/19/main/postgresql.conf
+             ├─3979 "postgres: 19/main: io worker 0"
+             ├─3980 "postgres: 19/main: io worker 1"
+             ├─3981 "postgres: 19/main: checkpointer "
+             ├─3982 "postgres: 19/main: background writer "
+             ├─3984 "postgres: 19/main: walwriter "
+             ├─3985 "postgres: 19/main: autovacuum launcher "
+             └─3986 "postgres: 19/main: logical replication launcher "
+
+Aug 14 01:54:03 ubuntu-01 systemd[1]: Starting postgresql@19-main.service - PostgreSQL Cluster 19-main...
+Aug 14 01:54:05 ubuntu-01 systemd[1]: Started postgresql@19-main.service - PostgreSQL Cluster 19-main.
+laborant@ubuntu-01:~$ ls /var/lib/postgresql/19/
+main
+laborant@ubuntu-01:~$ ls /var/lib/postgresql/19/main/
+ls: cannot open directory '/var/lib/postgresql/19/main/': Permission denied
+laborant@ubuntu-01:~$ sudo ls /var/lib/postgresql/19/main/
+PG_VERSION  pg_commit_ts   pg_logical    pg_replslot   pg_stat      pg_tblspc    pg_xact               postmaster.pid
+base        pg_dynshmem    pg_multixact  pg_serial     pg_stat_tmp  pg_twophase  postgresql.auto.conf
+global      pg_hosts.conf  pg_notify     pg_snapshots  pg_subtrans  pg_wal       postmaster.opts
+laborant@ubuntu-01:~$ sudo ls -al /var/lib/postgresql/19/main/
+total 96
+drwx------ 19 postgres postgres 4096 Aug 14 01:54 .
+drwxr-xr-x  3 postgres postgres 4096 Aug 14 01:53 ..
+-rw-------  1 postgres postgres    3 Aug 14 01:53 PG_VERSION
+drwx------  5 postgres postgres 4096 Aug 14 01:53 base
+drwx------  2 postgres postgres 4096 Aug 14 01:54 global
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_commit_ts
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_dynshmem
+-rw-------  1 postgres postgres  194 Aug 14 01:53 pg_hosts.conf
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_logical
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_multixact
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_notify
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_replslot
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_serial
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_snapshots
+drwx------  2 postgres postgres 4096 Aug 14 01:54 pg_stat
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_stat_tmp
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_subtrans
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_tblspc
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_twophase
+drwx------  4 postgres postgres 4096 Aug 14 01:53 pg_wal
+drwx------  2 postgres postgres 4096 Aug 14 01:53 pg_xact
+-rw-------  1 postgres postgres   88 Aug 14 01:53 postgresql.auto.conf
+-rw-------  1 postgres postgres  130 Aug 14 01:54 postmaster.opts
+-rw-------  1 postgres postgres  108 Aug 14 01:54 postmaster.pid
+laborant@ubuntu-01:~$ ls /usr/lib/postgresql/19/bin/
+clusterdb   dropuser    pg_archivecleanup  pg_config            pg_dump        pg_recvlogical  pg_test_fsync    pg_waldump     psql
+createdb    initdb      pg_basebackup      pg_controldata       pg_dumpall     pg_resetwal     pg_test_timing   pg_walsummary  reindexdb
+createuser  oid2name    pg_checksums       pg_createsubscriber  pg_isready     pg_restore      pg_upgrade       pgbench        vacuumdb
+dropdb      pg_amcheck  pg_combinebackup   pg_ctl               pg_receivewal  pg_rewind       pg_verifybackup  postgres       vacuumlo
+laborant@ubuntu-01:~$ ls /usr/local/
+bin  etc  games  include  lib  libexec  man  sbin  share  src
+laborant@ubuntu-01:~$ ls /home/
+laborant  ubuntu
+laborant@ubuntu-01:~$ echo ''
+
+laborant@ubuntu-01:~$ echo 'Types: deb\
+URIs: https://apt.postgresql.org/pub/repos/apt\
+Suites: resolute-pgdg\
+Components: main 19\
+Architectures: amd64\
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg'
+Types: deb\
+URIs: https://apt.postgresql.org/pub/repos/apt\
+Suites: resolute-pgdg\
+Components: main 19\
+Architectures: amd64\
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ echo 'Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg'
+Types: deb
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: resolute-pgdg
+Components: main 19
+Architectures: amd64
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg
+laborant@ubuntu-01:~$ echo 'p\np'
+p\np
+laborant@ubuntu-01:~$ echo "p\np"
+p\np
+laborant@ubuntu-01:~$ echo -e "p\np"
+p
+p
+laborant@ubuntu-01:~$ 
+Welcome to iximiuz Labs' PostgreSQL 19 Playground! 🚀
+
+Run `sudo -u postgres psql` to connect to the PostgreSQL server
+
+This is also a Ubuntu Playground! Details below!
+
+Welcome to iximiuz Labs' Ubuntu 26.04 Playground! 🚀
+
+This is a refined Ubuntu VM, curated with tools for efficient learning and
+hands-on experimenting:
+
+- vim, fzf, ripgrep: Command-line file editing and searching.
+- fx, jq, yq: Powerful JSON and YAML viewers and processors.
+- curl, socat, websocat: A comprehensive networking toolkit.
+- arkade: An efficient installer for additional tools you might require.
+
+Additional services at your disposal:
+
+* Port publishing: Showcase your app with its own public URL.
+* Terminal sharing: Collaborate seamlessly by sharing your terminal session.
+* registry.iximiuz.com: A private hub to push and pull container images.
+
+Playground VMs are ephemeral and short-lived — terminating a VM purges
+all data, including images in the private registry. Please, do not use
+playgrounds for processing critical or sensitive information.
+
+
+laborant@postgres-01:~$ sudo -u postgres psql
+psql (19beta3 (Ubuntu 19~beta3-1.pgdg26.04+1))
+Type "help" for help.
+
+postgres=# select * from pg_settings where name = 'server_version';
+postgres=# \x
+Expanded display is on.
+postgres=# select * from pg_settings where name = 'server_version';
+-[ RECORD 1 ]---+----------------------------------------
+name            | server_version
+setting         | 19beta3 (Ubuntu 19~beta3-1.pgdg26.04+1)
+unit            | 
+category        | Preset Options
+short_desc      | Shows the server version.
+extra_desc      | 
+context         | internal
+vartype         | string
+source          | default
+min_val         | 
+max_val         | 
+enumvals        | 
+boot_val        | 19beta3 (Ubuntu 19~beta3-1.pgdg26.04+1)
+reset_val       | 19beta3 (Ubuntu 19~beta3-1.pgdg26.04+1)
+sourcefile      | 
+sourceline      | 
+pending_restart | f
+
+postgres=# 
