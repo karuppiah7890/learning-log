@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+PORT=${SAGEMAKER_BIND_TO_PORT:-8080}
+
+exec tritonserver \
+  --allow-sagemaker=true \
+  --sagemaker-port=${PORT} \
+  --allow-http=false \
+  --allow-grpc=false \
+  --allow-metrics=false \
+  --model-control-mode=explicit \
+  --model-repository=/opt/ml/model/ \
+  --load-model=${SAGEMAKER_TRITON_DEFAULT_MODEL_NAME:-ner_ensemble} \
+  --log-verbose=true
