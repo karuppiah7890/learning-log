@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=49585644
+
 https://eighttrigrams.net/post/79
 
 https://eighttrigrams.net/posts
@@ -13,6 +15,8 @@ https://eighttrigrams.net/articles
 https://eighttrigrams.substack.com
 
 https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code
+
+https://news.ycombinator.com/item?id=47434047
 
 https://github.com/openai/symphony
 
@@ -43,3 +47,15 @@ https://github.com/yaml/go-yaml
 https://yaml.org
 
 https://en.wikipedia.org/wiki/Generation_effect
+
+https://dhall-lang.org/
+
+https://en.wikipedia.org/wiki/Single_source_of_truth
+
+https://kemptechnologies.com/glossary/configuration-drift/
+
+https://github.com/dhall-lang/dhall-lang
+
+https://haskellforall.com/2016/12/dhall-non-turing-complete-configuration
+
+https://www.google.com/search?q=dhall+programming+language
