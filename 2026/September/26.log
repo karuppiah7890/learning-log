@@ -22,3 +22,129 @@ sudo: a password is required
 >>> Installed Ollaya 0.6.1: /Users/kp/.local/bin/ollaya
 >>> Get started:  ollaya run laya
 ~ > 
+log > olla
+ollama  ollaya  
+log > olla
+ollama  ollaya  
+log > ollaya --help
+Run open decision models locally
+
+Usage: ollaya [COMMAND]
+
+Commands:
+  serve   Start ollaya
+  run     Run a model: answer questions about a state, or start a REPL
+  pull    Pull a model from a registry
+  list    List models [alias: ls]
+  ps      List running models
+  show    Show information for a model
+  rm      Remove a model
+  cp      Copy a model
+  stop    Stop a running model, or without one the server (which unloads every model)
+  mcp     Serve the local models to AI agents over the Model Context Protocol
+  create  Create a model from a Modelfile
+  help    Print this message or the help of the given subcommand(s)
+
+Options:
+  -v, --version  Show version information
+  -h, --help     Print help
+log > ollaya list
+NAME      ID             SIZE     MODIFIED
+laya:en   c78b04d05d2f   854 MB   Less than a second ago
+log > ollaya list
+NAME                ID             SIZE     MODIFIED
+laya:latest         89aa53ce17e1   11 KB    5 seconds ago
+laya:multilingual   6bf638565628   684 MB   5 seconds ago
+laya:en             c78b04d05d2f   854 MB   33 seconds ago
+log > ollaya run
+error: the following required arguments were not provided:
+  <MODEL>
+
+Usage: ollaya run <MODEL> [STATE]...
+
+For more information, try '--help'.
+log > ollaya run laya
+laya has no built-in questions, so it answers the triage preset. Choose with --preset NAME (triage, email, guard, moderation, router, agent) or --questions FILE.
+Enter a state to decide about (/? for help, """ for several lines).
+>>> /?
+Available commands:
+  /set questions <file>   Use the questions in a JSON file
+  /preset <name>          Use a built-in question set (triage, email, guard, moderation, router, agent)
+  /show                   Show the model and the current questions
+  /clear                  Clear the screen
+  /bye                    Exit
+  /?, /help               Help for a command
+
+Enter a state to decide about. Use """ to begin and end a multi-line state.
+>>> /show
+model: laya
+questions:
+  intent: choice
+  is_urgent: noul
+  frustration: score
+  refund_requested: noul
+  churn_risk: noul
+>>> git push --force
+intent            other                         ██████████████░░ 0.85
+is_urgent         no                            ████████████░░░░ 0.78
+frustration       0.92 / 3  concerned but civil  ████░░░░░░░░░░░░ 0.24
+refund_requested  no                            ████████████████ 1.00
+churn_risk        no                            █████████████░░░ 0.82
+>>> /preset triage
+Set questions to the triage preset.
+>>> /show
+model: laya
+questions:
+  intent: choice
+  is_urgent: noul
+  frustration: score
+  refund_requested: noul
+  churn_risk: noul
+>>> /preset email
+Set questions to the email preset.
+>>> /show
+model: laya
+questions:
+  category: choice
+  is_spam: noul
+  is_phishing: noul
+  urgency: score
+  needs_reply: noul
+>>> you have won 100 million dollars
+category     security                      ██████████████░░ 0.86
+is_spam      yes                           ████████████████ 1.00
+is_phishing  yes                           ███████████████░ 0.95
+urgency      1.05 / 2  needs attention soon  ███░░░░░░░░░░░░░ 0.16
+needs_reply  no                            ███████████████░ 0.93
+>>> this is your otp for logging into irctc
+category     security                      ███████████░░░░░ 0.66
+is_spam      yes                           ████████████████ 1.00
+is_phishing  yes                           ███████████████░ 0.95
+urgency      1.07 / 2  needs attention soon  ████░░░░░░░░░░░░ 0.23
+needs_reply  no                            ███████████████░ 0.93
+>>> please review our terms and conditions
+category     other                         ██████░░░░░░░░░░ 0.37
+is_spam      yes                           █████████░░░░░░░ 0.56
+is_phishing  yes                           █████████████░░░ 0.78
+urgency      1.21 / 2  needs attention soon  █████░░░░░░░░░░░ 0.30
+needs_reply  no                            █████████████░░░ 0.79
+>>> hi, how are you doing
+category     other                         ███████████░░░░░ 0.69
+is_spam      no                            ███████████████░ 0.92
+is_phishing  no                            █████████████░░░ 0.80
+urgency      0.82 / 2  needs attention soon  ███░░░░░░░░░░░░░ 0.16
+needs_reply  no                            ██████████░░░░░░ 0.64
+>>> file your income tax
+category     billing                       ████████████████ 0.98
+is_spam      no                            ████████████████ 1.00
+is_phishing  no                            ████████████░░░░ 0.77
+urgency      1.12 / 2  needs attention soon  ██████░░░░░░░░░░ 0.37
+needs_reply  no                            ████████████████ 1.00
+>>> send me your resume
+category     hr                            ████████░░░░░░░░ 0.53
+is_spam      no                            ███████████████░ 0.97
+is_phishing  no                            █████████░░░░░░░ 0.58
+urgency      0.91 / 2  needs attention soon  ██████░░░░░░░░░░ 0.36
+needs_reply  no                            ██████████████░░ 0.88
+>>> 
+log > 
