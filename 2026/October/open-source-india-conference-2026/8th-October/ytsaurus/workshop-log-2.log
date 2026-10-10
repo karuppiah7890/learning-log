@@ -1,0 +1,537 @@
+~ > echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}'\
+> | yt insert-rows "//home/workshop/user-${MY_ID}/bronze/queue" --format json
+~ > echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}'| yt insert-rows "//home/workshop/user-${MY_ID}/bronze/queue" --format json
+~ > 
+~ > 
+~ > 
+~ > for i in {1..5}; do
+> echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}' | yt insert-rows "//home/workshop/user-${MY_ID}/bronze/queue" --format json
+> done
+~ > 
+~ > 
+~ > for i in {1..5}; do
+> echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}' | yt insert-rows "//home/workshop/user-${MY_ID}/bronze/queue" --format json
+> done
+~ > 
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[[{name:date;type:date};{name:city;type:string};{name:temperature_2m_max;type:double};{name:temperature_2m_min;type:double};{name:temperature_2m_mean;type:double};{name:apparent_temperature_max;type:double};{name:precipitation_sum;type:double};{name:precipitation_hours;type:double};{name:relative_humidity_2m_mean;type:int64};{name:wind_speed_10m_max;type:double};{name:wind_direction_10m_dominant;type:int64};{name:shortwave_radiation_sum;type:double};{name:et0_fao_evapotranspiration;type:double};{name:weather_code;type:int64}]]}"
+Unexpected token ":" of type Colon; expected types are ['Equals']
+
+***** Details:
+Unexpected token ":" of type Colon; expected types are ['Equals']    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:45:46.311772Z
+
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[[{name=date;type=date};{name=city;type=string};{name=temperature_2m_max;type=double};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]]}"
+Error parsing attribute "schema"
+    Cannot parse "map"; expected "begin_map", actual "begin_list"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:46:43.523146Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/create    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=38133;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "Content-Type": "application/x-yt-yson-text",
+                      "X-YT-Correlation-Id": "dc10c9ec-aefde783-d343e45a-352d5e0c"
+                    }    
+    response_headers {
+                      "content-length": "736",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Error parsing attribute \\\"schema\\\"\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:46:43.418494Z\",\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":1,\"message\":\"Cannot parse \\\"map\\\"; expected \\\"begin_map\\\", actual \\\"begin_list\\\"\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:46:43.418494Z\",\"context\":\"[[{\\\\1\\\\x08name=\\\\1\\\\010date;\\\\1\\\\x08type=\\\\1\\\\010date;};{\\\\1\\\\x08name=\\\\1\\\\010city;\\\\1\\\\x08type=\\\\1\\\\x0Cstring;\",\"context_pos\":1,\"marked_context\":\"[  ERROR>>>  [{\\\\1\\\\x08name=\\\\1\\\\010date;\\\\1\\\\x08type=\\\\1\\\\010date;};{\\\\1\\\\x08name=\\\\1\\\\010city;\\\\1\\\\x08type=\\\\1\\\\x0Cstring;\",\"offset\":2}}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "9ffe8d7-62e7d37a-af1139f5-9eed8bb6",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Error parsing attribute \"schema\"",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "fb0feddb-10eb4602-ba819159-cf687aa",
+                      "date": "Thu, 08 Oct 2026 10:46:43 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "type": "table",
+                      "recursive": false,
+                      "ignore_existing": false,
+                      "lock_existing": false,
+                      "attributes": {
+                        "schema": [
+                          [
+                            {
+                              "name": "date",
+                              "type": "date"
+                            },
+                            {
+                              "name": "city",
+                              "type": "string"
+                            },
+                            {
+                              "name": "temperature_2m_max",
+                              "type": "double"
+                            },
+                            {
+                              "name": "temperature_2m_min",
+                              "type": "double"
+                            },
+                            {
+                              "name": "temperature_2m_mean",
+                              "type": "double"
+                            },
+                            {
+                              "name": "apparent_temperature_max",
+                              "type": "double"
+                            },
+                            {
+                              "name": "precipitation_sum",
+                              "type": "double"
+                            },
+                            {
+                              "name": "precipitation_hours",
+                              "type": "double"
+                            },
+                            {
+                              "name": "relative_humidity_2m_mean",
+                              "type": "int64"
+                            },
+                            {
+                              "name": "wind_speed_10m_max",
+                              "type": "double"
+                            },
+                            {
+                              "name": "wind_direction_10m_dominant",
+                              "type": "int64"
+                            },
+                            {
+                              "name": "shortwave_radiation_sum",
+                              "type": "double"
+                            },
+                            {
+                              "name": "et0_fao_evapotranspiration",
+                              "type": "double"
+                            },
+                            {
+                              "name": "weather_code",
+                              "type": "int64"
+                            }
+                          ]
+                        ]
+                      },
+                      "force": false,
+                      "ignore_type_mismatch": false,
+                      "path": "//home/workshop/user-15/weather_daily",
+                      "output_format": "json",
+                      "mutation_id": "6ec4b9f5-e3a34bf3-634116a4-4d649c35",
+                      "retry": false
+                    }    
+    transparent     True
+Error parsing attribute "schema"    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:46:43.418494Z    
+    path            //home/workshop/user-15/weather_daily
+Cannot parse "map"; expected "begin_map", actual "begin_list"    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:46:43.418494Z    
+    context         [[{\1\x08name=\1\010date;\1\x08type=\1\010date;};{\1\x08name=\1\010city;\1\x08type=\1\x0Cstring;    
+    context_pos     1    
+    marked_context  [  ERROR>>>  [{\1\x08name=\1\010date;\1\x08type=\1\010date;};{\1\x08name=\1\010city;\1\x08type=\1\x0Cstring;    
+    offset          2
+
+~ > 
+~ > 
+~ > 
+~ > 
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=date};{name=city;type=string};{name=temperature_2m_max;type=double};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+f-e5b4-1e0191-5c86b7f7
+~ > 
+~ > yt --help
+usage: yt [-h] [--proxy PROXY] [--prefix PREFIX] [--config CONFIG] [--tx TX]
+          [--master-cell-id MASTER_CELL_ID] [--ping-ancestor-txs] [--trace] [--version]
+          command ...
+
+Shell utility to work with YT system.
+
+Cypress (metainformation tree) commands:
+    exists, list, find, create, get, set, remove, copy, move, link,
+    concatenate, externalize, create-account, create-pool
+File commands:
+    read-file, write-file
+Table commands:
+    read-table, read-blob-table, write-table, create-temp-table,
+    alter-table, get-table-columnar-statistics, dirtable
+Dynamic table commands:
+    mount-table, unmount-table, remount-table, freeze-table, unfreeze-table, get-tablet-infos,
+    reshard-table, reshard-table-automatic, balance-tablet-cells, trim-rows, alter-table-replica,
+    select-rows, explain-query, lookup-rows, insert-rows, delete-rows, get-tablet-errors
+Run operation commands:
+    erase, merge, sort, map, reduce, join-reduce, remote-copy, vanilla, map-reduce
+Operation commands:
+    abort-op, suspend-op, resume-op, complete-op, update-op-parameters,
+    get-operation, list-operations, track-op
+Job commands:
+    run-job-shell, run-job-shell-command, abort-job, get-job-stderr,
+    get-job-input, get-job-input-paths, get-job, list-jobs
+Transaction commands:
+    start-tx, commit-tx, abort-tx, ping-tx,
+    lock, unlock
+ACL (permission) commands:
+    check-permission, add-member, remove-member
+Operation tools:
+    shuffle, transform
+Diagnostics:
+    job-tool, download-core-dump
+Other commands:
+    show-spec, execute, execute-batch, sky-share, show-default-config, transfer-account-resources, transfer-pool-resources,
+    generate-timestamp
+Subtools:
+    chyt, spyt, jupyt, idm, flow
+
+positional arguments:
+  command
+    exists              checks if Cypress node exists
+    list                lists directory (map_node) content. Node type must be "map_node"
+    find                searches for some nodes in Cypress subtree
+    create              creates Cypress node
+    create-account
+    create-pool
+    read                reads rows from table and parse (optionally)
+    read-table          reads rows from table and parse (optionally)
+    write               writes rows from input_stream to table
+    write-table         writes rows from input_stream to table
+    create-temp-table   creates temporary table by given path with given prefix and return name
+    read-blob-table     reads file from blob table
+    read-file           downloads file from path in Cypress to local machine
+    download            downloads file from path in Cypress to local machine
+    write-file          uploads file to destination path from stream on local machine
+    upload              uploads file to destination path from stream on local machine
+    get                 gets Cypress node content (attribute tree)
+    set                 sets new value to Cypress node
+    set-attribute       sets attribute at given path
+    copy                copies Cypress node
+    move                moves (renames) Cypress node
+    link                makes link to Cypress node
+    remove              removes Cypress node
+    remove-attribute    removes attribute at given path
+    externalize         externalize cypress node
+    internalize         internalize cypress node
+    concatenate         concatenates cypress nodes. This command applicable only to files and
+                        tables
+    mount-table         mounts the table
+    unmount-table       unmounts the table
+    remount-table       remounts the table
+    reshard-table       changes pivot keys separating tablets of a given table
+    reshard-table-automatic
+                        automatically balance tablets of a mounted table according to tablet
+                        balancer config
+    balance-tablet-cells
+                        reassign tablets evenly among tablet cells
+    trim-rows           trim rows of the dynamic table
+    alter-table         performs schema and other table meta information modifications
+    freeze-table        freezes the table
+    unfreeze-table      unfreezes the table
+    get-tablet-infos    returns various runtime tablet information
+    get-tablet-errors   returns dynamic table tablet and replication errors
+    alter-table-replica
+                        changes mode and enables or disables a table replica or replicated table
+                        tracker for table replica
+    select-rows         executes a SQL-like query on dynamic table
+    select
+    explain-query       explains a SQL-like query on dynamic table
+    lookup-rows         lookups rows in dynamic table
+    lookup
+    insert-rows         inserts rows from input_stream to dynamic table
+    insert
+    delete-rows         deletes rows with keys from input_stream from dynamic table
+    delete
+    register-queue-consumer
+                        registers queue consumer
+    unregister-queue-consumer
+                        unregisters queue consumer
+    list-queue-consumer-registrations
+                        lists queue consumer registrations
+    pull-queue          reads rows from a single partition of a queue (i.e. any ordered dynamic
+                        table)
+    pull-consumer       reads rows from a single partition of a queue (i.e. any ordered dynamic
+                        table) with authorization via consumer
+    pull-queue-consumer
+                        reads rows from a single partition of a queue (i.e. any ordered dynamic
+                        table) with authorization via consumer
+    advance-consumer    advances consumer offset for the given queue
+    advance-queue-consumer
+                        advances consumer offset for the given queue
+    push-queue-producer
+                        push rows to queue via queue producer
+    create-queue-producer-session
+                        creates queue producer session
+    remove-queue-producer-session
+                        removes queue producer session
+    start-query         start query
+    query               run query and track its progress (unless sync = false)
+    abort-query         abort query
+    read-query-result   read query result
+    get-query           get query
+    get-query-result    get query result
+    get-query-tracker-info
+                        get query tracker info
+    list-queries        list operations that satisfy given options
+    alter-query         alter query
+    erase               erases table or part of it
+    merge               merges source tables to destination table
+    sort                sorts source tables to destination table
+    map                 runs map operation
+    reduce              runs reduce operation
+    join-reduce         runs join-reduce operation
+    map-reduce          runs map (optionally), sort, reduce and reduce-combine (optionally)
+                        operations
+    remote-copy         copies source table from remote cluster to destination table on current
+                        cluster
+    vanilla             run vanilla operation
+    shuffle             shuffles table randomly
+    abort-op            aborts operation
+    suspend-op          suspends operation
+    resume-op           continues operation after suspending
+    track-op            synchronously tracks operation, prints current progress and finalize at
+                        the completion
+    complete-op         completes operation
+    update-op-parameters
+                        updates operation runtime parameters
+    patch-op-spec       patches operation spec
+    get-operation       get operation attributes through API
+    list-operations     list operations that satisfy given options
+    list-operation-events
+                        list events of given operation
+    check-operation-permission
+                        check if user has permission for operation
+    start-tx            starts transaction
+    abort-tx            aborts transaction. All changes will be lost
+    commit-tx           saves all transaction changes
+    ping-tx             prolongs transaction lifetime
+    lock                tries to lock the path. Do not forget about global `--tx` option
+    unlock              tries to unlock the path
+    add-member          adds member to Cypress node group
+    remove-member       removes member from Cypress node group
+    check-permission    checks permission for Cypress node
+    get-table-columnar-statistics
+                        gets columnar statistics of tables listed in paths
+    execute-batch       executes `requests` in parallel as one batch request
+    transfer-account-resources
+                        transfers resources between accounts
+    transfer-pool-resources
+                        transfers resources between pools
+    generate-timestamp  generates timestamp
+    run-job-shell       runs interactive shell in the job sandbox
+    run-job-shell-command
+                        runs a command in the job sandbox and returns the output
+    get-job-stderr      gets stderr of the specified job
+    get-job-input       get full input of the specified job
+    get-job-input-paths
+                        get input paths of the specified job
+    abort-job           interrupts running job with preserved result
+    list-jobs           list jobs of operation
+    get-job-trace       get traces of the specified job
+    get-job-spec        get spec of the specified job
+    get-job             get job of operation
+    list-job-traces     list traces of the specified job
+    set-user-password   updates user password, reading it and optionally a current password
+    issue-token         issues a new token for user, reading password interactively and securely
+                        from console
+    revoke-token        revokes user token, reading password and maybe token value interactively
+                        and securely from console
+    list-user-tokens    lists sha256-encoded user tokens, reading password interactively and
+                        securely from console
+    whoami              invokes whoami command at YT API and returns login
+    execute             the type of the None singleton
+    transform           transforms source table to destination table writing data with given
+                        compression and erasure codecs
+    job-tool            Tool helps to debug user job code by preparing job environment on local
+                        machine. It downloads all necessary job files, fail context (small
+                        portion of job input data) and prepares run script.
+    run-compression-benchmarks
+                        Gets input table and recompresses it in all available codecs. For each
+                        codec prints compression ratio, cpu_write and cpu_read.
+    dump-parquet        dump table with a strict schema as `Parquet
+                        <https://parquet.apache.org/docs>` file
+    upload-parquet      upload `Parquet <https://parquet.apache.org/docs>` file as a table
+    dump-orc            dump table with a strict schema as `ORC <https://orc.apache.org/>` file
+    upload-orc          upload `ORC <https://orc.apache.org/>` file as a table
+    show-default-config
+                        returns default configuration of python API
+    detect-porto-layer
+    explain-id
+    show-spec           shows available spec options of the operation
+    download-core-dump  downloads core dump for a given operation_id and job_id from a given
+                        core_table_path
+    get-features        retrieves supported cluster features (data types, codecs etc.)
+    run-command-with-lock
+                        the type of the None singleton
+    add-maintenance     adds maintenance request for a given node
+    remove-maintenance  removes maintenance requests from given node by id or filter
+
+options:
+  -h, --help            show this help message and exit
+  --proxy PROXY         specify cluster to run command, by default YT_PROXY from environment
+  --prefix PREFIX       specify common prefix for all relative paths, by default YT_PREFIX from
+                        environment
+  --config CONFIG       specify configuration
+  --tx TX               perform command in the context of the given transaction, by default
+                        0-0-0-0
+  --master-cell-id MASTER_CELL_ID
+                        perform command in master specified by this id; supported only for native
+                        driver and testing purposes
+  --ping-ancestor-txs   turn on pinging ancestor transactions
+  --trace               trace execution of request using jaeger
+  --version             show program's version number and exit
+
+Examples:
+
+List content of root directory of Hume cluster and check access to system.
+$  yt list / --proxy <cluster_host>
+>> home
+   sys
+   tmp
+
+Set YT_PROXY = <cluster_host> to avoid usage --proxy option.
+$ export YT_PROXY=<cluster_host>
+(Add this string to ~/.bashrc)
+
+$  yt create table //tmp/sepulki
+>> [...] Access denied: "write" permission for node //tmp is not allowed by any matching ACE [...]
+
+Oops! Forgotten token. Follow https://ytsaurus.tech/docs/en/user-guide/storage/auth
+
+$  yt create table //tmp/sepulki
+>> 1-2-3-4
+
+See all attributes created table.
+$ yt get "//tmp/sepulki/@"
+>> {
+        "chunk_list_id" = "5c6a-1c2459-65-1f9943e3";
+        "inherit_acl" = "true";
+        [...]
+    }
+
+You can use GUID of object #1-2-3-4 instead path.
+See also https://ytsaurus.tech/docs/en/user-guide/storage/ypath
+
+Note! Create parent directory of table before writing to it. Recursive path creating is not available during operation.
+
+Write to table in Cypress from local file.
+$ cat my_data_in_json | yt write //tmp/sepulki --format json
+
+For appending to table instead rewriting specify append mode.
+$ cat my_data_in_yson | yt write '<append=true>//tmp/sepulki' --format yson
+
+Output table to client stdout.
+$ yt read //tmp/test_table --format dsv
+>> b=hello  a=10
+   b=world  a=20
+
+Run map-reduce operation, append result to destination table.
+$ yt map-reduce --mapper "python my_mapper.py" --map-local-file "~/my_mapper.py" --reducer "./my_reducer.pl" --reduce-file "//tmp/my_reducer.pl"
+--src //project/some_existing_table  --src some_another_table_in_prefix_directory --dst <append=true>//tmp/sepulki
+--reduce-by "column_one" --reduce-by "column_two"
+>> [...] operation 5-6-7-8 initializing [...]
+
+Sort the table.
+$ yt sort --src //project/some_existing_table --dst //tmp/sepulki --sort-by "column-one"
+
+Sort the table in descending order.
+$ yt sort --src //project/some_existing_table --dst //tmp/sepulki --sort-by "{name=column-one; sort_order=descending;}"
+
+Note! Without modification `append=true` destination table is overwritten.
+Note! Specify paths to user scripts!
+
+Lookup rows from dynamic table.
+$ echo '{host=abc.com}' | yt lookup-rows //my/dynamic/table
+>> {"host"="abc.com";"last_seen_time": "2017-04-10T12:35:10"}
+
+See also:
+    YT CLI client           https://ytsaurus.tech/docs/en/api/cli/cli
+
+    user documentation      https://ytsaurus.tech/docs/en
+    access to the system    https://ytsaurus.tech/docs/en/user-guide/storage/auth
+    tutorial                https://ytsaurus.tech/docs/en/overview/try-yt
+    command specification   https://ytsaurus.tech/docs/en/api/commands
+    ACL                     https://ytsaurus.tech/docs/en/user-guide/storage/access-control
+    transactions            https://ytsaurus.tech/docs/en/user-guide/storage/transactions
+~ > yt delete 
+Traceback (most recent call last):
+  File "/Users/kp/.local/pipx/venvs/ytsaurus-client/lib/python3.14/site-packages/yt/wrapper/cli_helpers.py", line 70, in run_main
+    main_func()
+    ~~~~~~~~~^^
+  File "/Users/kp/.local/pipx/venvs/ytsaurus-client/lib/python3.14/site-packages/yt/cli/yt_binary.py", line 3485, in main_func
+    args.func(**func_args)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kp/.local/pipx/venvs/ytsaurus-client/lib/python3.14/site-packages/yt/cli/yt_binary.py", line 1223, in print_error
+    raise RuntimeError(error_message)
+RuntimeError: Use 'delete-rows' instead of 'delete'
+~ > yt delete --help
+usage: yt delete [-h] [--params PARAMS]
+
+. Use 'delete-rows' instead of 'delete'
+
+options:
+  -h, --help       show this help message and exit
+  --params PARAMS  specify additional params. structured params in yson format
+~ > yt delete table --help
+usage: yt delete [-h] [--params PARAMS]
+
+. Use 'delete-rows' instead of 'delete'
+
+options:
+  -h, --help       show this help message and exit
+  --params PARAMS  specify additional params. structured params in yson format
+~ > ls $HOME/Downloads/weather_daily.csv
+/Users/kp/Downloads/weather_daily.csv
+~ > 
+~ > 
+~ > 
+~ > yt write-table "//home/workshop/user-${MY_ID}/weather_daily" --format 'csv_with_names' < $HOME/Downloads/weather_daily.csv 
+Incorrect format csv_with_names
+
+***** Details:
+Incorrect format csv_with_names    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:53:48.278708Z
+
+~ > yt write-table --help
+usage: yt write-table [-h] [--params PARAMS] [--format FORMAT] [--table-writer TABLE_WRITER]
+                      [--compressed] [--no-compression]
+                      (--table TABLE | table)
+
+writes rows from input_stream to table
+
+positional arguments:
+  table                 address in Cypress. See also: https://ytsaurus.tech/docs/en/user-
+                        guide/storage/ypath
+
+options:
+  -h, --help            show this help message and exit
+  --params PARAMS       specify additional params. structured params in yson format
+  --table TABLE         address in Cypress. See also: https://ytsaurus.tech/docs/en/user-
+                        guide/storage/ypath
+  --format FORMAT       input format. (yson string), one of "yson", "json", "yamr", "dsv",
+                        "yamred_dsv", "schemaful_dsv" with modifications. See also:
+                        https://ytsaurus.tech/docs/en/user-guide/storage/formats
+  --table-writer TABLE_WRITER
+                        structured table-writer in yson format
+  --compressed          expect stream to contain compressed file data. Warning! This option
+                        disables retries. Data is passed directly to proxy without recompression.
+  --no-compression      disable compression
+
+Rewrite table by default. For append mode specify <append=true> before path.
+~ > python csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv" 
+-bash: python: command not found
+~ > python3 csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv" 
+python3            python3-config     python3.14         python3.14-config  
+~ > python3 csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv" 
+/opt/homebrew/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/kp/csv_to_dsv.py': [Errno 2] No such file or directory
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv" 
+date=2020-01-01	city=Agartala	temperature_2m_max=26.2	temperature_2m_min=16.2	temperature_2m_mean=20.5	apparent_temperature_max=28.3	precipitation_sum=0.3	precipitation_hours=3.0	relative_humidity_2m_mean=79	wind_speed_10m_max=11.5	wind_direction_10m_dominant=60	shortwave_radiation_sum=11.62	et0_fao_evapotranspiration=2.29	weather_code=51
+date=2020-01-02	city=Agartala	temperature_2m_max=26.5	temperature_2m_min=15.0	temperature_2m_mean=20.2	apparent_temperature_max=28.8	precipitation_sum=0.0	precipitation_hours=0.0	relative_humidity_2m_mean=86	wind_speed_10m_max=8.0	wind_direction_10m_dominant=30	shortwave_radiation_sum=11.7	et0_fao_evapotranspiration=2.25	weather_code=3
+date=2020-01-03	city=Agartala	temperature_2m_max=20.2	temperature_2m_min=15.7	temperature_2m_mean=18.0	apparent_temperature_max=21.4	precipitation_sum=18.5	precipitation_hours=16.0	relative_humidity_2m_mean=90	wind_speed_10m_max=17.1	wind_direction_10m_dominant=27	shortwave_radiation_sum=5.77	et0_fao_evapotranspiration=1.14	weather_code=63
+
+
+~ > 

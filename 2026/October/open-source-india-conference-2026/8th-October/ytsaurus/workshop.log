@@ -1,0 +1,510 @@
+~ > python3 -m pip install --user ytsaurus-client
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+~ > pip install --user ytsaurus-client
+-bash: pip: command not found
+~ > pip install --user ytsaurus-client
+pip3     pip3.14  pipx     
+~ > pip3 install --user ytsaurus-client
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+~ > pipx install --user ytsaurus-client
+usage: pipx [-h] [--version]
+            {install,install-all,uninject,inject,expose,unexpose,pin,unpin,upgrade,upgrade-all,upgrade-shared,uninstall,uninstall-all,reset,reinstall,reinstall-all,health,repair,list,interpreter,cache,manifest,run,exec,runpip,ensurepath,environment,completions,help} ...
+pipx: error: unrecognized arguments: --user
+~ > pipx install ytsaurus-client
+installing ytsaurus-client...
+Collecting ytsaurus-client
+  Downloading ytsaurus_client-0.13.55-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting simplejson>=3.20.2,~=3.18 (from ytsaurus-client)
+  Downloading simplejson-3.20.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting decorator>=5.1.1,~=5.1 (from ytsaurus-client)
+  Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting tqdm>=4.67.3,~=4.66 (from ytsaurus-client)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting argcomplete>=3.6.3,~=3.1 (from ytsaurus-client)
+  Downloading argcomplete-3.7.2-py3-none-any.whl.metadata (16 kB)
+Collecting charset-normalizer>=3.3.0,~=3.3 (from ytsaurus-client)
+  Downloading charset_normalizer-3.5.2-cp314-cp314-macosx_10_15_universal2.whl.metadata (46 kB)
+Collecting typing-extensions>=4.15.0,~=4.8 (from ytsaurus-client)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting distro>=1.6.0,~=1.6 (from ytsaurus-client)
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Downloading ytsaurus_client-0.13.55-py2.py3-none-any.whl (840 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 840.9/840.9 kB 1.6 MB/s  0:00:00
+Downloading argcomplete-3.7.2-py3-none-any.whl (43 kB)
+Downloading charset_normalizer-3.5.2-cp314-cp314-macosx_10_15_universal2.whl (367 kB)
+Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading simplejson-3.20.2-py3-none-any.whl (57 kB)
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, tqdm, simplejson, distro, decorator, charset-normalizer, argcomplete, ytsaurus-client
+Successfully installed argcomplete-3.7.2 charset-normalizer-3.5.2 decorator-5.3.1 distro-1.9.0 simplejson-3.20.2 tqdm-4.70.1 typing-extensions-4.16.0 ytsaurus-client-0.13.55
+  installed package ytsaurus-client 0.13.55, installed using Python 3.14.8
+  These apps are now available
+    - yt
+done! ✨ 🌟 ✨
+~ > yt 
+usage: yt [-h] [--proxy PROXY] [--prefix PREFIX] [--config CONFIG] [--tx TX]
+          [--master-cell-id MASTER_CELL_ID] [--ping-ancestor-txs] [--trace] [--version]
+          command ...
+yt: error: the following arguments are required: command
+~ > 
+
+~ > echo "{\"arrival\":{\"actual_at\":\"2025-07-16T01:31:00+05:30\",\"delay_min\":27.0,\"scheduled_at\":\"2025-07-16T01:04:00+05:30\"},\"date\":\"2025-07-15\",\"departure\":{\"actual_at\":\"2025-07-16T01:36:00+05:30\",\"delay_min\":31.0,\"departed\":1,\"scheduled_at\":\"2025-07-16T01:05:00+05:30\"},\"distance_km\":428.766,\"event_type\":\"train_run_reported\",\"halts_here\":1,\"location\":{\"lat\":23.841676,\"lng\":77.944003},\"platform\":\"1\",\"reported\":1,\"reported_at\":\"2025-07-16T01:32:46.015536+05:30\",\"schedule\":{\"arrival_at\":\"2025-07-16T01:04:00+05:30\",\"departure_at\":\"2025-07-16T01:05:00+05:30\"},\"schema_version\":1,\"seq\":53.0,\"source\":\"train_runs_all_backfill\",\"train_name\":\"JBP NZM SF EXP\",\"train_type\":\"SUF\"}"
+{"arrival":{"actual_at":"2025-07-16T01:31:00+05:30","delay_min":27.0,"scheduled_at":"2025-07-16T01:04:00+05:30"},"date":"2025-07-15","departure":{"actual_at":"2025-07-16T01:36:00+05:30","delay_min":31.0,"departed":1,"scheduled_at":"2025-07-16T01:05:00+05:30"},"distance_km":428.766,"event_type":"train_run_reported","halts_here":1,"location":{"lat":23.841676,"lng":77.944003},"platform":"1","reported":1,"reported_at":"2025-07-16T01:32:46.015536+05:30","schedule":{"arrival_at":"2025-07-16T01:04:00+05:30","departure_at":"2025-07-16T01:05:00+05:30"},"schema_version":1,"seq":53.0,"source":"train_runs_all_backfill","train_name":"JBP NZM SF EXP","train_type":"SUF"}
+~ > 
+~ > 
+~ > echo "{\"arrival\":{\"actual_at\":\"2025-07-16T01:31:00+05:30\",\"delay_min\":27.0,\"scheduled_at\":\"2025-07-16T01:04:00+05:30\"},\"date\":\"2025-07-15\",\"departure\":{\"actual_at\":\"2025-07-16T01:36:00+05:30\",\"delay_min\":31.0,\"departed\":1,\"scheduled_at\":\"2025-07-16T01:05:00+05:30\"},\"distance_km\":428.766,\"event_type\":\"train_run_reported\",\"halts_here\":1,\"location\":{\"lat\":23.841676,\"lng\":77.944003},\"platform\":\"1\",\"reported\":1,\"reported_at\":\"2025-07-16T01:32:46.015536+05:30\",\"schedule\":{\"arrival_at\":\"2025-07-16T01:04:00+05:30\",\"departure_at\":\"2025-07-16T01:05:00+05:30\"},\"schema_version\":1,\"seq\":53.0,\"source\":\"train_runs_all_backfill\",\"train_name\":\"JBP NZM SF EXP\",\"train_type\":\"SUF\"}" | jq
+{
+  "arrival": {
+    "actual_at": "2025-07-16T01:31:00+05:30",
+    "delay_min": 27.0,
+    "scheduled_at": "2025-07-16T01:04:00+05:30"
+  },
+  "date": "2025-07-15",
+  "departure": {
+    "actual_at": "2025-07-16T01:36:00+05:30",
+    "delay_min": 31.0,
+    "departed": 1,
+    "scheduled_at": "2025-07-16T01:05:00+05:30"
+  },
+  "distance_km": 428.766,
+  "event_type": "train_run_reported",
+  "halts_here": 1,
+  "location": {
+    "lat": 23.841676,
+    "lng": 77.944003
+  },
+  "platform": "1",
+  "reported": 1,
+  "reported_at": "2025-07-16T01:32:46.015536+05:30",
+  "schedule": {
+    "arrival_at": "2025-07-16T01:04:00+05:30",
+    "departure_at": "2025-07-16T01:05:00+05:30"
+  },
+  "schema_version": 1,
+  "seq": 53.0,
+  "source": "train_runs_all_backfill",
+  "train_name": "JBP NZM SF EXP",
+  "train_type": "SUF"
+}
+~ > 
+~ > yt
+usage: yt [-h] [--proxy PROXY] [--prefix PREFIX] [--config CONFIG] [--tx TX]
+          [--master-cell-id MASTER_CELL_ID] [--ping-ancestor-txs] [--trace] [--version]
+          command ...
+yt: error: the following arguments are required: command
+~ > export MY_ID=15
+~ > export YT_TOKEN="workshop-user-${MY_ID}"
+~ > export YT_PROXY="https://http-proxy-ws.benchmark.ytsaurus.tech"
+~ > yt list //home/workshop
+user-01
+user-02
+user-03
+user-04
+user-05
+user-06
+user-07
+user-08
+user-09
+user-10
+user-11
+user-12
+user-13
+user-14
+user-15
+user-16
+user-17
+user-18
+user-19
+user-20
+user-21
+user-22
+user-23
+user-24
+user-25
+user-26
+user-27
+user-28
+user-29
+user-30
+user-31
+user-32
+user-33
+user-34
+user-35
+user-36
+user-37
+user-38
+user-39
+user-40
+user-41
+user-42
+user-43
+user-44
+user-45
+user-46
+user-47
+user-48
+user-49
+user-50
+user01
+user02
+user03
+user04
+user05
+user06
+user07
+user08
+user09
+user10
+user11
+user12
+user13
+user14
+user15
+user16
+user17
+user18
+user19
+user20
+user21
+user22
+user23
+user24
+user25
+user26
+user27
+user28
+user29
+user30
+user31
+user32
+user33
+user34
+user35
+user36
+user37
+user38
+user39
+user40
+user41
+user42
+user43
+user44
+user45
+user46
+user47
+user48
+user49
+user50
+~ > claude
+-bash: claude: command not found
+~ > brew info claude
+==> claude (Claude): 2.19675.1,8613680e2e16d90700c039e084a7883f321ed4e3 (auto_updates)
+Anthropic's official Claude AI desktop app
+https://claude.com/download
+Not installed
+From: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/c/claude.rb
+==> Requirements
+Required: macOS >= 13 ✔
+==> Artifacts
+Claude.app (App)
+==> Downloading https://formulae.brew.sh/api/cask/claude.json
+==> Analytics
+install: 10,949 (30 days), 43,980 (90 days), 215,238 (365 days)
+~ > brew search claude
+==> Formulae
+claude-cmd                       claude-code-templates            claude-squad
+claude-code-router               claude-hooks                     claudekit
+
+==> Casks
+auto-claude              claude-code              claude-devtools          claudebar
+claude                   claude-code@latest       claude-status-bar
+~ > brew info claude-code
+==> claude-code (Claude Code): 2.1.285
+Terminal-based AI coding assistant
+https://claude.com/product/claude-code
+Not installed
+From: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/c/claude-code.rb
+==> Artifacts
+claude (Binary)
+==> Downloading https://formulae.brew.sh/api/cask/claude-code.json
+==> Analytics
+install: 34,469 (30 days), 166,247 (90 days), 1,152,046 (365 days)
+~ > brew install claude-code
+==> Auto-updating Homebrew...
+Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
+`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 3 taps (k1low/tap, homebrew/core and homebrew/cask).
+==> New Formulae
+cymbal: Language-agnostic code navigation CLI powered by tree-sitter
+typdiff: Diff tool that generates Typst documents highlighting differences between inputs
+==> New Casks
+auto-tune-central: Software download manager for Antares products
+azure-cli: Microsoft Azure CLI 2.0
+buildin: Collaborative workspace for notes, documents and wikis
+fl-studio: Digital audio production application
+fluxer: Chat for friends, groups, and communities with text, voice, and video
+mcplinker: Manage and sync MCP server configurations across AI clients
+nodeterm: Node-based terminal manager for terminals and coding agents on a canvas
+photocraft: Image editor
+solidtime: Open-source time tracker
+stashcat: Secure messenger for organisations
+threat-dragon: Threat modeling tool
+zed-delta: Multiplayer environment for coding with agents
+
+You have 8 outdated formulae installed.
+
+==> Fetching downloads for: claude-code
+✔︎ Cask claude-code (2.1.286)                                           Downloaded  225.2MB/225.2MB
+==> Installing Cask claude-code
+==> Linking Binary 'claude' to '/opt/homebrew/bin/claude'
+🍺  claude-code was successfully installed!
+~ > yt list "//home/workshop/user-${MY_ID}/bronze"
+queue
+trains_raw
+~ > 
+~ > yt list "//home/workshop/user-${MY_ID}/"
+Error resolving path //home/workshop/user-15/
+    Unexpected end-of-string in YPath
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:22:21.995445Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/list    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=6121;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"suppress_transaction_coordinator_sync\"=%false;\"path\"=\"//home/workshop/user-15/\";\"max_size\"=65535;\"return_only_value\"=%true;\"output_format\"=\"json\";}",
+                      "X-YT-Correlation-Id": "6013fc9b-b50217b9-76e8d023-57637d5c"
+                    }    
+    response_headers {
+                      "content-length": "748",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":500,\"message\":\"Error resolving path //home/workshop/user-15/\",\"attributes\":{\"pid\":1,\"tid\":1566137335372599242,\"thread\":\"LocalRead:0\",\"fid\":18446428119475331581,\"host\":\"ms-2.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:22:21.775770Z\",\"trace_id\":\"8c3e0bcb-5f63a80c-f873c059-985bb4d7\",\"span_id\":1920374260241303719,\"method\":\"List\",\"path\":\"//home/workshop/user-15/\"},\"inner_errors\":[{\"code\":1,\"message\":\"Unexpected end-of-string in YPath\",\"attributes\":{\"pid\":1,\"tid\":1566137335372599242,\"thread\":\"LocalRead:0\",\"fid\":18446428119475331581,\"host\":\"ms-2.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:22:21.775711Z\",\"trace_id\":\"8c3e0bcb-5f63a80c-f873c059-985bb4d7\",\"span_id\":1920374260241303719}}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "220972c4-a942b090-3db4a5a2-826f8d0c",
+                      "x-yt-response-code": "500",
+                      "x-yt-response-message": "Error resolving path //home/workshop/user-15/",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "8c3e0bcb-5f63a80c-f873c059-985bb4d7",
+                      "date": "Thu, 08 Oct 2026 10:22:21 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "path": "//home/workshop/user-15/",
+                      "max_size": 65535,
+                      "return_only_value": true,
+                      "output_format": "json"
+                    }    
+    transparent     True
+Error resolving path //home/workshop/user-15/    
+    code            500    
+    origin          ms-2.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:22:21.775770Z (pid 1, tid 15bc099bd85c4fca, fid fffee0a42c1aa1fd)    
+    thread          LocalRead:0    
+    trace_id        8c3e0bcb-5f63a80c-f873c059-985bb4d7    
+    span_id         1920374260241303719    
+    method          List    
+    path            //home/workshop/user-15/
+Unexpected end-of-string in YPath    
+    origin          ms-2.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:22:21.775711Z (pid 1, tid 15bc099bd85c4fca, fid fffee0a42c1aa1fd)    
+    thread          LocalRead:0    
+    trace_id        8c3e0bcb-5f63a80c-f873c059-985bb4d7    
+    span_id         1920374260241303719
+
+~ > yt list "//home/workshop/user-${MY_ID}"
+bronze
+~ > yt create table //home/workshop/user-${MY_ID}/my_first_table \
+> --attributes "{schema=[{name=key;type=string};{name=value;type=int64}]}"
+f-237c-1e0191-9757e543
+~ > echo '{"key": "A", "value": 41} {"key": "B", "value": 42}' | \
+> yt write-table "//home/workshop/user-${MY_ID}/my_first_table" --format json
+~ > 
+~ > 
+~ > 
+~ > echo '{"key": "A", "value": 41} {"key": "B", "value": 42}' | yt write-table "//home/workshop/user-${MY_ID}/my_first_table" --format json
+~ > yt read-table "//home/workshop/user-${MY_ID}/my_first_table" --format json
+{"key":"A","value":41}                              
+{"key":"B","value":42}
+~ > yt read-table "//home/workshop/user-${MY_ID}/bronze/trains_raw" --format json
+Command read is supported only for tables
+
+***** Details:
+Command read is supported only for tables    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:26:39.062711Z
+
+~ > yt read-table "//home/workshop/user-${MY_ID}/bronze/trains_raw/2026-10-05T11-24-00Z" --format json
+[DOWNLOAD]: 2026-10-05T11-24-00Z: 8.39MiB [00:02, 4.10MiB/s]{"$$cumulative_data_weight":null,"$$timestamp":null,"event_id":"train-runs-all:bef63994f15e835330b5aaada42f4092941cd61a","ingested_at":"2025-07-16T01:32:46.015536+05:30","payload_json":"{\"arrival\":{\"actual_at\":\"2025-07-16T01:31:00+05:30\",\"delay_min\":27.0,\"scheduled_at\":\"2025-07-16T01:04:00+05:30\"},\"date\":\"2025-07-15\",\"departure\":{\"actual_at\":\"2025-07-16T01:36:00+05:30\",\"delay_min\":31.0,\"departed\":1,\"scheduled_at\":\"2025-07-16T01:05:00+05:30\"},\"distance_km\":428.766,\"event_type\":\"train_run_reported\",\"halts_here\":1,\"location\":{\"lat\":23.841676,\"lng\":77.944003},\"platform\":\"1\",\"reported\":1,\"reported_at\":\"2025-07-16T01:32:46.015536+05:30\",\"schedule\":{\"arrival_at\":\"2025-07-16T01:04:00+05:30\",\"departure_at\":\"2025-07-16T01:05:00+05:30\"},\"schema_version\":1,\"seq\":53.0,\"source\":\"train_runs_all_backfill\",\"train_name\":\"JBP NZM SF EXP\",\"train_type\":\"SUF\"}","station_code":"BAQ","train_no":"12192"}
+{"$$cumulative_data_weight":null,"$$timestamp":null,"event_id":"train-runs-all:e7473257dafd8136d1ac3ba03057a3d2b18d1851","ingested_at":"2025-07-16T02:29:29.252971+05:30","payload_json":"{\"arrival\":{\"actual_at\":\"2025-07-16T02:12:00+05:30\",\"delay_min\":14.0,\"scheduled_at\":\"2025-07-16T01:58:00+05:30\"},\"date\":\"2025-07-15\",\"departure\":{\"actual_at\":\"2025-07-16T02:45:00+05:30\",\"delay_min\":45.0,\"departed\":1,\"scheduled_at\":\"2025-07-16T02:00:00+05:30\"},\"distance_km\":474.49,\"event_type\":\"train_run_reported\",\"halts_here\":1,\"location\":{\"lat\":24.169037,\"lng\":78.181396},\"platform\":\"4\",\"reported\":1,\"reported_at\":\"2025-07-16T02:29:29.252971+05:30\",\"schedule\":{\"arrival_at\":\"2025-07-16T01:58:00+05:30\",\"departure_at\":\"2025-07-16T02:00:00+05:30\"},\"schema_version\":1,\"seq\":60.0,\"source\":\"train_runs_all_backfill\",\"train_name\":\"JBP NZM SF EXP\",\"train_type\":\"SUF\"}","station_code":"BINA","train_no":"12192"}
+
+~ > yt read-table --help
+usage: yt read-table [-h] [--params PARAMS] [--format FORMAT] [--table-reader TABLE_READER]
+                     [--control-attributes CONTROL_ATTRIBUTES] [--unordered] [--as-json-list]
+                     [--omit-inaccessible-columns] [--omit-inaccessible-rows]
+                     (--table TABLE | table)
+
+reads rows from table and parse (optionally)
+
+positional arguments:
+  table                 address in Cypress. See also: https://ytsaurus.tech/docs/en/user-
+                        guide/storage/ypath
+
+options:
+  -h, --help            show this help message and exit
+  --params PARAMS       specify additional params. structured params in yson format
+  --table TABLE         address in Cypress. See also: https://ytsaurus.tech/docs/en/user-
+                        guide/storage/ypath
+  --format FORMAT       output format. (yson string), one of "yson", "json", "yamr", "dsv",
+                        "yamred_dsv", "schemaful_dsv" with modifications. See also:
+                        https://ytsaurus.tech/docs/en/user-guide/storage/formats
+  --table-reader TABLE_READER
+                        structured table-reader in yson format
+  --control-attributes CONTROL_ATTRIBUTES
+                        structured control-attributes in yson format
+  --unordered
+  --as-json-list        In case of JSON format output stream as JSON list instead of JSON lines
+                        format
+  --omit-inaccessible-columns
+                        Skip columns the user has no access to
+  --omit-inaccessible-rows
+                        Skip rows the user has no access to
+~ > yt read-table --help | rg -i limit
+~ > yt read-table --help 
+~ > 
+~ > 
+~ > 
+~ > echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-
+> 07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-
+> 07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur
+> Express\",\"station_name\":\"Ganj Basoda\"}"}'\
+> | yt insert-rows "//home/workshop/user-${MY_ID}/bronze/queue" --format json
+Error parsing JSON
+    lexical error: invalid character inside string.
+          61007","ingested_at":"2026-10- 07T12:00:00+05:30","train_no"
+                     (right here) ------^
+
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T10:29:01.458451Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/insert_rows    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=6145;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"suppress_transaction_coordinator_sync\"=%false;\"path\"=\"//home/workshop/user-15/bronze/queue\";\"input_format\"=\"json\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "6d7e2675-f0d5f629-13f7ab66-6f45b7db"
+                    }    
+    response_headers {
+                      "content-length": "867",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Error parsing JSON\",\"attributes\":{\"pid\":1,\"tid\":14639752501263048919,\"thread\":\"Connection:2\",\"fid\":18446431721185649386,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:29:01.321108Z\",\"trace_id\":\"21020941-5ee4a139-31e28bc7-8bb49258\",\"span_id\":8055596654193843040,\"path\":\"//home/workshop/user-15/bronze/queue\"},\"inner_errors\":[{\"code\":1,\"message\":\"lexical error: invalid character inside string.\\n          61007\\\",\\\"ingested_at\\\":\\\"2026-10- 07T12:00:00+05:30\\\",\\\"train_no\\\"\\n                     (right here) ------^\\n\",\"attributes\":{\"pid\":1,\"tid\":14639752501263048919,\"thread\":\"Connection:2\",\"fid\":18446431721185649386,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T10:29:01.321111Z\",\"trace_id\":\"21020941-5ee4a139-31e28bc7-8bb49258\",\"span_id\":8055596654193843040}}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "b218e6bd-d86294c1-877eda9-5df53996",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Error parsing JSON",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "21020941-5ee4a139-31e28bc7-8bb49258",
+                      "date": "Thu, 08 Oct 2026 10:29:01 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "path": "//home/workshop/user-15/bronze/queue",
+                      "input_format": "json"
+                    }    
+    transparent     True
+Error parsing JSON    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:29:01.321108Z (pid 1, tid cb2ad955cd6ba0d7, fid fffee3eac2c4a2ea)    
+    thread          Connection:2    
+    trace_id        21020941-5ee4a139-31e28bc7-8bb49258    
+    span_id         8055596654193843040    
+    path            //home/workshop/user-15/bronze/queue
+lexical error: invalid character inside string.
+          61007","ingested_at":"2026-10- 07T12:00:00+05:30","train_no"
+                     (right here) ------^
+    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T10:29:01.321111Z (pid 1, tid cb2ad955cd6ba0d7, fid fffee3eac2c4a2ea)    
+    thread          Connection:2    
+    trace_id        21020941-5ee4a139-31e28bc7-8bb49258    
+    span_id         8055596654193843040
+
+~ > 
+~ > 
+~ > 

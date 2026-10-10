@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "servers": {
+      "ytsaurus-workshop": {
+        "type": "remote",
+        "url": "https://mcp-ws.benchmark.ytsaurus.tech/mcp"
+      }
+    }
+  }
+}

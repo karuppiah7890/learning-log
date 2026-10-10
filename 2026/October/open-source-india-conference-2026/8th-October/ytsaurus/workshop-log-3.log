@@ -1,0 +1,1119 @@
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"\
+>     | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" \
+>         --format schemaful_dsv
+Attribute 'columns' is required for SchemafulDsvFormat
+
+***** Details:
+Attribute 'columns' is required for SchemafulDsvFormat    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:01:07.519941Z
+
+Traceback (most recent call last):
+  File "/Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py", line 24, in <module>
+    print("\t".join(values))
+    ~~~~~^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while flushing sys.stdout:
+BrokenPipeError: [Errno 32] Broken pipe
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"    | yt write-table "//home/workshop/user-${MY_ID}/weather_daily"         --format dsv
+Table writer failed                     
+    Error validating column "date"
+        Invalid type: expected "uint64", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:02:22.427299Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=38299;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"f-16d67-1e0004-7445\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "5bc4bde1-324d114-1bd1d2a8-8066c65b"
+                    }    
+    response_headers {
+                      "content-length": "1108",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":8507651124826042897,\"thread\":\"Connection:0\",\"fid\":18446431528905911776,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:02:21.333428Z\",\"trace_id\":\"a4972d0b-3bbf2d7a-6275f0b-585452b3\",\"span_id\":11433162926553726562,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"date\\\"\",\"attributes\":{\"pid\":1,\"tid\":8507651124826042897,\"thread\":\"Connection:0\",\"fid\":18446431528848536326,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:02:21.333351Z\",\"trace_id\":\"a4972d0b-3bbf2d7a-6275f0b-585452b3\",\"span_id\":11433162926553726562},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"uint64\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":8507651124826042897,\"thread\":\"Connection:0\",\"fid\":18446431528848536326,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:02:21.333311Z\",\"trace_id\":\"a4972d0b-3bbf2d7a-6275f0b-585452b3\",\"span_id\":11433162926553726562}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "1059a641-f976d72d-7054e518-8253822f",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "a4972d0b-3bbf2d7a-6275f0b-585452b3",
+                      "date": "Thu, 08 Oct 2026 11:02:21 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "f-16d67-1e0004-7445",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:02:21.333428Z (pid 1, tid 76113f9f60357211, fid fffee3bdfe00ade0)    
+    thread          Connection:0    
+    trace_id        a4972d0b-3bbf2d7a-6275f0b-585452b3    
+    span_id         11433162926553726562    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "date"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:02:21.333351Z (pid 1, tid 76113f9f60357211, fid fffee3bdfa953306)    
+    thread          Connection:0    
+    trace_id        a4972d0b-3bbf2d7a-6275f0b-585452b3    
+    span_id         11433162926553726562
+Invalid type: expected "uint64", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:02:21.333311Z (pid 1, tid 76113f9f60357211, fid fffee3bdfa953306)    
+    thread          Connection:0    
+    trace_id        a4972d0b-3bbf2d7a-6275f0b-585452b3    
+    span_id         11433162926553726562
+
+~ > 
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"    | yt write-table "//home/workshop/user-${MY_ID}/weather_daily"         --format dsv 
+Table writer failed                     
+    Error validating column "date"
+        Invalid type: expected "uint64", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:03:55.100934Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=38307;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"f-179c4-1e0004-d111\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "665cf170-e7cdaa7a-921995d-68b6bbc"
+                    }    
+    response_headers {
+                      "content-length": "1108",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":12356790218072331171,\"thread\":\"Connection:3\",\"fid\":18446431520492758291,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:03:53.357976Z\",\"trace_id\":\"52011b14-e6fbf2d3-d5ab34ca-41db4655\",\"span_id\":344022681161165348,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"date\\\"\",\"attributes\":{\"pid\":1,\"tid\":12356790218072331171,\"thread\":\"Connection:3\",\"fid\":18446431520453117071,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:03:53.357925Z\",\"trace_id\":\"52011b14-e6fbf2d3-d5ab34ca-41db4655\",\"span_id\":344022681161165348},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"uint64\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":12356790218072331171,\"thread\":\"Connection:3\",\"fid\":18446431520453117071,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:03:53.357894Z\",\"trace_id\":\"52011b14-e6fbf2d3-d5ab34ca-41db4655\",\"span_id\":344022681161165348}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "e3992442-da1df45a-9008c435-199afc8e",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "52011b14-e6fbf2d3-d5ab34ca-41db4655",
+                      "date": "Thu, 08 Oct 2026 11:03:53 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "f-179c4-1e0004-d111",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:03:53.357976Z (pid 1, tid ab7c233bf83913a3, fid fffee3bc088a2513)    
+    thread          Connection:3    
+    trace_id        52011b14-e6fbf2d3-d5ab34ca-41db4655    
+    span_id         344022681161165348    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "date"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:03:53.357925Z (pid 1, tid ab7c233bf83913a3, fid fffee3bc062d448f)    
+    thread          Connection:3    
+    trace_id        52011b14-e6fbf2d3-d5ab34ca-41db4655    
+    span_id         344022681161165348
+Invalid type: expected "uint64", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:03:53.357894Z (pid 1, tid ab7c233bf83913a3, fid fffee3bc062d448f)    
+    thread          Connection:3    
+    trace_id        52011b14-e6fbf2d3-d5ab34ca-41db4655    
+    span_id         344022681161165348
+
+~ > 
+~ > yt exists "//home/workshop/user-${MY_ID}/weather_daily"
+true
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily"
+~ > yt exists "//home/workshop/user-${MY_ID}/weather_daily"
+false
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" 
+Node //home/workshop/user15 has no child with key "weather_daily"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:06:55.789136Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/remove    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=38323;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "Content-Type": "application/x-yt-yson-text",
+                      "X-YT-Correlation-Id": "5eaac098-ca0b05e5-3b1c33cd-10f2b60e"
+                    }    
+    response_headers {
+                      "content-length": "253",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":500,\"message\":\"Node //home/workshop/user15 has no child with key \\\"weather_daily\\\"\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:06:55.682426Z\",\"path\":\"//home/workshop/user-15/weather_daily\"}}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "6ad79f15-ed0570a4-242faf0b-38f402e6",
+                      "x-yt-response-code": "500",
+                      "x-yt-response-message": "Node //home/workshop/user15 has no child with key \"weather_daily\"",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "ba649521-b4f7e96f-e8ff0b18-b58dd96b",
+                      "date": "Thu, 08 Oct 2026 11:06:55 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "path": "//home/workshop/user-15/weather_daily",
+                      "recursive": false,
+                      "force": false,
+                      "mutation_id": "29d3b64b-e3a32d78-bcf1cf2e-39a1c31a",
+                      "retry": false
+                    }    
+    transparent     True
+Node //home/workshop/user15 has no child with key "weather_daily"    
+    code            500    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:06:55.682426Z    
+    path            //home/workshop/user-15/weather_daily
+
+~ > 
+~ > 
+~ > 
+~ > 
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=string};{name=city;type=string};{name=temperature_2m_max;type=double};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+f-1a25a-1e0191-4b6ee3e7
+~ > 
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"\
+>     | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" \
+>         --format dsv
+Table writer failed                     
+    Error validating column "temperature_2m_max"
+        Invalid type: expected "double", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:08:42.518722Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=38380;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"f-1a490-1e0004-74b2\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "2fb10071-b8870606-b4b92eaf-b7336667"
+                    }    
+    response_headers {
+                      "content-length": "1128",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431493877156361,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:08:40.817138Z\",\"trace_id\":\"ed2c2647-a299c371-dc3b817d-447125e0\",\"span_id\":11692801017956774569,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"temperature_2m_max\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431493839253791,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:08:40.817059Z\",\"trace_id\":\"ed2c2647-a299c371-dc3b817d-447125e0\",\"span_id\":11692801017956774569},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"double\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431493839253791,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:08:40.817027Z\",\"trace_id\":\"ed2c2647-a299c371-dc3b817d-447125e0\",\"span_id\":11692801017956774569}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "53b0566e-ad59ce68-8f7404e8-84347676",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "ed2c2647-a299c371-dc3b817d-447125e0",
+                      "date": "Thu, 08 Oct 2026 11:08:40 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "f-1a490-1e0004-74b2",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:08:40.817138Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b5d6204a09)    
+    thread          Connection:1    
+    trace_id        ed2c2647-a299c371-dc3b817d-447125e0    
+    span_id         11692801017956774569    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "temperature_2m_max"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:08:40.817059Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b5d3ddf11f)    
+    thread          Connection:1    
+    trace_id        ed2c2647-a299c371-dc3b817d-447125e0    
+    span_id         11692801017956774569
+Invalid type: expected "double", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:08:40.817027Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b5d3ddf11f)    
+    thread          Connection:1    
+    trace_id        ed2c2647-a299c371-dc3b817d-447125e0    
+    span_id         11692801017956774569
+
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > 
+~ > 
+~ > yt exists "//home/workshop/user-${MY_ID}/weather_daily"
+false
+~ > 
+~ > 
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=string};{name=city;type=string};{name=temperature_2m_max;type=string};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+
+f-1b227-1e0191-5a8140c0
+~ > 
+~ > 
+~ > 
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"\
+>     | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" \
+>         --format dsv
+Table writer failed                     
+    Error validating column "temperature_2m_min"
+        Invalid type: expected "double", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:10:32.657658Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39026;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"f-1b359-1e0004-d6d5\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "4c6c624f-4f095a95-3734b289-7c7dd9e"
+                    }    
+    response_headers {
+                      "content-length": "1125",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":14639752501263048919,\"thread\":\"Connection:2\",\"fid\":18446431485175734706,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:10:31.546853Z\",\"trace_id\":\"afe1a9ac-10e629c2-c1c378c1-2fb54232\",\"span_id\":1385015445472526609,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"temperature_2m_min\\\"\",\"attributes\":{\"pid\":1,\"tid\":14639752501263048919,\"thread\":\"Connection:2\",\"fid\":18446431485135050296,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:10:31.546784Z\",\"trace_id\":\"afe1a9ac-10e629c2-c1c378c1-2fb54232\",\"span_id\":1385015445472526609},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"double\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":14639752501263048919,\"thread\":\"Connection:2\",\"fid\":18446431485135050296,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:10:31.546751Z\",\"trace_id\":\"afe1a9ac-10e629c2-c1c378c1-2fb54232\",\"span_id\":1385015445472526609}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "3a11c8d0-e8cf3189-4a1eeadd-4af69490",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "afe1a9ac-10e629c2-c1c378c1-2fb54232",
+                      "date": "Thu, 08 Oct 2026 11:10:31 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "f-1b359-1e0004-d6d5",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:10:31.546853Z (pid 1, tid cb2ad955cd6ba0d7, fid fffee3b3cf7b21b2)    
+    thread          Connection:2    
+    trace_id        afe1a9ac-10e629c2-c1c378c1-2fb54232    
+    span_id         1385015445472526609    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "temperature_2m_min"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:10:31.546784Z (pid 1, tid cb2ad955cd6ba0d7, fid fffee3b3cd0e5638)    
+    thread          Connection:2    
+    trace_id        afe1a9ac-10e629c2-c1c378c1-2fb54232    
+    span_id         1385015445472526609
+Invalid type: expected "double", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:10:31.546751Z (pid 1, tid cb2ad955cd6ba0d7, fid fffee3b3cd0e5638)    
+    thread          Connection:2    
+    trace_id        afe1a9ac-10e629c2-c1c378c1-2fb54232    
+    span_id         1385015445472526609
+
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=string};{name=city;type=string};{name=temperature_2m_max;type=string};{name=temperature_2m_min;type=string};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+
+Node //home/workshop/user15/weather_daily already exists
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:11:37.822113Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/create    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39053;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "Content-Type": "application/x-yt-yson-text",
+                      "X-YT-Correlation-Id": "9b5e1f97-704216d2-2b059bbf-cde79a95"
+                    }    
+    response_headers {
+                      "content-length": "242",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":501,\"message\":\"Node //home/workshop/user15/weather_daily already exists\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:11:37.700593Z\",\"path\":\"//home/workshop/user-15/weather_daily\"}}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "802ff8ec-aa9b7b0f-b83debf-a0cb3b57",
+                      "x-yt-response-code": "501",
+                      "x-yt-response-message": "Node //home/workshop/user15/weather_daily already exists",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "b65aa933-c4486060-43aa154f-8fd4d7e1",
+                      "date": "Thu, 08 Oct 2026 11:11:37 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "type": "table",
+                      "recursive": false,
+                      "ignore_existing": false,
+                      "lock_existing": false,
+                      "attributes": {
+                        "schema": [
+                          {
+                            "name": "date",
+                            "type": "string"
+                          },
+                          {
+                            "name": "city",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_max",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_min",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_mean",
+                            "type": "double"
+                          },
+                          {
+                            "name": "apparent_temperature_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_hours",
+                            "type": "double"
+                          },
+                          {
+                            "name": "relative_humidity_2m_mean",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "wind_speed_10m_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "wind_direction_10m_dominant",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "shortwave_radiation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "et0_fao_evapotranspiration",
+                            "type": "double"
+                          },
+                          {
+                            "name": "weather_code",
+                            "type": "int64"
+                          }
+                        ]
+                      },
+                      "force": false,
+                      "ignore_type_mismatch": false,
+                      "path": "//home/workshop/user-15/weather_daily",
+                      "output_format": "json",
+                      "mutation_id": "8d47481b-65655890-4226c970-eeb2a8b",
+                      "retry": false
+                    }    
+    transparent     True
+Node //home/workshop/user15/weather_daily already exists    
+    code            501    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:11:37.700593Z    
+    path            //home/workshop/user-15/weather_daily
+
+~ > 
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=string};{name=city;type=string};{name=temperature_2m_max;type=string};{name=temperature_2m_min;type=string};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+Node //home/workshop/user15/weather_daily already exists
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:11:40.648003Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/create    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39054;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "Content-Type": "application/x-yt-yson-text",
+                      "X-YT-Correlation-Id": "5e55af4-e76b8ea6-37022f0d-37183af"
+                    }    
+    response_headers {
+                      "content-length": "242",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":501,\"message\":\"Node //home/workshop/user15/weather_daily already exists\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:11:40.511183Z\",\"path\":\"//home/workshop/user-15/weather_daily\"}}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "3b01db2f-3bb82c13-a68d6769-2c85e4e8",
+                      "x-yt-response-code": "501",
+                      "x-yt-response-message": "Node //home/workshop/user15/weather_daily already exists",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "1c20559f-24b09f3-51a2f71b-c79b254c",
+                      "date": "Thu, 08 Oct 2026 11:11:40 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "type": "table",
+                      "recursive": false,
+                      "ignore_existing": false,
+                      "lock_existing": false,
+                      "attributes": {
+                        "schema": [
+                          {
+                            "name": "date",
+                            "type": "string"
+                          },
+                          {
+                            "name": "city",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_max",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_min",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_mean",
+                            "type": "double"
+                          },
+                          {
+                            "name": "apparent_temperature_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_hours",
+                            "type": "double"
+                          },
+                          {
+                            "name": "relative_humidity_2m_mean",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "wind_speed_10m_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "wind_direction_10m_dominant",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "shortwave_radiation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "et0_fao_evapotranspiration",
+                            "type": "double"
+                          },
+                          {
+                            "name": "weather_code",
+                            "type": "int64"
+                          }
+                        ]
+                      },
+                      "force": false,
+                      "ignore_type_mismatch": false,
+                      "path": "//home/workshop/user-15/weather_daily",
+                      "output_format": "json",
+                      "mutation_id": "d4e2b342-80ce2cc3-d4dad794-9c392e7a",
+                      "retry": false
+                    }    
+    transparent     True
+Node //home/workshop/user15/weather_daily already exists    
+    code            501    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:11:40.511183Z    
+    path            //home/workshop/user-15/weather_daily
+
+~ > 
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=string};{name=city;type=string};{name=temperature_2m_max;type=string};{name=temperature_2m_min;type=string};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+
+f-1c250-1e0191-1bdd4583
+~ > 
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"\
+>     | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" \
+>         --format dsv
+Table writer failed                     
+    Error validating column "temperature_2m_mean"
+        Invalid type: expected "double", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:12:09.806458Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39062;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"f-1c474-1e0004-c030\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "e7b9ef94-5ac93b22-e05295f7-f737d40d"
+                    }    
+    response_headers {
+                      "content-length": "1123",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431475072787286,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:12:08.113544Z\",\"trace_id\":\"67f4928f-da6622eb-40e1f186-55d92175\",\"span_id\":702167764523612022,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"temperature_2m_mean\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431475042708641,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:12:08.113461Z\",\"trace_id\":\"67f4928f-da6622eb-40e1f186-55d92175\",\"span_id\":702167764523612022},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"double\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431475042708641,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:12:08.113430Z\",\"trace_id\":\"67f4928f-da6622eb-40e1f186-55d92175\",\"span_id\":702167764523612022}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "403c9bc-1c9c651-bec796be-d142dda5",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "67f4928f-da6622eb-40e1f186-55d92175",
+                      "date": "Thu, 08 Oct 2026 11:12:08 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "f-1c474-1e0004-c030",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:12:08.113544Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b1754c6356)    
+    thread          Connection:1    
+    trace_id        67f4928f-da6622eb-40e1f186-55d92175    
+    span_id         702167764523612022    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "temperature_2m_mean"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:12:08.113461Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b173816ca1)    
+    thread          Connection:1    
+    trace_id        67f4928f-da6622eb-40e1f186-55d92175    
+    span_id         702167764523612022
+Invalid type: expected "double", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:12:08.113430Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3b173816ca1)    
+    thread          Connection:1    
+    trace_id        67f4928f-da6622eb-40e1f186-55d92175    
+    span_id         702167764523612022
+
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > python3 /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/csv_to_dsv.py < "$HOME/Downloads/weather_daily.csv"  > /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/weather_daily.dsv
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > cat /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/weather_daily.dsv \
+>     | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" \
+>         --format dsv
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily \
+>     --attributes "{schema=[{name=date;type=date};{name=city;type=string};{name=temperature_2m_max;type=double};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+Node //home/workshop/user15/weather_daily already exists
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:27:26.229193Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/create    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39155;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "Content-Type": "application/x-yt-yson-text",
+                      "X-YT-Correlation-Id": "90672162-d0e03dd3-fd4068d3-70496506"
+                    }    
+    response_headers {
+                      "content-length": "242",
+                      "cache-control": "no-store",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":501,\"message\":\"Node //home/workshop/user15/weather_daily already exists\",\"attributes\":{\"host\":\"ms-*.masters.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:27:26.120209Z\",\"path\":\"//home/workshop/user-15/weather_daily\"}}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "1644b6db-982e1ad3-ea8752fd-170bb92d",
+                      "x-yt-response-code": "501",
+                      "x-yt-response-message": "Node //home/workshop/user15/weather_daily already exists",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "4de47965-50fd6e2f-3a0b4bf1-55a04af4",
+                      "date": "Thu, 08 Oct 2026 11:27:25 GMT",
+                      "server": "ycalb"
+                    }    
+    params          {
+                      "suppress_transaction_coordinator_sync": false,
+                      "type": "table",
+                      "recursive": false,
+                      "ignore_existing": false,
+                      "lock_existing": false,
+                      "attributes": {
+                        "schema": [
+                          {
+                            "name": "date",
+                            "type": "date"
+                          },
+                          {
+                            "name": "city",
+                            "type": "string"
+                          },
+                          {
+                            "name": "temperature_2m_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "temperature_2m_min",
+                            "type": "double"
+                          },
+                          {
+                            "name": "temperature_2m_mean",
+                            "type": "double"
+                          },
+                          {
+                            "name": "apparent_temperature_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "precipitation_hours",
+                            "type": "double"
+                          },
+                          {
+                            "name": "relative_humidity_2m_mean",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "wind_speed_10m_max",
+                            "type": "double"
+                          },
+                          {
+                            "name": "wind_direction_10m_dominant",
+                            "type": "int64"
+                          },
+                          {
+                            "name": "shortwave_radiation_sum",
+                            "type": "double"
+                          },
+                          {
+                            "name": "et0_fao_evapotranspiration",
+                            "type": "double"
+                          },
+                          {
+                            "name": "weather_code",
+                            "type": "int64"
+                          }
+                        ]
+                      },
+                      "force": false,
+                      "ignore_type_mismatch": false,
+                      "path": "//home/workshop/user-15/weather_daily",
+                      "output_format": "json",
+                      "mutation_id": "c43290f6-1c86bb7b-f9eddb26-4e28c4f4",
+                      "retry": false
+                    }    
+    transparent     True
+Node //home/workshop/user15/weather_daily already exists    
+    code            501    
+    origin          ms-*.masters.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:27:26.120209Z    
+    path            //home/workshop/user-15/weather_daily
+
+~ > yt remove "//home/workshop/user-${MY_ID}/weather_daily" --force
+~ > yt create table //home/workshop/user-${MY_ID}/weather_daily     --attributes "{schema=[{name=date;type=date};{name=city;type=string};{name=temperature_2m_max;type=double};{name=temperature_2m_min;type=double};{name=temperature_2m_mean;type=double};{name=apparent_temperature_max;type=double};{name=precipitation_sum;type=double};{name=precipitation_hours;type=double};{name=relative_humidity_2m_mean;type=int64};{name=wind_speed_10m_max;type=double};{name=wind_direction_10m_dominant;type=int64};{name=shortwave_radiation_sum;type=double};{name=et0_fao_evapotranspiration;type=double};{name=weather_code;type=int64}]}"
+10-4235-1e0191-2bca826f
+~ > cat /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/weather_daily.dsv | yt write-table "//home/workshop/user-${MY_ID}/weather_daily" --format dsv 
+Table writer failed                     
+    Error validating column "date"
+        Invalid type: expected "uint64", actual "string"
+
+***** Details:
+Received HTTP response with error    
+    origin          Karuppiahs-MacBook-Pro.local on 2026-10-08T11:27:53.679244Z    
+    url             https://http-proxy-ws.benchmark.ytsaurus.tech/api/v4/write_table    
+    request_headers {
+                      "User-Agent": "Python wrapper 0.13.55",
+                      "Accept-Encoding": "gzip, identity",
+                      "X-Started-By": "{\"pid\"=39189;\"user\"=\"kp\";}",
+                      "X-YT-Header-Format": "<format=text>yson",
+                      "X-YT-Parameters": "{\"transaction_id\"=\"10-42bb-1e0004-400f\";\"suppress_transaction_coordinator_sync\"=%false;\"input_format\"=<\"enable_escaping\"=%true;\"enable_table_index\"=%false;\"table_index_column\"=\"@table_index\";>\"dsv\";\"path\"=\"//home/workshop/user-15/weather_daily\";}",
+                      "Content-Encoding": "gzip",
+                      "X-YT-Correlation-Id": "d8e69af6-1a9f0379-a4c12504-f7787c37"
+                    }    
+    response_headers {
+                      "content-length": "1111",
+                      "cache-control": "no-store",
+                      "content-disposition": "attachment",
+                      "content-type": "application/json",
+                      "x-yt-error": "{\"code\":1,\"message\":\"Table writer failed\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431368297944161,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:27:52.586072Z\",\"trace_id\":\"a4fe2b99-54072128-41d563fb-a18c8fe3\",\"span_id\":5834525960426802048,\"path\":\"//home/workshop/user-15/weather_daily\"},\"inner_errors\":[{\"code\":307,\"message\":\"Error validating column \\\"date\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431368167719276,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:27:52.585926Z\",\"trace_id\":\"a4fe2b99-54072128-41d563fb-a18c8fe3\",\"span_id\":5834525960426802048},\"inner_errors\":[{\"code\":307,\"message\":\"Invalid type: expected \\\"uint64\\\", actual \\\"string\\\"\",\"attributes\":{\"pid\":1,\"tid\":17734213039451533489,\"thread\":\"Connection:1\",\"fid\":18446431368167719276,\"host\":\"hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local\",\"datetime\":\"2026-10-08T11:27:52.585895Z\",\"trace_id\":\"a4fe2b99-54072128-41d563fb-a18c8fe3\",\"span_id\":5834525960426802048}}]}]}",
+                      "x-yt-error-content-type": "application/json",
+                      "x-yt-proxy": "hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local",
+                      "x-yt-request-id": "49ae9fe4-a0989885-64949879-b0c990af",
+                      "x-yt-response-code": "1",
+                      "x-yt-response-message": "Table writer failed",
+                      "X-YT-Response-Parameters": {},
+                      "x-yt-trace-id": "a4fe2b99-54072128-41d563fb-a18c8fe3",
+                      "date": "Thu, 08 Oct 2026 11:27:52 GMT",
+                      "server": "ycalb",
+                      "connection": "close"
+                    }    
+    params          {
+                      "transaction_id": "10-42bb-1e0004-400f",
+                      "suppress_transaction_coordinator_sync": false,
+                      "input_format": {
+                        "$attributes": {
+                          "enable_escaping": true,
+                          "enable_table_index": false,
+                          "table_index_column": "@table_index"
+                        },
+                        "$value": "dsv"
+                      },
+                      "path": "//home/workshop/user-15/weather_daily"
+                    }    
+    transparent     True
+Table writer failed    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:27:52.586072Z (pid 1, tid f61c94ccab9bf0b1, fid fffee39899059461)    
+    thread          Connection:1    
+    trace_id        a4fe2b99-54072128-41d563fb-a18c8fe3    
+    span_id         5834525960426802048    
+    path            //home/workshop/user-15/weather_daily
+Error validating column "date"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:27:52.585926Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3989142816c)    
+    thread          Connection:1    
+    trace_id        a4fe2b99-54072128-41d563fb-a18c8fe3    
+    span_id         5834525960426802048
+Invalid type: expected "uint64", actual "string"    
+    code            307    
+    origin          hp-0.http-proxies.ytsaurus-workshop.svc.cluster.local on 2026-10-08T11:27:52.585895Z (pid 1, tid f61c94ccab9bf0b1, fid fffee3989142816c)    
+    thread          Connection:1    
+    trace_id        a4fe2b99-54072128-41d563fb-a18c8fe3    
+    span_id         5834525960426802048
+
+~ > 
+~ > curl -fsSL https://opencode.ai/v2/install | bash
+
+Installing opencode version: 2.0.25
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 100%
+Successfully added opencode to $PATH in /Users/kp/.bashrc
+
+                                 ▄     
+█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█
+█░░█ █░░█ █▀▀▀ █░░█ █░░░ █░░█ █░░█ █▀▀▀
+▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀
+
+
+OpenCode includes free models, to start:
+
+cd <project>  # Open directory
+opencode      # Run command
+
+For more information visit https://opencode.ai/v2/docs
+
+
+~ > cd github.com/karuppiah7890/learning-log/202
+2020/ 2021/ 2025/ 2026/ 
+~ > cd github.com/karuppiah7890/learning-log/2026/
+April/     February/  June/      May/       September/ 
+August/    January/   March/     October/   
+~ > cd github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/
+open-source-india-conference-2026 > ls
+8th-October
+open-source-india-conference-2026 > cd 8th-October/ytsaurus/
+ytsaurus > ls
+commands.sh		manual.txt		workshop-log-3.log
+credentials		weather_daily.dsv	workshop.log
+csv_to_dsv.py		workshop-log-2.log	workshop.md
+ytsaurus > opencode
+-bash: opencode: command not found
+ytsaurus > opencode
+-bash: opencode: command not found
+ytsaurus > logout
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]
+ytsaurus > opencode --help
+DESCRIPTION
+  OpenCode command line interface
+
+USAGE
+  opencode <subcommand> [flags] [<directory>]
+
+ARGUMENTS
+  directory string    Directory to start OpenCode in (optional)
+
+FLAGS
+  --standalone            Run with a private server instead of the background service
+  --server string         Connect to a server URL instead of the background service
+  --auto                  Auto-approve permissions that are not explicitly denied
+  --continue, -c          Continue the last session
+  --session, -s string    Session ID to continue, or to create if it does not exist
+  --prompt string         Prompt to use
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+SUBCOMMANDS
+  upgrade, update    Upgrade OpenCode to the latest or a specific version
+  uninstall          Uninstall OpenCode, keeping session data, configuration, and state
+  acp                Start an Agent Client Protocol server
+  api                Make a request to the running server
+  debug              Debugging and troubleshooting tools
+  auth               manage integrations and credentials
+  mcp                Manage MCP (Model Context Protocol) servers
+  plugin             Manage plugins
+  models             List all available models
+  stats              Show shareable usage statistics
+  mini               Start the minimal interactive interface
+  run                Run OpenCode with a message
+  session            Manage sessions
+  service            Manage the background server
+  reload             Reload configuration
+  pair               Print one-time links to connect a browser or app
+  serve              Start the v2 API and web server
+ytsaurus > opencode mcp -h
+DESCRIPTION
+  Manage MCP (Model Context Protocol) servers
+
+USAGE
+  opencode mcp <subcommand> [flags]
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+SUBCOMMANDS
+  list      List configured MCP servers and their status
+  add       Add an MCP server to your configuration
+  auth      Authenticate with an OAuth-capable remote MCP server
+  logout    Remove stored OAuth credentials for an MCP server
+ytsaurus > opencode mcp list
+No MCP servers configured
+ytsaurus > opencode mcp add
+DESCRIPTION
+  Add an MCP server to your configuration
+
+USAGE
+  opencode mcp add [flags] <name> [<command...>]
+
+ARGUMENTS
+  name string          Name of the MCP server
+  command... string    Command and arguments for a local server, passed after -- (optional)
+
+FLAGS
+  --url string          URL for a remote MCP server
+  --header key=value    HTTP header for a remote server, as name=value
+  --env key=value       Environment variable for a local server, as name=value
+  --global              Write to the global config instead of the project config
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+ERROR
+  Missing required argument: name
+ytsaurus > opencode mcp add --url https://mcp-ws.benchmark.ytsaurus.tech/mcp
+DESCRIPTION
+  Add an MCP server to your configuration
+
+USAGE
+  opencode mcp add [flags] <name> [<command...>]
+
+ARGUMENTS
+  name string          Name of the MCP server
+  command... string    Command and arguments for a local server, passed after -- (optional)
+
+FLAGS
+  --url string          URL for a remote MCP server
+  --header key=value    HTTP header for a remote server, as name=value
+  --env key=value       Environment variable for a local server, as name=value
+  --global              Write to the global config instead of the project config
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+ERROR
+  Missing required argument: name
+ytsaurus > opencode mcp add ytsaurus-workshop --url https://mcp-ws.benchmark.ytsaurus.tech/mcp
+MCP server "ytsaurus-workshop" added to /Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus/opencode.json
+ytsaurus > opencode
+opencode   opencode2  
+ytsaurus > opencode2 --help
+DESCRIPTION
+  OpenCode command line interface
+
+USAGE
+  opencode <subcommand> [flags] [<directory>]
+
+ARGUMENTS
+  directory string    Directory to start OpenCode in (optional)
+
+FLAGS
+  --standalone            Run with a private server instead of the background service
+  --server string         Connect to a server URL instead of the background service
+  --auto                  Auto-approve permissions that are not explicitly denied
+  --continue, -c          Continue the last session
+  --session, -s string    Session ID to continue, or to create if it does not exist
+  --prompt string         Prompt to use
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+SUBCOMMANDS
+  upgrade, update    Upgrade OpenCode to the latest or a specific version
+  uninstall          Uninstall OpenCode, keeping session data, configuration, and state
+  acp                Start an Agent Client Protocol server
+  api                Make a request to the running server
+  debug              Debugging and troubleshooting tools
+  auth               manage integrations and credentials
+  mcp                Manage MCP (Model Context Protocol) servers
+  plugin             Manage plugins
+  models             List all available models
+  stats              Show shareable usage statistics
+  mini               Start the minimal interactive interface
+  run                Run OpenCode with a message
+  session            Manage sessions
+  service            Manage the background server
+  reload             Reload configuration
+  pair               Print one-time links to connect a browser or app
+  serve              Start the v2 API and web server
+ytsaurus > opencode2 version
+Error: ENOENT: no such file or directory, chdir '/Users/kp/github.com/karuppiah7890/learning-log/2026/October/open-source-india-conference-2026/8th-October/ytsaurus' -> 'version'
+    at chdir (unknown)
+    at <anonymous> (/$bunfs/root/chunk-tsjjsgfq.js:96:6417)
+ytsaurus > opencode2 --version
+opencode v2.0.25
+ytsaurus > opencode --version
+opencode v2.0.25
+ytsaurus > opencode mcp
+DESCRIPTION
+  Manage MCP (Model Context Protocol) servers
+
+USAGE
+  opencode mcp <subcommand> [flags]
+
+GLOBAL FLAGS
+  --help, -h                                                          Show help information
+  --version, -v                                                       Show version information
+  --wizard                                                            Start wizard mode for a command
+  --completions <bash|zsh|fish|sh>                                    Print shell completion script (choices: bash, zsh, fish, sh)
+  --log-level <all|trace|debug|info|warn|warning|error|fatal|none>    Sets the minimum log level (choices: all, trace, debug, info, warn, warning, error, fatal, none)
+  --print-logs                                                        Print logs to stderr (server logs require --standalone)
+
+SUBCOMMANDS
+  list      List configured MCP servers and their status
+  add       Add an MCP server to your configuration
+  auth      Authenticate with an OAuth-capable remote MCP server
+                                   ▄     ls for an MCP server
+  █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█
+  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀
+  ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀
+┌  Authenticate an MCP server
+  Session   
+  Continue  opencode -s ses_ee4b01465ffeE0XgxMYA6g9zZt
+│  ytsaurus-workshop
+ytsaurus > 
+ytsaurus > ation started
+ytsaurus > 
+ytsaurus > e ytsaurus-workshop in your browser. This window will close automatically.
+│
+●  https://ws.benchmark.ytsaurus.tech/oauth/authorize?response_type=code&client_id=mcp_77b4124e6ba77ef68de654b66fba1211&code_challenge=-ZM4lrVU5wPDZYieT1kQYCBoY2rufWtneJvN59JTcLc&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A50441%2Fcallback&state=FEkDxEQ6FLO3wrRHvuVsPv5Pu0gEMUFbprRaYKxgaTk&scope=mcp+offline_access&resource=https%3A%2F%2Fmcp-ws.benchmark.ytsaurus.tech%2Fmcp
+│
+◇  Waiting for authorization...
+│
+◆  Connected to ytsaurus-workshop
+│
+└  Done
+
+ytsaurus > opencode mcp list
+✓ ytsaurus-workshop  connected
+ytsaurus > opencode

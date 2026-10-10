@@ -1,0 +1,594 @@
+# Workshop Open Source India
+
+## 1. Prepare Your Environment
+
+### Sign in to the YTsaurus UI
+
+Open the workshop UI:
+
+https://ws.benchmark.ytsaurus.tech
+
+Use the credentials assigned to you:
+  - Username: `workshop-user-<YOUR_ID>`
+  - Password: `workshop-user-<YOUR_ID>`
+
+For example, participant 1 should use:
+
+- Username: `workshop-user-01`
+- Password: `workshop-user-01`
+
+Throughout this guide, `<YOUR_ID>` is your two-digit participant ID, such as `01`, `02`, or `30`.
+
+### Install the YTsaurus CLI
+
+Install the Python client:
+
+```bash
+python3 -m pip install --user ytsaurus-client
+```
+
+Set your participant ID. Replace XX with your two-digit ID:
+
+```
+export MY_ID=XX
+```
+
+For example:
+```
+export MY_ID=01
+```
+
+Configure the CLI:
+
+```
+export YT_TOKEN="workshop-user-${MY_ID}"
+export YT_PROXY="https://http-proxy-ws.benchmark.ytsaurus.tech"
+```
+
+Verify that the connection works:
+
+```
+yt list //home/workshop
+```
+
+> These environment variables apply only to the current terminal session. If you open a new terminal, run the export
+> commands again.
+
+### Configure an MCP Client
+
+MCP allows an AI coding assistant to inspect and work with data stored in YTsaurus.
+
+#### Codex
+
+codex mcp add workshop --url https://mcp-ws.benchmark.ytsaurus.tech/mcp
+
+#### Claude Code
+
+claude mcp add --transport http workshop https://mcp-ws.benchmark.ytsaurus.tech/mcp
+
+## 2. Workshop Exercises
+
+### Exercise 1: Explore Cypress
+
+Cypress is the hierarchical namespace in which YTsaurus stores tables, files, directories, and other objects.
+
+Open your personal working directory in the UI. Replace XX in the URL with your participant ID:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/userXX
+
+For example:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/user01
+
+List the contents of your directory using the CLI:
+
+```
+yt list "//home/workshop/user${MY_ID}"
+```
+
+You can also list the workshop root directory:
+
+```
+yt list //home/workshop
+```
+
+Explore the bronze directory in your workspace:
+
+```
+yt list "//home/workshop/user${MY_ID}/bronze"
+```
+
+### Exercise 2: Create Your First Table
+
+Open your personal working directory in the UI:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/userXX
+
+Create a static table named: `my_first_table` with columns "key" of type "string" and "value" of type "int64".
+
+Its full Cypress path should be:
+
+//home/workshop/userXX/my_first_table
+
+Or use CLI:
+
+```
+yt create table //home/workshop/user${MY_ID}/my_first_table --attributes "{schema=[{name=key;type=string};{name=value;type=int64}]}"
+```
+
+Make sure you create the table inside your own directory.
+
+### Exercise 3: Write and Read Data Using the CLI
+
+Write two rows to the table:
+
+```
+echo '{"key": "A", "value": 41} {"key": "B", "value": 42}' | \
+    yt write-table "//home/workshop/user${MY_ID}/my_first_table" --format json
+```
+
+Read the data back:
+
+```
+yt read-table "//home/workshop/user${MY_ID}/my_first_table" \
+    --format json
+```
+
+Now open `my_first_table` in the UI and inspect its contents.
+
+### Exercise 4: Inspect the Raw Train Dataset
+
+Each participant has a copy of the raw Indian railway dataset:
+
+`//home/workshop/userXX/bronze/trains_raw`
+
+ You can open the table in the UI:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/userXX/bronze/trains_raw
+
+Open the Description tab and inspect the table schema.
+
+The table does not have a useful description yet. In the next exercise, we will ask an AI assistant to analyze the table and generate one.
+
+### Exercise 5: Generate a Table Description with an AI Assistant
+
+Start a Claude Code or Codex session with the workshop MCP server enabled.
+
+Ask the assistant to inspect your table and generate a concise description. For example:
+
+Before sending the prompt, replace `XX` with your participant ID. Review the generated description before proceeding.
+
+```
+  Inspect the table //home/workshop/userXX/bronze/trains_raw.
+
+  Review its schema and a small sample of rows, then write:
+  1. A concise description of the table.
+  2. A short explanation of each column.
+  3. Any data-quality issues you notice.
+```
+
+### Exercise 6: Send Train Events to a Queue
+
+Your `bronze` directory contains an ingestion queue:
+
+`//home/workshop/userXX/bronze/trains_queue`
+
+Insert a sample train event into your queue:
+
+```bash
+echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}'\
+| yt insert-rows "//home/workshop/user${MY_ID}/bronze/queue" --format json
+```
+
+Each invocation inserts one event. Run the command several times if you want to produce multiple events:
+
+```bash
+for i in {1..5}; do
+    echo '{"event_id":"workshop-seed:train-12192-baq-20261007","ingested_at":"2026-10-07T12:00:00+05:30","train_no":"12192","station_code":"BAQ","payload_json":"{\"arrival\":{\"scheduled_at\":\"2026-10-07T11:30:00+05:30\",\"actual_at\":\"2026-10-07T11:42:00+05:30\",\"delay_min\":12},\"train_name\":\"Jabalpur Express\",\"station_name\":\"Ganj Basoda\"}"}' |
+      yt insert-rows "//home/workshop/user${MY_ID}/bronze/queue" \
+        --format json
+done
+```
+
+Open the queue in the UI and confirm that the events have appeared:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/userXX/bronze/queue
+
+Replace XX with your participant ID.
+
+This queue is configured with YTsaurus's built-in queue export mechanism. The export is managed by the platform's queue agents—not by an external cron job—and periodically writes newly arrived rows into static tables under:
+
+`//home/workshop/userXX/bronze/trains_raw`
+
+Open this directory in the UI:
+
+https://ws.benchmark.ytsaurus.tech/workshop/navigation?path=//home/workshop/userXX/bronze/trains_raw
+
+Refresh the directory after approximately one minute. A new static table containing the recently inserted events should appear. Exported tables are named using the export timestamp.
+
+For this workshop, the export interval is intentionally set to one minute so that the result is easy to observe. In a production system, exports are typically configured to run 
+
+---
+### Exercise 7: Import reference datasets with an AI agent
+
+Use your AI agent to import two public datasets from Hugging Face into the workshop YTsaurus
+  cluster:
+
+  1. Indian cities and their geographic coordinates:
+
+
+     https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality/blob/main/cities.csv
+
+  2. Daily weather observations for these cities:
+
+
+     https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality/blob/main/weather_daily.csv
+
+  The agent should:
+
+  - download both CSV files from Hugging Face;
+  - inspect their contents and infer appropriate column types;
+  - import them as typed static YTsaurus tables;
+  - add a concise description for each dataset;
+  - add a meaningful description for every column;
+  - verify the resulting schemas and row counts;
+  - show you a small sample from each table.
+
+  Create the tables next to your `bronze` directory:
+
+  ```text
+  //home/workshop/userXX/
+  ├── bronze/
+  ├── cities
+  └── weather_daily
+```
+
+Replace XX with your participant ID.
+
+<{Example prompt
+
+ Download these CSV files from Hugging Face:
+
+  https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality/resolve/main/cities.csv
+
+  https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality/resolve/main/weather_daily.csv
+
+  Analyze the files and import them into the workshop YTsaurus cluster as typed static tables:
+
+  //home/workshop/userXX/cities
+  //home/workshop/userXX/weather_daily
+
+  Use the first CSV row as column names and infer appropriate column types.
+
+  Add a concise description for each dataset and a meaningful description for every column.
+
+  Do not overwrite an existing table without asking me first.
+
+  After the import:
+  1. Verify the schema and row count of each table.
+  2. Show me a small sample from each table.
+
+}>
+
+After the agent finishes:
+
+  1. Open both tables in the YTsaurus UI.
+  2. Check their schemas and column descriptions on the Description tab.
+  3. Inspect several rows on the Data tab.
+  4. Confirm that cities contains 50 rows.
+  5. Ask the agent to report the date range available in weather_daily.
+
+### Exercise 8: Build the Silver layer with YQL
+
+Use your AI agent to prepare a cleaned Silver-layer table from the raw train events.
+
+Source dataset:
+
+`//home/workshop/userXX/bronze/trains_raw`
+
+Destination table: `//home/workshop/userXX/silver/trains`
+
+Ask the agent to create and execute a YQL query that:
+  - reads the complete bronze/trains_raw composite table;
+  - parses the train data stored in payload_json;
+  - removes duplicate events;
+  - excludes records with a missing actual arrival time;
+  - converts important fields to appropriate typed columns;
+  - writes the result into one static table at silver/trains;
+  - fully recalculates and replaces the Silver table on every run.
+
+The agent should show you the query before executing it. Read the generated query and try to understand how each transformation works.
+
+<{Example prompt
+Inspect this Bronze-layer dataset:
+
+  //home/ws/userXX/bronze/trains_raw
+
+  Prepare a YQL query that builds a cleaned Silver-layer table:
+
+  //home/ws/userXX/silver/trains
+
+  The query should:
+
+  - read all available data from the Bronze composite table;
+  - parse useful train and station fields from payload_json;
+  - remove duplicate events;
+  - exclude records where the actual arrival time is missing;
+  - use appropriate data types for the resulting columns;
+  - write the result into a single static table;
+  - completely replace the destination table on every run.
+
+  Show me the YQL query before executing it. After execution, verify the output schema and row
+  count, check that duplicate events were removed, and confirm that no rows with a missing
+  actual arrival time remain.
+}>
+
+After the query finishes:
+  1. Read the generated YQL query and identify:
+      - where the source table is read;
+      - how payload_json is parsed;
+      - how invalid rows are filtered;
+      - how duplicate events are removed;
+      - where the result is written.
+
+  2. Open the Queries section in the YTsaurus UI.
+  3. Find the query using the query ID returned by the agent.
+  4. Open the query and inspect its execution graph.
+  5. Look at the individual operations and their input and output row counts.
+  6. Open //home/workshop/userXX/silver/trains in the UI.
+  7. Check its schema on the Description tab.
+  8. Inspect several rows on the Data tab.
+  9. Confirm that:
+      - the table contains no duplicate events;
+      - the actual arrival time is present in every row;
+      - the Silver table has no more rows than the Bronze dataset.
+
+## Exercise 9: Build the Gold layer with YQL
+
+Use your AI agent to create an analytics-ready Gold-layer dataset by enriching the cleaned
+  train events with city and weather data.
+
+  Source tables:
+
+  ```text
+  //home/workshop/userXX/silver/trains
+  //home/workshop/userXX/cities
+  //home/workshop/userXX/weather_daily
+```
+
+  Destination table:
+
+  //home/workshop/userXX/gold/train_weather
+
+  Ask the agent to inspect all three tables before writing the query. It should identify
+  suitable join keys from the actual schemas and data instead of assuming that similarly named
+  columns always contain matching values.
+
+  The YQL query should:
+
+  - read the complete Silver train table;
+  - associate train events with cities using the available station or location data;
+  - join weather observations by city and event date;
+  - preserve the train-event grain: one output row per Silver train event;
+  - include useful train, city, and weather columns;
+  - use LEFT JOIN where appropriate so that unmatched train events are not silently discarded;
+  - fully recalculate and replace the Gold table on every run.
+
+  The agent should explain the selected join strategy and show you the query before executing
+  it.
+
+<{Example prompt
+
+Inspect these tables in the workshop YTsaurus cluster:
+
+  //home/workshop/userXX/silver/trains
+  //home/workshop/userXX/cities
+  //home/workshop/userXX/weather_daily
+
+  Create a YQL query that enriches the Silver train events with city information and daily
+  weather observations.
+
+  Before writing the query:
+
+  1. Inspect the schemas and sample rows.
+  2. Determine how train stations or locations can be associated with cities.
+  3. Verify that the proposed join columns contain compatible values.
+  4. Explain the selected join strategy and any limitations.
+
+  Write the result to:
+
+  //home/workshop/userXX/gold/train_weather
+
+  The result should preserve one row per Silver train event and include useful train, city, and
+  weather columns. Keep unmatched train events using LEFT JOINs and make missing enrichment
+  values visible as NULL.
+
+  Completely replace the destination table on every run.
+
+  Show me the YQL query before executing it.
+
+  After execution:
+  - give me the query ID;
+  - verify the output schema and row count;
+  - report how many rows matched a city;
+  - report how many rows matched a weather observation;
+  - show examples of both matched and unmatched rows.
+}>
+
+ Before executing the query, read it and identify:
+  - how train events are associated with cities;
+  - how event dates are matched with weather dates;
+  - which columns are used as join keys;
+  - whether the query uses INNER JOIN or LEFT JOIN;
+  - where the final table is written.
+
+  After the query finishes:
+
+  1. Open the Queries section in the YTsaurus UI.
+  2. Find the query using the query ID returned by the agent.
+  3. Open its execution graph.
+  4. Identify the stages that read the three source tables.
+  5. Find the join operations in the graph.
+  6. Compare their input and output row counts.
+  7. Open //home/workshop/userXX/gold/train_weather.
+  8. Inspect its schema and several rows.
+  9. Review the city and weather match statistics reported by the agent.
+
+## Exercise 10: Build a train delays dashboard
+
+Use your AI agent to create a dashboard based on the Gold-layer dataset:
+
+  ```text
+  //home/workshop/userXX/gold/train_weather
+  ```
+
+  Save the dashboard at:
+
+  ```text
+  //home/workshop/userXX/dashboards/train-delays
+  ```
+
+  The dashboard should help users explore train delays. It must include the maximum observed delay as a prominent KPI.
+
+  Ask the agent to inspect the Gold table before designing the dashboard and select appropriate fields from the actual schema.
+
+  Use CHYT for all dashboard data sources and queries. Configure every query source with `engine: "qt"` and `query_engine: "chyt"`. Do not use YQL for dashboard queries.
+
+  The dashboard should include:
+
+  - the maximum observed train delay;
+  - the average train delay;
+  - the number or percentage of delayed train events;
+  - delay changes over time;
+  - trains, stations, or cities with the largest delays;
+  - a table with examples of the most delayed events.
+
+  The agent should:
+
+  - explain how it defines a delayed event;
+  - explain which delay column it uses;
+  - handle missing delay values correctly;
+  - validate the dashboard before saving it;
+  - verify that its data sources return data;
+  - give you the final dashboard path.
+
+
+<{Example prompt
+Inspect this Gold-layer table:
+
+  //home/workshop/userXX/gold/train_weather
+
+  Create and save a dashboard about train delays at:
+
+  //home/workshop/userXX/dashboards/train-delays
+
+  The dashboard must include the maximum observed train delay as a prominent KPI.
+
+  Add other useful visualizations, such as:
+
+  - average delay;
+  - percentage of delayed events;
+  - delay over time;
+  - trains, stations, or cities with the largest delays;
+  - a table containing the most delayed events.
+
+  Use the actual table schema when selecting columns. Explain how you define the delay value and
+  how you handle NULL values.
+
+  Use CHYT for all dashboard queries. Configure every query source with engine "qt" and
+  query_engine "chyt". Do not use YQL.
+
+  Validate the dashboard before saving it and verify that its data sources return data.
+}>
+
+After the agent finishes:
+
+  1. Open the dashboard in the YTsaurus UI.
+  2. Check the maximum-delay value.
+  3. Inspect the other charts and tables.
+  4. Change any available filters and verify that the visualizations update.
+  5. Ask the agent to explain the queries used by the dashboard.
+  6. Compare the displayed values with several rows from the Gold table.
+
+## Exercise 11: Explore the relationship between weather and train delays
+
+Use your AI agent to create another dashboard that explores whether train delays are
+  associated with weather conditions.
+
+  Source dataset:
+
+  ```text
+  //home/workshop/userXX/gold/train_weather
+  ```
+
+  Save the dashboard at:
+
+  ```text
+  //home/workshop/userXX/dashboards/delay-weather-correlation
+  ```
+
+  Ask the agent to inspect the available weather and delay columns before designing the
+  analysis.
+
+  Use CHYT for all dashboard data sources and queries. Configure every query source with `engine: "qt"` and `query_engine: "chyt"`. Do not use YQL for dashboard queries.
+
+  The dashboard should include:
+
+  - the correlation between train delay and selected weather measurements;
+  - the number of observations used to calculate each correlation;
+  - a scatter plot comparing delay with at least one weather measurement;
+  - average delay grouped by a relevant weather condition or range;
+  - enough context to distinguish missing data from zero values.
+
+  Possible weather measurements include temperature, precipitation, humidity, and wind speed,
+  but the agent must use only columns that actually exist in the Gold table.
+
+  The dashboard must clearly state that correlation does not prove causation.
+
+
+<{Example prompt
+```text
+  Inspect this Gold-layer table:
+
+  //home/workshop/userXX/gold/train_weather
+
+  Create and save a dashboard at:
+
+  //home/workshop/userXX/dashboards/delay-weather-correlation
+
+  The dashboard should explore the relationship between train delays and weather.
+
+  Use only weather and delay columns that actually exist in the table.
+
+  Use CHYT for all dashboard queries. Configure every query source with engine "qt" and
+  query_engine "chyt". Do not use YQL.
+
+  Include:
+
+  - correlation coefficients between delay and relevant weather measurements;
+  - the number of observations used for each calculation;
+  - at least one scatter plot;
+  - average delay grouped by a weather condition or numeric range;
+  - filters that are useful for exploring the results.
+
+  Exclude rows with missing values from the corresponding correlation calculation, but do not
+  treat missing values as zero.
+
+  Validate the dashboard before saving it and verify that its data sources return data.
+
+  Include a note explaining that correlation does not prove causation.
+  ```
+}>
+
+ After the agent finishes:
+
+  1. Open the dashboard in the YTsaurus UI.
+  2. Review the reported correlation coefficients.
+  3. Check how many observations were used in each calculation.
+  4. Inspect the scatter plots for outliers and visible patterns.
+  5. Try available filters and compare different trains, cities, dates, or weather conditions.
+  6. Ask the agent which missing values were excluded.
+  7. Discuss whether the dashboard shows a meaningful relationship or only a weak correlation.
+  8. Remember that correlation alone does not establish that weather caused the delays.
+
+
