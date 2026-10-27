@@ -1,0 +1,368 @@
+Last login: Thu Oct 22 19:45:55 on ttys002
+log > cd
+~ > cd github.com/
+github.com > mkdir JustVugg
+github.com > cd JustVugg/
+JustVugg > git clone https://github.com/JustVugg/colibri.git
+Cloning into 'colibri'...
+remote: Enumerating objects: 28189, done.
+remote: Counting objects: 100% (17445/17445), done.
+remote: Compressing objects: 100% (2601/2601), done.
+remote: Total 28189 (delta 15870), reused 14858 (delta 14844), pack-reused 10744 (from 2)
+Receiving objects: 100% (28189/28189), 39.24 MiB | 16.55 MiB/s, done.
+Resolving deltas: 100% (21240/21240), done.
+JustVugg > cd colibri/
+colibri > ./start-here.sh 
+colibri setup
+
+Your machine
+  CPU     Apple M5, 4 cores (10 threads), ASIMDDP
+  RAM     17.2 GB (4.8 GB free now)
+  Disk    571 GB free in /Users/kp/colibri-models
+  GPU     none found (the engine runs on the CPU)
+  System  macOS 27.0.1
+
+  note: only 4.8 GB of RAM is free right now; closing other programs gives the model more room.
+
+Models that fit this machine
+  (fits = the dense part, which always stays in RAM, plus a minimum expert cache fit in RAM, and the download fits on the disk)
+   1) Qwen3.6-35B-A3B                   23 GB   runs from RAM         [recommended]
+      general chat with thinking and tools; int4-gs64 container; runs with a small expert cache (needs 10 GB, runs best with 20 GB)
+   2) Qwen3-Coder-30B-A3B               19 GB   runs from RAM
+      coding model with tool calls, no thinking; int4-gs64 container; runs with a small expert cache (needs 8 GB, runs best with 18 GB)
+   3) DeepSeek V4 Flash REAP 150B       85 GB   streams from the SSD
+      pruned DeepSeek V4 Flash (132 of 256 experts), official fp4/fp8 weights; runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   4) DeepSeek V4 Flash                167 GB   streams from the SSD
+      284B, official checkpoint, no conversion; runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   5) GLM-5.3                          419 GB   streams from the SSD
+      744B, int4-gs64, no MTP head (no speculative decoding); runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   6) GLM-5.2                          429 GB   streams from the SSD
+      744B, the reference model; int4-gs64 with the int8 MTP head; runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+  (1 more fit too: `--all` lists them, `--model ID` picks one)
+  (5 more need more RAM or disk: `coli setup --list` shows why)
+Choose a model [Enter = 1]: 
+
+Model: Qwen3.6-35B-A3B (Kreuzzelg/qwen36-35b-a3b-colibri-i4-gs64) -> /Users/kp/colibri-models/qwen36-35b
+
+Engine: qwen36 with CPU (no GPU found: the engine runs on the CPU)
+  building: make qwen36 ARCH=native  (a few minutes; log: /Users/kp/Library/Application Support/colibri/logs/build-cpu.log)
+  engine ready: /Users/kp/github.com/JustVugg/colibri/c/qwen36 (cpu, built)
+
+Download: Kreuzzelg/qwen36-35b-a3b-colibri-i4-gs64 (23.1 GB); safe to interrupt, rerun to continue
+  [########################] 100.0%  23.0 GB  done                           
+
+  expert profile: a starting history for Qwen3.6-35B-A3B (the experts its GPU tier loads first); your own use extends it
+  downloading the prebuilt engine v2.0.0 (colibri-v2.0.0-macos-arm64.tar.gz)
+  web dashboard: /Users/kp/github.com/JustVugg/colibri/web/dist (from the release archive)
+
+Plan: dense part 4.9 GB in RAM, expert cache 0.0 GB (0 per layer), projected hit rate 0%
+  plan warning: RAM budget cannot hold one expert slot per sparse layer
+  plan warning: GPU 0 (Apple M5) was detected but its free memory is not qualified as a placement budget on this platform; it is reported only and drives no automatic tier
+  plan warning: cold expert misses may reach disk; normal decode speed depends on hit rate
+
+Saved the run configuration: /Users/kp/Library/Application Support/colibri/setup.json
+  same as: coli web --model /Users/kp/colibri-models/qwen36-35b --host 127.0.0.1 --port 8000
+
+Starting colibri
+  Browser:             http://127.0.0.1:8000/
+  OpenAI base URL:     http://127.0.0.1:8000/v1
+  Anthropic base URL:  http://127.0.0.1:8000
+  stop: press Ctrl+C here (or close this window)
+
+dashboard: http://127.0.0.1:8000/  (opens automatically when the engine is ready)
+== qwen36 Phase-2 engine | cache=8/layer bits=4 ctx=8192 pilot=0 wide=1 hot=0 smooth=0.30 conf=0.92 ==
+[tok] loaded 248044 pieces (max id 248069) from /Users/kp/colibri-models/qwen36-35b/tokenizer.json
+[meta] loaded: q_heads=16 kv_heads=2 head_dim=256 q_head_dim=512 k_head_dim=256 v_head_dim=256 o_in=4096 rotary_dim=64 n_experts=256 topk=8 inter=512 shared_inter=512 n_group=1 topk_group=1 attn_output_gate=1 n_active=10
+[meta] DeltaNet: vheads=32 kheads=16 kdim=128 vdim=128 convk=4 conv_dim=8192
+[dense-i8] 291 matrices quantized during load, 7.2 GB f32 freed
+[qwen36] group-scaled experts: gs=64
+resident weights loaded in 5.5s | RSS after load: 2.57 GB
+[qwen36] expert format on disk: int4 packed (tier fmt=4)
+[gateway] input modalities: text (the engine loaded no vision tower; a picture gets a 400)
+OpenAI-compatible API listening on http://127.0.0.1:8000/v1
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-CM6Zk1g1.css HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-DwdNNcnX.js HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /fonts/bytesized.ttf HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /v1/models HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /colibri-icon.svg HTTP/1.1" 200 -
+[api] 127.0.0.1 - Request timed out: TimeoutError('timed out')
+[api] 127.0.0.1 - Request timed out: TimeoutError('timed out')
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "POST /v1/chat/completions HTTP/1.1" 200 -
+[qwen36] expert kernel: planar int4 in RAM (expert_ffn.h), QWEN_EXPERT_KERNEL=0 restores int8 unpack
+[qwen36] int4 packed weights detected — kept int4, repacked planar for expert_ffn.h
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[qwen36 spec gate] turn 1: T(1) 652.3 ms, rows, rho 0.50, acceptance by position 0.50 0.50 0.50 0.50 0.50
+[qwen36 lookup] turn 1: 1.00 tokens/forward (9 forwards per 9 tokens) | acceptance 0.0% (0/0 drafts in 0 verifies) | gate on, 0 declined, 0 probes
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "POST /v1/chat/completions HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /experts.json HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /profile HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /profile HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /profile HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+
+
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[qwen36 spec gate] turn 2: T(1) 701.1 ms, rows 2:2.04, rho 0.99, acceptance by position 0.30 0.50 0.50 0.50 0.50
+[qwen36 lookup] turn 2: 1.01 tokens/forward (331 forwards per 333 tokens) | acceptance 25.0% (2/8 drafts in 8 verifies) | gate on, 87 declined, 8 probes
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+^Ccolibri 
+colibri > 
+colibri > 
+colibri > ./start-here.sh 
+colibri setup
+
+Already set up: Qwen3.6-35B-A3B in /Users/kp/colibri-models/qwen36-35b (cpu)
+  updating: make qwen36 ARCH=native  (only what changed since the last build; log: /Users/kp/Library/Application Support/colibri/logs/build-cpu.log)
+  rebuilt: the sources changed since the last build
+
+Starting colibri
+  Browser:             http://127.0.0.1:8000/
+  OpenAI base URL:     http://127.0.0.1:8000/v1
+  Anthropic base URL:  http://127.0.0.1:8000
+  stop: press Ctrl+C here (or close this window)
+
+dashboard: http://127.0.0.1:8000/  (opens automatically when the engine is ready)
+== qwen36 Phase-2 engine | cache=8/layer bits=4 ctx=8192 pilot=0 wide=1 hot=0 smooth=0.30 conf=0.92 ==
+[tok] loaded 248044 pieces (max id 248069) from /Users/kp/colibri-models/qwen36-35b/tokenizer.json
+[meta] loaded: q_heads=16 kv_heads=2 head_dim=256 q_head_dim=512 k_head_dim=256 v_head_dim=256 o_in=4096 rotary_dim=64 n_experts=256 topk=8 inter=512 shared_inter=512 n_group=1 topk_group=1 attn_output_gate=1 n_active=10
+[meta] DeltaNet: vheads=32 kheads=16 kdim=128 vdim=128 convk=4 conv_dim=8192
+[dense-i8] 291 matrices quantized during load, 7.2 GB f32 freed
+[qwen36] group-scaled experts: gs=64
+resident weights loaded in 3.2s | RSS after load: 3.33 GB
+[qwen36] expert format on disk: int4 packed (tier fmt=4)
+[gateway] input modalities: text (the engine loaded no vision tower; a picture gets a 400)
+OpenAI-compatible API listening on http://127.0.0.1:8000/v1
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-CM6Zk1g1.css HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-DwdNNcnX.js HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /fonts/bytesized.ttf HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /v1/models HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+^Ccolibri > 
+colibri > 
+colibri > ./start-here.sh --list
+colibri setup
+
+ * qwen36-35b                    23 GB  tight      runs with a small expert cache (needs 10 GB, runs best with 20 GB)
+   qwen3-coder-30b               19 GB  tight      runs with a small expert cache (needs 8 GB, runs best with 18 GB)
+   deepseek-v4-flash-reap        85 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   deepseek-v4-flash            167 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   glm-5.3                      419 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   glm-5.2                      429 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   qwen-image-2.1                33 GB  tight      runs with a small expert cache (needs 12 GB, runs best with 18 GB)
+   mimo-v2.6-flash              172 GB  needs-ram  needs 32 GB of RAM (dense part 24 GB plus the expert cache); this machine has 17.2 GB
+   qwen38-flash-next            186 GB  needs-ram  needs 24 GB of RAM (dense part 8 GB plus the expert cache); this machine has 17.2 GB
+   inkling                      514 GB  needs-ram  needs 120 GB of RAM (dense part 49.4 GB plus the expert cache); this machine has 17.2 GB
+   mimo-v2.6-pro                564 GB  needs-ram  needs 54 GB of RAM (dense part 32.4 GB plus the expert cache); this machine has 17.2 GB
+   kimi-k3                     1561 GB  needs-ram  needs 32 GB of RAM (dense part 20 GB plus the expert cache); this machine has 17.2 GB
+colibri > ./start-here.sh --help
+usage: coli setup [-h] [--yes] [--model ID] [--model-dir DIR] [--dir DIR]
+                  [--backend {auto,cpu,vulkan,cuda}] [--no-gpu] [--host HOST] [--port PORT]
+                  [--no-start] [--background] [--no-browser] [--reconfigure] [--list] [--all]
+                  [--via-windows {auto,yes,no}] [--no-verify] [--json]
+
+options:
+  -h, --help            show this help message and exit
+  --yes, -y             non-interactive: take the recommendation and every default
+  --model ID            catalog model to install (see --list); default: the recommendation
+  --model-dir DIR       use a model already on disk instead of downloading one
+  --dir DIR             folder for downloaded models (default ~/colibri-models)
+  --backend {auto,cpu,vulkan,cuda}
+                        engine build: auto (default) picks CUDA when the toolkit builds for the
+                        card, then Vulkan, then the CPU, and a build that fails falls back to the
+                        next
+  --no-gpu              same as --backend cpu
+  --host HOST           address to serve on (default 127.0.0.1)
+  --port PORT           port to serve on (default 8000)
+  --no-start            set up, but do not start the server
+  --background          start the server in the background (log in the setup folder)
+  --no-browser          do not open the browser
+  --reconfigure         choose again even if a setup is already complete
+  --list                list the catalog against this machine and exit
+  --all                 also show the models that do not fit
+  --via-windows {auto,yes,no}
+                        WSL only: download through Windows' curl.exe (auto: when it measures
+                        faster)
+  --no-verify           skip the checksum of downloaded files
+  --json                machine-readable result; implies --yes and a background start
+colibri > ls ~/c
+clickhouse      colibri-models/ 
+colibri > ls ~/colibri-models/
+qwen36-35b
+colibri > ls ~/colibri-models/qwen36-35b/
+config.hf.json			model-00014.safetensors		model-00030.safetensors
+config.json			model-00015.safetensors		model-00031.safetensors
+model-00000.safetensors		model-00016.safetensors		model-00032.safetensors
+model-00001.safetensors		model-00017.safetensors		model-00033.safetensors
+model-00002.safetensors		model-00018.safetensors		model-00034.safetensors
+model-00003.safetensors		model-00019.safetensors		model-00035.safetensors
+model-00004.safetensors		model-00020.safetensors		model-00036.safetensors
+model-00005.safetensors		model-00021.safetensors		model-00037.safetensors
+model-00006.safetensors		model-00022.safetensors		model-00038.safetensors
+model-00007.safetensors		model-00023.safetensors		model-00039.safetensors
+model-00008.safetensors		model-00024.safetensors		model-globals.safetensors
+model-00009.safetensors		model-00025.safetensors		qwen36_meta.json
+model-00010.safetensors		model-00026.safetensors		README.md
+model-00011.safetensors		model-00027.safetensors		tokenizer.json
+model-00012.safetensors		model-00028.safetensors
+model-00013.safetensors		model-00029.safetensors
+colibri > ./start-here.sh --all
+colibri setup
+
+Already set up: Qwen3.6-35B-A3B in /Users/kp/colibri-models/qwen36-35b (cpu)
+  updating: make qwen36 ARCH=native  (only what changed since the last build; log: /Users/kp/Library/Application Support/colibri/logs/build-cpu.log)
+  up to date
+
+Starting colibri
+  Browser:             http://127.0.0.1:8000/
+  OpenAI base URL:     http://127.0.0.1:8000/v1
+  Anthropic base URL:  http://127.0.0.1:8000
+  stop: press Ctrl+C here (or close this window)
+
+dashboard: http://127.0.0.1:8000/  (opens automatically when the engine is ready)
+== qwen36 Phase-2 engine | cache=8/layer bits=4 ctx=8192 pilot=0 wide=1 hot=0 smooth=0.30 conf=0.92 ==
+[tok] loaded 248044 pieces (max id 248069) from /Users/kp/colibri-models/qwen36-35b/tokenizer.json
+[meta] loaded: q_heads=16 kv_heads=2 head_dim=256 q_head_dim=512 k_head_dim=256 v_head_dim=256 o_in=4096 rotary_dim=64 n_experts=256 topk=8 inter=512 shared_inter=512 n_group=1 topk_group=1 attn_output_gate=1 n_active=10
+[meta] DeltaNet: vheads=32 kheads=16 kdim=128 vdim=128 convk=4 conv_dim=8192
+
+[dense-i8] 291 matrices quantized during load, 7.2 GB f32 freed
+[qwen36] group-scaled experts: gs=64
+resident weights loaded in 3.1s | RSS after load: 3.44 GB
+[qwen36] expert format on disk: int4 packed (tier fmt=4)
+[gateway] input modalities: text (the engine loaded no vision tower; a picture gets a 400)
+OpenAI-compatible API listening on http://127.0.0.1:8000/v1
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-DwdNNcnX.js HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /assets/index-CM6Zk1g1.css HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /fonts/bytesized.ttf HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /v1/models HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+[api] 127.0.0.1 - "GET /colibri-icon.svg HTTP/1.1" 200 -
+^Ccolibri > ./start-here.sh --list --all
+colibri setup
+
+ * qwen36-35b                    23 GB  tight      runs with a small expert cache (needs 10 GB, runs best with 20 GB)
+   qwen3-coder-30b               19 GB  tight      runs with a small expert cache (needs 8 GB, runs best with 18 GB)
+   deepseek-v4-flash-reap        85 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   deepseek-v4-flash            167 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   glm-5.3                      419 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   glm-5.2                      429 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   qwen-image-2.1                33 GB  tight      runs with a small expert cache (needs 12 GB, runs best with 18 GB)
+   mimo-v2.6-flash              172 GB  needs-ram  needs 32 GB of RAM (dense part 24 GB plus the expert cache); this machine has 17.2 GB
+   qwen38-flash-next            186 GB  needs-ram  needs 24 GB of RAM (dense part 8 GB plus the expert cache); this machine has 17.2 GB
+   inkling                      514 GB  needs-ram  needs 120 GB of RAM (dense part 49.4 GB plus the expert cache); this machine has 17.2 GB
+   mimo-v2.6-pro                564 GB  needs-ram  needs 54 GB of RAM (dense part 32.4 GB plus the expert cache); this machine has 17.2 GB
+   kimi-k3                     1561 GB  needs-ram  needs 32 GB of RAM (dense part 20 GB plus the expert cache); this machine has 17.2 GB
+colibri > ./start-here.sh --list 
+colibri setup
+
+ * qwen36-35b                    23 GB  tight      runs with a small expert cache (needs 10 GB, runs best with 20 GB)
+   qwen3-coder-30b               19 GB  tight      runs with a small expert cache (needs 8 GB, runs best with 18 GB)
+   deepseek-v4-flash-reap        85 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   deepseek-v4-flash            167 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 32 GB)
+   glm-5.3                      419 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   glm-5.2                      429 GB  tight      runs with a small expert cache (needs 16 GB, runs best with 24 GB)
+   qwen-image-2.1                33 GB  tight      runs with a small expert cache (needs 12 GB, runs best with 18 GB)
+   mimo-v2.6-flash              172 GB  needs-ram  needs 32 GB of RAM (dense part 24 GB plus the expert cache); this machine has 17.2 GB
+   qwen38-flash-next            186 GB  needs-ram  needs 24 GB of RAM (dense part 8 GB plus the expert cache); this machine has 17.2 GB
+   inkling                      514 GB  needs-ram  needs 120 GB of RAM (dense part 49.4 GB plus the expert cache); this machine has 17.2 GB
+   mimo-v2.6-pro                564 GB  needs-ram  needs 54 GB of RAM (dense part 32.4 GB plus the expert cache); this machine has 17.2 GB
+   kimi-k3                     1561 GB  needs-ram  needs 32 GB of RAM (dense part 20 GB plus the expert cache); this machine has 17.2 GB
+colibri > ./start-here.sh --help
+usage: coli setup [-h] [--yes] [--model ID] [--model-dir DIR] [--dir DIR]
+                  [--backend {auto,cpu,vulkan,cuda}] [--no-gpu] [--host HOST] [--port PORT]
+                  [--no-start] [--background] [--no-browser] [--reconfigure] [--list] [--all]
+                  [--via-windows {auto,yes,no}] [--no-verify] [--json]
+
+options:
+  -h, --help            show this help message and exit
+  --yes, -y             non-interactive: take the recommendation and every default
+  --model ID            catalog model to install (see --list); default: the recommendation
+  --model-dir DIR       use a model already on disk instead of downloading one
+  --dir DIR             folder for downloaded models (default ~/colibri-models)
+  --backend {auto,cpu,vulkan,cuda}
+                        engine build: auto (default) picks CUDA when the toolkit builds for the
+                        card, then Vulkan, then the CPU, and a build that fails falls back to the
+                        next
+  --no-gpu              same as --backend cpu
+  --host HOST           address to serve on (default 127.0.0.1)
+  --port PORT           port to serve on (default 8000)
+  --no-start            set up, but do not start the server
+  --background          start the server in the background (log in the setup folder)
+  --no-browser          do not open the browser
+  --reconfigure         choose again even if a setup is already complete
+  --list                list the catalog against this machine and exit
+  --all                 also show the models that do not fit
+  --via-windows {auto,yes,no}
+                        WSL only: download through Windows' curl.exe (auto: when it measures
+                        faster)
+  --no-verify           skip the checksum of downloaded files
+  --json                machine-readable result; implies --yes and a background start
+colibri > 
